@@ -12,7 +12,7 @@ extension Never: View {
 }
 
 /// EmptyView: Acts as a Dummy View for Compiler, shouldn't be used
-struct EmptyView: View {
+struct EmptyView: HTMLContentView {
     typealias Body = Never
 }
 
