@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AnyView: HTMLContentView {
+struct AnyView: HTMLHeadContentView, HTMLBodyContentView {
     typealias Body = Never
     let tag = Tag.empty
 
@@ -17,7 +17,11 @@ struct AnyView: HTMLContentView {
         self.element = c0.element + "\n" + c1.element
     }
 
-    init<Content>(_ content: Content...) where Content: HTMLView {
+    init<Content>(_ content: Content) where Content: HTMLContentView {
+        self.element = content.element
+    }
+
+    init<Content>(_ content: [Content]) where Content: HTMLContentView {
         self.element = content.map { $0.element }.joined(separator: "\n")
     }
 }
