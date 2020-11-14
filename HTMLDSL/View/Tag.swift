@@ -56,4 +56,7 @@ enum SelfClosingTag: String {
 
     // Head Content Tags
     case meta
+
+    // Body Content Tags
+    case image = "img"
 }
