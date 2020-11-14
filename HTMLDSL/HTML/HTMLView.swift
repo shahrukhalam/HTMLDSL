@@ -8,10 +8,10 @@
 import Foundation
 
 protocol HTMLView: View {  }
-protocol HTMLContentView: View {  }
+protocol HTMLContentView: HTMLView {  }
 
-protocol HTMLHeadView: View {  }
-protocol HTMLHeadContentView: View {  }
+protocol HTMLHeadView: HTMLContentView {  }
+protocol HTMLHeadContentView: HTMLHeadView {  }
 
-protocol HTMLBodyView: View {  }
-protocol HTMLBodyContentView: View {  }
+protocol HTMLBodyView: HTMLContentView {  }
+protocol HTMLBodyContentView: HTMLBodyView {  }
