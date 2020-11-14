@@ -9,6 +9,8 @@ import Foundation
 
 struct Head<Content>: HTMLHeadView where Content: HTMLHeadContentView {
     var body: Content
+    let tag = Tag.enclosing(.head)
+
 
     init(@ViewBuilder content: () -> Content) {
         self.body = content()

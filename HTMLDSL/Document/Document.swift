@@ -9,6 +9,7 @@ import Foundation
 
 struct Document<Content>: View where Content: HTMLView {
     var body: Content
+    let tag = Tag.selfClosing(.document)
 
     init(@ViewBuilder content: () -> Content) {
         self.body = content()

@@ -13,16 +13,22 @@ struct ViewBuilder {
         return content
     }
 
-    static func buildBlock<C0, C1>(_ c0: C0, _ c1: C1) -> EmptyView where C0 : HTMLHeadView, C1 : HTMLBodyView {
-        HTML {
-            Head {
-                Text("")
-            }
-            
-            Body {
-                Text("")
-            }
-        }
-        return EmptyView()
+    static func buildBlock<C0, C1>(_ c0: C0, _ c1: C1) -> AnyView where C0 : HTMLHeadView, C1 : HTMLBodyView {
+        return AnyView(c0, c1)
+    }
+}
+
+struct AnyView: HTMLContentView {
+    typealias Body = Never
+    let tag = Tag.empty
+
+    let element: String
+
+    init<C0, C1>(_ c0: C0, _ c1: C1) where C0 : HTMLHeadView, C1 : HTMLBodyView {
+        self.element = c0.element + "\n" + c1.element
+    }
+
+    init<Content>(_ content: Content...) where Content: HTMLView {
+        self.element = content.map { $0.element }.joined(separator: "\n")
     }
 }

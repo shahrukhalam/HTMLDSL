@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0196B207255F105000EE0E24 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B206255F105000EE0E24 /* main.swift */; };
 		0196B21C255F107000EE0E24 /* HTMLDSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0196B213255F107000EE0E24 /* HTMLDSL.framework */; };
-		0196B221255F107000EE0E24 /* HTMLDSLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B220255F107000EE0E24 /* HTMLDSLTests.swift */; };
+		0196B221255F107000EE0E24 /* DocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B220255F107000EE0E24 /* DocumentTests.swift */; };
 		0196B223255F107000EE0E24 /* HTMLDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 0196B215255F107000EE0E24 /* HTMLDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0196B233255F110E00EE0E24 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B232255F110E00EE0E24 /* View.swift */; };
 		0196B238255F16F900EE0E24 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B237255F16F900EE0E24 /* Document.swift */; };
@@ -51,7 +51,7 @@
 		0196B215255F107000EE0E24 /* HTMLDSL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTMLDSL.h; sourceTree = "<group>"; };
 		0196B216255F107000EE0E24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0196B21B255F107000EE0E24 /* HTMLDSLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTMLDSLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0196B220255F107000EE0E24 /* HTMLDSLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLDSLTests.swift; sourceTree = "<group>"; };
+		0196B220255F107000EE0E24 /* DocumentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTests.swift; sourceTree = "<group>"; };
 		0196B222255F107000EE0E24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0196B232255F110E00EE0E24 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		0196B237255F16F900EE0E24 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		0196B21F255F107000EE0E24 /* HTMLDSLTests */ = {
 			isa = PBXGroup;
 			children = (
-				0196B220255F107000EE0E24 /* HTMLDSLTests.swift */,
+				0196B220255F107000EE0E24 /* DocumentTests.swift */,
 				0196B222255F107000EE0E24 /* Info.plist */,
 			);
 			path = HTMLDSLTests;
@@ -315,7 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0196B221255F107000EE0E24 /* HTMLDSLTests.swift in Sources */,
+				0196B221255F107000EE0E24 /* DocumentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
