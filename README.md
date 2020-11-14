@@ -24,3 +24,4 @@ Here we are trying to build one for HTML in Pure Swift which we all love.
 - Body
     - Headings
     - Image
+    - Paragraphs
