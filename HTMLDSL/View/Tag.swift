@@ -53,4 +53,7 @@ enum EnclosingTag: CustomStringConvertible {
 
 enum SelfClosingTag: String {
     case document = "!DOCTYPE html"
+
+    // Head Content Tags
+    case meta
 }
