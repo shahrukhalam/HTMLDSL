@@ -14,3 +14,12 @@ Here we are trying to build one for HTML in Pure Swift which we all love.
 ✅ Compile Time Error  
 ✅ Easy to Read & Debug  
 ✅ Create Websites without any knowledge of HTML, in pure Swift
+
+## Currently Supports:
+- Document
+- HTML
+- Head
+    - Title
+    - Meta
+- Body
+    - Headings
