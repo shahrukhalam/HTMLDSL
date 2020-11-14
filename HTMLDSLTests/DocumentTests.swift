@@ -13,11 +13,11 @@ class DocumentTests: XCTestCase {
         let document = Document {
             HTML {
                 Head {
-                    Text("Head Text")
+                    Title("My Website")
                 }
 
                 Body {
-                    Text("Body Text")
+                    Headings("My Heading")
                 }
             }
         }
@@ -27,10 +27,10 @@ class DocumentTests: XCTestCase {
         <!DOCTYPE html>
         <html>
         <head>
-        <h1> Head Text </h1>
+        <title> My Website </title>
         </head>
         <body>
-        <h1> Body Text </h1>
+        <h1> My Heading </h1>
         </body>
         </html>
         """

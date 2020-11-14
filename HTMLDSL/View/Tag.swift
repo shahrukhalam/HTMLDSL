@@ -15,7 +15,7 @@ enum Tag: CustomStringConvertible {
     var description: String {
         switch self {
         case .enclosing(let tag):
-            return tag.rawValue
+            return tag.description
         case .selfClosing(let tag):
             return tag.rawValue
         case .empty:
@@ -24,13 +24,31 @@ enum Tag: CustomStringConvertible {
     }
 }
 
-enum EnclosingTag: String {
+enum EnclosingTag: CustomStringConvertible {
     case html
     case head
     case body
 
+    // Head Content Tags
+    case title
+
     // Body Content Tags
-    case text = "h1"
+    case headings(HeadingTag)
+
+    var description: String {
+        switch self {
+        case .html:
+            return "html"
+        case .head:
+            return "head"
+        case .body:
+            return "body"
+        case .title:
+            return "title"
+        case .headings(let tag):
+            return tag.rawValue
+        }
+    }
 }
 
 enum SelfClosingTag: String {

@@ -7,14 +7,24 @@
 
 import Foundation
 
-struct Text: HTMLBodyContentView, HTMLHeadContentView {
+enum HeadingTag: String {
+    case h1
+    case h2
+    case h3
+    case h4
+    case h5
+    case h6
+}
+
+struct Headings: HTMLBodyContentView {
     typealias Body = Never
-    let tag = Tag.enclosing(.text)
+    let tag: Tag
 
     private let text: String
 
-    init(_ text: String) {
+    init(_ text: String, type: HeadingTag = .h1) {
         self.text = text
+        self.tag = Tag.enclosing(.headings(type))
     }
 
     var element: String {
