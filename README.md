@@ -23,3 +23,4 @@ Here we are trying to build one for HTML in Pure Swift which we all love.
     - Meta
 - Body
     - Headings
+    - Image
