@@ -18,7 +18,7 @@ class ImageTests: XCTestCase {
 
                 Body {
                     Headings("Nora Fatehi")
-                    Image("/images/nora.jpg", alternateText: "Nora Fatehi")
+                    Image("Images/nora.jpg", alternateText: "Nora Fatehi")
                 }
             }
         }
@@ -31,8 +31,8 @@ class ImageTests: XCTestCase {
         <title> My Website </title>
         </head>
         <body>
-        <h1> My Heading </h1>
-        <img src="/images/nora.jpg" alt="Nora Fatehi">
+        <h1> Nora Fatehi </h1>
+        <img src="Images/nora.jpg" alt="Nora Fatehi">
         </body>
         </html>
         """
