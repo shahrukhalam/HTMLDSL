@@ -11,7 +11,7 @@ struct HTML<Content>: HTMLView where Content: HTMLContentView {
     var body: Content
     let tag = Tag.enclosing(.html)
 
-    init(@ViewBuilder content: () -> Content) {
+    init(@HTMLViewBuilder content: () -> Content) {
         self.body = content()
     }
 }

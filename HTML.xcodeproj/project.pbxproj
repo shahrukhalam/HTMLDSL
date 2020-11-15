@@ -31,6 +31,7 @@
 		019CB97C2560234700C71B10 /* ImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CB97B2560234700C71B10 /* ImageTests.swift */; };
 		019CB98D256039E100C71B10 /* Paragraphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CB98C256039E100C71B10 /* Paragraphs.swift */; };
 		019CB99225603AA700C71B10 /* ParagraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CB99125603AA700C71B10 /* ParagraphTests.swift */; };
+		01B22B5C25613F93009DAAB4 /* HTMLViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22B5B25613F93009DAAB4 /* HTMLViewBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		019CB97B2560234700C71B10 /* ImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTests.swift; sourceTree = "<group>"; };
 		019CB98C256039E100C71B10 /* Paragraphs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraphs.swift; sourceTree = "<group>"; };
 		019CB99125603AA700C71B10 /* ParagraphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphTests.swift; sourceTree = "<group>"; };
+		01B22B5B25613F93009DAAB4 /* HTMLViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLViewBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,8 +178,8 @@
 		0196B231255F10FA00EE0E24 /* HTML */ = {
 			isa = PBXGroup;
 			children = (
-				0196B25B255F298100EE0E24 /* HTMLView.swift */,
 				0196B263255F2EB700EE0E24 /* HTML.swift */,
+				01B22B5B25613F93009DAAB4 /* HTMLViewBuilder.swift */,
 			);
 			path = HTML;
 			sourceTree = "<group>";
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				0196B232255F110E00EE0E24 /* View.swift */,
+				0196B25B255F298100EE0E24 /* HTMLView.swift */,
 				0196B24E255F210900EE0E24 /* View + Never.swift */,
 				019CB93B255FDC5C00C71B10 /* Tag.swift */,
 				019CB935255FDC0600C71B10 /* View + Element.swift */,
@@ -389,6 +392,7 @@
 				0196B26E255F309300EE0E24 /* Headings.swift in Sources */,
 				0196B25C255F298100EE0E24 /* HTMLView.swift in Sources */,
 				0196B24F255F210900EE0E24 /* View + Never.swift in Sources */,
+				01B22B5C25613F93009DAAB4 /* HTMLViewBuilder.swift in Sources */,
 				019CB95E25600E0B00C71B10 /* Meta.swift in Sources */,
 				019CB9762560216100C71B10 /* Image.swift in Sources */,
 				019CB93C255FDC5C00C71B10 /* Tag.swift in Sources */,
