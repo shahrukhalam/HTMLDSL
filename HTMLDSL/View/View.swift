@@ -12,6 +12,6 @@ protocol View {
     var body: Body { get }
 
     var tag: Tag { get }
-    var attributes: [Attribute] { get set }
+    var attributes: Set<Attribute> { get set }
     var element: String { get }
 }
