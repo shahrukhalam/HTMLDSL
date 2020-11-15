@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Style: CustomStringConvertible {
+enum Style: CustomStringConvertible, Hashable {
     case backgroundColor(Color)
 
     case width(Int)
