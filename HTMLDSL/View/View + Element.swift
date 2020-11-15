@@ -9,13 +9,16 @@ import Foundation
 
 extension View {
     var element: String {
+        let allAttributes = " " + attributes.map { $0.description }.joined(separator: " ")
+        let finalAttribute = attributes.isEmpty ? "" : allAttributes
+
         switch tag {
         case .enclosing:
-            return "<\(tag.description)>\n\(body.element)\n</\(tag.description)>"
+            return "<\(tag.description)\(finalAttribute)>\n\(body.element)\n</\(tag.description)>"
         case .selfClosing:
-            return "<\(tag.description)>\n\(body.element)"
+            return "<\(tag.description)\(finalAttribute)>\n\(body.element)"
         case .empty:
-            return "\(body.element)"
+            preconditionFailure("It's an EmptyView: shouldn't be used")
         }
     }
 }

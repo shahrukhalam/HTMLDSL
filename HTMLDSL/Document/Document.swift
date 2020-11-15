@@ -10,6 +10,7 @@ import Foundation
 struct Document<Content>: View where Content: HTMLView {
     var body: Content
     let tag = Tag.selfClosing(.document)
+    var attributes = [Attribute]()
 
     init(@ViewBuilder content: () -> Content) {
         self.body = content()
