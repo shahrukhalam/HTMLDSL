@@ -17,11 +17,4 @@ enum Attribute: CustomStringConvertible, Hashable {
             return "style=\"\(finalStyle)\""
         }
     }
-
-    static func == (lhs: Attribute, rhs: Attribute) -> Bool {
-        switch (lhs, rhs) {
-        case (.style, .style):
-            return true
-        }
-    }
 }
