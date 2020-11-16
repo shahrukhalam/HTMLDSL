@@ -15,8 +15,7 @@ extension ViewModifier where Content == Body {
         newAttributes.enumerated().forEach { (index, attribute) in
             if case .style(let styles) = attribute {
                 newStyles = styles
-                let indexOfStyle = newStyles.firstIndex { style in oldStyle == style }
-                if let indexOfStyle = indexOfStyle { newStyles.remove(at: indexOfStyle) }
+                newStyles.removeAll { style in oldStyle == style }
                 newAttributes.remove(at: index)
             }
         }
