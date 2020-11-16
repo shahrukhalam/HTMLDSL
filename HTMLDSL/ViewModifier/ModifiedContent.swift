@@ -11,7 +11,7 @@ struct ModifiedContent<Content, Modifier> {
     var content: Content
     let modifier: Modifier
 
-    var attributes = Set<Attribute>()
+    var attributes = [Attribute]()
 
     init(content: Content, modifier: Modifier) {
         self.content = content

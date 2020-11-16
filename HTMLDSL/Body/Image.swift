@@ -10,7 +10,7 @@ import Foundation
 struct Image: HTMLBodyContentView {
     typealias Body = Never
     let tag = Tag.selfClosing(.image)
-    var attributes = Set<Attribute>()
+    var attributes = [Attribute]()
 
     private let source: String
     private let alternateText: String

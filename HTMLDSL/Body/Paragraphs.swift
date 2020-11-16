@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct Paragraphs: HTMLBodyContentView {
+struct Paragraphs: HTMLBodyTextContentView {
     typealias Body = Never
     let tag = Tag.enclosing(.paragraph)
+    var attributes = [Attribute]()
 
     private let text: String
 
@@ -18,6 +19,8 @@ struct Paragraphs: HTMLBodyContentView {
     }
 
     var element: String {
-        "<\(tag.description)> \(text) </\(tag.description)>"
+        let allAttributes = " " + attributes.map { $0.description }.joined(separator: " ")
+        let finalAttribute = attributes.isEmpty ? "" : allAttributes
+        return "<\(tag.description)\(finalAttribute)> \(text) </\(tag.description)>"
     }
 }

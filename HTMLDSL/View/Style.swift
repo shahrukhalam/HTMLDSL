@@ -9,6 +9,7 @@ import Foundation
 
 enum Style: CustomStringConvertible, Hashable {
     case backgroundColor(Color)
+    case foregroundColor(Color)
 
     case width(Int)
     case height(Int)
@@ -18,6 +19,8 @@ enum Style: CustomStringConvertible, Hashable {
         switch self {
         case .backgroundColor(let color):
             return "background-color:\(color.rawValue);"
+        case .foregroundColor(let color):
+            return "color:\(color.rawValue);"
         case .width(let width):
             return "width:\(width)px;"
         case .height(let height):
@@ -30,6 +33,8 @@ enum Style: CustomStringConvertible, Hashable {
     static func == (lhs: Style, rhs: Style) -> Bool {
         switch (lhs, rhs) {
         case (.backgroundColor, .backgroundColor):
+            return true
+        case (.foregroundColor, .foregroundColor):
             return true
         case (.width, .width):
             return true

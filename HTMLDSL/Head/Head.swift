@@ -10,7 +10,7 @@ import Foundation
 struct Head<Content>: HTMLHeadView where Content: HTMLHeadContentView {
     var body: Content
     let tag = Tag.enclosing(.head)
-    var attributes = Set<Attribute>()
+    var attributes = [Attribute]()
 
     init(@ViewBuilder content: () -> Content) {
         self.body = content()
