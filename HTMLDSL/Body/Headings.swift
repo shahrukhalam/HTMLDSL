@@ -16,11 +16,12 @@ enum HeadingTag: String {
     case h6
 }
 
-struct Headings: HTMLBodyContentView {
+struct Headings: HTMLBodyTextContentView {
     typealias Body = Never
     let tag: Tag
 
     private let text: String
+    var attributes = [Attribute]()
 
     init(_ text: String, type: HeadingTag = .h1) {
         self.text = text
@@ -28,6 +29,8 @@ struct Headings: HTMLBodyContentView {
     }
 
     var element: String {
-        "<\(tag.description)> \(text) </\(tag.description)>"
+        let allAttributes = " " + attributes.map { $0.description }.joined(separator: " ")
+        let finalAttribute = attributes.isEmpty ? "" : allAttributes
+        return "<\(tag.description)\(finalAttribute)> \(text) </\(tag.description)>"
     }
 }

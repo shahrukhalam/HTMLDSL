@@ -17,7 +17,7 @@ extension View where Self.Body == Never {
         fatalError("It's a Never: Doesn't have a real Body")
     }
 
-    var attributes: Set<Attribute> {
+    var attributes: [Attribute] {
         get { [] }
         set { fatalError("It's a Never: Doesn't have any real Attributes") }
     }

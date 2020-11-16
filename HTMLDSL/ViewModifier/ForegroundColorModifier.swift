@@ -1,5 +1,5 @@
 //
-//  BackgroundColorModifier.swift
+//  ForegroundColorModifier.swift
 //  HTMLDSL
 //
 //  Created by Shahrukh Alam on 16/11/20.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BackgroundColorModifier<ContentView>: ViewModifier where ContentView: View {
+struct ForegroundColorModifier<ContentView>: ViewModifier where ContentView: HTMLBodyTextContentView {
     typealias Content = ContentView
     typealias Body = ContentView
 
@@ -18,6 +18,6 @@ struct BackgroundColorModifier<ContentView>: ViewModifier where ContentView: Vie
     }
 
     func body(content: Content) -> Body {
-        return update(content: content, for: .backgroundColor(.red), with: .backgroundColor(color))
+        return update(content: content, for: .foregroundColor(.red), with: .foregroundColor(color))
     }
 }

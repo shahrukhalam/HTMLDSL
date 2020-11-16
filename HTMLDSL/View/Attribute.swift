@@ -8,7 +8,7 @@
 import Foundation
 
 enum Attribute: CustomStringConvertible, Hashable {
-    case style(Set<Style>)
+    case style([Style])
 
     var description: String {
         switch self {

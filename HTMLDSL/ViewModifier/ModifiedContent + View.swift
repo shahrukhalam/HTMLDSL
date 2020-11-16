@@ -25,3 +25,5 @@ extension ModifiedContent: View where Modifier: ViewModifier, Modifier.Content =
         return newContent.element
     }
 }
+
+extension ModifiedContent: HTMLView, HTMLContentView, HTMLBodyView, HTMLBodyContentView, HTMLBodyTextContentView where Modifier: ViewModifier, Content: HTMLBodyTextContentView, Modifier.Content == Content {  }
