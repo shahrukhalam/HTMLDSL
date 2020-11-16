@@ -16,6 +16,8 @@ Here we are trying to build one for HTML in Pure Swift which we all love.
 ✅ Create Websites without any knowledge of HTML, in pure Swift
 
 ## Currently Supports:
+
+### Elements:
 - Document
 - HTML
 - Head
@@ -25,3 +27,8 @@ Here we are trying to build one for HTML in Pure Swift which we all love.
     - Headings
     - Image
     - Paragraphs
+### Attributes:
+- Background Color
+- Foreground Color
+- Width
+- Height

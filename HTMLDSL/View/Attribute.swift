@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Attribute: CustomStringConvertible, Hashable {
+enum Attribute: CustomStringConvertible, Equatable {
     case style([Style])
 
     var description: String {

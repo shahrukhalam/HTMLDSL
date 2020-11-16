@@ -45,6 +45,8 @@
 		01B22BC02562B84C009DAAB4 /* ViewModifier + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BBF2562B84C009DAAB4 /* ViewModifier + Extension.swift */; };
 		01B22BC52562BA7F009DAAB4 /* ForegroundColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BC42562BA7F009DAAB4 /* ForegroundColorModifier.swift */; };
 		01B22BCA2562BFE2009DAAB4 /* TextView + Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BC92562BFE2009DAAB4 /* TextView + Modifier.swift */; };
+		01B22BD22562D776009DAAB4 /* SizeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BD12562D776009DAAB4 /* SizeModifier.swift */; };
+		01B22BD72562D9C3009DAAB4 /* SizeModifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BD62562D9C3009DAAB4 /* SizeModifierTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		01B22BBF2562B84C009DAAB4 /* ViewModifier + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModifier + Extension.swift"; sourceTree = "<group>"; };
 		01B22BC42562BA7F009DAAB4 /* ForegroundColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForegroundColorModifier.swift; sourceTree = "<group>"; };
 		01B22BC92562BFE2009DAAB4 /* TextView + Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView + Modifier.swift"; sourceTree = "<group>"; };
+		01B22BD12562D776009DAAB4 /* SizeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeModifier.swift; sourceTree = "<group>"; };
+		01B22BD62562D9C3009DAAB4 /* SizeModifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeModifierTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +290,7 @@
 				01B22B9A25625958009DAAB4 /* EmptyModifier.swift */,
 				01B22BA925626685009DAAB4 /* BackgroundColorModifier.swift */,
 				01B22BC42562BA7F009DAAB4 /* ForegroundColorModifier.swift */,
+				01B22BD12562D776009DAAB4 /* SizeModifier.swift */,
 				01B22B9F25625AB7009DAAB4 /* ModifiedContent.swift */,
 				01B22BA425625B33009DAAB4 /* ModifiedContent + View.swift */,
 			);
@@ -296,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				01B22BB425626DF3009DAAB4 /* ModifiedContentTests.swift */,
+				01B22BD62562D9C3009DAAB4 /* SizeModifierTests.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -456,6 +462,7 @@
 				01B22B5C25613F93009DAAB4 /* HTMLViewBuilder.swift in Sources */,
 				019CB95E25600E0B00C71B10 /* Meta.swift in Sources */,
 				019CB9762560216100C71B10 /* Image.swift in Sources */,
+				01B22BD22562D776009DAAB4 /* SizeModifier.swift in Sources */,
 				01B22B6925616924009DAAB4 /* Color.swift in Sources */,
 				019CB93C255FDC5C00C71B10 /* Tag.swift in Sources */,
 				01B22BAA25626685009DAAB4 /* BackgroundColorModifier.swift in Sources */,
@@ -480,6 +487,7 @@
 				01B22BB525626DF3009DAAB4 /* ModifiedContentTests.swift in Sources */,
 				019CB97C2560234700C71B10 /* ImageTests.swift in Sources */,
 				0196B221255F107000EE0E24 /* DocumentTests.swift in Sources */,
+				01B22BD72562D9C3009DAAB4 /* SizeModifierTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

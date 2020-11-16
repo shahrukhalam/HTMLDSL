@@ -7,13 +7,12 @@
 
 import Foundation
 
-enum Style: CustomStringConvertible, Hashable {
+enum Style: CustomStringConvertible, Equatable {
     case backgroundColor(Color)
     case foregroundColor(Color)
 
-    case width(Int)
-    case height(Int)
-    case size(width: Int, height: Int)
+    case width(Dimension)
+    case height(Dimension)
 
     var description: String {
         switch self {
@@ -21,12 +20,10 @@ enum Style: CustomStringConvertible, Hashable {
             return "background-color:\(color.rawValue);"
         case .foregroundColor(let color):
             return "color:\(color.rawValue);"
-        case .width(let width):
-            return "width:\(width)px;"
-        case .height(let height):
-            return "height:\(height)px;"
-        case .size(let width, let height):
-            return "width:\(width)px;height:\(height)px;"
+        case .width(let dimension):
+            return "width:\(dimension.description);"
+        case .height(let dimension):
+            return "height:\(dimension.description);"
         }
     }
 
@@ -40,10 +37,25 @@ enum Style: CustomStringConvertible, Hashable {
             return true
         case (.height, .height):
             return true
-        case (.size, .size):
-            return true
         default:
             return false
+        }
+    }
+}
+
+enum Dimension: CustomStringConvertible {
+    case percentage(Int)
+    case pixel(Int)
+    case auto
+
+    var description: String {
+        switch self {
+        case .percentage(let value):
+            return "\(value)%"
+        case .pixel(let value):
+            return "\(value)px"
+        case .auto:
+            return "auto"
         }
     }
 }
