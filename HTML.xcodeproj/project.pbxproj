@@ -54,6 +54,8 @@
 		01B22BF02563024F009DAAB4 /* FontModifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BEF2563024F009DAAB4 /* FontModifierTests.swift */; };
 		01B22BF525630886009DAAB4 /* TextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BF425630886009DAAB4 /* TextAlignment.swift */; };
 		01B22BFA25630981009DAAB4 /* TextAlignmentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BF925630981009DAAB4 /* TextAlignmentModifier.swift */; };
+		01B22BFF25630D6F009DAAB4 /* TextFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BFE25630D6F009DAAB4 /* TextFormatting.swift */; };
+		01B22C0425630FFA009DAAB4 /* TextFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22C0325630FFA009DAAB4 /* TextFormattingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +132,8 @@
 		01B22BEF2563024F009DAAB4 /* FontModifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontModifierTests.swift; sourceTree = "<group>"; };
 		01B22BF425630886009DAAB4 /* TextAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlignment.swift; sourceTree = "<group>"; };
 		01B22BF925630981009DAAB4 /* TextAlignmentModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlignmentModifier.swift; sourceTree = "<group>"; };
+		01B22BFE25630D6F009DAAB4 /* TextFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatting.swift; sourceTree = "<group>"; };
+		01B22C0325630FFA009DAAB4 /* TextFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormattingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +315,7 @@
 				01B22BC42562BA7F009DAAB4 /* ForegroundColorModifier.swift */,
 				01B22BEA2562FFB4009DAAB4 /* FontModifier.swift */,
 				01B22BF925630981009DAAB4 /* TextAlignmentModifier.swift */,
+				01B22BFE25630D6F009DAAB4 /* TextFormatting.swift */,
 				01B22B9F25625AB7009DAAB4 /* ModifiedContent.swift */,
 				01B22BA425625B33009DAAB4 /* ModifiedContent + View.swift */,
 			);
@@ -323,6 +328,7 @@
 				01B22BB425626DF3009DAAB4 /* ModifiedContentTests.swift */,
 				01B22BD62562D9C3009DAAB4 /* SizeModifierTests.swift */,
 				01B22BEF2563024F009DAAB4 /* FontModifierTests.swift */,
+				01B22C0325630FFA009DAAB4 /* TextFormattingTests.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -482,6 +488,7 @@
 				0196B26E255F309300EE0E24 /* Headings.swift in Sources */,
 				0196B25C255F298100EE0E24 /* HTMLView.swift in Sources */,
 				0196B24F255F210900EE0E24 /* View + Never.swift in Sources */,
+				01B22BFF25630D6F009DAAB4 /* TextFormatting.swift in Sources */,
 				01B22B9B25625959009DAAB4 /* EmptyModifier.swift in Sources */,
 				01B22B5C25613F93009DAAB4 /* HTMLViewBuilder.swift in Sources */,
 				01B22BE12562EE5F009DAAB4 /* FontSize.swift in Sources */,
@@ -516,6 +523,7 @@
 				019CB97C2560234700C71B10 /* ImageTests.swift in Sources */,
 				0196B221255F107000EE0E24 /* DocumentTests.swift in Sources */,
 				01B22BD72562D9C3009DAAB4 /* SizeModifierTests.swift in Sources */,
+				01B22C0425630FFA009DAAB4 /* TextFormattingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

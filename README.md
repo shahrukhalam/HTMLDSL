@@ -35,3 +35,4 @@ Here we are trying to build one for HTML in Pure Swift which we all love.
 - Font Sizes
 - Web Safe Font Families
 - Text Alignment
+- Text Formatting
