@@ -7,18 +7,19 @@
 
 import Foundation
 
-extension ModifiedContent: View where Modifier: ViewModifier, Modifier.Content == Content {
+extension ModifiedContent: View, HTMLView, HTMLContentView
+where Modifier: ViewModifier, Modifier.Content == Content {
     typealias Body = Never
     var tag: Tag { .empty }
-
+    
     init(content: Content, modifier: Modifier) {
         self.content = content
         self.modifier = modifier
-
+        
         let newContent = modifier.body(content: content)
         self.attributes = newContent.attributes
     }
-
+    
     var element: String {
         var newContent = content
         newContent.attributes = attributes
@@ -26,4 +27,5 @@ extension ModifiedContent: View where Modifier: ViewModifier, Modifier.Content =
     }
 }
 
-extension ModifiedContent: HTMLView, HTMLContentView, HTMLBodyView, HTMLBodyContentView, HTMLBodyTextContentView where Modifier: ViewModifier, Content: HTMLBodyTextContentView, Modifier.Content == Content {  }
+extension ModifiedContent: HTMLBodyView, HTMLBodyContentView, HTMLBodyTextContentView
+where Modifier: ViewModifier, Content: HTMLBodyTextContentView, Modifier.Content == Content {  }
