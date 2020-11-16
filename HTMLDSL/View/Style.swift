@@ -9,10 +9,12 @@ import Foundation
 
 enum Style: CustomStringConvertible, Equatable {
     case backgroundColor(Color)
-    case foregroundColor(Color)
-
     case width(Dimension)
     case height(Dimension)
+
+    case foregroundColor(Color)
+    case fontFamily(FontFamily)
+    case fontSize(FontSize)
 
     var description: String {
         switch self {
@@ -24,6 +26,10 @@ enum Style: CustomStringConvertible, Equatable {
             return "width:\(dimension.description);"
         case .height(let dimension):
             return "height:\(dimension.description);"
+        case .fontFamily(let fontFamily):
+            return "font-family:\(fontFamily.description);"
+        case .fontSize(let fontSize):
+            return "font-size:\(fontSize.description);"
         }
     }
 
@@ -37,25 +43,12 @@ enum Style: CustomStringConvertible, Equatable {
             return true
         case (.height, .height):
             return true
+        case (.fontFamily, .fontFamily):
+            return true
+        case (.fontSize, .fontSize):
+            return true
         default:
             return false
-        }
-    }
-}
-
-enum Dimension: CustomStringConvertible {
-    case percentage(Int)
-    case pixel(Int)
-    case auto
-
-    var description: String {
-        switch self {
-        case .percentage(let value):
-            return "\(value)%"
-        case .pixel(let value):
-            return "\(value)px"
-        case .auto:
-            return "auto"
         }
     }
 }
