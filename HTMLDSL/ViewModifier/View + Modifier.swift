@@ -7,13 +7,13 @@
 
 import Foundation
 
-extension View {
-    func backgroundColor(_ color: Color) -> some View {
+extension HTMLContentView {
+    func backgroundColor(_ color: Color) -> some HTMLContentView {
         let modifier = BackgroundColorModifier<Self>(color: color)
         return ModifiedContent(content: self, modifier: modifier)
     }
 
-    func size(width: Dimension? = nil, height: Dimension? = nil) -> some View {
+    func size(width: Dimension? = nil, height: Dimension? = nil) -> some HTMLContentView {
         let modifier = SizeModifier<Self>(width: width, height: height)
         return ModifiedContent(content: self, modifier: modifier)
     }
