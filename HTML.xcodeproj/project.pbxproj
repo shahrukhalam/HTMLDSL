@@ -52,6 +52,8 @@
 		01B22BE62562EE77009DAAB4 /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BE52562EE77009DAAB4 /* FontFamily.swift */; };
 		01B22BEB2562FFB4009DAAB4 /* FontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BEA2562FFB4009DAAB4 /* FontModifier.swift */; };
 		01B22BF02563024F009DAAB4 /* FontModifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BEF2563024F009DAAB4 /* FontModifierTests.swift */; };
+		01B22BF525630886009DAAB4 /* TextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BF425630886009DAAB4 /* TextAlignment.swift */; };
+		01B22BFA25630981009DAAB4 /* TextAlignmentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BF925630981009DAAB4 /* TextAlignmentModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +128,8 @@
 		01B22BE52562EE77009DAAB4 /* FontFamily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFamily.swift; sourceTree = "<group>"; };
 		01B22BEA2562FFB4009DAAB4 /* FontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontModifier.swift; sourceTree = "<group>"; };
 		01B22BEF2563024F009DAAB4 /* FontModifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontModifierTests.swift; sourceTree = "<group>"; };
+		01B22BF425630886009DAAB4 /* TextAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlignment.swift; sourceTree = "<group>"; };
+		01B22BF925630981009DAAB4 /* TextAlignmentModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlignmentModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +243,7 @@
 				01B22BDB2562EE40009DAAB4 /* Dimension.swift */,
 				01B22BE02562EE5F009DAAB4 /* FontSize.swift */,
 				01B22BE52562EE77009DAAB4 /* FontFamily.swift */,
+				01B22BF425630886009DAAB4 /* TextAlignment.swift */,
 				019CB935255FDC0600C71B10 /* View + Element.swift */,
 				0196B253255F212700EE0E24 /* ViewBuilder.swift */,
 				019CB945255FDCBD00C71B10 /* EmptyView.swift */,
@@ -305,6 +310,7 @@
 				01B22BD12562D776009DAAB4 /* SizeModifier.swift */,
 				01B22BC42562BA7F009DAAB4 /* ForegroundColorModifier.swift */,
 				01B22BEA2562FFB4009DAAB4 /* FontModifier.swift */,
+				01B22BF925630981009DAAB4 /* TextAlignmentModifier.swift */,
 				01B22B9F25625AB7009DAAB4 /* ModifiedContent.swift */,
 				01B22BA425625B33009DAAB4 /* ModifiedContent + View.swift */,
 			);
@@ -465,7 +471,9 @@
 				019CB946255FDCBD00C71B10 /* EmptyView.swift in Sources */,
 				019CB956255FE40400C71B10 /* Title.swift in Sources */,
 				01B22BA025625AB7009DAAB4 /* ModifiedContent.swift in Sources */,
+				01B22BF525630886009DAAB4 /* TextAlignment.swift in Sources */,
 				019CB98D256039E100C71B10 /* Paragraphs.swift in Sources */,
+				01B22BFA25630981009DAAB4 /* TextAlignmentModifier.swift in Sources */,
 				01B22BAF25626986009DAAB4 /* View + Modifier.swift in Sources */,
 				01B22BE62562EE77009DAAB4 /* FontFamily.swift in Sources */,
 				0196B264255F2EB800EE0E24 /* HTML.swift in Sources */,
