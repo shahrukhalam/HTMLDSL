@@ -8,7 +8,7 @@
 import Foundation
 
 enum Color: String {
-    case Red
-    case Green
-    case Blue
+    case red
+    case green
+    case blue
 }
