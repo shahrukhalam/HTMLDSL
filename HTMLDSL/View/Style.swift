@@ -26,4 +26,19 @@ enum Style: CustomStringConvertible, Hashable {
             return "width:\(width)px;height:\(height)px;"
         }
     }
+
+    static func == (lhs: Style, rhs: Style) -> Bool {
+        switch (lhs, rhs) {
+        case (.backgroundColor, .backgroundColor):
+            return true
+        case (.width, .width):
+            return true
+        case (.height, .height):
+            return true
+        case (.size, .size):
+            return true
+        default:
+            return false
+        }
+    }
 }

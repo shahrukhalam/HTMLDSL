@@ -10,6 +10,7 @@ import Foundation
 struct Image: HTMLBodyContentView {
     typealias Body = Never
     let tag = Tag.selfClosing(.image)
+    var attributes = Set<Attribute>()
 
     private let source: String
     private let alternateText: String
@@ -20,6 +21,8 @@ struct Image: HTMLBodyContentView {
     }
 
     var element: String {
-        "<\(tag.description) src=\"\(source)\" alt=\"\(alternateText)\">"
+        let allAttributes = " " + attributes.map { $0.description }.joined(separator: " ")
+        let finalAttribute = attributes.isEmpty ? "" : allAttributes
+        return "<\(tag.description) src=\"\(source)\" alt=\"\(alternateText)\"\(finalAttribute)>"
     }
 }

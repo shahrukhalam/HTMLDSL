@@ -35,6 +35,13 @@
 		01B22B64256168D5009DAAB4 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22B63256168D5009DAAB4 /* Style.swift */; };
 		01B22B6925616924009DAAB4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22B6825616924009DAAB4 /* Color.swift */; };
 		01B22B6E25616BF9009DAAB4 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22B6D25616BF9009DAAB4 /* Attribute.swift */; };
+		01B22B902562573B009DAAB4 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22B8F2562573B009DAAB4 /* ViewModifier.swift */; };
+		01B22B9B25625959009DAAB4 /* EmptyModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22B9A25625958009DAAB4 /* EmptyModifier.swift */; };
+		01B22BA025625AB7009DAAB4 /* ModifiedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22B9F25625AB7009DAAB4 /* ModifiedContent.swift */; };
+		01B22BA525625B33009DAAB4 /* ModifiedContent + View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BA425625B33009DAAB4 /* ModifiedContent + View.swift */; };
+		01B22BAA25626685009DAAB4 /* BackgroundColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BA925626685009DAAB4 /* BackgroundColorModifier.swift */; };
+		01B22BAF25626986009DAAB4 /* View + Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BAE25626985009DAAB4 /* View + Modifier.swift */; };
+		01B22BB525626DF3009DAAB4 /* ModifiedContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BB425626DF3009DAAB4 /* ModifiedContentTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +99,13 @@
 		01B22B63256168D5009DAAB4 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		01B22B6825616924009DAAB4 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		01B22B6D25616BF9009DAAB4 /* Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
+		01B22B8F2562573B009DAAB4 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
+		01B22B9A25625958009DAAB4 /* EmptyModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModifier.swift; sourceTree = "<group>"; };
+		01B22B9F25625AB7009DAAB4 /* ModifiedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedContent.swift; sourceTree = "<group>"; };
+		01B22BA425625B33009DAAB4 /* ModifiedContent + View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModifiedContent + View.swift"; sourceTree = "<group>"; };
+		01B22BA925626685009DAAB4 /* BackgroundColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorModifier.swift; sourceTree = "<group>"; };
+		01B22BAE25626985009DAAB4 /* View + Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Modifier.swift"; sourceTree = "<group>"; };
+		01B22BB425626DF3009DAAB4 /* ModifiedContentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedContentTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				019CB93A255FDC2000C71B10 /* View */,
+				01B22B8E25625709009DAAB4 /* ViewModifier */,
 				0196B22D255F109900EE0E24 /* Document */,
 				0196B231255F10FA00EE0E24 /* HTML */,
 				019CB94E255FDDBD00C71B10 /* Head */,
@@ -168,6 +183,7 @@
 				019CB9672560190E00C71B10 /* Document */,
 				019CB96E2560191A00C71B10 /* Head */,
 				019CB97A2560232E00C71B10 /* Body */,
+				01B22BB325626DDB009DAAB4 /* ViewModifier */,
 				0196B222255F107000EE0E24 /* Info.plist */,
 			);
 			path = HTMLDSLTests;
@@ -252,6 +268,27 @@
 				019CB97B2560234700C71B10 /* ImageTests.swift */,
 			);
 			path = Body;
+			sourceTree = "<group>";
+		};
+		01B22B8E25625709009DAAB4 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				01B22B8F2562573B009DAAB4 /* ViewModifier.swift */,
+				01B22BAE25626985009DAAB4 /* View + Modifier.swift */,
+				01B22B9A25625958009DAAB4 /* EmptyModifier.swift */,
+				01B22BA925626685009DAAB4 /* BackgroundColorModifier.swift */,
+				01B22B9F25625AB7009DAAB4 /* ModifiedContent.swift */,
+				01B22BA425625B33009DAAB4 /* ModifiedContent + View.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		01B22BB325626DDB009DAAB4 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				01B22BB425626DF3009DAAB4 /* ModifiedContentTests.swift */,
+			);
+			path = ViewModifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,20 +433,26 @@
 				01B22B64256168D5009DAAB4 /* Style.swift in Sources */,
 				019CB946255FDCBD00C71B10 /* EmptyView.swift in Sources */,
 				019CB956255FE40400C71B10 /* Title.swift in Sources */,
+				01B22BA025625AB7009DAAB4 /* ModifiedContent.swift in Sources */,
 				019CB98D256039E100C71B10 /* Paragraphs.swift in Sources */,
+				01B22BAF25626986009DAAB4 /* View + Modifier.swift in Sources */,
 				0196B264255F2EB800EE0E24 /* HTML.swift in Sources */,
+				01B22BA525625B33009DAAB4 /* ModifiedContent + View.swift in Sources */,
 				0196B269255F306700EE0E24 /* Body.swift in Sources */,
 				0196B26E255F309300EE0E24 /* Headings.swift in Sources */,
 				0196B25C255F298100EE0E24 /* HTMLView.swift in Sources */,
 				0196B24F255F210900EE0E24 /* View + Never.swift in Sources */,
+				01B22B9B25625959009DAAB4 /* EmptyModifier.swift in Sources */,
 				01B22B5C25613F93009DAAB4 /* HTMLViewBuilder.swift in Sources */,
 				019CB95E25600E0B00C71B10 /* Meta.swift in Sources */,
 				019CB9762560216100C71B10 /* Image.swift in Sources */,
 				01B22B6925616924009DAAB4 /* Color.swift in Sources */,
 				019CB93C255FDC5C00C71B10 /* Tag.swift in Sources */,
+				01B22BAA25626685009DAAB4 /* BackgroundColorModifier.swift in Sources */,
 				0196B238255F16F900EE0E24 /* Document.swift in Sources */,
 				019CB936255FDC0600C71B10 /* View + Element.swift in Sources */,
 				0196B254255F212700EE0E24 /* ViewBuilder.swift in Sources */,
+				01B22B902562573B009DAAB4 /* ViewModifier.swift in Sources */,
 				01B22B6E25616BF9009DAAB4 /* Attribute.swift in Sources */,
 				0196B233255F110E00EE0E24 /* View.swift in Sources */,
 				019CB941255FDC8B00C71B10 /* AnyView.swift in Sources */,
@@ -422,6 +465,7 @@
 			files = (
 				019CB99225603AA700C71B10 /* ParagraphTests.swift in Sources */,
 				019CB963256013B100C71B10 /* MetaTests.swift in Sources */,
+				01B22BB525626DF3009DAAB4 /* ModifiedContentTests.swift in Sources */,
 				019CB97C2560234700C71B10 /* ImageTests.swift in Sources */,
 				0196B221255F107000EE0E24 /* DocumentTests.swift in Sources */,
 			);
