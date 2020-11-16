@@ -11,13 +11,13 @@ import XCTest
 class FontModifierTests: XCTestCase {
     func testHeadingWithBackgroundColorForegroundColorAndNoFont() {
         let headings = Headings("Nora Fatehi")
-            .backgroundColor(.green)
-            .foregroundColor(.blue)
+            .backgroundColor(.Green)
+            .foregroundColor(.Blue)
             .font()
 
         let expectation =
         """
-        <h1 style="background-color:green;color:blue;"> Nora Fatehi </h1>
+        <h1 style="background-color:Green;color:Blue;"> Nora Fatehi </h1>
         """
 
         XCTAssertEqual(headings.element, expectation)

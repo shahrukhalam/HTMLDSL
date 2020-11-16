@@ -11,11 +11,11 @@ import XCTest
 class ModifiedContentTests: XCTestCase {
     func testModifiedContentWithSingleBackgroundColor() {
         let image = Image("Images/nora.jpg", alternateText: "Nora Fatehi")
-            .backgroundColor(.red)
+            .backgroundColor(.Red)
 
         let expectation =
         """
-        <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color:red;">
+        <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color:Red;">
         """
 
         XCTAssertEqual(image.element, expectation)
@@ -23,24 +23,24 @@ class ModifiedContentTests: XCTestCase {
 
     func testModifiedContent_Types_Attributes_Elements() {
         let image = Image("Images/nora.jpg", alternateText: "Nora Fatehi")
-        let redImage = image.backgroundColor(.red)
-        let greenImage = redImage.backgroundColor(.green)
+        let redImage = image.backgroundColor(.Red)
+        let greenImage = redImage.backgroundColor(.Green)
 
         let redExpectation =
         """
-        <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color:red;">
+        <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color:Red;">
         """
 
         let greenExpectation =
         """
-        <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color:green;">
+        <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color:Green;">
         """
 
         XCTAssertTrue(redImage is ModifiedContent<Image, BackgroundColorModifier<Image>>)
         XCTAssertTrue(greenImage is ModifiedContent<ModifiedContent<Image, BackgroundColorModifier<Image>>, BackgroundColorModifier<ModifiedContent<Image, BackgroundColorModifier<Image>>>>)
 
-        XCTAssertEqual(redImage.attributes, [.style([.backgroundColor(.red)])])
-        XCTAssertEqual(greenImage.attributes, [Attribute.style([.backgroundColor(.green)])])
+        XCTAssertEqual(redImage.attributes, [.style([.backgroundColor(.Red)])])
+        XCTAssertEqual(greenImage.attributes, [Attribute.style([.backgroundColor(.Green)])])
 
         XCTAssertEqual(redImage.element, redExpectation)
         XCTAssertEqual(greenImage.element, greenExpectation)
@@ -48,13 +48,13 @@ class ModifiedContentTests: XCTestCase {
 
     func testModifiedContentWithMultipleBackgroundColor() {
         let image = Image("Images/nora.jpg", alternateText: "Nora Fatehi")
-            .backgroundColor(.red)
-            .backgroundColor(.green)
-            .backgroundColor(.blue)
+            .backgroundColor(.Red)
+            .backgroundColor(.Green)
+            .backgroundColor(.Blue)
 
         let expectation =
         """
-        <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color:blue;">
+        <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color:Blue;">
         """
 
         XCTAssertEqual(image.element, expectation)
@@ -62,12 +62,12 @@ class ModifiedContentTests: XCTestCase {
 
     func testHeadingWithBackgroundColorAndForegroundColor() {
         let headings = Headings("Nora Fatehi")
-            .backgroundColor(.green)
-            .foregroundColor(.blue)
+            .backgroundColor(.Green)
+            .foregroundColor(.Blue)
 
         let expectation =
         """
-        <h1 style="background-color:green;color:blue;"> Nora Fatehi </h1>
+        <h1 style="background-color:Green;color:Blue;"> Nora Fatehi </h1>
         """
 
         XCTAssertEqual(headings.element, expectation)
@@ -75,12 +75,12 @@ class ModifiedContentTests: XCTestCase {
 
     func testParagraphWithBackgroundColorAndForegroundColor() {
         let headings = Paragraphs("Nora Fatehi")
-            .backgroundColor(.green)
-            .foregroundColor(.blue)
+            .backgroundColor(.Green)
+            .foregroundColor(.Blue)
 
         let expectation =
         """
-        <p style="background-color:green;color:blue;"> Nora Fatehi </p>
+        <p style="background-color:Green;color:Blue;"> Nora Fatehi </p>
         """
 
         XCTAssertEqual(headings.element, expectation)
