@@ -37,7 +37,7 @@ class FontModifierTests: XCTestCase {
 
     func testHeadingWithFontFamilyNoSize() {
         let headings = Headings("Nora Fatehi")
-            .font(font: .serif([.TimesNewRoman, .Times, .serif]))
+            .font(family: .serif([.TimesNewRoman, .Times, .serif]))
 
         let expectation =
         """
@@ -49,11 +49,24 @@ class FontModifierTests: XCTestCase {
 
     func testHeadingWithFontSizeAndFamily() {
         let headings = Headings("Nora Fatehi")
-            .font(size: .percentage(100), font: .serif([.TimesNewRoman, .Times, .serif]))
+            .font(size: .percentage(100), family: .serif([.TimesNewRoman, .Times, .serif]))
 
         let expectation =
         """
         <h1 style="font-size:100%;font-family:Times New Roman, Times, serif;"> Nora Fatehi </h1>
+        """
+
+        XCTAssertEqual(headings.element, expectation)
+    }
+
+    func testHeadingWithFontSize_Family_AndAlignment() {
+        let headings = Headings("Nora Fatehi")
+            .font(size: .percentage(100), family: .serif([.TimesNewRoman, .Times, .serif]))
+            .align(.justify)
+
+        let expectation =
+        """
+        <h1 style="font-size:100%;font-family:Times New Roman, Times, serif;text-align:justify;"> Nora Fatehi </h1>
         """
 
         XCTAssertEqual(headings.element, expectation)

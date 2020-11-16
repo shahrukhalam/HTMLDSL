@@ -32,3 +32,6 @@ Here we are trying to build one for HTML in Pure Swift which we all love.
 - Foreground Color
 - Width
 - Height
+- Font Sizes
+- Web Safe Font Families
+- Text Alignment

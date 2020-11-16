@@ -23,8 +23,13 @@ extension HTMLBodyTextContentView {
         return ModifiedContent(content: self, modifier: modifier)
     }
 
-    func font(size: FontSize? = nil, font: FontFamily? = nil) -> some HTMLBodyTextContentView {
-        let modifier = FontModifier<Self>(size: size, font: font)
+    func font(size: FontSize? = nil, family: FontFamily? = nil) -> some HTMLBodyTextContentView {
+        let modifier = FontModifier<Self>(size: size, font: family)
+        return ModifiedContent(content: self, modifier: modifier)
+    }
+
+    func align(_ alignment: TextAlignment) -> some HTMLBodyTextContentView {
+        let modifier = TextAlignmentModifier<Self>(alignment: alignment)
         return ModifiedContent(content: self, modifier: modifier)
     }
 }
