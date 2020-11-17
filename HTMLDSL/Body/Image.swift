@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Image: HTMLBodyContentView {
+struct Image: HTMLBodyImageContentView {
     typealias Body = Never
     let tag = Tag.selfClosing(.image)
     var attributes = [Attribute]()
