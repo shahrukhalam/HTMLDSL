@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension ModifiedContent: View, HTMLView, HTMLContentView
+extension ModifiedContent: View, HTMLView, HTMLContentView, HTMLBodyView, HTMLBodyContentView
 where Modifier: ViewModifier, Modifier.Content == Content {
     typealias Body = Never
     var tag: Tag { .empty }
@@ -27,5 +27,8 @@ where Modifier: ViewModifier, Modifier.Content == Content {
     }
 }
 
-extension ModifiedContent: HTMLBodyView, HTMLBodyContentView, HTMLBodyTextContentView
-where Modifier: ViewModifier, Content: HTMLBodyTextContentView, Modifier.Content == Content {  }
+extension ModifiedContent: HTMLBodyTextContentView
+where Modifier: ViewModifier, Modifier.Content == Content, Content: HTMLBodyTextContentView {  }
+
+extension ModifiedContent: HTMLBodyImageContentView
+where Modifier: ViewModifier, Modifier.Content == Content, Content: HTMLBodyImageContentView {  }
