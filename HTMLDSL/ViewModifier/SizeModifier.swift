@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct SizeModifier<ContentView>: ViewModifier where ContentView: View {
-    typealias Content = ContentView
+struct SizeModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
     typealias Body = ContentView
 
     private let width: Dimension?

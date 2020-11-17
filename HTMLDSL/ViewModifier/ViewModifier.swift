@@ -9,6 +9,6 @@ import Foundation
 
 protocol ViewModifier {
     associatedtype Body: View
-    associatedtype Content: View
+    typealias Content = Body
     func body(content: Self.Content) -> Self.Body
 }

@@ -8,7 +8,6 @@
 import Foundation
 
 struct EmptyModifier: ViewModifier {
-    typealias Content = Never
     typealias Body = Never
 
     func body(content: Content) -> Body {  }

@@ -8,7 +8,6 @@
 import Foundation
 
 struct FontModifier<ContentView>: ViewModifier where ContentView: HTMLBodyTextContentView {
-    typealias Content = ContentView
     typealias Body = ContentView
 
     private let size: FontSize?

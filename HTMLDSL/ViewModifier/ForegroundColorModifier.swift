@@ -8,7 +8,6 @@
 import Foundation
 
 struct ForegroundColorModifier<ContentView>: ViewModifier where ContentView: HTMLBodyTextContentView {
-    typealias Content = ContentView
     typealias Body = ContentView
 
     private let color: Color
