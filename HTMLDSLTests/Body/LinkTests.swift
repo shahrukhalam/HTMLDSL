@@ -30,4 +30,52 @@ class LinkTests: XCTestCase {
 
         XCTAssertEqual(link.element, expectation)
     }
+
+    func testLinkWithImage() {
+        let link = ImageLink(url: "https://www.google.com") {
+            Image("google.jpg", alternateText: "Google")
+        }
+
+        let expectation =
+        """
+        <a href="https://www.google.com">
+        <img src="google.jpg" alt="Google">
+        </a>
+        """
+
+        XCTAssertEqual(link.element, expectation)
+    }
+
+    func testLinkWithImageAndTarget() {
+        let link = ImageLink(url: "https://www.google.com") {
+            Image("google.jpg", alternateText: "Google")
+        }
+        .target(.newWindowOrTab)
+
+        let expectation =
+        """
+        <a href="https://www.google.com" target="_blank">
+        <img src="google.jpg" alt="Google">
+        </a>
+        """
+
+        XCTAssertEqual(link.element, expectation)
+    }
+
+    func testLinkWithImage_Style_AndTarget() {
+        let link = ImageLink(url: "https://www.google.com") {
+            Image("google.jpg", alternateText: "Google")
+                .size(width: .pixel(42), height: .pixel(42))
+        }
+        .target(.newWindowOrTab)
+
+        let expectation =
+        """
+        <a href="https://www.google.com" target="_blank">
+        <img src="google.jpg" alt="Google" style="width:42px;height:42px;">
+        </a>
+        """
+
+        XCTAssertEqual(link.element, expectation)
+    }
 }
