@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct BackgroundColorModifier<ContentView>: ViewModifier where ContentView: View {
-    typealias Content = ContentView
+struct BackgroundColorModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
     typealias Body = ContentView
 
     private let color: Color

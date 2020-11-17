@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension ViewModifier where Content == Body {
+extension ViewModifier {
     func update(content: Content, for oldStyle: Style, with newStyle: Style) -> Body {
         var newContent = content
         var newStyles = [Style]()
