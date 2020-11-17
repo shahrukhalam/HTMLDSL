@@ -16,3 +16,4 @@ protocol HTMLHeadContentView: HTMLHeadView {  }
 protocol HTMLBodyView: HTMLContentView {  }
 protocol HTMLBodyContentView: HTMLBodyView {  }
 protocol HTMLBodyTextContentView: HTMLBodyContentView {  }
+protocol HTMLBodyImageContentView: HTMLBodyContentView {  }

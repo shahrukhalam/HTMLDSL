@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0114CA6825646454008E3F8A /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CA6725646454008E3F8A /* Link.swift */; };
+		0114CA6D2564669B008E3F8A /* LinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CA6C2564669B008E3F8A /* LinkTests.swift */; };
+		0114CA7225646A23008E3F8A /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CA7125646A23008E3F8A /* Target.swift */; };
+		0114CA7725646D68008E3F8A /* LinkViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CA7625646D68008E3F8A /* LinkViewBuilder.swift */; };
 		0196B207255F105000EE0E24 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B206255F105000EE0E24 /* main.swift */; };
 		0196B21C255F107000EE0E24 /* HTMLDSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0196B213255F107000EE0E24 /* HTMLDSL.framework */; };
 		0196B221255F107000EE0E24 /* DocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B220255F107000EE0E24 /* DocumentTests.swift */; };
@@ -81,6 +85,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0114CA6725646454008E3F8A /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		0114CA6C2564669B008E3F8A /* LinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkTests.swift; sourceTree = "<group>"; };
+		0114CA7125646A23008E3F8A /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
+		0114CA7625646D68008E3F8A /* LinkViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkViewBuilder.swift; sourceTree = "<group>"; };
 		0196B203255F105000EE0E24 /* HTML */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HTML; sourceTree = BUILT_PRODUCTS_DIR; };
 		0196B206255F105000EE0E24 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0196B213255F107000EE0E24 /* HTMLDSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTMLDSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,6 +256,7 @@
 				01B22BE02562EE5F009DAAB4 /* FontSize.swift */,
 				01B22BE52562EE77009DAAB4 /* FontFamily.swift */,
 				01B22BF425630886009DAAB4 /* TextAlignment.swift */,
+				0114CA7125646A23008E3F8A /* Target.swift */,
 				019CB935255FDC0600C71B10 /* View + Element.swift */,
 				0196B253255F212700EE0E24 /* ViewBuilder.swift */,
 				019CB945255FDCBD00C71B10 /* EmptyView.swift */,
@@ -263,6 +272,8 @@
 				0196B26D255F309300EE0E24 /* Headings.swift */,
 				019CB98C256039E100C71B10 /* Paragraphs.swift */,
 				019CB9752560216100C71B10 /* Image.swift */,
+				0114CA6725646454008E3F8A /* Link.swift */,
+				0114CA7625646D68008E3F8A /* LinkViewBuilder.swift */,
 			);
 			path = Body;
 			sourceTree = "<group>";
@@ -298,6 +309,7 @@
 			children = (
 				019CB99125603AA700C71B10 /* ParagraphTests.swift */,
 				019CB97B2560234700C71B10 /* ImageTests.swift */,
+				0114CA6C2564669B008E3F8A /* LinkTests.swift */,
 			);
 			path = Body;
 			sourceTree = "<group>";
@@ -479,16 +491,19 @@
 				01B22BA025625AB7009DAAB4 /* ModifiedContent.swift in Sources */,
 				01B22BF525630886009DAAB4 /* TextAlignment.swift in Sources */,
 				019CB98D256039E100C71B10 /* Paragraphs.swift in Sources */,
+				0114CA7725646D68008E3F8A /* LinkViewBuilder.swift in Sources */,
 				01B22BFA25630981009DAAB4 /* TextAlignmentModifier.swift in Sources */,
 				01B22BAF25626986009DAAB4 /* View + Modifier.swift in Sources */,
 				01B22BE62562EE77009DAAB4 /* FontFamily.swift in Sources */,
 				0196B264255F2EB800EE0E24 /* HTML.swift in Sources */,
 				01B22BA525625B33009DAAB4 /* ModifiedContent + View.swift in Sources */,
 				0196B269255F306700EE0E24 /* Body.swift in Sources */,
+				0114CA7225646A23008E3F8A /* Target.swift in Sources */,
 				0196B26E255F309300EE0E24 /* Headings.swift in Sources */,
 				0196B25C255F298100EE0E24 /* HTMLView.swift in Sources */,
 				0196B24F255F210900EE0E24 /* View + Never.swift in Sources */,
 				01B22BFF25630D6F009DAAB4 /* TextFormatting.swift in Sources */,
+				0114CA6825646454008E3F8A /* Link.swift in Sources */,
 				01B22B9B25625959009DAAB4 /* EmptyModifier.swift in Sources */,
 				01B22B5C25613F93009DAAB4 /* HTMLViewBuilder.swift in Sources */,
 				01B22BE12562EE5F009DAAB4 /* FontSize.swift in Sources */,
@@ -517,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				019CB99225603AA700C71B10 /* ParagraphTests.swift in Sources */,
+				0114CA6D2564669B008E3F8A /* LinkTests.swift in Sources */,
 				01B22BF02563024F009DAAB4 /* FontModifierTests.swift in Sources */,
 				019CB963256013B100C71B10 /* MetaTests.swift in Sources */,
 				01B22BB525626DF3009DAAB4 /* ModifiedContentTests.swift in Sources */,
