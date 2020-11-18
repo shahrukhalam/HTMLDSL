@@ -25,8 +25,9 @@ Here we are trying to build one for HTML in Pure Swift which we all love.
     - Meta
 - Body
     - Headings
-    - Image
     - Paragraphs
+    - Image
+    - Link with Text & Image
 ### Attributes:
 - Background Color
 - Foreground Color
@@ -36,3 +37,4 @@ Here we are trying to build one for HTML in Pure Swift which we all love.
 - Web Safe Font Families
 - Text Alignment
 - Text Formatting
+- Target for Links
