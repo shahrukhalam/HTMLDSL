@@ -22,4 +22,15 @@ enum Attribute: CustomStringConvertible, Equatable {
             return "target=\"\(target.rawValue)\""
         }
     }
+
+    static func == (lhs: Attribute, rhs: Attribute) -> Bool {
+        switch (lhs, rhs) {
+        case (.style, .style):
+            return true
+        case (.target, .target):
+            return true
+        default:
+            return false
+        }
+    }
 }
