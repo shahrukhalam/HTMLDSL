@@ -32,3 +32,6 @@ where Modifier: ViewModifier, Modifier.Content == Content, Content: HTMLBodyText
 
 extension ModifiedContent: HTMLBodyImageContentView
 where Modifier: ViewModifier, Modifier.Content == Content, Content: HTMLBodyImageContentView {  }
+
+extension ModifiedContent: HTMLBodyLinkContentView
+where Modifier: ViewModifier, Modifier.Content == Content, Content: HTMLBodyLinkContentView {  }

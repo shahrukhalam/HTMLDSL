@@ -25,4 +25,18 @@ extension ViewModifier {
         newContent.attributes = newAttributes
         return newContent
     }
+
+    func update(content: Content, for oldAttribute: Attribute, with newAttribute: Attribute) -> Body {
+        var newContent = content
+        var newAttributes = content.attributes
+        newAttributes.enumerated().forEach { (index, attribute) in
+            if oldAttribute == attribute {
+                newAttributes.remove(at: index)
+            }
+        }
+
+        newAttributes.append(newAttribute)
+        newContent.attributes = newAttributes
+        return newContent
+    }
 }

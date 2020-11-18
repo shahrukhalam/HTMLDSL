@@ -17,3 +17,4 @@ protocol HTMLBodyView: HTMLContentView {  }
 protocol HTMLBodyContentView: HTMLBodyView {  }
 protocol HTMLBodyTextContentView: HTMLBodyContentView {  }
 protocol HTMLBodyImageContentView: HTMLBodyContentView {  }
+protocol HTMLBodyLinkContentView: HTMLBodyContentView {  }

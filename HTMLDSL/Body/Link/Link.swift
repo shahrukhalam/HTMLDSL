@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Link: HTMLBodyContentView {
+struct Link: HTMLBodyLinkContentView {
     typealias Body = Never
     let tag = Tag.enclosing(.link)
     var attributes = [Attribute]()
@@ -24,11 +24,5 @@ struct Link: HTMLBodyContentView {
         let allAttributes = " " + attributes.map { $0.description }.joined(separator: " ")
         let finalAttribute = attributes.isEmpty ? "" : allAttributes
         return "<\(tag.description) href=\"\(url)\"\(finalAttribute)>\(text)</\(tag.description)>"
-    }
-
-    func target(_ attribute: Target) -> Link {
-        var link = Link(text: text, url: url)
-        link.attributes = attributes + [.target(attribute)]
-        return link
     }
 }
