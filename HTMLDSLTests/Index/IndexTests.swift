@@ -1,55 +1,15 @@
-# HTMLDSL
+//
+//  IndexTests.swift
+//  HTMLDSLTests
+//
+//  Created by Shahrukh Alam on 24/11/20.
+//
 
-## What's a DSL:
-It stands for Domain Specific Language.
+import XCTest
+@testable import HTMLDSL
 
-Purpose: DSL solves a particular problem for everyone even for the ones with very little knowledge on a particular domain.  
-
-If you are an Apple Developer, then you would probably know about `Podfile` which is a DSL written in Ruby.  
-
-Here we are trying to build one for HTML in Pure Swift which we all love.
-
-## Features:
-✅ Unit Tested
-
-✅ Experience SwiftUI like Syntax  
-
-✅ Type Safety  
-
-✅ Auto Completion  
-
-✅ Compile Time Error  
-
-✅ Easy to Read & Debug  
-
-✅ Create Websites without any knowledge of HTML, in pure Swift
-
-## Currently Supports:
-
-### Elements:
-- Document
-- HTML
-- Head
-    - Title
-    - Meta
-- Body
-    - Headings
-    - Paragraphs
-    - Image
-    - Link with Text & Image
-### Attributes:
-- Background Color
-- Foreground Color
-- Width
-- Height
-- Font Sizes
-- Web Safe Font Families
-- Text Alignment
-- Text Formatting
-- Target for Links
-
-## Example:
-```
+class IndexTests: XCTestCase {
+    func testIndexHTML() {
         let description =
             """
         (born 6 February 1992) is a Canadian dancer, model, actress, and singer who is best known for her work in the Indian film industry. She has appeared in Hindi, Telugu, Malayalam and Tamil language films.
@@ -81,7 +41,24 @@ Here we are trying to build one for HTML in Pure Swift which we all love.
                 }
             }
         }
-```
-Above code generates below HTML Page:
 
-![Index Page](Pages/Images/index.png)
+        let expectation =
+            """
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <title> My Website </title>
+        <meta charset="UTF-8" name="author" content="Shahrukh Alam">
+        </head>
+        <body>
+        <h1 style="color:DeepPink;font-size:4vw;"> Nora Fatehi </h1>
+        <p style="background-color:GhostWhite;font-size:125%;font-family:Courier New, Courier, monospace;text-align:justify;"> <b>Nora Fatehi </b>\(description) </p>
+        <img src="Images/nora.jpg" alt="Nora Fatehi" style="width:30%;">
+        <a href="https://www.instagram.com/norafatehi/?hl=en" target="_blank">Nora Fatehi Instagram Handle</a>
+        </body>
+        </html>
+        """
+
+        XCTAssertEqual(index.element, expectation)
+    }
+}

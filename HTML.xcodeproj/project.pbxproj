@@ -64,6 +64,7 @@
 		01B22BFA25630981009DAAB4 /* TextAlignmentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BF925630981009DAAB4 /* TextAlignmentModifier.swift */; };
 		01B22BFF25630D6F009DAAB4 /* TextFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BFE25630D6F009DAAB4 /* TextFormatting.swift */; };
 		01B22C0425630FFA009DAAB4 /* TextFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22C0325630FFA009DAAB4 /* TextFormattingTests.swift */; };
+		01E8025D256CDEA400B541ED /* IndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E8025C256CDEA400B541ED /* IndexTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,7 @@
 		01B22BF925630981009DAAB4 /* TextAlignmentModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlignmentModifier.swift; sourceTree = "<group>"; };
 		01B22BFE25630D6F009DAAB4 /* TextFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatting.swift; sourceTree = "<group>"; };
 		01B22C0325630FFA009DAAB4 /* TextFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormattingTests.swift; sourceTree = "<group>"; };
+		01E8025C256CDEA400B541ED /* IndexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 		0196B21F255F107000EE0E24 /* HTMLDSLTests */ = {
 			isa = PBXGroup;
 			children = (
+				01E8025B256CDE9300B541ED /* Index */,
 				019CB9672560190E00C71B10 /* Document */,
 				019CB96E2560191A00C71B10 /* Head */,
 				019CB97A2560232E00C71B10 /* Body */,
@@ -363,6 +366,14 @@
 				01B22C0325630FFA009DAAB4 /* TextFormattingTests.swift */,
 			);
 			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		01E8025B256CDE9300B541ED /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				01E8025C256CDEA400B541ED /* IndexTests.swift */,
+			);
+			path = Index;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -557,6 +568,7 @@
 			files = (
 				019CB99225603AA700C71B10 /* ParagraphTests.swift in Sources */,
 				0114CA6D2564669B008E3F8A /* LinkTests.swift in Sources */,
+				01E8025D256CDEA400B541ED /* IndexTests.swift in Sources */,
 				01B22BF02563024F009DAAB4 /* FontModifierTests.swift in Sources */,
 				019CB963256013B100C71B10 /* MetaTests.swift in Sources */,
 				01B22BB525626DF3009DAAB4 /* ModifiedContentTests.swift in Sources */,
