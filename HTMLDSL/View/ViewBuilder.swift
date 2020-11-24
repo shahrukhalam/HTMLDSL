@@ -22,4 +22,9 @@ struct ViewBuilder {
         let views = [AnyView(c0), AnyView(c1), AnyView(c2)]
         return AnyView(views)
     }
+
+    static func buildBlock<C0, C1, C2, C3>(_ c0: C0, _ c1: C1, _ c2: C2, _ c3: C3) -> AnyView where C0 : HTMLContentView, C1 : HTMLContentView, C2 : HTMLContentView, C3 : HTMLContentView {
+        let views = [AnyView(c0), AnyView(c1), AnyView(c2), AnyView(c3)]
+        return AnyView(views)
+    }
 }
