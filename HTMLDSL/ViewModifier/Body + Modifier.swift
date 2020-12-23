@@ -8,16 +8,6 @@
 import Foundation
 
 extension HTMLBodyView {
-    func identifyBy(id: String) -> some HTMLBodyView {
-        let modifier = IDModifier<Self>(id: id)
-        return ModifiedContent(content: self, modifier: modifier)
-    }
-
-    func identifyBy(cssClass: CSSClass) -> some HTMLBodyView {
-        let modifier = ClassModifier<Self>(cssClass: cssClass)
-        return ModifiedContent(content: self, modifier: modifier)
-    }
-
     func backgroundColor(_ color: Color) -> some HTMLBodyView {
         let modifier = BackgroundColorModifier<Self>(color: color)
         return ModifiedContent(content: self, modifier: modifier)

@@ -13,7 +13,7 @@ struct FlexibleContainer<Content>: HTMLBodyContentView where Content: HTMLBodyCo
     let tag = Tag.empty
     var attributes = [Attribute]()
 
-    init(@LinkViewBuilder content: () -> Content) {
+    init(@ViewBuilder content: () -> Content) {
         self.content = content()
     }
 
