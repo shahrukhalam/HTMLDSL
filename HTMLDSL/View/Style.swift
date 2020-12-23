@@ -12,6 +12,15 @@ enum Style: CustomStringConvertible, Equatable {
     case width(Dimension)
     case height(Dimension)
 
+    case margin(left: MarginDimension,
+                top: MarginDimension,
+                right: MarginDimension,
+                bottom: MarginDimension)
+    case padding(left: PaddingDimension,
+                 top: PaddingDimension,
+                 right: PaddingDimension,
+                 bottom: PaddingDimension)
+
     case foregroundColor(Color)
     case fontFamily(FontFamily)
     case fontSize(FontSize)
@@ -33,6 +42,10 @@ enum Style: CustomStringConvertible, Equatable {
             return "font-size:\(fontSize.description);"
         case .textAlignment(let alignment):
             return "text-align:\(alignment.rawValue);"
+        case let .margin(left, top, right, bottom):
+            return "margin: \(left.description) \(top.description) \(right.description) \(bottom.description);"
+        case let .padding(left, top, right, bottom):
+            return "padding: \(left.description) \(top.description) \(right.description) \(bottom.description);"
         }
     }
 
@@ -51,6 +64,10 @@ enum Style: CustomStringConvertible, Equatable {
         case (.fontSize, .fontSize):
             return true
         case (.textAlignment, .textAlignment):
+            return true
+        case (.margin, .margin):
+            return true
+        case (.padding, .padding):
             return true
         default:
             return false
