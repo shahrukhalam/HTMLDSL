@@ -12,7 +12,7 @@ enum CSSClass: String {
     case flexibleContainer = "flex-container"
 }
 
-struct ClassModifier<ContentView>: ViewModifier where ContentView: HTMLBodyView {
+struct ClassModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
     typealias Body = ContentView
 
     private let cssClass: CSSClass

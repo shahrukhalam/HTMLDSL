@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct IDModifier<ContentView>: ViewModifier where ContentView: HTMLBodyView {
+struct IDModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
     typealias Body = ContentView
 
     private let id: Attribute.HTMLID
