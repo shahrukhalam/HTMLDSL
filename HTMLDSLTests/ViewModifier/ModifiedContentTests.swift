@@ -72,9 +72,6 @@ class ModifiedContentTests: XCTestCase {
         <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color:Green;">
         """
 
-        XCTAssertTrue(redImage is ModifiedContent<Image, BackgroundColorModifier<Image>>)
-        XCTAssertTrue(greenImage is ModifiedContent<ModifiedContent<Image, BackgroundColorModifier<Image>>, BackgroundColorModifier<ModifiedContent<Image, BackgroundColorModifier<Image>>>>)
-
         XCTAssertEqual(redImage.attributes, [.style([.backgroundColor(.Red)])])
         XCTAssertEqual(greenImage.attributes, [Attribute.style([.backgroundColor(.Green)])])
 
