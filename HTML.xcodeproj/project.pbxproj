@@ -19,6 +19,8 @@
 		016A6CFC2593AA0200C62F47 /* ClassModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6CFB2593AA0200C62F47 /* ClassModifier.swift */; };
 		016A6D012593B0A200C62F47 /* FlexibleContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D002593B0A100C62F47 /* FlexibleContainerTests.swift */; };
 		016A6D062593B7A900C62F47 /* BodyContent + Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D052593B7A900C62F47 /* BodyContent + Modifier.swift */; };
+		016A6D0B2593D32D00C62F47 /* Div.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D0A2593D32D00C62F47 /* Div.swift */; };
+		016A6D102593DBF500C62F47 /* DivTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D0F2593DBF500C62F47 /* DivTests.swift */; };
 		0196B207255F105000EE0E24 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B206255F105000EE0E24 /* main.swift */; };
 		0196B21C255F107000EE0E24 /* HTMLDSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0196B213255F107000EE0E24 /* HTMLDSL.framework */; };
 		0196B221255F107000EE0E24 /* DocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B220255F107000EE0E24 /* DocumentTests.swift */; };
@@ -108,6 +110,8 @@
 		016A6CFB2593AA0200C62F47 /* ClassModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassModifier.swift; sourceTree = "<group>"; };
 		016A6D002593B0A100C62F47 /* FlexibleContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleContainerTests.swift; sourceTree = "<group>"; };
 		016A6D052593B7A900C62F47 /* BodyContent + Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyContent + Modifier.swift"; sourceTree = "<group>"; };
+		016A6D0A2593D32D00C62F47 /* Div.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Div.swift; sourceTree = "<group>"; };
+		016A6D0F2593DBF500C62F47 /* DivTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivTests.swift; sourceTree = "<group>"; };
 		0196B203255F105000EE0E24 /* HTML */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HTML; sourceTree = BUILT_PRODUCTS_DIR; };
 		0196B206255F105000EE0E24 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0196B213255F107000EE0E24 /* HTMLDSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTMLDSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -306,6 +310,7 @@
 				019CB98C256039E100C71B10 /* Paragraphs.swift */,
 				019CB9752560216100C71B10 /* Image.swift */,
 				016A6CEC2593A8AD00C62F47 /* FlexibleContainer.swift */,
+				016A6D0A2593D32D00C62F47 /* Div.swift */,
 				0114CA8525647B3B008E3F8A /* Link */,
 			);
 			path = Body;
@@ -382,6 +387,7 @@
 				01B22BEF2563024F009DAAB4 /* FontModifierTests.swift */,
 				01B22C0325630FFA009DAAB4 /* TextFormattingTests.swift */,
 				016A6D002593B0A100C62F47 /* FlexibleContainerTests.swift */,
+				016A6D0F2593DBF500C62F47 /* DivTests.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -537,6 +543,7 @@
 				01B22BCA2562BFE2009DAAB4 /* TextView + Modifier.swift in Sources */,
 				019CB946255FDCBD00C71B10 /* EmptyView.swift in Sources */,
 				019CB956255FE40400C71B10 /* Title.swift in Sources */,
+				016A6D0B2593D32D00C62F47 /* Div.swift in Sources */,
 				0114CA8125647B1A008E3F8A /* ImageLink.swift in Sources */,
 				01AA15F3256555F5006F2B39 /* LinkView + Modifier.swift in Sources */,
 				01B22BA025625AB7009DAAB4 /* ModifiedContent.swift in Sources */,
@@ -592,6 +599,7 @@
 				019CB99225603AA700C71B10 /* ParagraphTests.swift in Sources */,
 				016A6D012593B0A200C62F47 /* FlexibleContainerTests.swift in Sources */,
 				0114CA6D2564669B008E3F8A /* LinkTests.swift in Sources */,
+				016A6D102593DBF500C62F47 /* DivTests.swift in Sources */,
 				01E8025D256CDEA400B541ED /* IndexTests.swift in Sources */,
 				01B22BF02563024F009DAAB4 /* FontModifierTests.swift in Sources */,
 				019CB963256013B100C71B10 /* MetaTests.swift in Sources */,

@@ -22,6 +22,4 @@ struct FlexibleContainer<Content>: HTMLBodyContentView where Content: HTMLBodyCo
         let modifiedBody = ModifiedContent(content: content, modifier: modifier)
         return modifiedBody
     }
-
-    var element: String { body.element }
 }

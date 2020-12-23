@@ -19,7 +19,7 @@ extension View {
         case .selfClosing:
             return "<\(tag.description)\(finalAttribute)>\n\(body.element)"
         case .empty:
-            preconditionFailure("It's an EmptyView: shouldn't be used")
+            return "\(body.element)"
         }
     }
 }
