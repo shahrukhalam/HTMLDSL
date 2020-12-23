@@ -13,6 +13,10 @@
 		0114CA7725646D68008E3F8A /* LinkViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CA7625646D68008E3F8A /* LinkViewBuilder.swift */; };
 		0114CA7C25647AD7008E3F8A /* ImageView + Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CA7B25647AD7008E3F8A /* ImageView + Modifier.swift */; };
 		0114CA8125647B1A008E3F8A /* ImageLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CA8025647B1A008E3F8A /* ImageLink.swift */; };
+		016A6CED2593A8AD00C62F47 /* FlexibleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6CEC2593A8AD00C62F47 /* FlexibleContainer.swift */; };
+		016A6CF22593A9CD00C62F47 /* Body + Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6CF12593A9CD00C62F47 /* Body + Modifier.swift */; };
+		016A6CF72593A9EA00C62F47 /* IDModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6CF62593A9EA00C62F47 /* IDModifier.swift */; };
+		016A6CFC2593AA0200C62F47 /* ClassModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6CFB2593AA0200C62F47 /* ClassModifier.swift */; };
 		0196B207255F105000EE0E24 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B206255F105000EE0E24 /* main.swift */; };
 		0196B21C255F107000EE0E24 /* HTMLDSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0196B213255F107000EE0E24 /* HTMLDSL.framework */; };
 		0196B221255F107000EE0E24 /* DocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B220255F107000EE0E24 /* DocumentTests.swift */; };
@@ -96,6 +100,10 @@
 		0114CA7625646D68008E3F8A /* LinkViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkViewBuilder.swift; sourceTree = "<group>"; };
 		0114CA7B25647AD7008E3F8A /* ImageView + Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView + Modifier.swift"; sourceTree = "<group>"; };
 		0114CA8025647B1A008E3F8A /* ImageLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLink.swift; sourceTree = "<group>"; };
+		016A6CEC2593A8AD00C62F47 /* FlexibleContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleContainer.swift; sourceTree = "<group>"; };
+		016A6CF12593A9CD00C62F47 /* Body + Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Body + Modifier.swift"; sourceTree = "<group>"; };
+		016A6CF62593A9EA00C62F47 /* IDModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDModifier.swift; sourceTree = "<group>"; };
+		016A6CFB2593AA0200C62F47 /* ClassModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassModifier.swift; sourceTree = "<group>"; };
 		0196B203255F105000EE0E24 /* HTML */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HTML; sourceTree = BUILT_PRODUCTS_DIR; };
 		0196B206255F105000EE0E24 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0196B213255F107000EE0E24 /* HTMLDSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTMLDSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,6 +301,7 @@
 				0196B26D255F309300EE0E24 /* Headings.swift */,
 				019CB98C256039E100C71B10 /* Paragraphs.swift */,
 				019CB9752560216100C71B10 /* Image.swift */,
+				016A6CEC2593A8AD00C62F47 /* FlexibleContainer.swift */,
 				0114CA8525647B3B008E3F8A /* Link */,
 			);
 			path = Body;
@@ -340,10 +349,13 @@
 				01B22B8F2562573B009DAAB4 /* ViewModifier.swift */,
 				01B22BBF2562B84C009DAAB4 /* ViewModifier + Extension.swift */,
 				01B22BAE25626985009DAAB4 /* View + Modifier.swift */,
+				016A6CF12593A9CD00C62F47 /* Body + Modifier.swift */,
 				01B22BC92562BFE2009DAAB4 /* TextView + Modifier.swift */,
 				0114CA7B25647AD7008E3F8A /* ImageView + Modifier.swift */,
 				01AA15F2256555F5006F2B39 /* LinkView + Modifier.swift */,
 				01B22B9A25625958009DAAB4 /* EmptyModifier.swift */,
+				016A6CF62593A9EA00C62F47 /* IDModifier.swift */,
+				016A6CFB2593AA0200C62F47 /* ClassModifier.swift */,
 				01B22BA925626685009DAAB4 /* BackgroundColorModifier.swift */,
 				01B22BD12562D776009DAAB4 /* SizeModifier.swift */,
 				01B22BC42562BA7F009DAAB4 /* ForegroundColorModifier.swift */,
@@ -523,11 +535,13 @@
 				01AA15F3256555F5006F2B39 /* LinkView + Modifier.swift in Sources */,
 				01B22BA025625AB7009DAAB4 /* ModifiedContent.swift in Sources */,
 				01B22BF525630886009DAAB4 /* TextAlignment.swift in Sources */,
+				016A6CFC2593AA0200C62F47 /* ClassModifier.swift in Sources */,
 				019CB98D256039E100C71B10 /* Paragraphs.swift in Sources */,
 				0114CA7725646D68008E3F8A /* LinkViewBuilder.swift in Sources */,
 				01B22BFA25630981009DAAB4 /* TextAlignmentModifier.swift in Sources */,
 				01B22BAF25626986009DAAB4 /* View + Modifier.swift in Sources */,
 				01B22BE62562EE77009DAAB4 /* FontFamily.swift in Sources */,
+				016A6CED2593A8AD00C62F47 /* FlexibleContainer.swift in Sources */,
 				0196B264255F2EB800EE0E24 /* HTML.swift in Sources */,
 				01B22BA525625B33009DAAB4 /* ModifiedContent + View.swift in Sources */,
 				0196B269255F306700EE0E24 /* Body.swift in Sources */,
@@ -536,6 +550,7 @@
 				0196B25C255F298100EE0E24 /* HTMLView.swift in Sources */,
 				0196B24F255F210900EE0E24 /* View + Never.swift in Sources */,
 				01B22BFF25630D6F009DAAB4 /* TextFormatting.swift in Sources */,
+				016A6CF72593A9EA00C62F47 /* IDModifier.swift in Sources */,
 				0114CA6825646454008E3F8A /* Link.swift in Sources */,
 				01B22B9B25625959009DAAB4 /* EmptyModifier.swift in Sources */,
 				01B22B5C25613F93009DAAB4 /* HTMLViewBuilder.swift in Sources */,
@@ -554,6 +569,7 @@
 				0196B254255F212700EE0E24 /* ViewBuilder.swift in Sources */,
 				01B22BC02562B84C009DAAB4 /* ViewModifier + Extension.swift in Sources */,
 				01B22BC52562BA7F009DAAB4 /* ForegroundColorModifier.swift in Sources */,
+				016A6CF22593A9CD00C62F47 /* Body + Modifier.swift in Sources */,
 				01B22B902562573B009DAAB4 /* ViewModifier.swift in Sources */,
 				01B22B6E25616BF9009DAAB4 /* Attribute.swift in Sources */,
 				01AA15EE25655571006F2B39 /* TargetModifier.swift in Sources */,
