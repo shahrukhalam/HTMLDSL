@@ -36,6 +36,7 @@ enum EnclosingTag: CustomStringConvertible {
     case headings(HeadingTag)
     case paragraph
     case link
+    case div
 
     var description: String {
         switch self {
@@ -53,6 +54,8 @@ enum EnclosingTag: CustomStringConvertible {
             return "p"
         case .link:
             return "a"
+        case .div:
+            return "div"
         }
     }
 }
