@@ -118,4 +118,47 @@ class ModifiedContentTests: XCTestCase {
 
         XCTAssertEqual(headings.element, expectation)
     }
+
+    func testParagraphWithBackgroundColor_ForegroundColorAndID() {
+        let headings = Paragraphs("Nora Fatehi")
+            .backgroundColor(.Green)
+            .foregroundColor(.Blue)
+            .identifyBy(id: "Nora")
+
+        let expectation =
+        """
+        <p style="background-color:Green;color:Blue;" id="Nora"> Nora Fatehi </p>
+        """
+
+        XCTAssertEqual(headings.element, expectation)
+    }
+
+    func testParagraphWithBackgroundColor_ForegroundColorAndClass() {
+        let headings = Paragraphs("Nora Fatehi")
+            .backgroundColor(.Green)
+            .foregroundColor(.Blue)
+            .identifyBy(cssClass: .flexibleContainer)
+
+        let expectation =
+        """
+        <p style="background-color:Green;color:Blue;" class="flex-container"> Nora Fatehi </p>
+        """
+
+        XCTAssertEqual(headings.element, expectation)
+    }
+
+    func testParagraphWithBackgroundColor_ForegroundColor_IDAndClass() {
+        let headings = Paragraphs("Nora Fatehi")
+            .backgroundColor(.Green)
+            .foregroundColor(.Blue)
+            .identifyBy(id: "Nora")
+            .identifyBy(cssClass: .flexibleContainer)
+
+        let expectation =
+        """
+        <p style="background-color:Green;color:Blue;" id="Nora" class="flex-container"> Nora Fatehi </p>
+        """
+
+        XCTAssertEqual(headings.element, expectation)
+    }
 }
