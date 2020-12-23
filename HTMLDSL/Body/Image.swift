@@ -21,8 +21,9 @@ struct Image: HTMLBodyImageContentView {
     }
 
     var element: String {
-        let allAttributes = " " + attributes.map { $0.description }.joined(separator: " ")
-        let finalAttribute = attributes.isEmpty ? "" : allAttributes
+        let allAttributes = attributes.map { $0.description }.joined(separator: " ")
+        let isEmptyAttribute = attributes.isEmpty || allAttributes.isEmpty
+        let finalAttribute = isEmptyAttribute ? "" : " " + allAttributes
         return "<\(tag.description) src=\"\(source)\" alt=\"\(alternateText)\"\(finalAttribute)>"
     }
 }
