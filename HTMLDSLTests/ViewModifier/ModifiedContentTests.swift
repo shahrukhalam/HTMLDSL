@@ -9,6 +9,42 @@ import XCTest
 @testable import HTMLDSL
 
 class ModifiedContentTests: XCTestCase {
+    func testHeadingWithID() {
+        let headings = Headings("Nora Fatehi")
+            .identifyBy(id: "Nora")
+
+        let expectation =
+        """
+        <h1 id="Nora"> Nora Fatehi </h1>
+        """
+
+        XCTAssertEqual(headings.element, expectation)
+    }
+
+    func testHeadingWithEmptyClass() {
+        let headings = Headings("Nora Fatehi")
+            .identifyBy(cssClass: .empty)
+
+        let expectation =
+        """
+        <h1> Nora Fatehi </h1>
+        """
+
+        XCTAssertEqual(headings.element, expectation)
+    }
+
+    func testHeadingWithClass() {
+        let headings = Headings("Nora Fatehi")
+            .identifyBy(cssClass: .flexibleContainer)
+
+        let expectation =
+        """
+        <h1 class="flex-container"> Nora Fatehi </h1>
+        """
+
+        XCTAssertEqual(headings.element, expectation)
+    }
+
     func testModifiedContentWithSingleBackgroundColor() {
         let image = Image("Images/nora.jpg", alternateText: "Nora Fatehi")
             .backgroundColor(.Red)
