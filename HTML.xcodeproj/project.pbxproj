@@ -26,6 +26,9 @@
 		016A6D1F2593F61C00C62F47 /* PaddingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D1E2593F61C00C62F47 /* PaddingModifier.swift */; };
 		016A6D2C2594008100C62F47 /* MarginModifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D2B2594008100C62F47 /* MarginModifierTests.swift */; };
 		016A6D312594020800C62F47 /* PaddingModifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D302594020800C62F47 /* PaddingModifierTests.swift */; };
+		016A6D372594941B00C62F47 /* CSSStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D362594941B00C62F47 /* CSSStyle.swift */; };
+		016A6D44259606CE00C62F47 /* HeadStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D43259606CE00C62F47 /* HeadStyle.swift */; };
+		016A6D4C2596099E00C62F47 /* CSSStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D4B2596099E00C62F47 /* CSSStyleTests.swift */; };
 		0196B207255F105000EE0E24 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B206255F105000EE0E24 /* main.swift */; };
 		0196B21C255F107000EE0E24 /* HTMLDSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0196B213255F107000EE0E24 /* HTMLDSL.framework */; };
 		0196B221255F107000EE0E24 /* DocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B220255F107000EE0E24 /* DocumentTests.swift */; };
@@ -122,6 +125,9 @@
 		016A6D1E2593F61C00C62F47 /* PaddingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingModifier.swift; sourceTree = "<group>"; };
 		016A6D2B2594008100C62F47 /* MarginModifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginModifierTests.swift; sourceTree = "<group>"; };
 		016A6D302594020800C62F47 /* PaddingModifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingModifierTests.swift; sourceTree = "<group>"; };
+		016A6D362594941B00C62F47 /* CSSStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSSStyle.swift; sourceTree = "<group>"; };
+		016A6D43259606CE00C62F47 /* HeadStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadStyle.swift; sourceTree = "<group>"; };
+		016A6D4B2596099E00C62F47 /* CSSStyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSSStyleTests.swift; sourceTree = "<group>"; };
 		0196B203255F105000EE0E24 /* HTML */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HTML; sourceTree = BUILT_PRODUCTS_DIR; };
 		0196B206255F105000EE0E24 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0196B213255F107000EE0E24 /* HTMLDSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTMLDSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +222,22 @@
 			path = Link;
 			sourceTree = "<group>";
 		};
+		016A6D35259493F700C62F47 /* CSSStyle */ = {
+			isa = PBXGroup;
+			children = (
+				016A6D362594941B00C62F47 /* CSSStyle.swift */,
+			);
+			path = CSSStyle;
+			sourceTree = "<group>";
+		};
+		016A6D3E2596063B00C62F47 /* CSSStyle */ = {
+			isa = PBXGroup;
+			children = (
+				016A6D4B2596099E00C62F47 /* CSSStyleTests.swift */,
+			);
+			path = CSSStyle;
+			sourceTree = "<group>";
+		};
 		0196B1FA255F105000EE0E24 = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +275,7 @@
 				0196B231255F10FA00EE0E24 /* HTML */,
 				019CB94E255FDDBD00C71B10 /* Head */,
 				019CB94D255FDD9F00C71B10 /* Body */,
+				016A6D35259493F700C62F47 /* CSSStyle */,
 				0196B215255F107000EE0E24 /* HTMLDSL.h */,
 				0196B216255F107000EE0E24 /* Info.plist */,
 			);
@@ -267,6 +290,7 @@
 				019CB96E2560191A00C71B10 /* Head */,
 				019CB97A2560232E00C71B10 /* Body */,
 				01B22BB325626DDB009DAAB4 /* ViewModifier */,
+				016A6D3E2596063B00C62F47 /* CSSStyle */,
 				0196B222255F107000EE0E24 /* Info.plist */,
 			);
 			path = HTMLDSLTests;
@@ -333,6 +357,7 @@
 				0196B278255F374E00EE0E24 /* Head.swift */,
 				019CB955255FE40400C71B10 /* Title.swift */,
 				019CB95D25600E0B00C71B10 /* Meta.swift */,
+				016A6D43259606CE00C62F47 /* HeadStyle.swift */,
 			);
 			path = Head;
 			sourceTree = "<group>";
@@ -598,12 +623,14 @@
 				0196B238255F16F900EE0E24 /* Document.swift in Sources */,
 				019CB936255FDC0600C71B10 /* View + Element.swift in Sources */,
 				01B22BEB2562FFB4009DAAB4 /* FontModifier.swift in Sources */,
+				016A6D44259606CE00C62F47 /* HeadStyle.swift in Sources */,
 				0196B254255F212700EE0E24 /* ViewBuilder.swift in Sources */,
 				01B22BC02562B84C009DAAB4 /* ViewModifier + Extension.swift in Sources */,
 				01B22BC52562BA7F009DAAB4 /* ForegroundColorModifier.swift in Sources */,
 				016A6CF22593A9CD00C62F47 /* Body + Modifier.swift in Sources */,
 				01B22B902562573B009DAAB4 /* ViewModifier.swift in Sources */,
 				01B22B6E25616BF9009DAAB4 /* Attribute.swift in Sources */,
+				016A6D372594941B00C62F47 /* CSSStyle.swift in Sources */,
 				01AA15EE25655571006F2B39 /* TargetModifier.swift in Sources */,
 				0196B233255F110E00EE0E24 /* View.swift in Sources */,
 				019CB941255FDC8B00C71B10 /* AnyView.swift in Sources */,
@@ -619,6 +646,7 @@
 				0114CA6D2564669B008E3F8A /* LinkTests.swift in Sources */,
 				016A6D102593DBF500C62F47 /* DivTests.swift in Sources */,
 				01E8025D256CDEA400B541ED /* IndexTests.swift in Sources */,
+				016A6D4C2596099E00C62F47 /* CSSStyleTests.swift in Sources */,
 				01B22BF02563024F009DAAB4 /* FontModifierTests.swift in Sources */,
 				019CB963256013B100C71B10 /* MetaTests.swift in Sources */,
 				01B22BB525626DF3009DAAB4 /* ModifiedContentTests.swift in Sources */,

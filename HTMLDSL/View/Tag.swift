@@ -31,6 +31,7 @@ enum EnclosingTag: CustomStringConvertible {
 
     // Head Content Tags
     case title
+    case style
 
     // Body Content Tags
     case headings(HeadingTag)
@@ -49,6 +50,8 @@ enum EnclosingTag: CustomStringConvertible {
             return "body"
         case .title:
             return "title"
+        case .style:
+            return "style"
         case .headings(let tag):
             return tag.rawValue
         case .paragraph:

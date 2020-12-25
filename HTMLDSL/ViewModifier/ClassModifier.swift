@@ -7,9 +7,18 @@
 
 import Foundation
 
-enum CSSClass: String {
+enum CSSClass: CustomStringConvertible {
     case empty
-    case flexibleContainer = "flex-container"
+    case flexibleContainer
+
+    var description: String {
+        switch self {
+        case .empty:
+            return ""
+        case .flexibleContainer:
+            return "flex-container"
+        }
+    }
 }
 
 struct ClassModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
