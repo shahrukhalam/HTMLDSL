@@ -4,19 +4,45 @@
 <head>
     <title> My Website </title>
     <meta charset="UTF-8" name="author" content="Shahrukh Alam">
+    <style>
+        body {
+            margin: 16px;
+            font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(240, 240, 240, 0.8);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+            text-align: center;
+        }
+
+        .nav a {
+            display: inline-block;
+            padding: 16px;
+            text-decoration: none;
+            color: Black;
+        }
+
+        .intro {
+            margin-top: 66px;
+            font-size: 44px;
+            font-weight: 600;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 style="color:DeepPink;font-size:4vw;"> Nora Fatehi </h1>
-    <p
-        style="background-color:GhostWhite;font-size:125%;font-family:Courier New, Courier, monospace;text-align:justify;">
-        <b>Nora Fatehi </b>(born 6 February 1992) is a Canadian dancer, model, actress, and singer who is best known for
-        her work in the Indian film industry. She has appeared in Hindi, Telugu, Malayalam and Tamil language films.
-        She made her film debut in the Bollywood film Roar: Tigers of the Sundarbans. She gained popularity in Telugu
-        cinema by doing item numbers in films like Temper, Baahubali: The Beginning and Kick 2 and has also starred in
-        two Malayalam films, Double Barrel and Kayamkulam Kochunni. </p>
-    <img src="Images/nora.jpg" alt="Nora Fatehi" style="width:30%;">
-    <a href="https://www.instagram.com/norafatehi/?hl=en" target="_blank">Nora Fatehi Instagram Handle</a>
+    <div class="nav">
+        <a href="">Home</a>
+        <a href="">About</a>
+    </div>
+
+    <h1 class="intro">Shahrukh Alam</h1>
 </body>
 
 </html>
