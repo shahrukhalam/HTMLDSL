@@ -11,12 +11,20 @@ enum CSSClass: CustomStringConvertible {
     case empty
     case flexibleContainer
 
+    // Custom Classes for Index
+    case indexNav
+    case indexIntro
+
     var description: String {
         switch self {
         case .empty:
             return ""
         case .flexibleContainer:
             return "flex-container"
+        case .indexNav:
+            return "indexNav"
+        case .indexIntro:
+            return "indexIntro"
         }
     }
 }

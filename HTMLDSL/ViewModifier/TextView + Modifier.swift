@@ -18,6 +18,11 @@ extension HTMLBodyTextContentView {
         return ModifiedContent(content: self, modifier: modifier)
     }
 
+    func font(weight: FontWeight) -> ModifiedContent<Self, FontWeightModifier<Self>> {
+        let modifier = FontWeightModifier<Self>(weight: weight)
+        return ModifiedContent(content: self, modifier: modifier)
+    }
+
     func align(_ alignment: TextAlignment) -> ModifiedContent<Self, TextAlignmentModifier<Self>> {
         let modifier = TextAlignmentModifier<Self>(alignment: alignment)
         return ModifiedContent(content: self, modifier: modifier)

@@ -33,3 +33,17 @@ struct FontModifier<ContentView>: ViewModifier where ContentView: HTMLBodyTextCo
         }
     }
 }
+
+struct FontWeightModifier<ContentView>: ViewModifier where ContentView: HTMLBodyTextContentView {
+    typealias Body = ContentView
+
+    private let weight: FontWeight
+
+    init(weight: FontWeight) {
+        self.weight = weight
+    }
+
+    func body(content: Content) -> Body {
+        return update(content: content, for: .fontWeight(.normal), with: .fontWeight(weight))
+    }
+}
