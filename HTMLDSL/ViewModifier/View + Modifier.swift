@@ -23,15 +23,15 @@ extension HTMLContentView {
         return ModifiedContent(content: self, modifier: modifier)
     }
 
-    func size(width: Dimension? = nil, height: Dimension? = nil) -> ModifiedContent<Self, SizeModifier<Self>> {
+    func size(width: AutoDimension? = nil, height: AutoDimension? = nil) -> ModifiedContent<Self, SizeModifier<Self>> {
         let modifier = SizeModifier<Self>(width: width, height: height)
         return ModifiedContent(content: self, modifier: modifier)
     }
 
-    func margin(left: MarginDimension,
-                top: MarginDimension,
-                right: MarginDimension,
-                bottom: MarginDimension) -> ModifiedContent<Self, MarginModifier<Self>> {
+    func margin(left: AutoInheritDimension,
+                top: AutoInheritDimension,
+                right: AutoInheritDimension,
+                bottom: AutoInheritDimension) -> ModifiedContent<Self, MarginModifier<Self>> {
         let modifier = MarginModifier<Self>(left: left,
                                             top: top,
                                             right: right,
@@ -39,14 +39,27 @@ extension HTMLContentView {
         return ModifiedContent(content: self, modifier: modifier)
     }
 
-    func padding(left: PaddingDimension,
-                 top: PaddingDimension,
-                 right: PaddingDimension,
-                 bottom: PaddingDimension) -> ModifiedContent<Self, PaddingModifier<Self>> {
+    func padding(left: InheritDimension,
+                 top: InheritDimension,
+                 right: InheritDimension,
+                 bottom: InheritDimension) -> ModifiedContent<Self, PaddingModifier<Self>> {
         let modifier = PaddingModifier<Self>(left: left,
                                              top: top,
                                              right: right,
                                              bottom: bottom)
+        return ModifiedContent(content: self, modifier: modifier)
+    }
+
+    func position(_ position: Position,
+                  left: AutoInheritInitialDimension = .auto,
+                  top: AutoInheritInitialDimension = .auto,
+                  right: AutoInheritInitialDimension = .auto,
+                  bottom: AutoInheritInitialDimension = .auto) -> ModifiedContent<Self, PositionModifier<Self>> {
+        let modifier = PositionModifier<Self>(position: position,
+                                              left: left,
+                                              top: top,
+                                              right: right,
+                                              bottom: bottom)
         return ModifiedContent(content: self, modifier: modifier)
     }
 }

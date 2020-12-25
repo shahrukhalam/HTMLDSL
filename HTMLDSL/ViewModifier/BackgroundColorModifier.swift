@@ -17,6 +17,6 @@ struct BackgroundColorModifier<ContentView>: ViewModifier where ContentView: HTM
     }
 
     func body(content: Content) -> Body {
-        return update(content: content, for: .backgroundColor(.Red), with: .backgroundColor(color))
+        return update(content: content, for: .backgroundColor(.html(.Black)), with: .backgroundColor(color))
     }
 }

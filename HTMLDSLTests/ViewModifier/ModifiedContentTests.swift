@@ -47,7 +47,7 @@ class ModifiedContentTests: XCTestCase {
 
     func testModifiedContentWithSingleBackgroundColor() {
         let image = Image("Images/nora.jpg", alternateText: "Nora Fatehi")
-            .backgroundColor(.Red)
+            .backgroundColor(.html(.Red))
 
         let expectation =
         """
@@ -59,8 +59,8 @@ class ModifiedContentTests: XCTestCase {
 
     func testModifiedContent_Types_Attributes_Elements() {
         let image = Image("Images/nora.jpg", alternateText: "Nora Fatehi")
-        let redImage = image.backgroundColor(.Red)
-        let greenImage = redImage.backgroundColor(.Green)
+        let redImage = image.backgroundColor(.html(.Red))
+        let greenImage = redImage.backgroundColor(.html(.Green))
 
         let redExpectation =
         """
@@ -72,8 +72,8 @@ class ModifiedContentTests: XCTestCase {
         <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color:Green;">
         """
 
-        XCTAssertEqual(redImage.attributes, [.style([.backgroundColor(.Red)])])
-        XCTAssertEqual(greenImage.attributes, [Attribute.style([.backgroundColor(.Green)])])
+        XCTAssertEqual(redImage.attributes, [.style([.backgroundColor(.html(.Red))])])
+        XCTAssertEqual(greenImage.attributes, [Attribute.style([.backgroundColor(.html(.Green))])])
 
         XCTAssertEqual(redImage.element, redExpectation)
         XCTAssertEqual(greenImage.element, greenExpectation)
@@ -81,9 +81,9 @@ class ModifiedContentTests: XCTestCase {
 
     func testModifiedContentWithMultipleBackgroundColor() {
         let image = Image("Images/nora.jpg", alternateText: "Nora Fatehi")
-            .backgroundColor(.Red)
-            .backgroundColor(.Green)
-            .backgroundColor(.Blue)
+            .backgroundColor(.html(.Red))
+            .backgroundColor(.html(.Green))
+            .backgroundColor(.html(.Blue))
 
         let expectation =
         """
@@ -95,8 +95,8 @@ class ModifiedContentTests: XCTestCase {
 
     func testHeadingWithBackgroundColorAndForegroundColor() {
         let headings = Headings("Nora Fatehi")
-            .backgroundColor(.Green)
-            .foregroundColor(.Blue)
+            .backgroundColor(.html(.Green))
+            .foregroundColor(.html(.Blue))
 
         let expectation =
         """
@@ -108,8 +108,8 @@ class ModifiedContentTests: XCTestCase {
 
     func testParagraphWithBackgroundColorAndForegroundColor() {
         let headings = Paragraphs("Nora Fatehi")
-            .backgroundColor(.Green)
-            .foregroundColor(.Blue)
+            .backgroundColor(.html(.Green))
+            .foregroundColor(.html(.Blue))
 
         let expectation =
         """
@@ -121,8 +121,8 @@ class ModifiedContentTests: XCTestCase {
 
     func testParagraphWithBackgroundColor_ForegroundColorAndID() {
         let headings = Paragraphs("Nora Fatehi")
-            .backgroundColor(.Green)
-            .foregroundColor(.Blue)
+            .backgroundColor(.html(.Green))
+            .foregroundColor(.html(.Blue))
             .identifyBy(id: "Nora")
 
         let expectation =
@@ -135,8 +135,8 @@ class ModifiedContentTests: XCTestCase {
 
     func testParagraphWithBackgroundColor_ForegroundColorAndClass() {
         let headings = Paragraphs("Nora Fatehi")
-            .backgroundColor(.Green)
-            .foregroundColor(.Blue)
+            .backgroundColor(.html(.Green))
+            .foregroundColor(.html(.Blue))
             .identifyBy(cssClass: .flexibleContainer)
 
         let expectation =
@@ -149,8 +149,8 @@ class ModifiedContentTests: XCTestCase {
 
     func testParagraphWithBackgroundColor_ForegroundColor_IDAndClass() {
         let headings = Paragraphs("Nora Fatehi")
-            .backgroundColor(.Green)
-            .foregroundColor(.Blue)
+            .backgroundColor(.html(.Green))
+            .foregroundColor(.html(.Blue))
             .identifyBy(id: "Nora")
             .identifyBy(cssClass: .flexibleContainer)
 

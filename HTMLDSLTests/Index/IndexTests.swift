@@ -24,6 +24,13 @@ class IndexTests: XCTestCase {
                                                       .HelveticaNeue,
                                                       .Helvetica,
                                                       .Arial]))
+
+                        IndexNavStyle()
+
+                        ClassStyle(forClass: .indexIntro)
+                            .margin(top: .pixel(66))
+                            .font(size: .pixel(44))
+                            .font(weight: .number(600))
                     }
                 }
 
@@ -51,6 +58,28 @@ class IndexTests: XCTestCase {
         body {
         margin: 16px 16px 16px 16px;
         font-family:SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
+        }
+        .indexNav {
+        position: fixed;
+        left: auto;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color:rgba(240, 240, 240, 0.8);
+        text-align:center;
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+        }
+        .indexNav a {
+        padding: 16px 16px 16px 16px;
+        color:Black;
+        display: inline-block;
+        text-decoration: none;
+        }
+        .indexIntro {
+        margin: auto 66px auto auto;
+        font-size:44px;
+        font-weight:600;
         }
         </style>
         </head>

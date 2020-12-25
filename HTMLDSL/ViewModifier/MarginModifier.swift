@@ -10,15 +10,15 @@ import Foundation
 struct MarginModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
     typealias Body = ContentView
     
-    private let left: MarginDimension
-    private let top: MarginDimension
-    private let right: MarginDimension
-    private let bottom: MarginDimension
+    private let left: AutoInheritDimension
+    private let top: AutoInheritDimension
+    private let right: AutoInheritDimension
+    private let bottom: AutoInheritDimension
     
-    init(left: MarginDimension,
-         top: MarginDimension,
-         right: MarginDimension,
-         bottom: MarginDimension) {
+    init(left: AutoInheritDimension,
+         top: AutoInheritDimension,
+         right: AutoInheritDimension,
+         bottom: AutoInheritDimension) {
         self.left = left
         self.top = top
         self.right = right

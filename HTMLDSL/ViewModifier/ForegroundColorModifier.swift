@@ -17,6 +17,6 @@ struct ForegroundColorModifier<ContentView>: ViewModifier where ContentView: HTM
     }
 
     func body(content: Content) -> Body {
-        return update(content: content, for: .foregroundColor(.Red), with: .foregroundColor(color))
+        return update(content: content, for: .foregroundColor(.html(.Black)), with: .foregroundColor(color))
     }
 }

@@ -31,7 +31,7 @@ class CSSStyleTests: XCTestCase {
     func testHeadWithEmptyClassStyle() {
         let head = Head {
             HeadStyle {
-                ClassStyle(for: .empty)
+                ClassStyle(forClass: .empty)
             }
         }
 
@@ -72,7 +72,7 @@ class CSSStyleTests: XCTestCase {
         let head = Head {
             HeadStyle {
                 TagStyle(for: .enclosing(.body))
-                    .backgroundColor(.Yellow)
+                    .backgroundColor(.html(.Yellow))
             }
         }
 
@@ -94,9 +94,9 @@ class CSSStyleTests: XCTestCase {
         let head = Head {
             HeadStyle {
                 TagStyle(for: .enclosing(.body))
-                    .backgroundColor(.Yellow)
+                    .backgroundColor(.html(.Yellow))
                 TagStyle(for: .enclosing(.headings(.h1)))
-                    .backgroundColor(.Red)
+                    .backgroundColor(.html(.Red))
             }
         }
 
@@ -121,9 +121,9 @@ class CSSStyleTests: XCTestCase {
         let head = Head {
             HeadStyle {
                 TagStyle(for: .enclosing(.body))
-                    .backgroundColor(.Yellow)
-                ClassStyle(for: .flexibleContainer)
-                    .backgroundColor(.Red)
+                    .backgroundColor(.html(.Yellow))
+                ClassStyle(forClass: .flexibleContainer)
+                    .backgroundColor(.html(.Red))
             }
         }
 
@@ -142,5 +142,83 @@ class CSSStyleTests: XCTestCase {
         """
 
         XCTAssertEqual(head.element, expectation)
+    }
+
+    func testHeadWithBodyTagMultipleStyle() {
+        let head = Head {
+            HeadStyle {
+                TagStyle(for: .enclosing(.body))
+                    .backgroundColor(.html(.Yellow))
+                    .margin(uniform: .pixel(15))
+            }
+        }
+
+        let expectation =
+        """
+        <head>
+        <style>
+        body {
+        background-color:Yellow;
+        margin: 15px 15px 15px 15px;
+        }
+        </style>
+        </head>
+        """
+
+        XCTAssertEqual(head.element, expectation)
+    }
+
+    func testHeadWithFlexibleContainerClassMultipleStyle() {
+        let head = Head {
+            HeadStyle {
+                ClassStyle(forClass: .flexibleContainer)
+                    .backgroundColor(.html(.Yellow))
+                    .margin(uniform: .pixel(15))
+                    .size(width: .pixel(15), height: .pixel(15))
+            }
+        }
+
+        let expectation =
+        """
+        <head>
+        <style>
+        .flex-container {
+        background-color:Yellow;
+        margin: 15px 15px 15px 15px;
+        width:15px;
+        height:15px;
+        }
+        </style>
+        </head>
+        """
+
+        XCTAssertEqual(head.element, expectation)
+    }
+
+    func testIndexNavStyle() {
+        let indexNavStyle = IndexNavStyle()
+
+        let expectation =
+            """
+        .indexNav {
+        position: fixed;
+        left: auto;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color:rgba(240, 240, 240, 0.8);
+        text-align:center;
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+        }
+        .indexNav a {
+        padding: 16px 16px 16px 16px;
+        color:Black;
+        display: inline-block;
+        text-decoration: none;
+        }
+        """
+
+        XCTAssertEqual(indexNavStyle.element, expectation)
     }
 }

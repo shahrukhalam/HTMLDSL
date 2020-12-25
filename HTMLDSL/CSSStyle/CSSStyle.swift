@@ -24,12 +24,12 @@ extension CSSStyle {
         return isEmptyKey ? "" : "\(key) {\n\(finalStyle)\n}"
     }
 
-    private func modified(oldStyle: Style, with newStyle: Style) -> Self {
-        var newStyles = styles
+    private func modified(body: CSSStyle, oldStyle: Style, with newStyle: Style) -> Self {
+        var newStyles = body.styles
         newStyles.removeAll { style in style == oldStyle }
         newStyles.append(newStyle)
 
-        switch self {
+        switch body {
         case is TagStyle:
             return TagStyle(for: key, with: newStyles) as! Self
         case is ClassStyle:
@@ -40,28 +40,29 @@ extension CSSStyle {
     }
 
     func backgroundColor(_ color: Color) -> Self {
-        modified(oldStyle: .backgroundColor(.White), with: .backgroundColor(color))
+        modified(body: self, oldStyle: .backgroundColor(.html(.Black)), with: .backgroundColor(color))
     }
 
-    func size(width: Dimension? = nil, height: Dimension? = nil) -> Self {
+    func size(width: AutoDimension? = nil, height: AutoDimension? = nil) -> Self {
         var body = self
 
         if let width = width {
-            body = modified(oldStyle: .width(.auto), with: .width(width))
+            body = modified(body: self, oldStyle: .width(.auto), with: .width(width))
         }
 
         if let height = height {
-            body = modified(oldStyle: .height(.auto), with: .height(height))
+            body = modified(body: body, oldStyle: .height(.auto), with: .height(height))
         }
 
         return body
     }
 
-    func margin(left: MarginDimension,
-                top: MarginDimension,
-                right: MarginDimension,
-                bottom: MarginDimension) -> Self {
-        modified(oldStyle: .margin(left: .auto,
+    func margin(left: AutoInheritDimension = .auto,
+                top: AutoInheritDimension = .auto,
+                right: AutoInheritDimension = .auto,
+                bottom: AutoInheritDimension = .auto) -> Self {
+        modified(body: self,
+                 oldStyle: .margin(left: .auto,
                                    top: .auto,
                                    right: .auto,
                                    bottom: .auto),
@@ -71,8 +72,9 @@ extension CSSStyle {
                                bottom: bottom))
     }
 
-    func margin(uniform: MarginDimension) -> Self {
-        modified(oldStyle: .margin(left: .auto,
+    func margin(uniform: AutoInheritDimension) -> Self {
+        modified(body: self,
+                 oldStyle: .margin(left: .auto,
                                    top: .auto,
                                    right: .auto,
                                    bottom: .auto),
@@ -82,11 +84,12 @@ extension CSSStyle {
                                bottom: uniform))
     }
 
-    func padding(left: PaddingDimension,
-                 top: PaddingDimension,
-                 right: PaddingDimension,
-                 bottom: PaddingDimension) -> Self {
-        modified(oldStyle: .padding(left: .inherit,
+    func padding(left: InheritDimension,
+                 top: InheritDimension,
+                 right: InheritDimension,
+                 bottom: InheritDimension) -> Self {
+        modified(body: self,
+                 oldStyle: .padding(left: .inherit,
                                     top: .inherit,
                                     right: .inherit,
                                     bottom: .inherit),
@@ -96,8 +99,9 @@ extension CSSStyle {
                                 bottom: bottom))
     }
 
-    func padding(uniform: PaddingDimension) -> Self {
-        modified(oldStyle: .padding(left: .inherit,
+    func padding(uniform: InheritDimension) -> Self {
+        modified(body: self,
+                 oldStyle: .padding(left: .inherit,
                                     top: .inherit,
                                     right: .inherit,
                                     bottom: .inherit),
@@ -107,22 +111,71 @@ extension CSSStyle {
                                 bottom: uniform))
     }
 
+    func position(_ position: Position,
+                  left: AutoInheritInitialDimension = .auto,
+                  top: AutoInheritInitialDimension = .auto,
+                  right: AutoInheritInitialDimension = .auto,
+                  bottom: AutoInheritInitialDimension = .auto) -> Self {
+        var body: Self
+        body = modified(body: self, oldStyle: .position(.static), with: .position(position))
+        body = modified(body: body, oldStyle: .constraint(left: .auto,
+                                                          top: .auto,
+                                                          right: .auto,
+                                                          bottom: .auto),
+                        with: .constraint(left: left,
+                                          top: top,
+                                          right: right,
+                                          bottom: bottom))
+        return body
+    }
+
+    func foregroundColor(_ color: Color) -> Self {
+        modified(body: self, oldStyle: .foregroundColor(.html(.Black)), with: .foregroundColor(color))
+    }
+
     func font(family: FontFamily) -> Self {
-        modified(oldStyle: .fontFamily(.sansSerif([])), with: .fontFamily(family))
+        modified(body: self, oldStyle: .fontFamily(.sansSerif([])), with: .fontFamily(family))
     }
 
     func font(size: FontSize) -> Self {
-        modified(oldStyle: .fontSize(.pixel(16)), with: .fontSize(size))
+        modified(body: self, oldStyle: .fontSize(.pixel(16)), with: .fontSize(size))
+    }
+
+    func font(weight: FontWeight) -> Self {
+        modified(body: self, oldStyle: .fontWeight(.normal), with: .fontWeight(weight))
+    }
+
+    func align(_ alignment: TextAlignment) -> Self {
+        modified(body: self, oldStyle: .textAlignment(.left), with: .textAlignment(alignment))
+    }
+
+    func filter(saturationInPercentage: Int,
+                blurInPixel: Int) -> Self {
+        return modified(body: self,
+                        oldStyle: .filter(saturationInPercentage: 0, blurInPixel: 0),
+                        with: .filter(saturationInPercentage: saturationInPercentage,
+                                      blurInPixel: blurInPixel))
+    }
+
+    func display(_ display: Display) -> Self {
+        return modified(body: self,
+                        oldStyle: .display(.initial),
+                        with: .display(display))
+    }
+
+    func textDecoration(_ decoration: TextDecoration) -> Self {
+        return modified(body: self,
+                        oldStyle: .textDecoration(.none),
+                        with: .textDecoration(decoration))
     }
 }
 
 struct TagStyle: CSSStyle {
-    let styles: [Style]
+    var styles = [Style]()
     let key: CustomStringConvertible
 
-    init(for tag: Tag, with style: [Style] = []) {
+    init(for tag: Tag) {
         self.key = tag.description
-        self.styles = style
     }
 
     fileprivate init(for key: CustomStringConvertible, with style: [Style]) {
@@ -132,14 +185,21 @@ struct TagStyle: CSSStyle {
 }
 
 struct ClassStyle: CSSStyle {
-    let styles: [Style]
+    var styles = [Style]()
     let key: CustomStringConvertible
 
-    init(for cssClass: CSSClass, with style: [Style] = []) {
-        let isEmptyKey = cssClass.description.isEmpty
+    init(forClass: CSSClass) {
+        let isEmptyKey = forClass.description.isEmpty
+        self.key = isEmptyKey ? "" : ".\(forClass.description)"
+    }
 
-        self.key = isEmptyKey ? "" : ".\(cssClass.description)"
-        self.styles = style
+    init(forClass: CSSClass, withTag: Tag) {
+        switch (forClass, withTag) {
+        case (.empty, .empty):
+            self.key = ""
+        default:
+            self.key = ".\(forClass.description) \(withTag.description)"
+        }
     }
 
     fileprivate init(for key: CustomStringConvertible, with style: [Style]) {
