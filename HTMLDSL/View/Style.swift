@@ -24,6 +24,7 @@ enum Style: CustomStringConvertible, Equatable {
     case foregroundColor(Color)
     case fontFamily(FontFamily)
     case fontSize(FontSize)
+    case fontWeight(FontWeight)
     case textAlignment(TextAlignment)
 
     var description: String {
@@ -40,6 +41,8 @@ enum Style: CustomStringConvertible, Equatable {
             return "font-family:\(fontFamily.description);"
         case .fontSize(let fontSize):
             return "font-size:\(fontSize.description);"
+        case .fontWeight(let fontWeight):
+            return "font-weight:\(fontWeight.description);"
         case .textAlignment(let alignment):
             return "text-align:\(alignment.rawValue);"
         case let .margin(left, top, right, bottom):
@@ -62,6 +65,8 @@ enum Style: CustomStringConvertible, Equatable {
         case (.fontFamily, .fontFamily):
             return true
         case (.fontSize, .fontSize):
+            return true
+        case (.fontWeight, .fontWeight):
             return true
         case (.textAlignment, .textAlignment):
             return true

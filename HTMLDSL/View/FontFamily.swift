@@ -35,8 +35,11 @@ enum FontFamily {
 
     enum SansSerif: String {
         case sansSerif = "sans-serif"
+        case SFProDisplay = "SF Pro Display"
+        case SFProIcons = "SF Pro Icons"
         case Arial
         case Helvetica
+        case HelveticaNeue = "Helvetica Neue"
         case ArialBlack = "Arial Black"
         case Gadget
         case ComicSansMS = "Comic Sans MS"

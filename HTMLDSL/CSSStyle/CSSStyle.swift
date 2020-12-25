@@ -71,6 +71,17 @@ extension CSSStyle {
                                bottom: bottom))
     }
 
+    func margin(uniform: MarginDimension) -> Self {
+        modified(oldStyle: .margin(left: .auto,
+                                   top: .auto,
+                                   right: .auto,
+                                   bottom: .auto),
+                 with: .margin(left: uniform,
+                               top: uniform,
+                               right: uniform,
+                               bottom: uniform))
+    }
+
     func padding(left: PaddingDimension,
                  top: PaddingDimension,
                  right: PaddingDimension,
@@ -83,6 +94,25 @@ extension CSSStyle {
                                 top: top,
                                 right: right,
                                 bottom: bottom))
+    }
+
+    func padding(uniform: PaddingDimension) -> Self {
+        modified(oldStyle: .padding(left: .inherit,
+                                    top: .inherit,
+                                    right: .inherit,
+                                    bottom: .inherit),
+                 with: .padding(left: uniform,
+                                top: uniform,
+                                right: uniform,
+                                bottom: uniform))
+    }
+
+    func font(family: FontFamily) -> Self {
+        modified(oldStyle: .fontFamily(.sansSerif([])), with: .fontFamily(family))
+    }
+
+    func font(size: FontSize) -> Self {
+        modified(oldStyle: .fontSize(.pixel(16)), with: .fontSize(size))
     }
 }
 
