@@ -61,10 +61,10 @@ class IndexTests: XCTestCase {
         }
         .indexNav {
         position: fixed;
-        left: auto;
+        left: 0px;
         top: 0px;
         right: 0px;
-        bottom: 0px;
+        bottom: auto;
         background-color:rgba(240, 240, 240, 0.8);
         text-align:center;
         -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -77,7 +77,7 @@ class IndexTests: XCTestCase {
         text-decoration: none;
         }
         .indexIntro {
-        margin: auto 66px auto auto;
+        margin: 66px auto auto auto;
         font-size:44px;
         font-weight:600;
         }

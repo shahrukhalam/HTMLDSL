@@ -6,30 +6,31 @@
     <meta charset="UTF-8" name="author" content="Shahrukh Alam">
     <style>
         body {
-            margin: 16px;
-            font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            margin: 16px 16px 16px 16px;
+            font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
         }
 
-        .nav {
+        .indexNav {
             position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+            bottom: auto;
             background-color: rgba(240, 240, 240, 0.8);
+            text-align: center;
             -webkit-backdrop-filter: saturate(180%) blur(20px);
             backdrop-filter: saturate(180%) blur(20px);
-            text-align: center;
         }
 
-        .nav a {
-            display: inline-block;
-            padding: 16px;
-            text-decoration: none;
+        .indexNav a {
+            padding: 16px 16px 16px 16px;
             color: Black;
+            display: inline-block;
+            text-decoration: none;
         }
 
-        .intro {
-            margin-top: 66px;
+        .indexIntro {
+            margin: 66px auto auto auto;
             font-size: 44px;
             font-weight: 600;
         }
@@ -37,12 +38,11 @@
 </head>
 
 <body>
-    <div class="nav">
+    <div class="indexNav">
         <a href="">Home</a>
         <a href="">About</a>
     </div>
-
-    <h1 class="intro">Shahrukh Alam</h1>
+    <h1 class="indexIntro"> Shahrukh Alam </h1>
 </body>
 
 </html>

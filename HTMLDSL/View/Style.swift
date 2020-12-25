@@ -57,9 +57,9 @@ enum Style: CustomStringConvertible, Equatable {
         case .textAlignment(let alignment):
             return "text-align:\(alignment.rawValue);"
         case let .margin(left, top, right, bottom):
-            return "margin: \(left.description) \(top.description) \(right.description) \(bottom.description);"
+            return "margin: \(top.description) \(right.description) \(bottom.description) \(left.description);"
         case let .padding(left, top, right, bottom):
-            return "padding: \(left.description) \(top.description) \(right.description) \(bottom.description);"
+            return "padding: \(top.description) \(right.description) \(bottom.description) \(left.description);"
         case .position(let position):
             if case .sticky = position {
                 return "position: -webkit-sticky;\nposition: \(position.rawValue);"
