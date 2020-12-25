@@ -17,14 +17,7 @@ class IndexTests: XCTestCase {
                     Meta([.characterSet(.utf8),
                           .name(.author, content: "Shahrukh Alam")])
                     HeadStyle {
-                        TagStyle(for: .enclosing(.body))
-                            .margin(uniform: .pixel(16))
-                            .font(family: .sansSerif([.SFProDisplay,
-                                                      .SFProIcons,
-                                                      .HelveticaNeue,
-                                                      .Helvetica,
-                                                      .Arial]))
-
+                        IndexBodyStyle()
                         IndexNavStyle()
 
                         ClassStyle(forClass: .indexIntro)

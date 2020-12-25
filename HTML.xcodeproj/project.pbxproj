@@ -34,6 +34,7 @@
 		016A6D612596A45200C62F47 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D602596A45200C62F47 /* Display.swift */; };
 		016A6D662596A82B00C62F47 /* TextDecoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D652596A82B00C62F47 /* TextDecoration.swift */; };
 		016A6D6B2596A99200C62F47 /* IndexNavStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D6A2596A99200C62F47 /* IndexNavStyle.swift */; };
+		016A6D702596B0A300C62F47 /* IndexBodyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D6F2596B0A300C62F47 /* IndexBodyStyle.swift */; };
 		0196B207255F105000EE0E24 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B206255F105000EE0E24 /* main.swift */; };
 		0196B21C255F107000EE0E24 /* HTMLDSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0196B213255F107000EE0E24 /* HTMLDSL.framework */; };
 		0196B221255F107000EE0E24 /* DocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B220255F107000EE0E24 /* DocumentTests.swift */; };
@@ -138,6 +139,7 @@
 		016A6D602596A45200C62F47 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
 		016A6D652596A82B00C62F47 /* TextDecoration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDecoration.swift; sourceTree = "<group>"; };
 		016A6D6A2596A99200C62F47 /* IndexNavStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexNavStyle.swift; sourceTree = "<group>"; };
+		016A6D6F2596B0A300C62F47 /* IndexBodyStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexBodyStyle.swift; sourceTree = "<group>"; };
 		0196B203255F105000EE0E24 /* HTML */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HTML; sourceTree = BUILT_PRODUCTS_DIR; };
 		0196B206255F105000EE0E24 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0196B213255F107000EE0E24 /* HTMLDSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTMLDSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +239,7 @@
 			children = (
 				016A6D362594941B00C62F47 /* CSSStyle.swift */,
 				016A6D6A2596A99200C62F47 /* IndexNavStyle.swift */,
+				016A6D6F2596B0A300C62F47 /* IndexBodyStyle.swift */,
 			);
 			path = CSSStyle;
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 				01B22BFA25630981009DAAB4 /* TextAlignmentModifier.swift in Sources */,
 				01B22BAF25626986009DAAB4 /* View + Modifier.swift in Sources */,
 				01B22BE62562EE77009DAAB4 /* FontFamily.swift in Sources */,
+				016A6D702596B0A300C62F47 /* IndexBodyStyle.swift in Sources */,
 				016A6D572596852500C62F47 /* Position.swift in Sources */,
 				016A6CED2593A8AD00C62F47 /* FlexibleContainer.swift in Sources */,
 				0196B264255F2EB800EE0E24 /* HTML.swift in Sources */,

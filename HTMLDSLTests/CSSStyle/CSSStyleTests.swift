@@ -202,10 +202,10 @@ class CSSStyleTests: XCTestCase {
             """
         .indexNav {
         position: fixed;
-        left: auto;
+        left: 0px;
         top: 0px;
         right: 0px;
-        bottom: 0px;
+        bottom: auto;
         background-color:rgba(240, 240, 240, 0.8);
         text-align:center;
         -webkit-backdrop-filter: saturate(180%) blur(20px);
