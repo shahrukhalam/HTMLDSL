@@ -7,8 +7,22 @@
 
 import Foundation
 
+enum Color: CustomStringConvertible {
+    case html(HTMLColor)
+    case rgba(red: Int, green: Int, blue: Int, alpha: Float)
+
+    var description: String {
+        switch self {
+        case .html(let color):
+            return color.rawValue
+        case let .rgba(red, green, blue, alpha):
+            return "rgba(\(red), \(green), \(blue), \(alpha))"
+        }
+    }
+}
+
 // Color Names Supported by All Browsers: https://www.w3schools.com/colors/colors_names.asp
-enum Color: String {
+enum HTMLColor: String {
     case AliceBlue
     case AntiqueWhite
     case Aqua

@@ -10,10 +10,10 @@ import Foundation
 struct SizeModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
     typealias Body = ContentView
 
-    private let width: Dimension?
-    private let height: Dimension?
+    private let width: AutoDimension?
+    private let height: AutoDimension?
 
-    init(width: Dimension?, height: Dimension?) {
+    init(width: AutoDimension?, height: AutoDimension?) {
         self.width = width
         self.height = height
     }
