@@ -221,4 +221,125 @@ class CSSStyleTests: XCTestCase {
 
         XCTAssertEqual(indexNavStyle.element, expectation)
     }
+
+    func testHeroImageStyle() {
+        let indexNavStyle = HeroImageStyle(url: "Images/nora.jpg",
+                                           heightInPixel: 745)
+
+        let expectation =
+            """
+        .heroImage {
+        background-image: url("Images/nora.jpg");
+        background-color:rgba(250, 250, 250, 1.0);
+        height:745px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: -1;
+        }
+        """
+
+        XCTAssertEqual(indexNavStyle.element, expectation)
+    }
+
+    func testCenteredTextStyle() {
+        let style = CenteredTextStyle(topInPixel: 50)
+
+        let expectation =
+            """
+        .centeredText {
+        text-align:center;
+        position: absolute;
+        left: 50%;
+        top: 50px;
+        right: auto;
+        bottom: auto;
+        transform: translate(-50%, 0%);
+        }
+        """
+
+        XCTAssertEqual(style.element, expectation)
+    }
+
+    func testHeroHeading() {
+        let style = HeroHeadingStyle(color: .html(.White))
+
+        let expectation =
+            """
+        .heroHeading {
+        font-size:44px;
+        font-weight:600;
+        color:White;
+        }
+        """
+
+        XCTAssertEqual(style.element, expectation)
+    }
+
+    func testHeroSubHeading() {
+        let style = HeroSubHeadingStyle(color: .html(.White))
+
+        let expectation =
+            """
+        .heroSubHeading {
+        font-size:40px;
+        font-weight:400;
+        color:White;
+        }
+        """
+
+        XCTAssertEqual(style.element, expectation)
+    }
+
+    func testGridContainerStle() {
+        let style = GridContainerStyle()
+
+        let expectation =
+            """
+        .gridContainer {
+        padding: 12px 12px 12px 12px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 12px;
+        background-color:rgba(250, 250, 250, 1.0);
+        }
+        """
+
+        XCTAssertEqual(style.element, expectation)
+    }
+
+    func testGridImageStle() {
+        let style = GridImageStyle(url: "Images/nora.jpg", heightInPixel: 720)
+
+        let expectation =
+            """
+        .gridImage {
+        background-image: url("Images/nora.jpg");
+        background-color:rgba(250, 250, 250, 1.0);
+        height:720px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        }
+        """
+
+        XCTAssertEqual(style.element, expectation)
+    }
+
+    func testGridSubHeading() {
+        let style = GridSubHeadingStyle(color: .html(.White))
+
+        let expectation =
+            """
+        .gridSubHeading {
+        font-size:19px;
+        font-weight:400;
+        color:White;
+        }
+        """
+
+        XCTAssertEqual(style.element, expectation)
+    }
 }

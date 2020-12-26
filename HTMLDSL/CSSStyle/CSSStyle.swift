@@ -34,6 +34,8 @@ extension CSSStyle {
             return TagStyle(for: key, with: newStyles) as! Self
         case is ClassStyle:
             return ClassStyle(for: key, with: newStyles) as! Self
+        case is PageStyle:
+            return PageStyle(style: newStyles) as! Self
         default:
             preconditionFailure("No other Style is supported yet")
         }
@@ -111,22 +113,25 @@ extension CSSStyle {
                                 bottom: uniform))
     }
 
-    func position(_ position: Position,
-                  left: AutoInheritInitialDimension = .auto,
-                  top: AutoInheritInitialDimension = .auto,
-                  right: AutoInheritInitialDimension = .auto,
-                  bottom: AutoInheritInitialDimension = .auto) -> Self {
-        var body: Self
-        body = modified(body: self, oldStyle: .position(.static), with: .position(position))
-        body = modified(body: body, oldStyle: .constraint(left: .auto,
-                                                          top: .auto,
-                                                          right: .auto,
-                                                          bottom: .auto),
+    func position(_ position: Position) -> Self {
+        return modified(body: self,
+                        oldStyle: .position(.static),
+                        with: .position(position))
+    }
+
+    func constraint(left: AutoInheritInitialDimension = .auto,
+                    top: AutoInheritInitialDimension = .auto,
+                    right: AutoInheritInitialDimension = .auto,
+                    bottom: AutoInheritInitialDimension = .auto) -> Self {
+        return modified(body: self,
+                        oldStyle: .constraint(left: .auto,
+                                              top: .auto,
+                                              right: .auto,
+                                              bottom: .auto),
                         with: .constraint(left: left,
                                           top: top,
                                           right: right,
                                           bottom: bottom))
-        return body
     }
 
     func foregroundColor(_ color: Color) -> Self {
@@ -168,6 +173,61 @@ extension CSSStyle {
                         oldStyle: .textDecoration(.none),
                         with: .textDecoration(decoration))
     }
+
+    func boxSize(_ size: BoxSizing) -> Self {
+        return modified(body: self,
+                        oldStyle: .boxSizing(.initial),
+                        with: .boxSizing(size))
+    }
+
+    func backgroundImage(url: String) -> Self {
+        return modified(body: self,
+                        oldStyle: .backgroundImage(""),
+                        with: .backgroundImage(url))
+    }
+
+    func backgroundPosition(_ position: BackgroundPosition) -> Self {
+        return modified(body: self,
+                        oldStyle: .backgroundPosition(.initial),
+                        with: .backgroundPosition(position))
+    }
+
+    func backgroundRepeat(_ mode: BackgroundRepeat) -> Self {
+        return modified(body: self,
+                        oldStyle: .backgroundRepeat(.initial),
+                        with: .backgroundRepeat(mode))
+    }
+
+    func backgroundSize(_ size: BackgroundSize) -> Self {
+        return modified(body: self,
+                        oldStyle: .backgroundSize(.initial),
+                        with: .backgroundSize(size))
+    }
+
+    func zIndex(_ index: Int) -> Self {
+        return modified(body: self,
+                        oldStyle: .zIndex(0),
+                        with: .zIndex(index))
+    }
+
+    func transform(_ transform: Transform) -> Self {
+        return modified(body: self,
+                        oldStyle: .transform(.translate(X: .pixel(0), Y: .pixel(0))),
+                        with: .transform(transform))
+    }
+
+    // Grid
+    func gridColumn(gap: Int) -> Self {
+        return modified(body: self,
+                        oldStyle: .gridColumnGap(0),
+                        with: .gridColumnGap(gap))
+    }
+
+    func gridNumberOfColumnsWithWidth(_ templates: [AutoDimension]) -> Self {
+        return modified(body: self,
+                        oldStyle: .gridTemplateColumns([]),
+                        with: .gridTemplateColumns(templates))
+    }
 }
 
 struct TagStyle: CSSStyle {
@@ -189,8 +249,8 @@ struct ClassStyle: CSSStyle {
     let key: CustomStringConvertible
 
     init(forClass: CSSClass) {
-        let isEmptyKey = forClass.description.isEmpty
-        self.key = isEmptyKey ? "" : ".\(forClass.description)"
+        let isEmptyKey = forClass.rawValue.isEmpty
+        self.key = isEmptyKey ? "" : ".\(forClass.rawValue)"
     }
 
     init(forClass: CSSClass, withTag: Tag) {
@@ -198,12 +258,23 @@ struct ClassStyle: CSSStyle {
         case (.empty, .empty):
             self.key = ""
         default:
-            self.key = ".\(forClass.description) \(withTag.description)"
+            self.key = ".\(forClass.rawValue) \(withTag.description)"
         }
     }
 
     fileprivate init(for key: CustomStringConvertible, with style: [Style]) {
         self.key = key
+        self.styles = style
+    }
+}
+
+struct PageStyle: CSSStyle {
+    var styles = [Style]()
+    let key: CustomStringConvertible = "*"
+
+    init() {  }
+
+    fileprivate init(style: [Style]) {
         self.styles = style
     }
 }

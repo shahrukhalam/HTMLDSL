@@ -6,13 +6,8 @@
     <meta charset="UTF-8" name="author" content="Shahrukh Alam">
     <style>
         body {
-            margin: 0px;
-            /* margin: 16px 16px 16px 16px; */
+            margin: 0px 0px 0px 0px;
             font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
-        }
-
-        * {
-            box-sizing: border-box;
         }
 
         .indexNav {
@@ -36,58 +31,59 @@
 
         .heroImage {
             background-image: url("Images/nora.jpg");
-            background-color: #cccccc;
-            height: 720px;
+            background-color: rgba(250, 250, 250, 1.0);
+            height: 745px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
-            margin: -16px -16px auto -16px;
             z-index: -1;
         }
 
-        .gridImage {
-            background-image: url("Images/nora.jpg");
-            background-color: #cccccc;
-            height: 720px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-        }
-
-        .heroCenteredText {
+        .centeredText {
             text-align: center;
             position: absolute;
-            top: 50px;
             left: 50%;
-            transform: translate(-50%, 0);
+            top: 50px;
+            right: auto;
+            bottom: auto;
+            transform: translate(-50%, 0%);
         }
 
         .heroHeading {
             font-size: 44px;
             font-weight: 600;
-            color: white;
+            color: White;
         }
 
-        .heroHeading2 {
+        .heroSubHeading {
             font-size: 40px;
             font-weight: 400;
-            color: white;
-        }
-
-        .heroSubheading {
-            font-size: 19px;
-            font-weight: 400;
-            color: white;
+            color: White;
         }
 
         .gridContainer {
-            padding: 16px;
+            padding: 12px 12px 12px 12px;
             display: grid;
             grid-template-columns: auto auto;
-            grid-column-gap: 16px;
-            background-color: #fafafa; /* (250, 250, 250, 1.0) */
+            grid-column-gap: 12px;
+            background-color: rgba(250, 250, 250, 1.0);
+        }
+
+        .gridImage {
+            background-image: url("Images/nora.jpg");
+            background-color: rgba(250, 250, 250, 1.0);
+            height: 720px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .gridSubHeading {
+            font-size: 19px;
+            font-weight: 400;
+            color: White;
         }
     </style>
 </head>
@@ -98,32 +94,22 @@
         <a href="">About</a>
     </div>
     <div class="heroImage">
-        <div class="heroCenteredText">
-            <h1 class="heroHeading">Hey</h1>
-            <h3 class="heroHeading2">This is Shahrukh Alam</h3>
+        <div class="centeredText">
+            <h1 class="heroHeading"> Hola! </h1>
+            <h1 class="heroSubHeading"> This is Shahrukh Alam </h1>
         </div>
     </div>
     <div class="gridContainer">
         <div class="gridImage">
-            <div class="heroCenteredText">
-                <h1 class="heroHeading">Hey</h1>
-                <h3 class="heroSubheading">Learn advanced techniques for creating sophisticated and dynamic layouts in
-                    OS X
-                    and iOS apps using the auto layout system. You'll receive tons of useful examples, see "how we did
-                    that," and learn valuable best practices and debugging techniques. If you are new to auto layout,
-                    you
-                    might want to attend the Introduction to Auto Layout session.</h3>
+            <div class="centeredText">
+                <h1 class="heroHeading"> Hola! </h1>
+                <h1 class="gridSubHeading"> This is Shahrukh Alam </h1>
             </div>
         </div>
         <div class="gridImage">
-            <div class="heroCenteredText">
-                <h1 class="heroHeading">Hello</h1>
-                <h3 class="heroSubheading">Learn advanced techniques for creating sophisticated and dynamic layouts in
-                    OS X
-                    and iOS apps using the auto layout system. You'll receive tons of useful examples, see "how we did
-                    that," and learn valuable best practices and debugging techniques. If you are new to auto layout,
-                    you
-                    might want to attend the Introduction to Auto Layout session.</h3>
+            <div class="centeredText">
+                <h1 class="heroHeading"> Hola! </h1>
+                <h1 class="gridSubHeading"> This is Shahrukh Alam </h1>
             </div>
         </div>
     </div>

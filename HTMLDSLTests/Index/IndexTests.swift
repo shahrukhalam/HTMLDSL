@@ -19,11 +19,13 @@ class IndexTests: XCTestCase {
                     HeadStyle {
                         IndexBodyStyle()
                         IndexNavStyle()
-
-                        ClassStyle(forClass: .indexIntro)
-                            .margin(top: .pixel(66))
-                            .font(size: .pixel(44))
-                            .font(weight: .number(600))
+                        HeroImageStyle(url: "Images/nora.jpg", heightInPixel: 745)
+                        CenteredTextStyle(topInPixel: 50)
+                        HeroHeadingStyle(color: .html(.White))
+                        HeroSubHeadingStyle(color: .html(.White))
+                        GridContainerStyle()
+                        GridImageStyle(url: "Images/nora.jpg", heightInPixel: 720)
+                        GridSubHeadingStyle(color: .html(.White))
                     }
                 }
 
@@ -34,8 +36,41 @@ class IndexTests: XCTestCase {
                     }
                     .identifyBy(cssClass: .indexNav)
 
-                    Headings("Shahrukh Alam")
-                        .identifyBy(cssClass: .indexIntro)
+                    Div {
+                        Div {
+                            Headings("Hola!")
+                                .identifyBy(cssClass: .heroHeading)
+                            Headings("This is Shahrukh Alam")
+                                .identifyBy(cssClass: .heroSubHeading)
+                        }
+                        .identifyBy(cssClass: .centeredText)
+                    }
+                    .identifyBy(cssClass: .heroImage)
+
+                    Div {
+                        Div {
+                            Div {
+                                Headings("Hola!")
+                                    .identifyBy(cssClass: .heroHeading)
+                                Headings("This is Shahrukh Alam")
+                                    .identifyBy(cssClass: .gridSubHeading)
+                            }
+                            .identifyBy(cssClass: .centeredText)
+                        }
+                        .identifyBy(cssClass: .gridImage)
+
+                        Div {
+                            Div {
+                                Headings("Hola!")
+                                    .identifyBy(cssClass: .heroHeading)
+                                Headings("This is Shahrukh Alam")
+                                    .identifyBy(cssClass: .gridSubHeading)
+                            }
+                            .identifyBy(cssClass: .centeredText)
+                        }
+                        .identifyBy(cssClass: .gridImage)
+                    }
+                    .identifyBy(cssClass: .gridContainer)
                 }
             }
         }
@@ -49,7 +84,7 @@ class IndexTests: XCTestCase {
         <meta charset="UTF-8" name="author" content="Shahrukh Alam">
         <style>
         body {
-        margin: 16px 16px 16px 16px;
+        margin: 0px 0px 0px 0px;
         font-family:SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
         }
         .indexNav {
@@ -69,10 +104,55 @@ class IndexTests: XCTestCase {
         display: inline-block;
         text-decoration: none;
         }
-        .indexIntro {
-        margin: 66px auto auto auto;
+        .heroImage {
+        background-image: url("Images/nora.jpg");
+        background-color:rgba(250, 250, 250, 1.0);
+        height:745px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: -1;
+        }
+        .centeredText {
+        text-align:center;
+        position: absolute;
+        left: 50%;
+        top: 50px;
+        right: auto;
+        bottom: auto;
+        transform: translate(-50%, 0%);
+        }
+        .heroHeading {
         font-size:44px;
         font-weight:600;
+        color:White;
+        }
+        .heroSubHeading {
+        font-size:40px;
+        font-weight:400;
+        color:White;
+        }
+        .gridContainer {
+        padding: 12px 12px 12px 12px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 12px;
+        background-color:rgba(250, 250, 250, 1.0);
+        }
+        .gridImage {
+        background-image: url("Images/nora.jpg");
+        background-color:rgba(250, 250, 250, 1.0);
+        height:720px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        }
+        .gridSubHeading {
+        font-size:19px;
+        font-weight:400;
+        color:White;
         }
         </style>
         </head>
@@ -81,7 +161,26 @@ class IndexTests: XCTestCase {
         <a href="">Home</a>
         <a href="">About</a>
         </div>
-        <h1 class="indexIntro"> Shahrukh Alam </h1>
+        <div class="heroImage">
+        <div class="centeredText">
+        <h1 class="heroHeading"> Hola! </h1>
+        <h1 class="heroSubHeading"> This is Shahrukh Alam </h1>
+        </div>
+        </div>
+        <div class="gridContainer">
+        <div class="gridImage">
+        <div class="centeredText">
+        <h1 class="heroHeading"> Hola! </h1>
+        <h1 class="gridSubHeading"> This is Shahrukh Alam </h1>
+        </div>
+        </div>
+        <div class="gridImage">
+        <div class="centeredText">
+        <h1 class="heroHeading"> Hola! </h1>
+        <h1 class="gridSubHeading"> This is Shahrukh Alam </h1>
+        </div>
+        </div>
+        </div>
         </body>
         </html>
         """
