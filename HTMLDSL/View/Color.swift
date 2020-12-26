@@ -26,7 +26,7 @@ enum Color: CustomStringConvertible {
 
 extension Color {
     static var TableBackgroundColor: Color {
-        return .rgba(red: 250, green: 250, blue: 250, alpha: 1.0) // #fafafa
+        return .rgba(red: 240, green: 240, blue: 240, alpha: 1.0) // #F0F0F0
     }
 }
 
