@@ -7,13 +7,18 @@
 
 import Foundation
 
+enum CSSTag: String {
+    case hoverLink = "a:hover"
+}
+
 enum CSSClass: String {
     case empty = ""
     case flexibleContainer = "flex-container"
 
     // Custom Classes for Index
     case indexNav
-    case indexIntro
+    case activeLink
+    case inactiveLink
 
     case centeredText
 

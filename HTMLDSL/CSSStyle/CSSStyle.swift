@@ -238,6 +238,10 @@ struct TagStyle: CSSStyle {
         self.key = tag.description
     }
 
+    init(cssTag: CSSTag) {
+        self.key = cssTag.rawValue
+    }
+
     fileprivate init(for key: CustomStringConvertible, with style: [Style]) {
         self.key = key
         self.styles = style

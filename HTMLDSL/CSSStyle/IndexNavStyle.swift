@@ -23,10 +23,23 @@ struct IndexNavStyle: CSSStyle {
 
         let linkStyle = ClassStyle(forClass: .indexNav, withTag: .enclosing(.link))
             .padding(uniform: .pixel(16))
-            .foregroundColor(.html(.Black))
             .display(.inlineBlock)
             .textDecoration(.none)
 
-        self.element = [navStyle, linkStyle].map { $0.element }.joined(separator: "\n")
+        let activeLinkStyle = ClassStyle(forClass: .activeLink)
+            .foregroundColor(.html(.Black))
+        
+        let inactiveLinkStyle = ClassStyle(forClass: .inactiveLink)
+            .foregroundColor(Color.InactiveBlack)
+        
+        let hoverLinkStyle = TagStyle(cssTag: .hoverLink)
+            .foregroundColor(.html(.Black))
+        
+        let classStyles = [navStyle, linkStyle, activeLinkStyle, inactiveLinkStyle]
+            .map { $0.element }
+        let tagStyles = [hoverLinkStyle].map { $0.element }
+        let allStyles = classStyles + tagStyles
+        self.element = allStyles
+            .joined(separator: "\n")
     }
 }

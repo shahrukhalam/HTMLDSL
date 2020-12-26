@@ -213,9 +213,17 @@ class CSSStyleTests: XCTestCase {
         }
         .indexNav a {
         padding: 16px 16px 16px 16px;
-        color:Black;
         display: inline-block;
         text-decoration: none;
+        }
+        .activeLink {
+        color:Black;
+        }
+        .inactiveLink {
+        color:rgba(61, 61, 61, 1.0);
+        }
+        a:hover {
+        color:Black;
         }
         """
 
