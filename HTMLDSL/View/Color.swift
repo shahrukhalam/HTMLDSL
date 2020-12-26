@@ -10,6 +10,7 @@ import Foundation
 enum Color: CustomStringConvertible {
     case html(HTMLColor)
     case rgba(red: Int, green: Int, blue: Int, alpha: Float)
+    case hexWithHash(String)
 
     var description: String {
         switch self {
@@ -17,7 +18,15 @@ enum Color: CustomStringConvertible {
             return color.rawValue
         case let .rgba(red, green, blue, alpha):
             return "rgba(\(red), \(green), \(blue), \(alpha))"
+        case .hexWithHash(let value):
+            return value
         }
+    }
+}
+
+extension Color {
+    static var TableBackgroundColor: Color {
+        return .rgba(red: 250, green: 250, blue: 250, alpha: 1.0) // #fafafa
     }
 }
 

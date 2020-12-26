@@ -11,6 +11,7 @@ import Foundation
 enum Display: String {
     case inline
     case block
+    case grid
     case inlineBlock = "inline-block"
     case none
     case initial

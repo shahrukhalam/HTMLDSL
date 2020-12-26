@@ -20,12 +20,14 @@ enum Style: CustomStringConvertible, Equatable {
                  top: InheritDimension,
                  right: InheritDimension,
                  bottom: InheritDimension)
+    case boxSizing(BoxSizing)
 
     case position(Position)
     case constraint(left: AutoInheritInitialDimension,
                     top: AutoInheritInitialDimension,
                     right: AutoInheritInitialDimension,
                     bottom: AutoInheritInitialDimension)
+    case transform(Transform)
 
     case foregroundColor(Color)
     case fontFamily(FontFamily)
@@ -37,6 +39,17 @@ enum Style: CustomStringConvertible, Equatable {
     case filter(saturationInPercentage: Int, blurInPixel: Int)
 
     case display(Display)
+
+    case backgroundImage(String)
+    case backgroundPosition(BackgroundPosition)
+    case backgroundRepeat(BackgroundRepeat)
+    case backgroundSize(BackgroundSize)
+
+    case zIndex(Int)
+
+    // Grid
+    case gridColumnGap(Int)
+    case gridTemplateColumns([AutoDimension])
 
     var description: String {
         switch self {
@@ -74,6 +87,25 @@ enum Style: CustomStringConvertible, Equatable {
             return "display: \(display.rawValue);"
         case .textDecoration(let decoration):
             return "text-decoration: \(decoration.rawValue);"
+        case .boxSizing(let size):
+            return "box-sizing: \(size.rawValue);"
+        case .backgroundImage(let url):
+            return "background-image: url(\"\(url)\");"
+        case .backgroundPosition(let position):
+            return "background-position: \(position.rawValue);"
+        case .backgroundRepeat(let repeatMode):
+            return "background-repeat: \(repeatMode.rawValue);"
+        case .backgroundSize(let size):
+            return "background-size: \(size.description);"
+        case .zIndex(let index):
+            return "z-index: \(index);"
+        case .transform(let transform):
+            return "transform: \(transform.description);"
+        case .gridColumnGap(let gap):
+            return "grid-column-gap: \(gap)px;"
+        case .gridTemplateColumns(let columnDimensions):
+            let templateColumns = columnDimensions.map { $0.description }.joined(separator: " ")
+            return "grid-template-columns: \(templateColumns);"
         }
     }
 
@@ -108,6 +140,24 @@ enum Style: CustomStringConvertible, Equatable {
         case (.display, .display):
             return true
         case (.textDecoration, .textDecoration):
+            return true
+        case (.boxSizing, .boxSizing):
+            return true
+        case (.backgroundImage, .backgroundImage):
+            return true
+        case (.backgroundPosition, .backgroundPosition):
+            return true
+        case (.backgroundRepeat, .backgroundRepeat):
+            return true
+        case (.backgroundSize, .backgroundSize):
+            return true
+        case (.zIndex, .zIndex):
+            return true
+        case (.transform, .transform):
+            return true
+        case (.gridColumnGap, .gridColumnGap):
+            return true
+        case (.gridTemplateColumns, .gridTemplateColumns):
             return true
         default:
             return false

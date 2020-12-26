@@ -7,26 +7,23 @@
 
 import Foundation
 
-enum CSSClass: CustomStringConvertible {
-    case empty
-    case flexibleContainer
+enum CSSClass: String {
+    case empty = ""
+    case flexibleContainer = "flex-container"
 
     // Custom Classes for Index
     case indexNav
     case indexIntro
 
-    var description: String {
-        switch self {
-        case .empty:
-            return ""
-        case .flexibleContainer:
-            return "flex-container"
-        case .indexNav:
-            return "indexNav"
-        case .indexIntro:
-            return "indexIntro"
-        }
-    }
+    case centeredText
+
+    case heroImage
+    case heroHeading
+    case heroSubHeading
+
+    case gridContainer
+    case gridImage
+    case gridSubHeading
 }
 
 struct ClassModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {

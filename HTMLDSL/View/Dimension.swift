@@ -83,3 +83,10 @@ enum AutoInheritInitialDimension: CustomStringConvertible {
         }
     }
 }
+
+enum BoxSizing: String {
+    case contentBox = "content-box"
+    case borderBox = "border-box"
+    case initial
+    case inherit
+}

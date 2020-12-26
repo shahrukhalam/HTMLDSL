@@ -35,6 +35,8 @@
 		016A6D662596A82B00C62F47 /* TextDecoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D652596A82B00C62F47 /* TextDecoration.swift */; };
 		016A6D6B2596A99200C62F47 /* IndexNavStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D6A2596A99200C62F47 /* IndexNavStyle.swift */; };
 		016A6D702596B0A300C62F47 /* IndexBodyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D6F2596B0A300C62F47 /* IndexBodyStyle.swift */; };
+		016A6D752597A26D00C62F47 /* PageBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D742597A26D00C62F47 /* PageBoxStyle.swift */; };
+		016A6D7A2597B5E000C62F47 /* HeroImageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D792597B5E000C62F47 /* HeroImageStyle.swift */; };
 		0196B207255F105000EE0E24 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B206255F105000EE0E24 /* main.swift */; };
 		0196B21C255F107000EE0E24 /* HTMLDSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0196B213255F107000EE0E24 /* HTMLDSL.framework */; };
 		0196B221255F107000EE0E24 /* DocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196B220255F107000EE0E24 /* DocumentTests.swift */; };
@@ -140,6 +142,8 @@
 		016A6D652596A82B00C62F47 /* TextDecoration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDecoration.swift; sourceTree = "<group>"; };
 		016A6D6A2596A99200C62F47 /* IndexNavStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexNavStyle.swift; sourceTree = "<group>"; };
 		016A6D6F2596B0A300C62F47 /* IndexBodyStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexBodyStyle.swift; sourceTree = "<group>"; };
+		016A6D742597A26D00C62F47 /* PageBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageBoxStyle.swift; sourceTree = "<group>"; };
+		016A6D792597B5E000C62F47 /* HeroImageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroImageStyle.swift; sourceTree = "<group>"; };
 		0196B203255F105000EE0E24 /* HTML */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HTML; sourceTree = BUILT_PRODUCTS_DIR; };
 		0196B206255F105000EE0E24 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0196B213255F107000EE0E24 /* HTMLDSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTMLDSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +244,8 @@
 				016A6D362594941B00C62F47 /* CSSStyle.swift */,
 				016A6D6A2596A99200C62F47 /* IndexNavStyle.swift */,
 				016A6D6F2596B0A300C62F47 /* IndexBodyStyle.swift */,
+				016A6D742597A26D00C62F47 /* PageBoxStyle.swift */,
+				016A6D792597B5E000C62F47 /* HeroImageStyle.swift */,
 			);
 			path = CSSStyle;
 			sourceTree = "<group>";
@@ -640,10 +646,12 @@
 				01B22BD22562D776009DAAB4 /* SizeModifier.swift in Sources */,
 				016A6D062593B7A900C62F47 /* BodyContent + Modifier.swift in Sources */,
 				016A6D6B2596A99200C62F47 /* IndexNavStyle.swift in Sources */,
+				016A6D752597A26D00C62F47 /* PageBoxStyle.swift in Sources */,
 				01B22B6925616924009DAAB4 /* Color.swift in Sources */,
 				019CB93C255FDC5C00C71B10 /* Tag.swift in Sources */,
 				01B22BAA25626685009DAAB4 /* BackgroundColorModifier.swift in Sources */,
 				0196B238255F16F900EE0E24 /* Document.swift in Sources */,
+				016A6D7A2597B5E000C62F47 /* HeroImageStyle.swift in Sources */,
 				019CB936255FDC0600C71B10 /* View + Element.swift in Sources */,
 				01B22BEB2562FFB4009DAAB4 /* FontModifier.swift in Sources */,
 				016A6D44259606CE00C62F47 /* HeadStyle.swift in Sources */,

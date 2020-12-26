@@ -27,7 +27,7 @@ enum Attribute: CustomStringConvertible, Equatable {
             return "style=\"\(finalStyle)\""
         case .class(let cssClass):
             if case .empty = cssClass { return "" }
-            return "class=\"\(cssClass.description)\""
+            return "class=\"\(cssClass.rawValue)\""
         case .target(let target):
             return "target=\"\(target.rawValue)\""
         }

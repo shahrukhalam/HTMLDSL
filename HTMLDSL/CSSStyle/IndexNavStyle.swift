@@ -8,14 +8,15 @@
 import Foundation
 
 struct IndexNavStyle: CSSStyle {
-    let key: CustomStringConvertible = ""
+    let key: CustomStringConvertible = Tag.empty.description
     let styles = [Style]()
 
     var element: String
 
     init() {
         let navStyle = ClassStyle(forClass: .indexNav)
-            .position(.fixed, left: .pixel(0), top: .pixel(0), right: .pixel(0))
+            .position(.fixed)
+            .constraint(left: .pixel(0), top: .pixel(0), right: .pixel(0))
             .backgroundColor(.rgba(red: 240, green: 240, blue: 240, alpha: 0.8))
             .align(.center)
             .filter(saturationInPercentage: 180, blurInPixel: 20)
