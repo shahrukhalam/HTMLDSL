@@ -28,6 +28,10 @@ extension Color {
     static var TableBackgroundColor: Color {
         return .rgba(red: 240, green: 240, blue: 240, alpha: 1.0) // #F0F0F0
     }
+
+    static var InactiveBlack: Color {
+        return .rgba(red: 61, green: 61, blue: 61, alpha: 1.0) // #3D3D3D
+    }
 }
 
 // Color Names Supported by All Browsers: https://www.w3schools.com/colors/colors_names.asp

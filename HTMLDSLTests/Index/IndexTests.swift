@@ -31,8 +31,8 @@ class IndexTests: XCTestCase {
 
                 Body {
                     Div {
-                        Link(text: "Home", url: "")
-                        Link(text: "About", url: "")
+                        Link(text: "Home", url: "").identifyBy(cssClass: .activeLink)
+                        Link(text: "About", url: "About.html").identifyBy(cssClass: .inactiveLink)
                     }
                     .identifyBy(cssClass: .indexNav)
 
@@ -100,9 +100,17 @@ class IndexTests: XCTestCase {
         }
         .indexNav a {
         padding: 16px 16px 16px 16px;
-        color:Black;
         display: inline-block;
         text-decoration: none;
+        }
+        .activeLink {
+        color:Black;
+        }
+        .inactiveLink {
+        color:rgba(61, 61, 61, 1.0);
+        }
+        a:hover {
+        color:Black;
         }
         .heroImage {
         background-image: url("Images/nora.jpg");
@@ -158,8 +166,8 @@ class IndexTests: XCTestCase {
         </head>
         <body>
         <div class="indexNav">
-        <a href="">Home</a>
-        <a href="">About</a>
+        <a href="" class="activeLink">Home</a>
+        <a href="About.html" class="inactiveLink">About</a>
         </div>
         <div class="heroImage">
         <div class="centeredText">
