@@ -12,6 +12,7 @@ enum Display: String {
     case inline
     case block
     case grid
+    case flex
     case inlineBlock = "inline-block"
     case none
     case initial

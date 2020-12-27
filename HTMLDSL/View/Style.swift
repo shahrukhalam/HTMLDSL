@@ -51,6 +51,11 @@ enum Style: CustomStringConvertible, Equatable {
     case gridColumnGap(Int)
     case gridTemplateColumns([AutoDimension])
 
+    // Flex
+    case flexDirection(StackViewDirection)
+    case flexAlignAlongAxis(StackViewAlignment)
+    case flexDistributeOnCrossAxis(StackViewDistribution)
+
     var description: String {
         switch self {
         case .backgroundColor(let color):
@@ -106,6 +111,12 @@ enum Style: CustomStringConvertible, Equatable {
         case .gridTemplateColumns(let columnDimensions):
             let templateColumns = columnDimensions.map { $0.description }.joined(separator: " ")
             return "grid-template-columns: \(templateColumns);"
+        case .flexDirection(let direction):
+            return "flex-direction: \(direction.rawValue);"
+        case .flexAlignAlongAxis(let alignment):
+            return "justify-content: \(alignment.rawValue);"
+        case .flexDistributeOnCrossAxis(let distribution):
+            return "align-items: \(distribution.rawValue);"
         }
     }
 
@@ -158,6 +169,12 @@ enum Style: CustomStringConvertible, Equatable {
         case (.gridColumnGap, .gridColumnGap):
             return true
         case (.gridTemplateColumns, .gridTemplateColumns):
+            return true
+        case (.flexDirection, .flexDirection):
+            return true
+        case (.flexAlignAlongAxis, .flexAlignAlongAxis):
+            return true
+        case (.flexDistributeOnCrossAxis, .flexDistributeOnCrossAxis):
             return true
         default:
             return false

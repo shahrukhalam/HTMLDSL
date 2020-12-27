@@ -52,6 +52,11 @@ struct StyleBuilder {
         let styles = [c0.element, c1.element, c2.element, c3.element, c4.element, c5.element, c6.element, c7.element, c8.element]
         return styles.joined(separator: "\n")
     }
+
+    static func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8, C9>(_ c0: C0, _ c1: C1, _ c2: C2, _ c3: C3, _ c4: C4, _ c5: C5, _ c6: C6, _ c7: C7, _ c8: C8, _ c9: C9) -> String where C0 : CSSStyle, C1 : CSSStyle, C2 : CSSStyle, C3 : CSSStyle, C4 : CSSStyle, C5 : CSSStyle, C6 : CSSStyle, C7 : CSSStyle, C8 : CSSStyle, C9 : CSSStyle {
+        let styles = [c0.element, c1.element, c2.element, c3.element, c4.element, c5.element, c6.element, c7.element, c8.element, c9.element]
+        return styles.joined(separator: "\n")
+    }
 }
 
 struct HeadStyle: HTMLHeadContentView {

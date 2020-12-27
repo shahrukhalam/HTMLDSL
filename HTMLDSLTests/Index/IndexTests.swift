@@ -19,13 +19,14 @@ class IndexTests: XCTestCase {
                     HeadStyle {
                         IndexBodyStyle()
                         IndexNavStyle()
-                        HeroImageStyle(url: "Images/nora.jpg", heightInPixel: 745)
-                        CenteredTextStyle(topInPixel: 50)
+                        HeroImageStyle(url: "Images/Hero.png", heightInPixel: 745)
+                        CenteredTextStyle(topInPixel: 76)
                         HeroHeadingStyle(color: .html(.White))
                         HeroSubHeadingStyle(color: .html(.White))
                         GridContainerStyle()
                         GridImageStyle(url: "Images/nora.jpg", heightInPixel: 720)
                         GridSubHeadingStyle(color: .html(.White))
+                        StackViewStyle(alignment: .center, distribution: .center)
                     }
                 }
 
@@ -38,10 +39,20 @@ class IndexTests: XCTestCase {
 
                     Div {
                         Div {
-                            Headings("Hola!")
-                                .identifyBy(cssClass: .heroHeading)
-                            Headings("This is Shahrukh Alam")
+                            Div {
+                                Image("Images/app store.png", alternateText: "App Store Icon")
+                                    .size(width: .pixel(40), height: .pixel(40))
+                                Headings("Featured")
+                                    .identifyBy(cssClass: .heroHeading)
+                                    .padding(left: .pixel(10))
+                                    .margin()
+                            }
+                            .identifyBy(cssClass: .flexibleContainerHorizontal)
+
+                            Headings("Paytm Money Trading App")
                                 .identifyBy(cssClass: .heroSubHeading)
+                                .padding(top: .pixel(16))
+                                .margin()
                         }
                         .identifyBy(cssClass: .centeredText)
                     }
@@ -113,7 +124,7 @@ class IndexTests: XCTestCase {
         color:Black;
         }
         .heroImage {
-        background-image: url("Images/nora.jpg");
+        background-image: url("Images/Hero.png");
         background-color:rgba(240, 240, 240, 1.0);
         height:745px;
         background-position: center;
@@ -126,7 +137,7 @@ class IndexTests: XCTestCase {
         text-align:center;
         position: absolute;
         left: 50%;
-        top: 50px;
+        top: 76px;
         right: auto;
         bottom: auto;
         transform: translate(-50%, 0%);
@@ -162,6 +173,12 @@ class IndexTests: XCTestCase {
         font-weight:400;
         color:White;
         }
+        .flexibleContainerHorizontal {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        }
         </style>
         </head>
         <body>
@@ -171,8 +188,11 @@ class IndexTests: XCTestCase {
         </div>
         <div class="heroImage">
         <div class="centeredText">
-        <h1 class="heroHeading"> Hola! </h1>
-        <h1 class="heroSubHeading"> This is Shahrukh Alam </h1>
+        <div class="flexibleContainerHorizontal">
+        <img src="Images/app store.png" alt="App Store Icon" style="width:40px;height:40px;">
+        <h1 class="heroHeading" style="padding: 0px 0px 0px 10px;margin: 0px 0px 0px 0px;"> Featured </h1>
+        </div>
+        <h1 class="heroSubHeading" style="padding: 16px 0px 0px 0px;margin: 0px 0px 0px 0px;"> Paytm Money Trading App </h1>
         </div>
         </div>
         <div class="gridContainer">
