@@ -59,15 +59,15 @@ extension CSSStyle {
         return body
     }
 
-    func margin(left: AutoInheritDimension = .auto,
-                top: AutoInheritDimension = .auto,
-                right: AutoInheritDimension = .auto,
-                bottom: AutoInheritDimension = .auto) -> Self {
+    func margin(left: AutoInheritDimension = .pixel(0),
+                top: AutoInheritDimension = .pixel(0),
+                right: AutoInheritDimension = .pixel(0),
+                bottom: AutoInheritDimension = .pixel(0)) -> Self {
         modified(body: self,
-                 oldStyle: .margin(left: .auto,
-                                   top: .auto,
-                                   right: .auto,
-                                   bottom: .auto),
+                 oldStyle: .margin(left: .pixel(0),
+                                   top: .pixel(0),
+                                   right: .pixel(0),
+                                   bottom: .pixel(0)),
                  with: .margin(left: left,
                                top: top,
                                right: right,
@@ -76,25 +76,25 @@ extension CSSStyle {
 
     func margin(uniform: AutoInheritDimension) -> Self {
         modified(body: self,
-                 oldStyle: .margin(left: .auto,
-                                   top: .auto,
-                                   right: .auto,
-                                   bottom: .auto),
+                 oldStyle: .margin(left: .pixel(0),
+                                   top: .pixel(0),
+                                   right: .pixel(0),
+                                   bottom: .pixel(0)),
                  with: .margin(left: uniform,
                                top: uniform,
                                right: uniform,
                                bottom: uniform))
     }
 
-    func padding(left: InheritDimension,
-                 top: InheritDimension,
-                 right: InheritDimension,
-                 bottom: InheritDimension) -> Self {
+    func padding(left: InheritDimension = .pixel(0),
+                 top: InheritDimension = .pixel(0),
+                 right: InheritDimension = .pixel(0),
+                 bottom: InheritDimension = .pixel(0)) -> Self {
         modified(body: self,
-                 oldStyle: .padding(left: .inherit,
-                                    top: .inherit,
-                                    right: .inherit,
-                                    bottom: .inherit),
+                 oldStyle: .padding(left: .pixel(0),
+                                    top: .pixel(0),
+                                    right: .pixel(0),
+                                    bottom: .pixel(0)),
                  with: .padding(left: left,
                                 top: top,
                                 right: right,
@@ -103,10 +103,10 @@ extension CSSStyle {
 
     func padding(uniform: InheritDimension) -> Self {
         modified(body: self,
-                 oldStyle: .padding(left: .inherit,
-                                    top: .inherit,
-                                    right: .inherit,
-                                    bottom: .inherit),
+                 oldStyle: .padding(left: .pixel(0),
+                                    top: .pixel(0),
+                                    right: .pixel(0),
+                                    bottom: .pixel(0)),
                  with: .padding(left: uniform,
                                 top: uniform,
                                 right: uniform,
@@ -227,6 +227,25 @@ extension CSSStyle {
         return modified(body: self,
                         oldStyle: .gridTemplateColumns([]),
                         with: .gridTemplateColumns(templates))
+    }
+
+    // Flex
+    func flexDirection(_ direction: StackViewDirection) -> Self {
+        return modified(body: self,
+                        oldStyle: .flexDirection(.horizontal),
+                        with: .flexDirection(direction))
+    }
+
+    func flexAlign(_ alignment: StackViewAlignment) -> Self {
+        return modified(body: self,
+                        oldStyle: .flexAlignAlongAxis(.stretch),
+                        with: .flexAlignAlongAxis(alignment))
+    }
+
+    func flexDistribute(_ distribution: StackViewDistribution) -> Self {
+        return modified(body: self,
+                        oldStyle: .flexDistributeOnCrossAxis(.flexStart),
+                        with: .flexDistributeOnCrossAxis(distribution))
     }
 }
 

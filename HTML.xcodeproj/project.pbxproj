@@ -13,11 +13,9 @@
 		0114CA7725646D68008E3F8A /* LinkViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CA7625646D68008E3F8A /* LinkViewBuilder.swift */; };
 		0114CA7C25647AD7008E3F8A /* ImageView + Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CA7B25647AD7008E3F8A /* ImageView + Modifier.swift */; };
 		0114CA8125647B1A008E3F8A /* ImageLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CA8025647B1A008E3F8A /* ImageLink.swift */; };
-		016A6CED2593A8AD00C62F47 /* FlexibleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6CEC2593A8AD00C62F47 /* FlexibleContainer.swift */; };
 		016A6CF22593A9CD00C62F47 /* Body + Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6CF12593A9CD00C62F47 /* Body + Modifier.swift */; };
 		016A6CF72593A9EA00C62F47 /* IDModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6CF62593A9EA00C62F47 /* IDModifier.swift */; };
 		016A6CFC2593AA0200C62F47 /* ClassModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6CFB2593AA0200C62F47 /* ClassModifier.swift */; };
-		016A6D012593B0A200C62F47 /* FlexibleContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D002593B0A100C62F47 /* FlexibleContainerTests.swift */; };
 		016A6D062593B7A900C62F47 /* BodyContent + Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D052593B7A900C62F47 /* BodyContent + Modifier.swift */; };
 		016A6D0B2593D32D00C62F47 /* Div.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D0A2593D32D00C62F47 /* Div.swift */; };
 		016A6D102593DBF500C62F47 /* DivTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D0F2593DBF500C62F47 /* DivTests.swift */; };
@@ -120,11 +118,9 @@
 		0114CA7625646D68008E3F8A /* LinkViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkViewBuilder.swift; sourceTree = "<group>"; };
 		0114CA7B25647AD7008E3F8A /* ImageView + Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView + Modifier.swift"; sourceTree = "<group>"; };
 		0114CA8025647B1A008E3F8A /* ImageLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLink.swift; sourceTree = "<group>"; };
-		016A6CEC2593A8AD00C62F47 /* FlexibleContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleContainer.swift; sourceTree = "<group>"; };
 		016A6CF12593A9CD00C62F47 /* Body + Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Body + Modifier.swift"; sourceTree = "<group>"; };
 		016A6CF62593A9EA00C62F47 /* IDModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDModifier.swift; sourceTree = "<group>"; };
 		016A6CFB2593AA0200C62F47 /* ClassModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassModifier.swift; sourceTree = "<group>"; };
-		016A6D002593B0A100C62F47 /* FlexibleContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleContainerTests.swift; sourceTree = "<group>"; };
 		016A6D052593B7A900C62F47 /* BodyContent + Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyContent + Modifier.swift"; sourceTree = "<group>"; };
 		016A6D0A2593D32D00C62F47 /* Div.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Div.swift; sourceTree = "<group>"; };
 		016A6D0F2593DBF500C62F47 /* DivTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivTests.swift; sourceTree = "<group>"; };
@@ -366,7 +362,6 @@
 				0196B26D255F309300EE0E24 /* Headings.swift */,
 				019CB98C256039E100C71B10 /* Paragraphs.swift */,
 				019CB9752560216100C71B10 /* Image.swift */,
-				016A6CEC2593A8AD00C62F47 /* FlexibleContainer.swift */,
 				016A6D0A2593D32D00C62F47 /* Div.swift */,
 				016A6D142593E3A400C62F47 /* IFrame.swift */,
 				0114CA8525647B3B008E3F8A /* Link */,
@@ -450,7 +445,6 @@
 				01B22BD62562D9C3009DAAB4 /* SizeModifierTests.swift */,
 				01B22BEF2563024F009DAAB4 /* FontModifierTests.swift */,
 				01B22C0325630FFA009DAAB4 /* TextFormattingTests.swift */,
-				016A6D002593B0A100C62F47 /* FlexibleContainerTests.swift */,
 				016A6D0F2593DBF500C62F47 /* DivTests.swift */,
 			);
 			path = ViewModifier;
@@ -622,7 +616,6 @@
 				01B22BE62562EE77009DAAB4 /* FontFamily.swift in Sources */,
 				016A6D702596B0A300C62F47 /* IndexBodyStyle.swift in Sources */,
 				016A6D572596852500C62F47 /* Position.swift in Sources */,
-				016A6CED2593A8AD00C62F47 /* FlexibleContainer.swift in Sources */,
 				0196B264255F2EB800EE0E24 /* HTML.swift in Sources */,
 				01B22BA525625B33009DAAB4 /* ModifiedContent + View.swift in Sources */,
 				0196B269255F306700EE0E24 /* Body.swift in Sources */,
@@ -674,7 +667,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				019CB99225603AA700C71B10 /* ParagraphTests.swift in Sources */,
-				016A6D012593B0A200C62F47 /* FlexibleContainerTests.swift in Sources */,
 				0114CA6D2564669B008E3F8A /* LinkTests.swift in Sources */,
 				016A6D102593DBF500C62F47 /* DivTests.swift in Sources */,
 				01E8025D256CDEA400B541ED /* IndexTests.swift in Sources */,

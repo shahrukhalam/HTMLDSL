@@ -13,7 +13,6 @@ enum CSSTag: String {
 
 enum CSSClass: String {
     case empty = ""
-    case flexibleContainer = "flex-container"
 
     // Custom Classes for Index
     case indexNav
@@ -26,9 +25,15 @@ enum CSSClass: String {
     case heroHeading
     case heroSubHeading
 
+    // Grid
     case gridContainer
     case gridImage
     case gridSubHeading
+
+    // Flex
+    case flexibleContainer = "flex-container"
+    case flexibleContainerHorizontal
+    case flexibleContainerVertical
 }
 
 struct ClassModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {

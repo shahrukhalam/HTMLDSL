@@ -28,10 +28,10 @@ extension HTMLContentView {
         return ModifiedContent(content: self, modifier: modifier)
     }
 
-    func margin(left: AutoInheritDimension,
-                top: AutoInheritDimension,
-                right: AutoInheritDimension,
-                bottom: AutoInheritDimension) -> ModifiedContent<Self, MarginModifier<Self>> {
+    func margin(left: AutoInheritDimension = .pixel(0),
+                top: AutoInheritDimension = .pixel(0),
+                right: AutoInheritDimension = .pixel(0),
+                bottom: AutoInheritDimension = .pixel(0)) -> ModifiedContent<Self, MarginModifier<Self>> {
         let modifier = MarginModifier<Self>(left: left,
                                             top: top,
                                             right: right,
@@ -39,10 +39,10 @@ extension HTMLContentView {
         return ModifiedContent(content: self, modifier: modifier)
     }
 
-    func padding(left: InheritDimension,
-                 top: InheritDimension,
-                 right: InheritDimension,
-                 bottom: InheritDimension) -> ModifiedContent<Self, PaddingModifier<Self>> {
+    func padding(left: InheritDimension = .pixel(0),
+                 top: InheritDimension = .pixel(0),
+                 right: InheritDimension = .pixel(0),
+                 bottom: InheritDimension = .pixel(0)) -> ModifiedContent<Self, PaddingModifier<Self>> {
         let modifier = PaddingModifier<Self>(left: left,
                                              top: top,
                                              right: right,

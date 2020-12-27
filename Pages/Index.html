@@ -28,9 +28,21 @@
             text-decoration: none;
         }
 
+        .activeLink {
+            color: Black;
+        }
+
+        .inactiveLink {
+            color: rgba(61, 61, 61, 1.0);
+        }
+
+        a:hover {
+            color: Black;
+        }
+
         .heroImage {
-            background-image: url("Images/nora.jpg");
-            background-color: rgba(250, 250, 250, 1.0);
+            background-image: url("Images/Hero.png");
+            background-color: rgba(240, 240, 240, 1.0);
             height: 745px;
             background-position: center;
             background-repeat: no-repeat;
@@ -43,7 +55,7 @@
             text-align: center;
             position: absolute;
             left: 50%;
-            top: 50px;
+            top: 76px;
             right: auto;
             bottom: auto;
             transform: translate(-50%, 0%);
@@ -71,6 +83,7 @@
 
         .gridImage {
             background-image: url("Images/nora.jpg");
+            background-color: rgba(240, 240, 240, 1.0);
             height: 720px;
             background-position: center;
             background-repeat: no-repeat;
@@ -84,16 +97,11 @@
             color: White;
         }
 
-        .inActiveLink {
-            color: #3D3D3D;
-        }
-
-        .activeLink {
-            color: black;
-        }
-
-        a:hover {
-            color: black;
+        .flexibleContainerHorizontal {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -101,12 +109,17 @@
 <body>
     <div class="indexNav">
         <a href="" class="activeLink">Home</a>
-        <a href="About.html" class="inActiveLink">About</a>
+        <a href="About.html" class="inactiveLink">About</a>
     </div>
     <div class="heroImage">
         <div class="centeredText">
-            <h1 class="heroHeading"> Hola! </h1>
-            <h1 class="heroSubHeading"> This is Shahrukh Alam </h1>
+            <div class="flexibleContainerHorizontal">
+                <img src="Images/app store.png" alt="App Store Icon" style="width:40px;height:40px;">
+                <h1 class="heroHeading" style="padding: 0px 0px 0px 10px;margin: 0px 0px 0px 0px;"> Featured </h1>
+            </div>
+            <h1 class="heroSubHeading" style="padding: 16px 0px 0px 0px;margin: 0px 0px 0px 0px;"> Paytm Money Trading
+                App
+            </h1>
         </div>
     </div>
     <div class="gridContainer">

@@ -135,3 +135,48 @@ struct GridSubHeadingStyle: CSSStyle {
         self.element = gridSubHeading.element
     }
 }
+
+enum StackViewDirection: String {
+    case horizontal = "row"
+    case vertical = "column"
+}
+
+enum StackViewAlignment: String {
+    case stretch
+    case center
+}
+
+enum StackViewDistribution: String {
+    case flexStart = "flex-start"
+    case center
+}
+
+struct StackViewStyle: CSSStyle {
+    let key: CustomStringConvertible = Tag.empty.description
+    let styles = [Style]()
+
+    var element: String
+
+    init(direction: StackViewDirection = .horizontal,
+         alignment: StackViewAlignment = .stretch,
+         distribution: StackViewDistribution = .flexStart) {
+        let stackViewStyle: ClassStyle
+
+        switch direction {
+        case .horizontal:
+            stackViewStyle = ClassStyle(forClass: .flexibleContainerHorizontal)
+                .display(.flex)
+                .flexDirection(.horizontal)
+                .flexAlign(alignment)
+                .flexDistribute(distribution)
+        case .vertical:
+            stackViewStyle = ClassStyle(forClass: .flexibleContainerVertical)
+                .display(.flex)
+                .flexDirection(.vertical)
+                .flexAlign(alignment)
+                .flexDistribute(distribution)
+        }
+
+        self.element = stackViewStyle.element
+    }
+}
