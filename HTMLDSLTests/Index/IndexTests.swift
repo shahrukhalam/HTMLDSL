@@ -118,14 +118,14 @@ class IndexTests: XCTestCase {
         color:Black;
         }
         .inactiveLink {
-        color:rgba(61, 61, 61, 1.0);
+        color:rgba(60, 60, 60, 1.0);
         }
         a:hover {
         color:Black;
         }
         .heroImage {
         background-image: url("Images/Hero.png");
-        background-color:rgba(240, 240, 240, 1.0);
+        background-color:rgba(250, 250, 250, 1.0);
         height:745px;
         background-position: center;
         background-repeat: no-repeat;
@@ -157,11 +157,11 @@ class IndexTests: XCTestCase {
         display: grid;
         grid-template-columns: auto auto;
         grid-column-gap: 12px;
-        background-color:rgba(240, 240, 240, 1.0);
+        background-color:rgba(250, 250, 250, 1.0);
         }
         .gridImage {
         background-image: url("Images/nora.jpg");
-        background-color:rgba(240, 240, 240, 1.0);
+        background-color:rgba(250, 250, 250, 1.0);
         height:720px;
         background-position: center;
         background-repeat: no-repeat;
