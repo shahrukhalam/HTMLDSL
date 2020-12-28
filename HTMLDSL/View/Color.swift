@@ -25,12 +25,16 @@ enum Color: CustomStringConvertible {
 }
 
 extension Color {
+    static var NavBarColor: Color {
+        return .rgba(red: 240, green: 240, blue: 240, alpha: 0.8) // #F0F0F0
+    }
+
     static var TableBackgroundColor: Color {
-        return .rgba(red: 240, green: 240, blue: 240, alpha: 1.0) // #F0F0F0
+        return .rgba(red: 250, green: 250, blue: 250, alpha: 1.0) // #FAFAFA
     }
 
     static var InactiveBlack: Color {
-        return .rgba(red: 61, green: 61, blue: 61, alpha: 1.0) // #3D3D3D
+        return .rgba(red: 60, green: 60, blue: 60, alpha: 1.0) // #3C3C3C
     }
 }
 
