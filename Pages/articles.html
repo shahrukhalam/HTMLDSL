@@ -103,16 +103,79 @@
             padding-top: 16px;
             line-height: 1.6;
         }
+
+        .flexibleOpenSourceNavContainer {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: center;
+            background-color: #111111;
+            top: 50px;
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        .flexibleOpenSourceNavContainerHorizontal {
+            display: flex;
+            position: relative;
+            margin-left: 48px;
+            margin-right: 48px;
+            align-items: flex-end;
+        }
+
+        .flexibleOpenSourceNavContainerVertical {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 48px;
+        }
+
+        .flexibleOpenSourceNavContainerHorizontal a {
+            text-decoration: none;
+        }
+
+        .flexibleOpenSourceNavContainerHorizontal a:hover p {
+            color: #7BB9F9;
+        }
+
+        .flexibleOpenSourceNavContainerVertical img {
+            width: 50px;
+        }
+
+        .flexibleOpenSourceNavContainerVertical p {
+            margin: 0px;
+            padding-top: 4px;
+            font-size: 11px;
+            color: white;
+        }
+
+        #activeLinkOpenSource {
+            color: #7BB9F9;
+        }
     </style>
 </head>
 
 <body>
     <div class="indexNav">
         <img src="Images/iOS Developer.png" alt="iOS Developer Icon" style="height: 40px;">
-        <a href="Index.html" class="inactiveLink">Home</a>
-        <a href="" class="inactiveLink">Projects</a>
+        <a href="index.html" class="inactiveLink">Home</a>
+        <a href="index.html" class="inactiveLink">Projects</a>
         <a href="" class="activeLink">Open Source</a>
-        <a href="" class="inactiveLink">About</a>
+        <a href="index.html" class="inactiveLink">About</a>
+    </div>
+
+    <div class="flexibleOpenSourceNavContainer" style="background-color: #111111;">
+        <div class="flexibleOpenSourceNavContainerHorizontal">
+            <a class="flexibleOpenSourceNavContainerVertical" href="articles.html">
+                <img src="Images/article.png" alt="Project">
+                <p id="activeLinkOpenSource">Articles</p>
+            </a>
+
+            <a class="flexibleOpenSourceNavContainerVertical" href="projects.html">
+                <img src="Images/project.png" alt="Project">
+                <p>Projects</p>
+            </a>
+        </div>
     </div>
 
     <div class="flexibleArticlesContainer">
