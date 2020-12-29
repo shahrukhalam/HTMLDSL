@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shahrukh Alam's Portfolio</title>
+    <meta charset="UTF-8" name="author" content="Shahrukh Alam">
+    <style>
+        body {
+            margin: 0px 0px 0px 0px;
+            font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
+            background-color: #222222;
+        }
+
+        .indexNav {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+            bottom: auto;
+            background-color: rgba(240, 240, 240, 0.8);
+            text-align: center;
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+            z-index: 1;
+        }
+
+        .indexNav img {
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            transform: translate(0%, -50%);
+        }
+
+        .indexNav a {
+            padding: 16px 16px 16px 16px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .activeLink {
+            color: Black;
+        }
+
+        .inactiveLink {
+            color: rgba(60, 60, 60, 1.0);
+        }
+
+        a:hover {
+            color: Black;
+        }
+
+        .flexibleArticleContainer {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .flexibleArticleContainer a {
+            position: absolute;
+            width: inherit;
+            height: 100%;
+        }
+
+        .flexibleContainerHorizontal {
+            display: flex;
+            flex-direction: row;
+            width: 60%;
+            padding: 16px;
+            align-items: center;
+            background: #111111;
+            /* Apple's Backgound Color: #F5F5F7 */
+            border-radius: 16px;
+        }
+
+        .flexibleContainerHorizontal img {
+            height: 150px;
+            width: 250px;
+            object-fit: cover;
+        }
+
+        .flexibleContainerVertical {
+            display: flex;
+            flex-direction: column;
+            padding-left: 16px;
+        }
+
+        .articleHeading {
+            font-size: 28px;
+            font-weight: 600;
+            color: white;
+            margin: 0px;
+        }
+
+        .articleSubHeading {
+            font-size: 20px;
+            font-weight: 400;
+            color: white;
+            /* Apple's Text Color: #1D1D1F */
+            margin: 0px;
+            padding-top: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="indexNav">
+        <img src="Images/iOS Developer.png" alt="iOS Developer Icon" style="height: 40px;">
+        <a href="Index.html" class="inactiveLink">Home</a>
+        <a href="" class="inactiveLink">Projects</a>
+        <a href="" class="activeLink">Open Source</a>
+        <a href="" class="inactiveLink">About</a>
+    </div>
+
+    <div class="flexibleArticleContainer" style="top: 75px;">
+        <div class="flexibleContainerHorizontal">
+            <img src="Images/functionBuilder.jpeg" alt="Function Builder">
+            <div class="flexibleContainerVertical">
+                <h1 class="articleHeading">How I Decoded Function Builders in Swift</h1>
+                <h1 class="articleSubHeading">This is my experience with Function Builders in Swift. How I encountered
+                    it, the things I did to find behind the scenes which make a Function Builder & ultimately reach the
+                    awesomeness of it.</h1>
+            </div>
+            <a href="https://medium.com/swift-india/how-i-decoded-function-builders-in-swift-be21e9f13429"
+                target="_blank"></a>
+        </div>
+    </div>
+
+    <div class="flexibleArticleContainer" style="top: 100px;">
+        <div class="flexibleContainerHorizontal">
+            <img src="Images/secure.jpeg" alt="Secure Secrets">
+            <div class="flexibleContainerVertical">
+                <h1 class="articleHeading">Secure Secrets in iOS app</h1>
+                <h1 class="articleSubHeading">How do we store our secrets on the client-side? Are we really vulnerable
+                    to attacks? Is it really worthwhile to take the measures to store them securely?</h1>
+            </div>
+            <a href="https://medium.com/swift-india/secure-secrets-in-ios-app-9f66085800b4" target="_blank"></a>
+        </div>
+    </div>
+
+    <div class="flexibleArticleContainer" style="top: 125px;">
+        <div class="flexibleContainerHorizontal">
+            <img src="Images/staticLib.jpeg" alt="Static Library">
+            <div class="flexibleContainerVertical">
+                <h1 class="articleHeading">Static Library in iOS</h1>
+                <h1 class="articleSubHeading">Are we Duplicating a piece of code for a particular functionality across
+                    multiple Apps? Do we find it difficult to fix a bug on all those places? If Yes, then Static Library
+                    is an answer to our problems.</h1>
+            </div>
+            <a href="https://medium.com/swift-india/static-library-in-ios-d133123678d1" target="_blank"></a>
+        </div>
+    </div>
+
+    <div class="flexibleArticleContainer" style="top: 150px;padding-bottom: 25px;">
+        <div class="flexibleContainerHorizontal">
+            <img src="Images/faceID.png" alt="Face ID">
+            <div class="flexibleContainerVertical">
+                <h1 class="articleHeading">Integrating Face ID/Touch ID in iOS</h1>
+                <h1 class="articleSubHeading">Did you know Facial Recognition dates back to 1960s with manual
+                    measurements of facial coordinates. It’s used by govt agencies like DOJ, FBI, DEA, CBP and U.S.
+                    Marshalls. In-fact US-Govt used facial recognition to confirm the identity of Osama bin Laden for
+                    Operation Neptune Spear in 2011.</h1>
+            </div>
+            <a href="https://medium.com/swift2go/integrating-face-id-touch-id-in-ios-78da7080f742" target="_blank"></a>
+        </div>
+    </div>
+</body>
+
+</html>
