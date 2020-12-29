@@ -8,7 +8,6 @@
         body {
             margin: 0px 0px 0px 0px;
             font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
-            background-color: #222222;
         }
 
         .indexNav {
@@ -49,28 +48,31 @@
             color: Black;
         }
 
-        .flexibleArticleContainer {
+        .flexibleArticlesContainer {
             display: flex;
+            flex-direction: column;
             position: relative;
-            justify-content: center;
-            width: 100%;
-        }
-
-        .flexibleArticleContainer a {
-            position: absolute;
-            width: inherit;
-            height: 100%;
+            align-items: center;
+            background-color: #222222;
+            top: 50px;
         }
 
         .flexibleContainerHorizontal {
             display: flex;
-            flex-direction: row;
+            position: relative;
             width: 60%;
             padding: 16px;
             align-items: center;
-            background: #111111;
             /* Apple's Backgound Color: #F5F5F7 */
+            background: #111111;
             border-radius: 16px;
+        }
+
+        .flexibleContainerHorizontal a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0px;
         }
 
         .flexibleContainerHorizontal img {
@@ -95,8 +97,8 @@
         .articleSubHeading {
             font-size: 20px;
             font-weight: 400;
-            color: white;
             /* Apple's Text Color: #1D1D1F */
+            color: white;
             margin: 0px;
             padding-top: 16px;
             line-height: 1.6;
@@ -113,21 +115,24 @@
         <a href="" class="inactiveLink">About</a>
     </div>
 
-    <div class="flexibleArticleContainer" style="top: 75px;">
+    <div class="flexibleArticlesContainer">
+        <div style="padding-top: 16px;"></div>
         <div class="flexibleContainerHorizontal">
             <img src="Images/functionBuilder.jpeg" alt="Function Builder">
             <div class="flexibleContainerVertical">
                 <h1 class="articleHeading">How I Decoded Function Builders in Swift</h1>
-                <h1 class="articleSubHeading">This is my experience with Function Builders in Swift. How I encountered
-                    it, the things I did to find behind the scenes which make a Function Builder & ultimately reach the
+                <h1 class="articleSubHeading">This is my experience with Function Builders in Swift. How I
+                    encountered
+                    it, the things I did to find behind the scenes which make a Function Builder & ultimately reach
+                    the
                     awesomeness of it.</h1>
             </div>
+
             <a href="https://medium.com/swift-india/how-i-decoded-function-builders-in-swift-be21e9f13429"
                 target="_blank"></a>
         </div>
-    </div>
 
-    <div class="flexibleArticleContainer" style="top: 100px;">
+        <div style="padding-top: 16px;"></div>
         <div class="flexibleContainerHorizontal">
             <img src="Images/secure.jpeg" alt="Secure Secrets">
             <div class="flexibleContainerVertical">
@@ -137,9 +142,8 @@
             </div>
             <a href="https://medium.com/swift-india/secure-secrets-in-ios-app-9f66085800b4" target="_blank"></a>
         </div>
-    </div>
 
-    <div class="flexibleArticleContainer" style="top: 125px;">
+        <div style="padding-top: 16px;"></div>
         <div class="flexibleContainerHorizontal">
             <img src="Images/staticLib.jpeg" alt="Static Library">
             <div class="flexibleContainerVertical">
@@ -150,9 +154,8 @@
             </div>
             <a href="https://medium.com/swift-india/static-library-in-ios-d133123678d1" target="_blank"></a>
         </div>
-    </div>
 
-    <div class="flexibleArticleContainer" style="top: 150px;padding-bottom: 25px;">
+        <div style="padding-top: 16px;"></div>
         <div class="flexibleContainerHorizontal">
             <img src="Images/faceID.png" alt="Face ID">
             <div class="flexibleContainerVertical">
@@ -164,6 +167,8 @@
             </div>
             <a href="https://medium.com/swift2go/integrating-face-id-touch-id-in-ios-78da7080f742" target="_blank"></a>
         </div>
+
+        <div style="padding-bottom: 16px;"></div>
     </div>
 </body>
 
