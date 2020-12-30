@@ -1,0 +1,37 @@
+.indexNav {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: auto;
+    background-color: rgba(240, 240, 240, 0.8);
+    text-align: center;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    z-index: 1;
+}
+
+.indexNav img {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translate(0%, -50%);
+}
+
+.indexNav a {
+    padding: 16px 16px 16px 16px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.inactiveLink {
+    color: rgba(60, 60, 60, 1.0);
+}
+
+.activeLink {
+    color: Black;
+}
+
+a:hover {
+    color: Black;
+}

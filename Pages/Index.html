@@ -4,48 +4,13 @@
 <head>
     <title>Shahrukh Alam's Portfolio</title>
     <meta charset="UTF-8" name="author" content="Shahrukh Alam">
+
+    <link rel="stylesheet" href="nav.css">
+
     <style>
         body {
             margin: 0px 0px 0px 0px;
             font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
-        }
-
-        .indexNav {
-            position: fixed;
-            left: 0px;
-            top: 0px;
-            right: 0px;
-            bottom: auto;
-            background-color: rgba(240, 240, 240, 0.8);
-            text-align: center;
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            backdrop-filter: saturate(180%) blur(20px);
-            z-index: 1;
-        }
-
-        .indexNav img {
-            position: absolute;
-            top: 50%;
-            left: 100px;
-            transform: translate(0%, -50%);
-        }
-
-        .indexNav a {
-            padding: 16px 16px 16px 16px;
-            display: inline-block;
-            text-decoration: none;
-        }
-
-        .activeLink {
-            color: Black;
-        }
-
-        .inactiveLink {
-            color: rgba(60, 60, 60, 1.0);
-        }
-
-        a:hover {
-            color: Black;
         }
 
         .heroImage {
@@ -113,16 +78,21 @@
             align-items: center;
         }
     </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#nav-placeholder').load("nav.html", function (response, status, xhr) {
+                $('#navHome').removeClass("inactiveLink");
+                $('#navHome').addClass("activeLink");
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <div class="indexNav">
-        <img src="Images/iOS Developer.png" alt="iOS Developer Icon" style="height: 40px;">
-        <a href="" class="activeLink">Home</a>
-        <a href="" class="inactiveLink">Projects</a>
-        <a href="articles.html" class="inactiveLink">Open Source</a>
-        <a href="" class="inactiveLink">About</a>
-    </div>
+    <div id="nav-placeholder"></div>
+
     <div class="heroImage">
         <div class="centeredText" style="top: 76px;">
             <div class="flexibleContainerHorizontal">
@@ -156,7 +126,8 @@
                 </div>
                 <div class="flexibleContainerHorizontal">
                     <h1 class="gridSubHeading" style="color: black;">Published under</h1>
-                    <img src="Images/news uk.png" alt="News UK Icon" style="padding-left: 8px;width:100px;padding-top: 8px;">
+                    <img src="Images/news uk.png" alt="News UK Icon"
+                        style="padding-left: 8px;width:100px;padding-top: 8px;">
                 </div>
                 <h1 class="gridSubHeading" style="color: black;">Largest circulation of any Daily Newspaper in the UK
                 </h1>
@@ -169,7 +140,8 @@
             <div class="centeredText" style="top: 60px;width: 100%;">
                 <h1 class="heroHeading" style="color: black;">Wysa</h1>
                 <h1 class="gridSubHeading" style="color: black;">Best App 2020 on Play Store</h1>
-                <h1 class="gridSubHeading" style="color: black;">Certified by Orcha UK for best App in Stress category</h1>
+                <h1 class="gridSubHeading" style="color: black;">Certified by Orcha UK for best App in Stress category
+                </h1>
             </div>
             <a href="About.html" style="display: inline-block;width: 100%;height: 100%;position: absolute;"></a>
         </div>
