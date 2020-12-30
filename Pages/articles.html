@@ -4,48 +4,11 @@
 <head>
     <title>Shahrukh Alam's Portfolio</title>
     <meta charset="UTF-8" name="author" content="Shahrukh Alam">
+    <link rel="stylesheet" href="nav.css">
     <style>
         body {
             margin: 0px 0px 0px 0px;
             font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
-        }
-
-        .indexNav {
-            position: fixed;
-            left: 0px;
-            top: 0px;
-            right: 0px;
-            bottom: auto;
-            background-color: rgba(240, 240, 240, 0.8);
-            text-align: center;
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            backdrop-filter: saturate(180%) blur(20px);
-            z-index: 1;
-        }
-
-        .indexNav img {
-            position: absolute;
-            top: 50%;
-            left: 100px;
-            transform: translate(0%, -50%);
-        }
-
-        .indexNav a {
-            padding: 16px 16px 16px 16px;
-            display: inline-block;
-            text-decoration: none;
-        }
-
-        .activeLink {
-            color: Black;
-        }
-
-        .inactiveLink {
-            color: rgba(60, 60, 60, 1.0);
-        }
-
-        a:hover {
-            color: Black;
         }
 
         .flexibleArticlesContainer {
@@ -153,16 +116,20 @@
             color: #7BB9F9;
         }
     </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#nav-placeholder').load("nav.html", function (response, status, xhr) {
+                $('#navOpenSource').removeClass("inactiveLink");
+                $('#navOpenSource').addClass("activeLink");
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <div class="indexNav">
-        <img src="Images/iOS Developer.png" alt="iOS Developer Icon" style="height: 40px;">
-        <a href="index.html" class="inactiveLink">Home</a>
-        <a href="index.html" class="inactiveLink">Projects</a>
-        <a href="" class="activeLink">Open Source</a>
-        <a href="index.html" class="inactiveLink">About</a>
-    </div>
+    <div id="nav-placeholder"></div>
 
     <div class="flexibleOpenSourceNavContainer" style="background-color: #111111;">
         <div class="flexibleOpenSourceNavContainerHorizontal">
