@@ -1,0 +1,24 @@
+.gridContainer {
+    padding: 12px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 12px;
+    background-color: rgba(240, 240, 240, 1.0);
+}
+
+.gridImage {
+    background-color: rgba(240, 240, 240, 1.0);
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.gridSubHeading {
+    font-size: 19px;
+    font-weight: 400;
+    color: White;
+    padding: 16px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
