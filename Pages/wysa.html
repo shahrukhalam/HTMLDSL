@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shahrukh Alam's Portfolio</title>
+    <meta charset="UTF-8" name="author" content="Shahrukh Alam">
+
+    <link rel="stylesheet" href="CSS/Common/body.css">
+    <link rel="stylesheet" href="CSS/Common/nav.css">
+    <link rel="stylesheet" href="CSS/Index/hero.css">
+    <link rel="stylesheet" href="CSS/Index/grid.css">
+    <link rel="stylesheet" href="CSS/Index/project.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#nav-placeholder').load("HTML/nav.html", function (response, status, xhr) {
+                $('#navHome').removeClass("inactiveLink");
+                $('#navHome').addClass("activeLink");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <div class="heroImage" style="background-image: url(Images/wysaHero.png);">
+        <div class="centeredText" style="top: 76px;">
+            <h1 class="heroProjectHeading">Wysa App</h1>
+            <h1 class="heroProjectSubHeading">A cute app that lets you talk to a Penguin, an Emotionally Intelligent
+                chatbot which uses AI to react to the Emotions you Express.</h1>
+        </div>
+    </div>
+    <a href="About.html" style="display: inline-block;width: 100%;height: 695px;position: absolute;top: 50px;"></a>
+
+    <div class="gridContainer" style="background-color: rgba(240, 240, 240, 1.0);">
+        <div class="gridImage" style="background-image: url(Images/wysaFeatures.png);">
+            <div class="textStartingFromCentre">
+                <h1 class="heroProjectHeading">Key Features</h1>
+                <h1 class="projectSubHeading">Anonymous & Secure</h1>
+                <h1 class="projectSubHeading">AI Friend</h1>
+                <h1 class="projectSubHeading">Self Care Kit</h1>
+                <h1 class="projectSubHeading">Sleep Stories & Meditations</h1>
+                <h1 class="projectSubHeading">Professional Therapist</h1>
+                <h1 class="projectSubHeading">Health Monitoring & Reports</h1>
+            </div>
+        </div>
+
+        <div class="gridImage" style="background-image: url(Images/wysaRole.png);">
+            <div class="textStartingFromCentre">
+                <h1 class="heroProjectHeading">My Role</h1>
+                <h1 class="heroProjectHeading2">Lead iOS Developer</h1>
+                <h1 class="projectSubHeading">Development & Deployment of iPhone end-to-end Apps</h1>
+                <h1 class="projectSubHeading">Helping in API Design</h1>
+                <h1 class="projectSubHeading">Designing mock Wireframes</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
