@@ -1,0 +1,31 @@
+.heroImage {
+    background-color: rgba(250, 250, 250, 1.0);
+    height: 745px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.centeredText {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, 0%);
+}
+
+.heroHeading {
+    font-size: 44px;
+    font-weight: 600;
+    color: White;
+    margin: 0px;
+}
+
+.heroSubHeading {
+    font-size: 40px;
+    font-weight: 400;
+    color: White;
+    margin: 0px;
+}

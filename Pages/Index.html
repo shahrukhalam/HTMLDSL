@@ -5,84 +5,16 @@
     <title>Shahrukh Alam's Portfolio</title>
     <meta charset="UTF-8" name="author" content="Shahrukh Alam">
 
-    <link rel="stylesheet" href="nav.css">
-
-    <style>
-        body {
-            margin: 0px 0px 0px 0px;
-            font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
-        }
-
-        .heroImage {
-            background-image: url("Images/Hero.png");
-            background-color: rgba(250, 250, 250, 1.0);
-            height: 745px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-        }
-
-        .centeredText {
-            text-align: center;
-            position: absolute;
-            left: 50%;
-            right: auto;
-            bottom: auto;
-            transform: translate(-50%, 0%);
-        }
-
-        .heroHeading {
-            font-size: 44px;
-            font-weight: 600;
-            color: White;
-            margin: 0px;
-        }
-
-        .heroSubHeading {
-            font-size: 40px;
-            font-weight: 400;
-            color: White;
-            margin: 0px;
-        }
-
-        .gridContainer {
-            padding: 12px;
-            display: grid;
-            grid-template-columns: auto auto;
-            grid-column-gap: 12px;
-            background-color: rgba(240, 240, 240, 1.0);
-        }
-
-        .gridImage {
-            background-color: rgba(240, 240, 240, 1.0);
-            height: 600px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-        }
-
-        .gridSubHeading {
-            font-size: 19px;
-            font-weight: 400;
-            color: White;
-            padding: 16px 0px 0px 0px;
-            margin: 0px 0px 0px 0px;
-        }
-
-        .flexibleContainerHorizontal {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/Common/body.css">
+    <link rel="stylesheet" href="CSS/Common/nav.css">
+    <link rel="stylesheet" href="CSS/Index/hero.css">
+    <link rel="stylesheet" href="CSS/Index/grid.css">
+    <link rel="stylesheet" href="CSS/Index/flexibleContainer.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#nav-placeholder').load("nav.html", function (response, status, xhr) {
+            $('#nav-placeholder').load("HTML/nav.html", function (response, status, xhr) {
                 $('#navHome').removeClass("inactiveLink");
                 $('#navHome').addClass("activeLink");
             });
@@ -93,7 +25,7 @@
 <body>
     <div id="nav-placeholder"></div>
 
-    <div class="heroImage">
+    <div class="heroImage" style="background-image: url(Images/Hero.png);">
         <div class="centeredText" style="top: 76px;">
             <div class="flexibleContainerHorizontal">
                 <img src="Images/App Store.png" alt="App Store Icon" style="width:40px;height:40px;">
