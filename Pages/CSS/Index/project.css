@@ -30,3 +30,18 @@
     font-weight: 400;
     color: White;
 }
+
+.flexibleProjectContainerHorizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flexibleProjectContainerHorizontal img {
+    width: 36px;
+    height: 36px;
+}
+
+.flexibleProjectContainerHorizontal h1 {
+    padding-left: 8px;
+}
