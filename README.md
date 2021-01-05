@@ -89,4 +89,4 @@ let index = Document {
 ```
 Above code generates below HTML Page:
 
-![Index Page](Pages/Images/index.png)
+<img src="/Pages/Images/index.png" height=750px>
