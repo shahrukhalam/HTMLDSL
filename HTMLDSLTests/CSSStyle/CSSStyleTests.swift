@@ -231,20 +231,17 @@ class CSSStyleTests: XCTestCase {
     }
 
     func testHeroImageStyle() {
-        let indexNavStyle = HeroImageStyle(url: "Images/nora.jpg",
-                                           heightInPixel: 745)
+        let indexNavStyle = HeroImageStyle(heightInPixel: 745)
 
         let expectation =
             """
         .heroImage {
-        background-image: url("Images/nora.jpg");
         background-color:rgba(250, 250, 250, 1.0);
         height:745px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        z-index: -1;
         }
         """
 
@@ -318,12 +315,11 @@ class CSSStyleTests: XCTestCase {
     }
 
     func testGridImageStle() {
-        let style = GridImageStyle(url: "Images/nora.jpg", heightInPixel: 720)
+        let style = GridImageStyle(heightInPixel: 720)
 
         let expectation =
             """
         .gridImage {
-        background-image: url("Images/nora.jpg");
         background-color:rgba(250, 250, 250, 1.0);
         height:720px;
         background-position: center;

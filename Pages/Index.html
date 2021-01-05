@@ -2,81 +2,38 @@
 <html>
 
 <head>
-    <title>Shahrukh Alam's Portfolio</title>
+    <title> My Website </title>
     <meta charset="UTF-8" name="author" content="Shahrukh Alam">
 
     <link rel="stylesheet" href="CSS/Common/body.css">
     <link rel="stylesheet" href="CSS/Common/nav.css">
     <link rel="stylesheet" href="CSS/Index/hero.css">
     <link rel="stylesheet" href="CSS/Index/grid.css">
-    <link rel="stylesheet" href="CSS/Index/flexibleContainer.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#nav-placeholder').load("HTML/nav.html", function (response, status, xhr) {
-                $('#navHome').removeClass("inactiveLink");
-                $('#navHome').addClass("activeLink");
-            });
-        });
-    </script>
 </head>
 
 <body>
-    <div id="nav-placeholder"></div>
-
-    <div class="heroImage" style="background-image: url(Images/Hero.png);">
-        <div class="centeredText" style="top: 76px;">
-            <div class="flexibleContainerHorizontal">
-                <img src="Images/App Store.png" alt="App Store Icon" style="width:40px;height:40px;">
-                <h1 class="heroHeading" style="padding-left: 16px;"> Featured </h1>
-            </div>
-            <h1 class="heroSubHeading" style="padding-top: 16px;">Paytm Money Trading App</h1>
+    <div class="indexNav">
+        <a href="index.html" class="activeLink">Home</a>
+        <a href="about.html" class="inactiveLink">About</a>
+    </div>
+    <div class="heroImage" style="background-image: url(Images/wonder1.jpg);">
+        <div class="centeredText">
+            <h1 class="heroHeading"> Featured </h1>
+            <h1 class="heroSubHeading"> Paytm Money Trading App </h1>
         </div>
     </div>
-    <a href="About.html" style="display: inline-block;width: 100%;height: 695px;position: absolute;top: 50px;"></a>
-
     <div class="gridContainer">
-        <div class="gridImage" style="background-image: url(Images/gojek.png);">
-            <div class="centeredText" style="top: 60px;width: 100%;">
-                <h1 class="heroHeading" style="color: black;">Gojek</h1>
-                <h1 class="gridSubHeading" style="color: black;"><b>Super App</b> (17+ Services)</h1>
-                <h1 class="gridSubHeading" style="color: black;">250M+ Users, 2M+ Drivers, 3M+ Orders/Day</h1>
-                <h1 class="gridSubHeading" style="color: black;"><i>50 Companies that Changed the World</i> by Fortune
-                    2017</h1>
+        <div class="gridImage" style="background-image: url(Images/wonder2.jpg);">
+            <div class="centeredText">
+                <h1 class="heroHeading"> Hola! </h1>
+                <h1 class="gridSubHeading"> This is Shahrukh Alam </h1>
             </div>
-            <a href="About.html" style="display: inline-block;width: 100%;height: 100%;position: absolute;"></a>
         </div>
-        <div class="gridImage" style="background-image: url(Images/the\ sun.png);">
-            <div class="centeredText" style="top: 60px;width: 100%;">
-                <h1 class="heroHeading" style="color: black;">The Sun</h1>
-                <div class="flexibleContainerHorizontal">
-                    <h1 class="gridSubHeading" style="color: black;">A</h1>
-                    <img src="Images/news corp.png" alt="News Corp Icon"
-                        style="padding-left: 8px;width:100px;padding-top: 16px;">
-                    <h1 class="gridSubHeading" style="padding-left: 8px;color: black;">Brand</h1>
-                </div>
-                <div class="flexibleContainerHorizontal">
-                    <h1 class="gridSubHeading" style="color: black;">Published under</h1>
-                    <img src="Images/news uk.png" alt="News UK Icon"
-                        style="padding-left: 8px;width:100px;padding-top: 8px;">
-                </div>
-                <h1 class="gridSubHeading" style="color: black;">Largest circulation of any Daily Newspaper in the UK
-                </h1>
+        <div class="gridImage" style="background-image: url(Images/wonder3.jpeg);">
+            <div class="centeredText">
+                <h1 class="heroHeading"> Hola! </h1>
+                <h1 class="gridSubHeading"> This is Shahrukh Alam </h1>
             </div>
-            <a href="About.html" style="display: inline-block;width: 100%;height: 100%;position: absolute;"></a>
-        </div>
-    </div>
-    <div class="gridContainer" style="background-color: white;">
-        <div class="gridImage" style="background-image: url(Images/wysa.png);">
-            <div class="centeredText" style="top: 60px;width: 100%;">
-                <h1 class="heroHeading" style="color: black;">Wysa</h1>
-                <h1 class="gridSubHeading" style="color: black;">Best App 2020 on Play Store</h1>
-                <h1 class="gridSubHeading" style="color: black;">Certified by Orcha UK for best App in Stress category
-                </h1>
-                <h1 class="gridSubHeading" style="color: black;">Featured on BBC, Bloomberg, University of Washington & many more</h1>
-            </div>
-            <a href="About.html" style="display: inline-block;width: 100%;height: 100%;position: absolute;"></a>
         </div>
     </div>
 </body>

@@ -13,18 +13,15 @@ struct HeroImageStyle: CSSStyle {
 
     var element: String
 
-    init(url: String,
-         heightInPixel: Int,
+    init(heightInPixel: Int,
          backgroundColor: Color = Color.TableBackgroundColor) {
         let heroImageStyle = ClassStyle(forClass: .heroImage)
-            .backgroundImage(url: url)
             .backgroundColor(backgroundColor)
             .size(height: .pixel(heightInPixel))
             .backgroundPosition(.center)
             .backgroundRepeat(.noRepeat)
             .backgroundSize(.cover)
             .position(.relative)
-            .zIndex(-1)
 
         self.element = heroImageStyle.element
     }
@@ -104,11 +101,9 @@ struct GridImageStyle: CSSStyle {
 
     var element: String
 
-    init(url: String,
-         heightInPixel: Int,
+    init(heightInPixel: Int,
          backgroundColor: Color = Color.TableBackgroundColor) {
         let heroImageStyle = ClassStyle(forClass: .gridImage)
-            .backgroundImage(url: url)
             .backgroundColor(backgroundColor)
             .size(height: .pixel(heightInPixel))
             .backgroundPosition(.center)
