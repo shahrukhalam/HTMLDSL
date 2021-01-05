@@ -87,6 +87,8 @@
 		01B22BFF25630D6F009DAAB4 /* TextFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22BFE25630D6F009DAAB4 /* TextFormatting.swift */; };
 		01B22C0425630FFA009DAAB4 /* TextFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B22C0325630FFA009DAAB4 /* TextFormattingTests.swift */; };
 		01E8025D256CDEA400B541ED /* IndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E8025C256CDEA400B541ED /* IndexTests.swift */; };
+		01FC8CDB25A42E0E00719706 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC8CDA25A42E0E00719706 /* Hero.swift */; };
+		01FC8CE325A43C7800719706 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC8CE225A43C7800719706 /* Grid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +198,8 @@
 		01B22BFE25630D6F009DAAB4 /* TextFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatting.swift; sourceTree = "<group>"; };
 		01B22C0325630FFA009DAAB4 /* TextFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormattingTests.swift; sourceTree = "<group>"; };
 		01E8025C256CDEA400B541ED /* IndexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexTests.swift; sourceTree = "<group>"; };
+		01FC8CDA25A42E0E00719706 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		01FC8CE225A43C7800719706 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,10 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				016A6D362594941B00C62F47 /* CSSStyle.swift */,
-				016A6D6A2596A99200C62F47 /* IndexNavStyle.swift */,
-				016A6D6F2596B0A300C62F47 /* IndexBodyStyle.swift */,
-				016A6D742597A26D00C62F47 /* PageBoxStyle.swift */,
-				016A6D792597B5E000C62F47 /* HeroImageStyle.swift */,
+				01FC8CD525A42DDE00719706 /* Custom */,
 			);
 			path = CSSStyle;
 			sourceTree = "<group>";
@@ -365,6 +366,7 @@
 				016A6D0A2593D32D00C62F47 /* Div.swift */,
 				016A6D142593E3A400C62F47 /* IFrame.swift */,
 				0114CA8525647B3B008E3F8A /* Link */,
+				01FC8CD925A42DE900719706 /* Custom */,
 			);
 			path = Body;
 			sourceTree = "<group>";
@@ -456,6 +458,26 @@
 				01E8025C256CDEA400B541ED /* IndexTests.swift */,
 			);
 			path = Index;
+			sourceTree = "<group>";
+		};
+		01FC8CD525A42DDE00719706 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				016A6D6A2596A99200C62F47 /* IndexNavStyle.swift */,
+				016A6D6F2596B0A300C62F47 /* IndexBodyStyle.swift */,
+				016A6D742597A26D00C62F47 /* PageBoxStyle.swift */,
+				016A6D792597B5E000C62F47 /* HeroImageStyle.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		01FC8CD925A42DE900719706 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				01FC8CDA25A42E0E00719706 /* Hero.swift */,
+				01FC8CE225A43C7800719706 /* Grid.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -629,6 +651,7 @@
 				016A6D1F2593F61C00C62F47 /* PaddingModifier.swift in Sources */,
 				0114CA6825646454008E3F8A /* Link.swift in Sources */,
 				016A6D662596A82B00C62F47 /* TextDecoration.swift in Sources */,
+				01FC8CE325A43C7800719706 /* Grid.swift in Sources */,
 				01B22B9B25625959009DAAB4 /* EmptyModifier.swift in Sources */,
 				01B22B5C25613F93009DAAB4 /* HTMLViewBuilder.swift in Sources */,
 				01B22BE12562EE5F009DAAB4 /* FontSize.swift in Sources */,
@@ -647,6 +670,7 @@
 				016A6D7A2597B5E000C62F47 /* HeroImageStyle.swift in Sources */,
 				019CB936255FDC0600C71B10 /* View + Element.swift in Sources */,
 				01B22BEB2562FFB4009DAAB4 /* FontModifier.swift in Sources */,
+				01FC8CDB25A42E0E00719706 /* Hero.swift in Sources */,
 				016A6D44259606CE00C62F47 /* HeadStyle.swift in Sources */,
 				0196B254255F212700EE0E24 /* ViewBuilder.swift in Sources */,
 				01B22BC02562B84C009DAAB4 /* ViewModifier + Extension.swift in Sources */,
