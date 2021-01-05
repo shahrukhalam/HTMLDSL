@@ -196,7 +196,7 @@ class CSSStyleTests: XCTestCase {
     }
 
     func testIndexNavStyle() {
-        let indexNavStyle = IndexNavStyle()
+        let indexNavStyle = PageNavStyle()
 
         let expectation =
             """
@@ -210,6 +210,7 @@ class CSSStyleTests: XCTestCase {
         text-align:center;
         -webkit-backdrop-filter: saturate(180%) blur(20px);
         backdrop-filter: saturate(180%) blur(20px);
+        z-index: 1;
         }
         .indexNav a {
         padding: 16px 16px 16px 16px;
@@ -241,7 +242,7 @@ class CSSStyleTests: XCTestCase {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        position: relative;
+        position: absolute;
         }
         """
 

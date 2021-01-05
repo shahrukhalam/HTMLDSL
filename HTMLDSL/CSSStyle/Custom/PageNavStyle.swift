@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct IndexNavStyle: CSSStyle {
+struct PageNavStyle: CSSStyle {
     let key: CustomStringConvertible = Tag.empty.description
     let styles = [Style]()
 
@@ -20,6 +20,7 @@ struct IndexNavStyle: CSSStyle {
             .backgroundColor(.rgba(red: 240, green: 240, blue: 240, alpha: 0.8))
             .align(.center)
             .filter(saturationInPercentage: 180, blurInPixel: 20)
+            .zIndex(1)
 
         let linkStyle = ClassStyle(forClass: .indexNav, withTag: .enclosing(.link))
             .padding(uniform: .pixel(16))

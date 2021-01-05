@@ -23,6 +23,11 @@ extension HTMLContentView {
         return ModifiedContent(content: self, modifier: modifier)
     }
 
+    func backgroundImage(path: String) -> ModifiedContent<Self, BackgroundImageModifier<Self>> {
+        let modifier = BackgroundImageModifier<Self>(path: path)
+        return ModifiedContent(content: self, modifier: modifier)
+    }
+
     func size(width: AutoDimension? = nil, height: AutoDimension? = nil) -> ModifiedContent<Self, SizeModifier<Self>> {
         let modifier = SizeModifier<Self>(width: width, height: height)
         return ModifiedContent(content: self, modifier: modifier)

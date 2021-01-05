@@ -21,7 +21,7 @@ struct HeroImageStyle: CSSStyle {
             .backgroundPosition(.center)
             .backgroundRepeat(.noRepeat)
             .backgroundSize(.cover)
-            .position(.relative)
+            .position(.absolute)
 
         self.element = heroImageStyle.element
     }
