@@ -95,7 +95,7 @@ enum Style: CustomStringConvertible, Equatable {
         case .boxSizing(let size):
             return "box-sizing: \(size.rawValue);"
         case .backgroundImage(let url):
-            return "background-image: url(\"\(url)\");"
+            return "background-image: url(\(url));"
         case .backgroundPosition(let position):
             return "background-position: \(position.rawValue);"
         case .backgroundRepeat(let repeatMode):

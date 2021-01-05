@@ -35,5 +35,6 @@ struct Hero: HTMLBodyContentView {
             .identifyBy(cssClass: .centeredText)
         }
         .identifyBy(cssClass: .heroImage)
+        .backgroundImage(path: detail.image)
     }
 }

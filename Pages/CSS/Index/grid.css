@@ -15,8 +15,14 @@
     position: relative;
 }
 
+.gridHeading {
+    font-size: 32px;
+    font-weight: 400;
+    color: White;
+}
+
 .gridSubHeading {
-    font-size: 19px;
+    font-size: 24px;
     font-weight: 400;
     color: White;
 }

@@ -29,6 +29,7 @@ struct Grid: HTMLBodyContentView {
                 .identifyBy(cssClass: .centeredText)
             }
             .identifyBy(cssClass: .gridImage)
+            .backgroundImage(path: detail.image)
 
             return AnyView(gridView)
         }
