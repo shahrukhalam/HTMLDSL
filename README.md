@@ -50,34 +50,39 @@ Here we are trying to build one for HTML in Pure Swift which we all love.
 
 ## Example:
 ```
-let description =
-    """
-(born 6 February 1992) is a Canadian dancer, model, actress, and singer who is best known for her work in the Indian film industry. She has appeared in Hindi, Telugu, Malayalam and Tamil language films.
-She made her film debut in the Bollywood film Roar: Tigers of the Sundarbans. She gained popularity in Telugu cinema by doing item numbers in films like Temper, Baahubali: The Beginning and Kick 2 and has also starred in two Malayalam films, Double Barrel and Kayamkulam Kochunni.
-"""
-
 let index = Document {
     HTML {
         Head {
-            Title("My Website")
+            Title("Wonder Woman")
             Meta([.characterSet(.utf8),
                   .name(.author, content: "Shahrukh Alam")])
+            CSSLink(path: "CSS/Common/nav.css")
+            CSSLink(path: "CSS/Index/hero.css")
+            CSSLink(path: "CSS/Index/grid.css")
+            HeadStyle {
+                IndexBodyStyle()
+            }
         }
-
+        
         Body {
-            Headings("Nora Fatehi")
-                .foregroundColor(.DeepPink)
-                .font(size: .relativeToViewportWidth(4))
-            Paragraphs("Nora Fatehi ".bold + description)
-                .backgroundColor(.GhostWhite)
-                .font(size: .percentage(125),
-                      family: .monospace([.CourierNew, .Courier, .monospace]))
-                .align(.justify)
-            Image("Images/nora.jpg", alternateText: "Nora Fatehi")
-                .size(width: .percentage(30))
-            Link(text: "Nora Fatehi Instagram Handle",
-                 url: "https://www.instagram.com/norafatehi/?hl=en")
-                .target(.newWindowOrTab)
+            Div {
+                Link(text: "Home", url: "index.html")
+                    .identifyBy(cssClass: .activeLink)
+                Link(text: "About", url: "about.html")
+                    .identifyBy(cssClass: .inactiveLink)
+            }
+            .identifyBy(cssClass: .indexNav)
+            
+            Hero(detail: Detail(title: "Gal Galot",
+                                subtitle: "Diana Prince or Wonder Woman",
+                                image: "Images/wonder1.jpg"))
+            
+            Grid(details: [Detail(title: "Wonder Woman",
+                                  subtitle: "Amazons, Themyscira & Ares",
+                                  image: "Images/wonder2.jpg"),
+                           Detail(title: "Wonder Woman 1984",
+                                  subtitle: "I wish to be You",
+                                  image: "Images/wonder3.jpeg")])
         }
     }
 }
