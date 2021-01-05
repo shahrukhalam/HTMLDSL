@@ -11,12 +11,9 @@
 		0114CA6D2564669B008E3F8A /* LinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CA6C2564669B008E3F8A /* LinkTests.swift */; };
 		0114CA7225646A23008E3F8A /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CA7125646A23008E3F8A /* Target.swift */; };
 		0114CA7725646D68008E3F8A /* LinkViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CA7625646D68008E3F8A /* LinkViewBuilder.swift */; };
-		0114CA7C25647AD7008E3F8A /* ImageView + Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CA7B25647AD7008E3F8A /* ImageView + Modifier.swift */; };
 		0114CA8125647B1A008E3F8A /* ImageLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CA8025647B1A008E3F8A /* ImageLink.swift */; };
-		016A6CF22593A9CD00C62F47 /* Body + Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6CF12593A9CD00C62F47 /* Body + Modifier.swift */; };
 		016A6CF72593A9EA00C62F47 /* IDModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6CF62593A9EA00C62F47 /* IDModifier.swift */; };
 		016A6CFC2593AA0200C62F47 /* ClassModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6CFB2593AA0200C62F47 /* ClassModifier.swift */; };
-		016A6D062593B7A900C62F47 /* BodyContent + Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D052593B7A900C62F47 /* BodyContent + Modifier.swift */; };
 		016A6D0B2593D32D00C62F47 /* Div.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D0A2593D32D00C62F47 /* Div.swift */; };
 		016A6D102593DBF500C62F47 /* DivTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D0F2593DBF500C62F47 /* DivTests.swift */; };
 		016A6D152593E3A400C62F47 /* IFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A6D142593E3A400C62F47 /* IFrame.swift */; };
@@ -120,12 +117,9 @@
 		0114CA6C2564669B008E3F8A /* LinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkTests.swift; sourceTree = "<group>"; };
 		0114CA7125646A23008E3F8A /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 		0114CA7625646D68008E3F8A /* LinkViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkViewBuilder.swift; sourceTree = "<group>"; };
-		0114CA7B25647AD7008E3F8A /* ImageView + Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView + Modifier.swift"; sourceTree = "<group>"; };
 		0114CA8025647B1A008E3F8A /* ImageLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLink.swift; sourceTree = "<group>"; };
-		016A6CF12593A9CD00C62F47 /* Body + Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Body + Modifier.swift"; sourceTree = "<group>"; };
 		016A6CF62593A9EA00C62F47 /* IDModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDModifier.swift; sourceTree = "<group>"; };
 		016A6CFB2593AA0200C62F47 /* ClassModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassModifier.swift; sourceTree = "<group>"; };
-		016A6D052593B7A900C62F47 /* BodyContent + Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyContent + Modifier.swift"; sourceTree = "<group>"; };
 		016A6D0A2593D32D00C62F47 /* Div.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Div.swift; sourceTree = "<group>"; };
 		016A6D0F2593DBF500C62F47 /* DivTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivTests.swift; sourceTree = "<group>"; };
 		016A6D142593E3A400C62F47 /* IFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFrame.swift; sourceTree = "<group>"; };
@@ -419,10 +413,7 @@
 				01B22B8F2562573B009DAAB4 /* ViewModifier.swift */,
 				01B22BBF2562B84C009DAAB4 /* ViewModifier + Extension.swift */,
 				01B22BAE25626985009DAAB4 /* View + Modifier.swift */,
-				016A6CF12593A9CD00C62F47 /* Body + Modifier.swift */,
-				016A6D052593B7A900C62F47 /* BodyContent + Modifier.swift */,
 				01B22BC92562BFE2009DAAB4 /* TextView + Modifier.swift */,
-				0114CA7B25647AD7008E3F8A /* ImageView + Modifier.swift */,
 				01AA15F2256555F5006F2B39 /* LinkView + Modifier.swift */,
 				01B22B9A25625958009DAAB4 /* EmptyModifier.swift */,
 				016A6CF62593A9EA00C62F47 /* IDModifier.swift */,
@@ -666,9 +657,7 @@
 				01B22BDC2562EE40009DAAB4 /* Dimension.swift in Sources */,
 				019CB95E25600E0B00C71B10 /* Meta.swift in Sources */,
 				019CB9762560216100C71B10 /* Image.swift in Sources */,
-				0114CA7C25647AD7008E3F8A /* ImageView + Modifier.swift in Sources */,
 				01B22BD22562D776009DAAB4 /* SizeModifier.swift in Sources */,
-				016A6D062593B7A900C62F47 /* BodyContent + Modifier.swift in Sources */,
 				016A6D6B2596A99200C62F47 /* PageNavStyle.swift in Sources */,
 				016A6D752597A26D00C62F47 /* PageBoxStyle.swift in Sources */,
 				01B22B6925616924009DAAB4 /* Color.swift in Sources */,
@@ -684,7 +673,6 @@
 				01B22BC02562B84C009DAAB4 /* ViewModifier + Extension.swift in Sources */,
 				016A6D612596A45200C62F47 /* Display.swift in Sources */,
 				01B22BC52562BA7F009DAAB4 /* ForegroundColorModifier.swift in Sources */,
-				016A6CF22593A9CD00C62F47 /* Body + Modifier.swift in Sources */,
 				01B22B902562573B009DAAB4 /* ViewModifier.swift in Sources */,
 				01B22B6E25616BF9009DAAB4 /* Attribute.swift in Sources */,
 				016A6D372594941B00C62F47 /* CSSStyle.swift in Sources */,
