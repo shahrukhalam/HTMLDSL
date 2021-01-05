@@ -10,18 +10,12 @@ If you are an Apple Developer, then you would probably know about `Podfile` whic
 Here we are trying to build one for HTML in Pure Swift which we all love.
 
 ## Features:
-✅ Unit Tested
-
+✅ Unit Tested  
 ✅ Experience SwiftUI like Syntax  
-
 ✅ Type Safety  
-
 ✅ Auto Completion  
-
 ✅ Compile Time Error  
-
 ✅ Easy to Read & Debug  
-
 ✅ Create Websites without any knowledge of HTML, in pure Swift
 
 ## Currently Supports:
@@ -32,21 +26,32 @@ Here we are trying to build one for HTML in Pure Swift which we all love.
 - Head
     - Title
     - Meta
+    - External Style
+    - Internal Style
 - Body
     - Headings
     - Paragraphs
     - Image
     - Link with Text & Image
+    - Div
+    - IFrame
+    - Inline Style
 ### Attributes:
-- Background Color
-- Foreground Color
-- Width
-- Height
-- Font Sizes
-- Web Safe Font Families
-- Text Alignment
-- Text Formatting
+- id, CSS Class
+- Margin, Padding, Box Sizing
+- Position, Edge Constraints
+- Transform
+- Background Color, Foreground Color
+- Width, Height
+- Font Sizes, Web Safe Font Families, Font Weight
+- Text Alignment, Text Formatting, Text Decoration
 - Target for Links
+- Filter
+- Display
+- Background Image, Background Position, Background Repeat, Background Size
+- zIndex
+- Grid: Column Gap, Template Columns
+- Flex: Direction, Align along the Axis, Distribute along cross Axis
 
 ## Example:
 ```
