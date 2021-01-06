@@ -1,4 +1,4 @@
-<img src="logo.png" width=200px>
+<img src="logo.png" width=160px>
 
 # HTMLDSL
 
