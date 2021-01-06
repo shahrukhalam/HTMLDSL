@@ -1,3 +1,5 @@
+<img src="logo.png" width=200px>
+
 # HTMLDSL
 
 ## What's a DSL:
