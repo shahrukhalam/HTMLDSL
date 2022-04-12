@@ -88,6 +88,7 @@
 		01FC8CE325A43C7800719706 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC8CE225A43C7800719706 /* Grid.swift */; };
 		01FC8D0425A468FA00719706 /* CSSLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC8D0325A468FA00719706 /* CSSLink.swift */; };
 		01FC8D0C25A46C0500719706 /* BackgroundImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC8D0B25A46C0500719706 /* BackgroundImageModifier.swift */; };
+		959553F728053659008A3A14 /* Indentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959553F628053659008A3A14 /* Indentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +199,7 @@
 		01FC8CE225A43C7800719706 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		01FC8D0325A468FA00719706 /* CSSLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSSLink.swift; sourceTree = "<group>"; };
 		01FC8D0B25A46C0500719706 /* BackgroundImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageModifier.swift; sourceTree = "<group>"; };
+		959553F628053659008A3A14 /* Indentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +336,7 @@
 				0196B232255F110E00EE0E24 /* View.swift */,
 				0196B25B255F298100EE0E24 /* HTMLView.swift */,
 				0196B24E255F210900EE0E24 /* View + Never.swift */,
+				959553F628053659008A3A14 /* Indentation.swift */,
 				019CB93B255FDC5C00C71B10 /* Tag.swift */,
 				01B22B63256168D5009DAAB4 /* Style.swift */,
 				01B22B6D25616BF9009DAAB4 /* Attribute.swift */,
@@ -678,6 +681,7 @@
 				016A6D372594941B00C62F47 /* CSSStyle.swift in Sources */,
 				01AA15EE25655571006F2B39 /* TargetModifier.swift in Sources */,
 				0196B233255F110E00EE0E24 /* View.swift in Sources */,
+				959553F728053659008A3A14 /* Indentation.swift in Sources */,
 				019CB941255FDC8B00C71B10 /* AnyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

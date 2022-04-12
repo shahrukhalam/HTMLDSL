@@ -9,6 +9,8 @@ import Foundation
 
 struct Document<Content>: View where Content: HTMLView {
     var body: Content
+
+    let indentation: Indentation = .none
     let tag = Tag.selfClosing(.document)
     var attributes = [Attribute]()
 

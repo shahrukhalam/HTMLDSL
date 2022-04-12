@@ -9,6 +9,8 @@ import Foundation
 
 struct Head<Content>: HTMLHeadView where Content: HTMLHeadContentView {
     var body: Content
+
+    let indentation: Indentation = .none
     let tag = Tag.enclosing(.head)
     var attributes = [Attribute]()
 

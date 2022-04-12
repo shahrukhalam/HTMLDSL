@@ -9,7 +9,7 @@ import XCTest
 @testable import HTMLDSL
 
 class DocumentTests: XCTestCase {
-    func testInitalDocument() {
+    func testInitialDocument() {
         let document = Document {
             HTML {
                 Head {
@@ -31,6 +31,45 @@ class DocumentTests: XCTestCase {
         </head>
         <body>
         <h1> My Heading </h1>
+        </body>
+        </html>
+        """
+
+        XCTAssertEqual(document.element, expectation)
+    }
+
+    func testInitialDocumentIndentation() {
+        let document = Document {
+            HTML {
+                Head {
+                    Title("My Website")
+                }
+
+                Body {
+                    Div {
+                        Headings("My Heading1")
+                        Div {
+                            Headings("My Heading2")
+                        }
+                    }
+                }
+            }
+        }
+
+        let expectation =
+        """
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title> My Website </title>
+        </head>
+        <body>
+            <div>
+                <h1> My Heading1 </h1>
+                <div>
+                    <h1> My Heading2 </h1>
+                </div>
+            </div>
         </body>
         </html>
         """

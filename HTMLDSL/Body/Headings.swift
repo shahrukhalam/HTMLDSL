@@ -29,9 +29,13 @@ struct Headings: HTMLBodyTextContentView {
     }
 
     var element: String {
+        let spaceCount: Int = indentation.rawValue
+        let spaces = Array(repeating: " ", count: spaceCount).joined(separator: "")
+
         let allAttributes = attributes.map { $0.description }.joined(separator: " ")
         let isEmptyAttribute = attributes.isEmpty || allAttributes.isEmpty
         let finalAttribute = isEmptyAttribute ? "" : " " + allAttributes
-        return "<\(tag.description)\(finalAttribute)> \(text) </\(tag.description)>"
+
+        return spaces + "<\(tag.description)\(finalAttribute)> \(text) </\(tag.description)>"
     }
 }

@@ -18,6 +18,8 @@ struct Title: HTMLHeadContentView {
     }
 
     var element: String {
-        "<\(tag.description)> \(text) </\(tag.description)>"
+        let spaceCount: Int = indentation.rawValue
+        let indentation = Array(repeating: " ", count: spaceCount).joined(separator: "")
+        return indentation + "<\(tag.description)> \(text) </\(tag.description)>"
     }
 }
