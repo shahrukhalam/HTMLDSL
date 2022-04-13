@@ -20,14 +20,16 @@ struct Headings: HTMLBodyTextContentView {
     typealias Body = Never
     let tag: Tag
 
-    private let text: String
+    let text: String
     var attributes = [Attribute]()
 
     init(_ text: String, type: HeadingTag = .h1) {
         self.text = text
         self.tag = Tag.enclosing(.headings(type))
     }
+}
 
+extension HTMLBodyTextContentView {
     var element: String {
         let spaceCount: Int = indentation.rawValue
         let spaces = Array(repeating: " ", count: spaceCount).joined(separator: "")

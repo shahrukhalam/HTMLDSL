@@ -28,7 +28,9 @@ where Modifier: ViewModifier, Modifier.Content == Content {
 }
 
 extension ModifiedContent: HTMLBodyTextContentView
-where Modifier: ViewModifier, Modifier.Content == Content, Content: HTMLBodyTextContentView {  }
+where Modifier: ViewModifier, Modifier.Content == Content, Content: HTMLBodyTextContentView {
+    var text: String { content.text }
+}
 
 extension ModifiedContent: HTMLBodyImageContentView
 where Modifier: ViewModifier, Modifier.Content == Content, Content: HTMLBodyImageContentView {  }

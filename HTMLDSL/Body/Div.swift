@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Div<Content>: HTMLBodyTextContentView where Content: HTMLBodyContentView {
+struct Div<Content>: HTMLBodyContentView where Content: HTMLBodyContentView {
     var body: Content
 
     let tag = Tag.enclosing(.div)

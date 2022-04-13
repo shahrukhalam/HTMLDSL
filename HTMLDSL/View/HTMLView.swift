@@ -12,9 +12,14 @@ protocol HTMLContentView: HTMLView {  }
 
 protocol HTMLHeadView: HTMLContentView {  }
 protocol HTMLHeadContentView: HTMLHeadView {  }
+protocol HTMLHeadTextContentView: HTMLHeadContentView {
+    var text: String { get }
+}
 
 protocol HTMLBodyView: HTMLContentView {  }
 protocol HTMLBodyContentView: HTMLBodyView {  }
-protocol HTMLBodyTextContentView: HTMLBodyContentView {  }
+protocol HTMLBodyTextContentView: HTMLBodyContentView {
+    var text: String { get }
+}
 protocol HTMLBodyImageContentView: HTMLBodyContentView {  }
 protocol HTMLBodyLinkContentView: HTMLBodyContentView {  }

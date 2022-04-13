@@ -7,16 +7,18 @@
 
 import Foundation
 
-struct Title: HTMLHeadContentView {
+struct Title: HTMLHeadTextContentView {
     typealias Body = Never
     let tag = Tag.enclosing(.title)
 
-    private let text: String
+    let text: String
 
     init(_ text: String) {
         self.text = text
     }
+}
 
+extension HTMLHeadTextContentView {
     var element: String {
         let spaceCount: Int = indentation.rawValue
         let indentation = Array(repeating: " ", count: spaceCount).joined(separator: "")

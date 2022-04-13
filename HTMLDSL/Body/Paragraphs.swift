@@ -12,7 +12,7 @@ struct Paragraphs: HTMLBodyTextContentView {
     let tag = Tag.enclosing(.paragraph)
     var attributes = [Attribute]()
 
-    private let text: String
+    let text: String
 
     init(_ text: String) {
         self.text = text
