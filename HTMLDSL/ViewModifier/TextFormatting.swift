@@ -8,7 +8,7 @@
 import Foundation
 
 extension String {
-    enum Tag: String {
+    private enum Tag: String {
         case bold = "b"
         case markImportant = "strong"
         case italic = "i"

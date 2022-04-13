@@ -9,6 +9,7 @@ import Foundation
 
 struct Title: HTMLHeadTextContentView {
     typealias Body = Never
+    let newLine: NewLine = .none
     let tag = Tag.enclosing(.title)
 
     let text: String

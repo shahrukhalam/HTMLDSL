@@ -17,27 +17,25 @@ enum HeadingTag: String {
 }
 
 struct Headings: HTMLBodyTextContentView {
-    typealias Body = Never
+    var body: String
+
+    let newLine: NewLine = .none
+
     let tag: Tag
+    var attributes = [Attribute]()
 
     let text: String
-    var attributes = [Attribute]()
 
     init(_ text: String, type: HeadingTag = .h1) {
         self.text = text
+
         self.tag = Tag.enclosing(.headings(type))
+        self.body = text
     }
 }
 
-extension HTMLBodyTextContentView {
-    var element: String {
-        let spaceCount: Int = indentation.rawValue
-        let spaces = Array(repeating: " ", count: spaceCount).joined(separator: "")
-
-        let allAttributes = attributes.map { $0.description }.joined(separator: " ")
-        let isEmptyAttribute = attributes.isEmpty || allAttributes.isEmpty
-        let finalAttribute = isEmptyAttribute ? "" : " " + allAttributes
-
-        return spaces + "<\(tag.description)\(finalAttribute)> \(text) </\(tag.description)>"
-    }
+extension String: View {
+    typealias Body = Never
+    var tag: Tag { fatalError("It's a last element of the hierarchy: Doesn't have a real Tag") }
+    var element: String { self }
 }

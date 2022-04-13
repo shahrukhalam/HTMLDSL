@@ -28,11 +28,11 @@ class ImageTests: XCTestCase {
         <!DOCTYPE html>
         <html>
         <head>
-        <title> My Website </title>
+            <title> My Website </title>
         </head>
         <body>
-        <h1> Nora Fatehi </h1>
-        <img src="Images/nora.jpg" alt="Nora Fatehi">
+            <h1> Nora Fatehi </h1>
+            <img src="Images/nora.jpg" alt="Nora Fatehi">
         </body>
         </html>
         """

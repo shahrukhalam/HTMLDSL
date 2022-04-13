@@ -17,4 +17,8 @@ struct Document<Content>: View where Content: HTMLView {
     init(@ViewBuilder content: () -> Content) {
         self.body = content()
     }
+
+    var element: String {
+        "<\(tag.description)>\n\(body.element)"
+    }
 }
