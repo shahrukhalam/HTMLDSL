@@ -36,4 +36,6 @@ protocol HTMLBodyTextContentView: HTMLBodyContentView {
 /// Images in `Body`
 protocol HTMLBodyImageContentView: HTMLBodyContentView {  }
 /// Links in `Body`
-protocol HTMLBodyLinkContentView: HTMLBodyContentView {  }
+protocol HTMLBodyLinkContentView: HTMLBodyContentView {
+    var url: String { get }
+}

@@ -16,6 +16,7 @@ enum Attribute: CustomStringConvertible, Equatable {
     case `class`(CSSClass)
 
     // Link
+    case href(String)
     case target(Target)
 
     var description: String {
@@ -28,6 +29,8 @@ enum Attribute: CustomStringConvertible, Equatable {
         case .class(let cssClass):
             if case .empty = cssClass { return "" }
             return "class=\"\(cssClass.rawValue)\""
+        case .href(let url):
+            return "href=\"\(url)\""
         case .target(let target):
             return "target=\"\(target.rawValue)\""
         }
@@ -40,6 +43,8 @@ enum Attribute: CustomStringConvertible, Equatable {
         case (.style, .style):
             return true
         case (.class, .class):
+            return true
+        case (.href, .href):
             return true
         case (.target, .target):
             return true

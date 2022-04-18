@@ -36,4 +36,6 @@ extension ModifiedContent: HTMLBodyImageContentView
 where Modifier: ViewModifier, Modifier.Content == Content, Content: HTMLBodyImageContentView {  }
 
 extension ModifiedContent: HTMLBodyLinkContentView
-where Modifier: ViewModifier, Modifier.Content == Content, Content: HTMLBodyLinkContentView {  }
+where Modifier: ViewModifier, Modifier.Content == Content, Content: HTMLBodyLinkContentView {
+    var url: String { content.url }
+}

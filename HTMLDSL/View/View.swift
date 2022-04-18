@@ -17,12 +17,3 @@ protocol View {
     var attributes: [Attribute] { get set }
     var element: String { get }
 }
-
-enum NewLine: String {
-    case none = ""
-    case one = "\n"
-}
-
-extension View {
-    var newLine: NewLine { .one }
-}

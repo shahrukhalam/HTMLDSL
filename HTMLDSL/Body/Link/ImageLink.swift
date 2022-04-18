@@ -12,17 +12,12 @@ struct ImageLink<Content>: HTMLBodyLinkContentView where Content: HTMLBodyImageC
     let tag = Tag.enclosing(.link)
     var attributes = [Attribute]()
 
-    private let url: String
+    let url: String
 
     init(url: String, @LinkViewBuilder content: () -> Content) {
         self.body = content()
-        self.url = url
-    }
 
-    var element: String {
-        let allAttributes = attributes.map { $0.description }.joined(separator: " ")
-        let isEmptyAttribute = attributes.isEmpty || allAttributes.isEmpty
-        let finalAttribute = isEmptyAttribute ? "" : " " + allAttributes
-        return "<\(tag.description) href=\"\(url)\"\(finalAttribute)>\n\(body.element)\n</\(tag.description)>"
+        self.url = url
+        attributes.append(.href(url))
     }
 }

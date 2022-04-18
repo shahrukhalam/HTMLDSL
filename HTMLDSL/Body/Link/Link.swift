@@ -8,22 +8,19 @@
 import Foundation
 
 struct Link: HTMLBodyLinkContentView {
-    typealias Body = Never
+    var body: String
     let tag = Tag.enclosing(.link)
     var attributes = [Attribute]()
 
     private let text: String
-    private let url: String
+    let url: String
 
     init(text: String, url: String) {
         self.text = text
-        self.url = url
-    }
 
-    var element: String {
-        let allAttributes = attributes.map { $0.description }.joined(separator: " ")
-        let isEmptyAttribute = attributes.isEmpty || allAttributes.isEmpty
-        let finalAttribute = isEmptyAttribute ? "" : " " + allAttributes
-        return "<\(tag.description) href=\"\(url)\"\(finalAttribute)>\(text)</\(tag.description)>"
+        self.url = url
+        attributes.append(.href(url))
+
+        self.body = text
     }
 }

@@ -27,10 +27,10 @@ class MetaTests: XCTestCase {
         <!DOCTYPE html>
         <html>
         <head>
-        <meta>
+            <meta>
         </head>
         <body>
-        <h1> My Heading </h1>
+            <h1> My Heading </h1>
         </body>
         </html>
         """
@@ -56,10 +56,10 @@ class MetaTests: XCTestCase {
         <!DOCTYPE html>
         <html>
         <head>
-        <meta charset="UTF-8">
+            <meta charset="UTF-8">
         </head>
         <body>
-        <h1> My Heading </h1>
+            <h1> My Heading </h1>
         </body>
         </html>
         """
@@ -85,10 +85,10 @@ class MetaTests: XCTestCase {
         <!DOCTYPE html>
         <html>
         <head>
-        <meta name="author" content="John Doe">
+            <meta name="author" content="John Doe">
         </head>
         <body>
-        <h1> My Heading </h1>
+            <h1> My Heading </h1>
         </body>
         </html>
         """
@@ -114,10 +114,10 @@ class MetaTests: XCTestCase {
         <!DOCTYPE html>
         <html>
         <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
         <body>
-        <h1> My Heading </h1>
+            <h1> My Heading </h1>
         </body>
         </html>
         """
@@ -145,10 +145,10 @@ class MetaTests: XCTestCase {
         <!DOCTYPE html>
         <html>
         <head>
-        <meta charset="UTF-8" name="author" content="John Doe" name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta charset="UTF-8" name="author" content="John Doe" name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
         <body>
-        <h1> My Heading </h1>
+            <h1> My Heading </h1>
         </body>
         </html>
         """

@@ -9,6 +9,8 @@ import Foundation
 
 struct Meta: HTMLHeadContentView {
     typealias Body = Never
+
+    let newLine: NewLine = .none
     let tag = Tag.selfClosing(.meta)
 
     private let attributes: [MetaAttributes]
@@ -18,12 +20,15 @@ struct Meta: HTMLHeadContentView {
     }
 
     var element: String {
+        let spaceCount: Int = indentation.rawValue
+        let spaces = Array(repeating: " ", count: spaceCount).joined(separator: "")
+
         guard !attributes.isEmpty else {
-            return "<\(tag.description)>"
+            return spaces + "<\(tag.description)>"
         }
 
         let finalAttributes = attributes.map { $0.description }.joined(separator: " ")
-        return "<\(tag.description) \(finalAttributes)>"
+        return spaces + "<\(tag.description) \(finalAttributes)>"
     }
 }
 
