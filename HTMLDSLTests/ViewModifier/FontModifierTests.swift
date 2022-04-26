@@ -17,7 +17,7 @@ class FontModifierTests: XCTestCase {
 
         let expectation =
         """
-        <h1 style="background-color:Green;color:Blue;"> Nora Fatehi </h1>
+            <h1 style="background-color:Green;color:Blue;"> Nora Fatehi </h1>
         """
 
         XCTAssertEqual(headings.element, expectation)
@@ -29,7 +29,7 @@ class FontModifierTests: XCTestCase {
 
         let expectation =
         """
-        <h1 style="font-size:100%;"> Nora Fatehi </h1>
+            <h1 style="font-size:100%;"> Nora Fatehi </h1>
         """
 
         XCTAssertEqual(headings.element, expectation)
@@ -41,7 +41,7 @@ class FontModifierTests: XCTestCase {
 
         let expectation =
         """
-        <h1 style="font-family:Times New Roman, Times, serif;"> Nora Fatehi </h1>
+            <h1 style="font-family:Times New Roman, Times, serif;"> Nora Fatehi </h1>
         """
 
         XCTAssertEqual(headings.element, expectation)
@@ -53,7 +53,7 @@ class FontModifierTests: XCTestCase {
 
         let expectation =
         """
-        <h1 style="font-size:100%;font-family:Times New Roman, Times, serif;"> Nora Fatehi </h1>
+            <h1 style="font-size:100%;font-family:Times New Roman, Times, serif;"> Nora Fatehi </h1>
         """
 
         XCTAssertEqual(headings.element, expectation)
@@ -66,7 +66,7 @@ class FontModifierTests: XCTestCase {
 
         let expectation =
         """
-        <h1 style="font-size:100%;font-family:Times New Roman, Times, serif;text-align:justify;"> Nora Fatehi </h1>
+            <h1 style="font-size:100%;font-family:Times New Roman, Times, serif;text-align:justify;"> Nora Fatehi </h1>
         """
 
         XCTAssertEqual(headings.element, expectation)

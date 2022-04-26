@@ -19,9 +19,8 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-        <style>
-
-        </style>
+            <style>
+            </style>
         </head>
         """
 
@@ -38,9 +37,8 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-        <style>
-
-        </style>
+            <style>
+            </style>
         </head>
         """
 
@@ -57,11 +55,10 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-        <style>
-        body {
-
-        }
-        </style>
+            <style>
+            body {
+            }
+            </style>
         </head>
         """
 
@@ -79,11 +76,11 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-        <style>
-        body {
-        background-color:Yellow;
-        }
-        </style>
+            <style>
+            body {
+            background-color:Yellow;
+            }
+            </style>
         </head>
         """
 
@@ -103,14 +100,14 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-        <style>
-        body {
-        background-color:Yellow;
-        }
-        h1 {
-        background-color:Red;
-        }
-        </style>
+            <style>
+            body {
+            background-color:Yellow;
+            }
+            h1 {
+            background-color:Red;
+            }
+            </style>
         </head>
         """
 
@@ -130,14 +127,14 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-        <style>
-        body {
-        background-color:Yellow;
-        }
-        .flex-container {
-        background-color:Red;
-        }
-        </style>
+            <style>
+            body {
+            background-color:Yellow;
+            }
+            .flex-container {
+            background-color:Red;
+            }
+            </style>
         </head>
         """
 
@@ -156,12 +153,12 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-        <style>
-        body {
-        background-color:Yellow;
-        margin: 15px 15px 15px 15px;
-        }
-        </style>
+            <style>
+            body {
+            background-color:Yellow;
+            margin: 15px 15px 15px 15px;
+            }
+            </style>
         </head>
         """
 
@@ -181,14 +178,14 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-        <style>
-        .flex-container {
-        background-color:Yellow;
-        margin: 15px 15px 15px 15px;
-        width:15px;
-        height:15px;
-        }
-        </style>
+            <style>
+            .flex-container {
+            background-color:Yellow;
+            margin: 15px 15px 15px 15px;
+            width:15px;
+            height:15px;
+            }
+            </style>
         </head>
         """
 

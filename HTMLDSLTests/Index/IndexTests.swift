@@ -52,43 +52,47 @@ class IndexTests: XCTestCase {
         <!DOCTYPE html>
         <html>
         <head>
-        <title> Wonder Woman </title>
-        <meta charset="UTF-8" name="author" content="Shahrukh Alam">
-        <link rel="stylesheet" href="CSS/Common/nav.css">
-        <link rel="stylesheet" href="CSS/Index/hero.css">
-        <link rel="stylesheet" href="CSS/Index/grid.css">
-        <style>
-        body {
-        margin: 0px 0px 0px 0px;
-        font-family:SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
-        }
-        </style>
+            <title> Wonder Woman </title>
+            <meta charset="UTF-8" name="author" content="Shahrukh Alam">
+            <link rel="stylesheet" href="CSS/Common/nav.css">
+            <link rel="stylesheet" href="CSS/Index/hero.css">
+            <link rel="stylesheet" href="CSS/Index/grid.css">
+            <style>
+            body {
+            margin: 0px 0px 0px 0px;
+            font-family:SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
+            }
+            </style>
         </head>
         <body>
-        <div class="indexNav">
-        <a href="index.html" class="activeLink">Home</a>
-        <a href="about.html" class="inactiveLink">About</a>
-        </div>
-        <div class="heroImage" style="background-image: url(Images/wonder1.jpg);">
-        <div class="centeredText">
-        <h1 class="heroHeading"> Gal Galot </h1>
-        <h1 class="heroSubHeading"> Diana Prince or Wonder Woman </h1>
-        </div>
-        </div>
-        <div class="gridContainer">
-        <div class="gridImage" style="background-image: url(Images/wonder2.jpg);">
-        <div class="centeredText">
-        <h1 class="heroHeading"> Wonder Woman </h1>
-        <h1 class="gridSubHeading"> Amazons, Themyscira & Ares </h1>
-        </div>
-        </div>
-        <div class="gridImage" style="background-image: url(Images/wonder3.jpeg);">
-        <div class="centeredText">
-        <h1 class="heroHeading"> Wonder Woman 1984 </h1>
-        <h1 class="gridSubHeading"> I wish to be You </h1>
-        </div>
-        </div>
-        </div>
+            <div class="indexNav">
+                <a href="index.html" class="activeLink">
+                Home
+                </a>
+                <a href="about.html" class="inactiveLink">
+                About
+                </a>
+            </div>
+                <div class="heroImage" style="background-image: url(Images/wonder1.jpg);">
+                    <div class="centeredText">
+                        <h1 class="heroHeading"> Gal Galot </h1>
+                        <h1 class="heroSubHeading"> Diana Prince or Wonder Woman </h1>
+                    </div>
+                </div>
+                <div class="gridContainer">
+                    <div class="gridImage" style="background-image: url(Images/wonder2.jpg);">
+                        <div class="centeredText">
+                            <h1 class="heroHeading"> Wonder Woman </h1>
+                            <h1 class="gridSubHeading"> Amazons, Themyscira & Ares </h1>
+                        </div>
+                    </div>
+                    <div class="gridImage" style="background-image: url(Images/wonder3.jpeg);">
+                        <div class="centeredText">
+                            <h1 class="heroHeading"> Wonder Woman 1984 </h1>
+                            <h1 class="gridSubHeading"> I wish to be You </h1>
+                        </div>
+                    </div>
+                </div>
         </body>
         </html>
         """

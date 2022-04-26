@@ -60,14 +60,17 @@ struct StyleBuilder {
 }
 
 struct HeadStyle: HTMLHeadContentView {
-    typealias Body = Never
+    let body: String
+
     let tag = Tag.enclosing(.style)
-    let attributes = [Attribute]()
+
+    var attributes: [Attribute] = []
 
     init(@StyleBuilder content: () -> String) {
         let allStyles = content()
-        self.element = "<\(tag.description)>\n\(allStyles)\n</\(tag.description)>"
+        self.body = allStyles
+//        self.element = "<\(tag.description)>\n\(allStyles)\n</\(tag.description)>"
     }
 
-    var element: String
+//    var element: String
 }
