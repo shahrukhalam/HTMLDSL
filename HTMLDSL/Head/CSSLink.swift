@@ -21,8 +21,4 @@ struct CSSLink: HTMLHeadContentView {
         self.path = path
         self.body = "rel=\"stylesheet\" href=\"\(path)\""
     }
-
-//    var element: String {
-//        "<\(tag.description) rel=\"stylesheet\" href=\"\(path)\">"
-//    }
 }

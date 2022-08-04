@@ -7,7 +7,7 @@
 
 import Foundation
 
-@_functionBuilder
+@resultBuilder
 struct ViewBuilder {
     static func buildBlock<Content>(_ content: Content) -> Content where Content: HTMLView {
         return content

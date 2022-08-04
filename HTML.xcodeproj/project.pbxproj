@@ -90,6 +90,8 @@
 		01FC8D0C25A46C0500719706 /* BackgroundImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC8D0B25A46C0500719706 /* BackgroundImageModifier.swift */; };
 		95053A0D280D3B7E00C9D331 /* NewLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95053A0C280D3B7E00C9D331 /* NewLine.swift */; };
 		95053A0F280D3D8C00C9D331 /* View + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95053A0E280D3D8C00C9D331 /* View + String.swift */; };
+		955FD7CF289C1110009F4503 /* Markdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955FD7CE289C1110009F4503 /* Markdown.swift */; };
+		955FD7D1289C21BE009F4503 /* MarkdownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955FD7D0289C21BE009F4503 /* MarkdownTests.swift */; };
 		959553F728053659008A3A14 /* Indentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959553F628053659008A3A14 /* Indentation.swift */; };
 /* End PBXBuildFile section */
 
@@ -203,6 +205,8 @@
 		01FC8D0B25A46C0500719706 /* BackgroundImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageModifier.swift; sourceTree = "<group>"; };
 		95053A0C280D3B7E00C9D331 /* NewLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLine.swift; sourceTree = "<group>"; };
 		95053A0E280D3D8C00C9D331 /* View + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + String.swift"; sourceTree = "<group>"; };
+		955FD7CE289C1110009F4503 /* Markdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Markdown.swift; sourceTree = "<group>"; };
+		955FD7D0289C21BE009F4503 /* MarkdownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTests.swift; sourceTree = "<group>"; };
 		959553F628053659008A3A14 /* Indentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -297,6 +301,7 @@
 				019CB94E255FDDBD00C71B10 /* Head */,
 				019CB94D255FDD9F00C71B10 /* Body */,
 				016A6D35259493F700C62F47 /* CSSStyle */,
+				955FD7CD289C10F6009F4503 /* Markdown */,
 				0196B215255F107000EE0E24 /* HTMLDSL.h */,
 				0196B216255F107000EE0E24 /* Info.plist */,
 			);
@@ -312,6 +317,7 @@
 				019CB97A2560232E00C71B10 /* Body */,
 				01B22BB325626DDB009DAAB4 /* ViewModifier */,
 				016A6D3E2596063B00C62F47 /* CSSStyle */,
+				955FD7CC289C10E9009F4503 /* Markdown */,
 				0196B222255F107000EE0E24 /* Info.plist */,
 			);
 			path = HTMLDSLTests;
@@ -484,6 +490,22 @@
 				01FC8CE225A43C7800719706 /* Grid.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		955FD7CC289C10E9009F4503 /* Markdown */ = {
+			isa = PBXGroup;
+			children = (
+				955FD7D0289C21BE009F4503 /* MarkdownTests.swift */,
+			);
+			path = Markdown;
+			sourceTree = "<group>";
+		};
+		955FD7CD289C10F6009F4503 /* Markdown */ = {
+			isa = PBXGroup;
+			children = (
+				955FD7CE289C1110009F4503 /* Markdown.swift */,
+			);
+			path = Markdown;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -664,6 +686,7 @@
 				01FC8D0425A468FA00719706 /* CSSLink.swift in Sources */,
 				01B22B5C25613F93009DAAB4 /* HTMLViewBuilder.swift in Sources */,
 				01B22BE12562EE5F009DAAB4 /* FontSize.swift in Sources */,
+				955FD7CF289C1110009F4503 /* Markdown.swift in Sources */,
 				01B22BDC2562EE40009DAAB4 /* Dimension.swift in Sources */,
 				019CB95E25600E0B00C71B10 /* Meta.swift in Sources */,
 				019CB9762560216100C71B10 /* Image.swift in Sources */,
@@ -704,6 +727,7 @@
 				01E8025D256CDEA400B541ED /* IndexTests.swift in Sources */,
 				016A6D4C2596099E00C62F47 /* CSSStyleTests.swift in Sources */,
 				01B22BF02563024F009DAAB4 /* FontModifierTests.swift in Sources */,
+				955FD7D1289C21BE009F4503 /* MarkdownTests.swift in Sources */,
 				019CB963256013B100C71B10 /* MetaTests.swift in Sources */,
 				01B22BB525626DF3009DAAB4 /* ModifiedContentTests.swift in Sources */,
 				016A6D312594020800C62F47 /* PaddingModifierTests.swift in Sources */,

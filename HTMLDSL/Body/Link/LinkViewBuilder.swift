@@ -7,7 +7,7 @@
 
 import Foundation
 
-@_functionBuilder
+@resultBuilder
 struct LinkViewBuilder {
     static func buildBlock<Content>(_ content: Content) -> Content where Content: HTMLBodyImageContentView {
         return content

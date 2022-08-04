@@ -7,7 +7,7 @@
 
 import Foundation
 
-@_functionBuilder
+@resultBuilder
 struct StyleBuilder {
     static func buildBlock<Content>(_ content: Content) -> String where Content: CSSStyle {
         return content.element
@@ -69,8 +69,5 @@ struct HeadStyle: HTMLHeadContentView {
     init(@StyleBuilder content: () -> String) {
         let allStyles = content()
         self.body = allStyles
-//        self.element = "<\(tag.description)>\n\(allStyles)\n</\(tag.description)>"
     }
-
-//    var element: String
 }
