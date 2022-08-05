@@ -15,6 +15,9 @@ struct Markdown: HTMLBodyContentView {
     init(_ markdown: String) {
         let spaceCount: Int = Indentation.tab.rawValue
         let spaces = Array(repeating: " ", count: spaceCount).joined(separator: "")
-        self.body = spaces + markdown
+        self.body = markdown
+            .split(separator: "\n")
+            .map { spaces + $0 }
+            .joined(separator: "\n")
     }
 }

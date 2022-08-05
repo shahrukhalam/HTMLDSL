@@ -92,6 +92,7 @@
 		95053A0F280D3D8C00C9D331 /* View + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95053A0E280D3D8C00C9D331 /* View + String.swift */; };
 		955FD7CF289C1110009F4503 /* Markdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955FD7CE289C1110009F4503 /* Markdown.swift */; };
 		955FD7D1289C21BE009F4503 /* MarkdownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955FD7D0289C21BE009F4503 /* MarkdownTests.swift */; };
+		955FD7D3289C22B8009F4503 /* MarkdownIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955FD7D2289C22B8009F4503 /* MarkdownIndexTests.swift */; };
 		959553F728053659008A3A14 /* Indentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959553F628053659008A3A14 /* Indentation.swift */; };
 /* End PBXBuildFile section */
 
@@ -207,6 +208,7 @@
 		95053A0E280D3D8C00C9D331 /* View + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + String.swift"; sourceTree = "<group>"; };
 		955FD7CE289C1110009F4503 /* Markdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Markdown.swift; sourceTree = "<group>"; };
 		955FD7D0289C21BE009F4503 /* MarkdownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTests.swift; sourceTree = "<group>"; };
+		955FD7D2289C22B8009F4503 /* MarkdownIndexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownIndexTests.swift; sourceTree = "<group>"; };
 		959553F628053659008A3A14 /* Indentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -496,6 +498,7 @@
 			isa = PBXGroup;
 			children = (
 				955FD7D0289C21BE009F4503 /* MarkdownTests.swift */,
+				955FD7D2289C22B8009F4503 /* MarkdownIndexTests.swift */,
 			);
 			path = Markdown;
 			sourceTree = "<group>";
@@ -722,6 +725,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				019CB99225603AA700C71B10 /* ParagraphTests.swift in Sources */,
+				955FD7D3289C22B8009F4503 /* MarkdownIndexTests.swift in Sources */,
 				0114CA6D2564669B008E3F8A /* LinkTests.swift in Sources */,
 				016A6D102593DBF500C62F47 /* DivTests.swift in Sources */,
 				01E8025D256CDEA400B541ED /* IndexTests.swift in Sources */,

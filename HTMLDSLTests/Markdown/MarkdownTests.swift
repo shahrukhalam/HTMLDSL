@@ -15,7 +15,7 @@ class MarkdownTests: XCTestCase {
         let expectation =
         """
             <div>
-                Hello
+                <p>Hello</p>
             </div>
         """
         
@@ -36,7 +36,7 @@ class MarkdownTests: XCTestCase {
                 Home
                 </a>
                 <div>
-                    Hello
+                    <p>Hello</p>
                 </div>
             </div>
         """
@@ -73,7 +73,7 @@ class MarkdownTests: XCTestCase {
                 Home
                 </a>
                 <div>
-                    Hello
+                    <p>Hello</p>
                 </div>
             </div>
         </body>
