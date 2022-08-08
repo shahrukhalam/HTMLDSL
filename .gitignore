@@ -1,3 +1,9 @@
-HTML.xcodeproj/xcshareddata
-HTML.xcodeproj/xcuserdata
-HTML.xcodeproj/project.xcworkspace/xcuserdata
+.DS_Store
+/.build
+/Packages
+/*.xcodeproj
+xcuserdata/
+DerivedData/
+.swiftpm/config/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
