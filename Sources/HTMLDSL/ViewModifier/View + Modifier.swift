@@ -67,4 +67,9 @@ public extension HTMLContentView {
                                               bottom: bottom)
         return ModifiedContent(content: self, modifier: modifier)
     }
+    
+    func borderWidth(_ dimension: AutoDimension) -> ModifiedContent<Self, BorderModifier<Self>> {
+        let modifier = BorderModifier<Self>(dimension: dimension)
+        return ModifiedContent(content: self, modifier: modifier)
+    }
 }

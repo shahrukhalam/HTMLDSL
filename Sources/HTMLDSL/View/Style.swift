@@ -9,6 +9,7 @@ import Foundation
 
 public enum Style: CustomStringConvertible, Equatable {
     case backgroundColor(Color)
+
     case width(AutoDimension)
     case height(AutoDimension)
 
@@ -59,6 +60,9 @@ public enum Style: CustomStringConvertible, Equatable {
     
     // MARK: Pointer
     case pointer(PointerEvent)
+    
+    // MARK: Border
+    case borderWidth(AutoDimension)
 
     public var description: String {
         switch self {
@@ -125,6 +129,8 @@ public enum Style: CustomStringConvertible, Equatable {
             return "pointer-events: \(event.rawValue);"
         case .lineHeight(let heightInPixel):
             return "line-height: \(heightInPixel)px;"
+        case .borderWidth(let dimension):
+            return "border-width: \(dimension.description);"
         }
     }
 
@@ -187,6 +193,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.pointer, .pointer):
             return true
         case (.lineHeight, .lineHeight):
+            return true
+        case (.borderWidth, .borderWidth):
             return true
         default:
             return false

@@ -75,4 +75,5 @@ public enum SelfClosingTag: String {
 
     // Body Content Tags
     case image = "img"
+    case hr
 }

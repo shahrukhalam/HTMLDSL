@@ -24,7 +24,8 @@ extension View {
             textElement = "<\(tag.description)\(finalAttribute)>\(bodyElement)\(lineSpace)</\(tag.description)>"
         case .selfClosing:
             let isEmptyNewLine = newLine == .none
-            let bodyElement: String = isEmptyNewLine ? (" " + body.element) : (newLine.rawValue + body.element)
+            let bodyElementSameLine = body.element.isEmpty ? "" : " " + body.element
+            let bodyElement: String = isEmptyNewLine ? bodyElementSameLine : (newLine.rawValue + body.element)
             textElement = "<\(tag.description)\(bodyElement)\(finalAttribute)>"
         case .empty:
             textElement = "\(body.element)"
