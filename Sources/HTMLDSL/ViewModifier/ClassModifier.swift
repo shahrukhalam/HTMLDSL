@@ -14,7 +14,7 @@ public enum CSSTag: String {
 public enum CSSClass: String {
     case empty = ""
 
-    // Custom Classes for Index
+    // MARK: Custom Classes for Index
     case indexNav
     case activeLink
     case inactiveLink
@@ -25,27 +25,33 @@ public enum CSSClass: String {
     case heroHeading
     case heroSubHeading
 
-    // Grid
+    // MARK: Grid
     case gridContainer
     case gridImage
     case gridSubHeading
 
-    // Flex
+    // MARK: Flex
     case flexibleContainer = "flex-container"
     case flexibleContainerHorizontal
     case flexibleContainerVertical
+    
+    // MARK: Markdown
+    case article
+    
+    // MARK: Markdown
+    case markdown
 }
 
-struct ClassModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
-    typealias Body = ContentView
+public struct ClassModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
+    public typealias Body = ContentView
 
     private let cssClass: CSSClass
 
-    init(cssClass: CSSClass) {
+    public init(cssClass: CSSClass) {
         self.cssClass = cssClass
     }
 
-    func body(content: Content) -> Body {
+    public func body(content: Content) -> Body {
         return update(content: content, for: .class(.empty), with: .class(cssClass))
     }
 }

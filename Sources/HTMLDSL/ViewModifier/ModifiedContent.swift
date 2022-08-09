@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct ModifiedContent<Content, Modifier> {
-    var content: Content
-    let modifier: Modifier
+public struct ModifiedContent<Content, Modifier> {
+    public var content: Content
+    public let modifier: Modifier
 
-    var attributes = [Attribute]()
+    public var attributes = [Attribute]()
 
-    init(content: Content, modifier: Modifier) {
+    public init(content: Content, modifier: Modifier) {
         self.content = content
         self.modifier = modifier
     }

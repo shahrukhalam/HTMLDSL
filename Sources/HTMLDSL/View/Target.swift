@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Target: String, Equatable {
+public enum Target: String, Equatable {
     case sameWindowOrTab = "_self"
     case newWindowOrTab = "_blank"
     case parentFrame = "_parent"

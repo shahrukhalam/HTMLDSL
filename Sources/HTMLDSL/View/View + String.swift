@@ -6,7 +6,7 @@
 //
 
 extension String: View {
-    typealias Body = Never
-    var tag: Tag { fatalError("It's a last element of the hierarchy: Doesn't have a real Tag") }
-    var element: String { self }
+    public typealias Body = Never
+    public var tag: Tag { fatalError("It's a last element of the hierarchy: Doesn't have a real Tag") }
+    public var element: String { self }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 extension View {
-    var element: String {
+    public var element: String {
         let allAttributes = attributes.map { $0.description }.joined(separator: " ")
         let isEmptyAttribute = attributes.isEmpty || allAttributes.isEmpty
         let finalAttribute = isEmptyAttribute ? "" : " " + allAttributes
@@ -28,8 +28,6 @@ extension View {
             textElement = "<\(tag.description)\(bodyElement)\(finalAttribute)>"
         case .empty:
             textElement = "\(body.element)"
-        case .all:
-            fatalError("Not for Views")
         }
 
         let spaceCount: Int = indentation.rawValue

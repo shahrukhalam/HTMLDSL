@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol View {
+public protocol View {
     associatedtype Body: View
     var body: Body { get }
 

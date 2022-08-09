@@ -35,6 +35,7 @@ public enum Style: CustomStringConvertible, Equatable {
     case fontWeight(FontWeight)
     case textAlignment(TextAlignment)
     case textDecoration(TextDecoration)
+    case lineHeight(Int)
 
     case filter(saturationInPercentage: Int, blurInPixel: Int)
 
@@ -122,6 +123,8 @@ public enum Style: CustomStringConvertible, Equatable {
             return "align-items: \(distribution.rawValue);"
         case .pointer(let event):
             return "pointer-events: \(event.rawValue);"
+        case .lineHeight(let heightInPixel):
+            return "line-height: \(heightInPixel)px;"
         }
     }
 
@@ -182,6 +185,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.flexDistributeOnCrossAxis, .flexDistributeOnCrossAxis):
             return true
         case (.pointer, .pointer):
+            return true
+        case (.lineHeight, .lineHeight):
             return true
         default:
             return false

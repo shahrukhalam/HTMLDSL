@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct Link: HTMLBodyLinkContentView {
-    var body: String
-    let tag = Tag.enclosing(.link)
-    var attributes = [Attribute]()
+public struct Link: HTMLBodyLinkContentView {
+    public var body: String
+    public let tag = Tag.enclosing(.link)
+    public var attributes = [Attribute]()
 
     private let text: String
-    let url: String
+    public let url: String
 
-    init(text: String, url: String) {
+    public init(text: String, url: String) {
         self.text = text
 
         self.url = url

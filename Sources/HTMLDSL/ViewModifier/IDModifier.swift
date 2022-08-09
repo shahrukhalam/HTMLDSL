@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct IDModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
-    typealias Body = ContentView
+public struct IDModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
+    public typealias Body = ContentView
 
     private let id: Attribute.HTMLID
 
-    init(id: Attribute.HTMLID) {
+    public init(id: Attribute.HTMLID) {
         self.id = id
     }
 
-    func body(content: Content) -> Body {
+    public func body(content: Content) -> Body {
         return update(content: content, for: .id(""), with: .id(id))
     }
 }

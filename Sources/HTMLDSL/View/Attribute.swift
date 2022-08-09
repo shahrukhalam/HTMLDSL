@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum Attribute: CustomStringConvertible, Equatable {
-    typealias HTMLID = String
+public enum Attribute: CustomStringConvertible, Equatable {
+    public typealias HTMLID = String
 
     case id(HTMLID)
 
@@ -19,7 +19,7 @@ enum Attribute: CustomStringConvertible, Equatable {
     case href(String)
     case target(Target)
 
-    var description: String {
+    public var description: String {
         switch self {
         case .id(let id):
             return "id=\"\(id)\""
@@ -36,7 +36,7 @@ enum Attribute: CustomStringConvertible, Equatable {
         }
     }
 
-    static func == (lhs: Attribute, rhs: Attribute) -> Bool {
+    public static func == (lhs: Attribute, rhs: Attribute) -> Bool {
         switch (lhs, rhs) {
         case (.id, .id):
             return true

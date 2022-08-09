@@ -16,17 +16,17 @@ public enum HeadingTag: String {
     case h6
 }
 
-struct Headings: HTMLBodyTextContentView {
-    var body: String
+public struct Headings: HTMLBodyTextContentView {
+    public var body: String
 
-    let newLine: NewLine = .none
+    public let newLine: NewLine = .none
 
-    let tag: Tag
-    var attributes = [Attribute]()
+    public let tag: Tag
+    public var attributes = [Attribute]()
 
-    let text: String
+    public let text: String
 
-    init(_ text: String, type: HeadingTag = .h1) {
+    public init(_ text: String, type: HeadingTag = .h1) {
         self.text = text
 
         self.tag = Tag.enclosing(.headings(type))

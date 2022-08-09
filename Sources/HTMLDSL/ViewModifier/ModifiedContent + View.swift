@@ -9,10 +9,10 @@ import Foundation
 
 extension ModifiedContent: View, HTMLView, HTMLContentView, HTMLBodyView, HTMLBodyContentView
 where Modifier: ViewModifier, Modifier.Content == Content {
-    typealias Body = Never
-    var tag: Tag { .empty }
+    public typealias Body = Never
+    public var tag: Tag { .empty }
     
-    init(content: Content, modifier: Modifier) {
+    public init(content: Content, modifier: Modifier) {
         self.content = content
         self.modifier = modifier
         
@@ -20,7 +20,7 @@ where Modifier: ViewModifier, Modifier.Content == Content {
         self.attributes = newContent.attributes
     }
     
-    var element: String {
+    public var element: String {
         var newContent = content
         newContent.attributes = attributes
         return newContent.element
@@ -29,7 +29,7 @@ where Modifier: ViewModifier, Modifier.Content == Content {
 
 extension ModifiedContent: HTMLBodyTextContentView
 where Modifier: ViewModifier, Modifier.Content == Content, Content: HTMLBodyTextContentView {
-    var text: String { content.text }
+    public var text: String { content.text }
 }
 
 extension ModifiedContent: HTMLBodyImageContentView
@@ -37,5 +37,5 @@ where Modifier: ViewModifier, Modifier.Content == Content, Content: HTMLBodyImag
 
 extension ModifiedContent: HTMLBodyLinkContentView
 where Modifier: ViewModifier, Modifier.Content == Content, Content: HTMLBodyLinkContentView {
-    var url: String { content.url }
+    public var url: String { content.url }
 }

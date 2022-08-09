@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct Div<Content>: HTMLBodyContentView where Content: HTMLBodyContentView {
-    var body: Content
+public struct Div<Content>: HTMLBodyContentView where Content: HTMLBodyContentView {
+    public var body: Content
 
-    let tag = Tag.enclosing(.div)
-    var attributes = [Attribute]()
+    public let tag = Tag.enclosing(.div)
+    public var attributes = [Attribute]()
 
-    init(@ViewBuilder content: () -> Content) {
+    public init(@ViewBuilder content: () -> Content) {
         self.body = content()
     }
 }

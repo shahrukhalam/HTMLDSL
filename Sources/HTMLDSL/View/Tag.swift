@@ -11,7 +11,6 @@ public enum Tag: CustomStringConvertible {
     case enclosing(EnclosingTag)
     case selfClosing(SelfClosingTag)
     case empty
-    case all
 
     public var description: String {
         switch self {
@@ -21,8 +20,6 @@ public enum Tag: CustomStringConvertible {
             return tag.rawValue
         case .empty:
             return ""
-        case .all:
-            return "*"
         }
     }
 }

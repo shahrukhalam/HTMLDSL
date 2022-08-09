@@ -8,11 +8,11 @@
 import Foundation
 
 extension Never: View {
-    typealias Body = Never
-    var tag: Tag { fatalError("It's a Never: Doesn't have a real Tag") }
+    public typealias Body = Never
+    public var tag: Tag { fatalError("It's a Never: Doesn't have a real Tag") }
 }
 
-extension View where Self.Body == Never {
+public extension View where Self.Body == Never {
     var body: Body {
         fatalError("It's a Never: Doesn't have a real Body")
     }

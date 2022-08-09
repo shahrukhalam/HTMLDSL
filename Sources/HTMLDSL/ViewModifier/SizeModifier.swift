@@ -7,18 +7,18 @@
 
 import Foundation
 
-struct SizeModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
-    typealias Body = ContentView
+public struct SizeModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
+    public typealias Body = ContentView
 
     private let width: AutoDimension?
     private let height: AutoDimension?
 
-    init(width: AutoDimension?, height: AutoDimension?) {
+    public init(width: AutoDimension?, height: AutoDimension?) {
         self.width = width
         self.height = height
     }
 
-    func body(content: Content) -> Body {
+    public func body(content: Content) -> Body {
         switch (width, height) {
         case (.none, .none):
             return content

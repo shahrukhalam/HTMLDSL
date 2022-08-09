@@ -153,6 +153,10 @@ public extension CSSStyle {
     func align(_ alignment: TextAlignment) -> Self {
         modified(body: self, oldStyle: .textAlignment(.left), with: .textAlignment(alignment))
     }
+    
+    func lineHeight(_ height: Int) -> Self {
+        modified(body: self, oldStyle: .lineHeight(0), with: .lineHeight(height))
+    }
 
     func filter(saturationInPercentage: Int,
                 blurInPixel: Int) -> Self {
@@ -296,11 +300,11 @@ public struct ClassStyle: CSSStyle {
     }
 }
 
-struct PageStyle: CSSStyle {
-    var styles = [Style]()
-    let key: CustomStringConvertible = "*"
+public struct PageStyle: CSSStyle {
+    public var styles = [Style]()
+    public let key: CustomStringConvertible = "*"
 
-    init() {  }
+    public init() {  }
 
     fileprivate init(style: [Style]) {
         self.styles = style

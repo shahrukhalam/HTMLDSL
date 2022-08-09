@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ViewModifier {
+public protocol ViewModifier {
     associatedtype Body: View
     typealias Content = Body
     func body(content: Self.Content) -> Self.Body

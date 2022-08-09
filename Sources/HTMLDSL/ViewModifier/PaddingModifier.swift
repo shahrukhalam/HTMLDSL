@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct PaddingModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
-    typealias Body = ContentView
+public struct PaddingModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
+    public typealias Body = ContentView
 
     private let left: InheritDimension
     private let top: InheritDimension
     private let right: InheritDimension
     private let bottom: InheritDimension
 
-    init(left: InheritDimension,
+    public init(left: InheritDimension,
          top: InheritDimension,
          right: InheritDimension,
          bottom: InheritDimension) {
@@ -25,7 +25,7 @@ struct PaddingModifier<ContentView>: ViewModifier where ContentView: HTMLContent
         self.bottom = bottom
     }
 
-    func body(content: Content) -> Body {
+    public func body(content: Content) -> Body {
         return update(content: content,
                       for: .padding(left: .inherit,
                                     top: .inherit,

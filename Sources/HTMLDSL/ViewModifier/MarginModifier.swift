@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct MarginModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
-    typealias Body = ContentView
+public struct MarginModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
+    public typealias Body = ContentView
     
     private let left: AutoInheritDimension
     private let top: AutoInheritDimension
     private let right: AutoInheritDimension
     private let bottom: AutoInheritDimension
     
-    init(left: AutoInheritDimension,
+    public init(left: AutoInheritDimension,
          top: AutoInheritDimension,
          right: AutoInheritDimension,
          bottom: AutoInheritDimension) {
@@ -25,7 +25,7 @@ struct MarginModifier<ContentView>: ViewModifier where ContentView: HTMLContentV
         self.bottom = bottom
     }
     
-    func body(content: Content) -> Body {
+    public func body(content: Content) -> Body {
         return update(content: content,
                       for: .margin(left: .auto,
                                    top: .auto,

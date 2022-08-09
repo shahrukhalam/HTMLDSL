@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension HTMLContentView {
+public extension HTMLContentView {
     func identifyBy(id: String) -> ModifiedContent<Self, IDModifier<Self>> {
         let modifier = IDModifier<Self>(id: id)
         return ModifiedContent(content: self, modifier: modifier)

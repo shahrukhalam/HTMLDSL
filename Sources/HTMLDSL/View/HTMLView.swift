@@ -9,33 +9,33 @@ import Foundation
 
 /// Content for `Document`
 /// eg: `HTML`
-protocol HTMLView: View {  }
+public protocol HTMLView: View {  }
 /// Content for `HTML`
 /// eg: `Head`, `Body`
-protocol HTMLContentView: HTMLView {  }
+public protocol HTMLContentView: HTMLView {  }
 
 /// ``HTMLContentView`` for `Head`
-protocol HTMLHeadView: HTMLContentView {  }
+public protocol HTMLHeadView: HTMLContentView {  }
 /// Content for `Head`
 /// eg: `Meta`, `Title`
-protocol HTMLHeadContentView: HTMLHeadView {  }
+public protocol HTMLHeadContentView: HTMLHeadView {  }
 /// Texts in `Head`
-protocol HTMLHeadTextContentView: HTMLHeadContentView {
+public protocol HTMLHeadTextContentView: HTMLHeadContentView {
     var text: String { get }
 }
 
 /// ``HTMLContentView`` for `Body`
-protocol HTMLBodyView: HTMLContentView {  }
+public protocol HTMLBodyView: HTMLContentView {  }
 /// Content for `Body`
 /// eg: `Headings`, `Paragraph`
-protocol HTMLBodyContentView: HTMLBodyView {  }
+public protocol HTMLBodyContentView: HTMLBodyView {  }
 /// Texts in `Body`
-protocol HTMLBodyTextContentView: HTMLBodyContentView {
+public protocol HTMLBodyTextContentView: HTMLBodyContentView {
     var text: String { get }
 }
 /// Images in `Body`
-protocol HTMLBodyImageContentView: HTMLBodyContentView {  }
+public protocol HTMLBodyImageContentView: HTMLBodyContentView {  }
 /// Links in `Body`
-protocol HTMLBodyLinkContentView: HTMLBodyContentView {
+public protocol HTMLBodyLinkContentView: HTMLBodyContentView {
     var url: String { get }
 }

@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct PositionModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
-    typealias Body = ContentView
+public struct PositionModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
+    public typealias Body = ContentView
 
     private let position: Position
 
@@ -17,7 +17,7 @@ struct PositionModifier<ContentView>: ViewModifier where ContentView: HTMLConten
     private let right: AutoInheritInitialDimension
     private let bottom: AutoInheritInitialDimension
 
-    init(position: Position,
+    public init(position: Position,
          left: AutoInheritInitialDimension,
          top: AutoInheritInitialDimension,
          right: AutoInheritInitialDimension,
@@ -29,7 +29,7 @@ struct PositionModifier<ContentView>: ViewModifier where ContentView: HTMLConten
         self.bottom = bottom
     }
 
-    func body(content: Content) -> Body {
+    public func body(content: Content) -> Body {
         let updatedPosition = update(content: content,
                                      for: .position(.static),
                                      with: .position(position))

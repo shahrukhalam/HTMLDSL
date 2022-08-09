@@ -8,12 +8,12 @@
 import Foundation
 import Ccmark
 
-struct Markdown: HTMLBodyContentView {    
-    var body: String
-    let tag: Tag = .enclosing(.div)
-    var attributes = [Attribute]()
+public struct Markdown: HTMLBodyContentView {
+    public var body: String
+    public let tag: Tag = .enclosing(.div)
+    public var attributes = [Attribute]()
     
-    init(_ markdown: String) {
+    public init(_ markdown: String) {
         let spaceCount: Int = Indentation.tab.rawValue
         let spaces = Array(repeating: " ", count: spaceCount).joined(separator: "")
         self.body = Self.html(from: markdown)
