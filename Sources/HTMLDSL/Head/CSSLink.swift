@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct CSSLink: HTMLHeadContentView {
-    let body: String
+public struct CSSLink: HTMLHeadContentView {
+    public let body: String
 
-    let newLine: NewLine = .none
-    let tag = Tag.selfClosing(.link)
+    public let newLine: NewLine = .none
+    public let tag = Tag.selfClosing(.link)
 
-    var attributes: [Attribute] = []
+    public var attributes: [Attribute] = []
 
     private let path: String
 
-    init(path: String) {
+    public init(path: String) {
         self.path = path
         self.body = "rel=\"stylesheet\" href=\"\(path)\""
     }

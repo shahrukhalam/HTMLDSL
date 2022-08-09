@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct HTML<Content>: HTMLView where Content: HTMLContentView {
-    var body: Content
+public struct HTML<Content>: HTMLView where Content: HTMLContentView {
+    public var body: Content
 
-    let indentation: Indentation = .none
-    let tag = Tag.enclosing(.html)
-    var attributes = [Attribute]()
+    public let indentation: Indentation = .none
+    public let tag = Tag.enclosing(.html)
+    public var attributes = [Attribute]()
 
-    init(@HTMLViewBuilder content: () -> Content) {
+    public init(@HTMLViewBuilder content: () -> Content) {
         self.body = content()
     }
 }

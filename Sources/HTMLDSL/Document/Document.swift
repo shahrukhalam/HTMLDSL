@@ -7,18 +7,18 @@
 
 import Foundation
 
-struct Document<Content>: View where Content: HTMLView {
-    var body: Content
+public struct Document<Content>: View where Content: HTMLView {
+    public var body: Content
 
-    let indentation: Indentation = .none
-    let tag = Tag.selfClosing(.document)
-    var attributes = [Attribute]()
+    public let indentation: Indentation = .none
+    public let tag = Tag.selfClosing(.document)
+    public var attributes = [Attribute]()
 
-    init(@ViewBuilder content: () -> Content) {
+    public init(@ViewBuilder content: () -> Content) {
         self.body = content()
     }
 
-    var element: String {
+    public var element: String {
         "<\(tag.description)>\n\(body.element)"
     }
 }

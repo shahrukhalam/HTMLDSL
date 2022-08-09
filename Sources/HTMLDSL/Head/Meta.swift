@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct Meta: HTMLHeadContentView {
-    typealias Body = Never
+public struct Meta: HTMLHeadContentView {
+    public typealias Body = Never
 
-    let newLine: NewLine = .none
-    let tag = Tag.selfClosing(.meta)
+    public let newLine: NewLine = .none
+    public let tag = Tag.selfClosing(.meta)
 
     private let attributes: [MetaAttributes]
 
-    init(_ attributes: [MetaAttributes]) {
+    public init(_ attributes: [MetaAttributes]) {
         self.attributes = attributes
     }
 
-    var element: String {
+    public var element: String {
         let spaceCount: Int = indentation.rawValue
         let spaces = Array(repeating: " ", count: spaceCount).joined(separator: "")
 
@@ -32,13 +32,13 @@ struct Meta: HTMLHeadContentView {
     }
 }
 
-extension Meta {
+public extension Meta {
     enum MetaAttributes: CustomStringConvertible {
         case characterSet(CharacterSet)
         case name(Name, content: String)
         case viewport(width: Width, scale: Scale)
 
-        var description: String {
+        public var description: String {
             switch self {
             case .characterSet(let characterSet):
                 return "charset=\"\(characterSet.rawValue)\""
