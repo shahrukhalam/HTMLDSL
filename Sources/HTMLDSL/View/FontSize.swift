@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum FontSize: CustomStringConvertible {
+public enum FontSize: CustomStringConvertible {
     case percentage(Int)
     case pixel(Int)
     case relativeToDefaultFontSize(Float)
     case relativeToViewportWidth(Int)
 
-    var description: String {
+    public var description: String {
         switch self {
         case .percentage(let value):
             return "\(value)%"
@@ -27,7 +27,7 @@ enum FontSize: CustomStringConvertible {
     }
 }
 
-enum FontWeight: CustomStringConvertible {
+public enum FontWeight: CustomStringConvertible {
     case normal
     case bold
     case bolder
@@ -36,7 +36,7 @@ enum FontWeight: CustomStringConvertible {
     case initial
     case inherit
 
-    var description: String {
+    public var description: String {
         switch self {
         case .normal:
             return "normal"

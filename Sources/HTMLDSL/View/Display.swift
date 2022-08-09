@@ -8,7 +8,7 @@
 import Foundation
 
 // https://www.w3schools.com/cssref/pr_class_display.asp
-enum Display: String {
+public enum Display: String {
     case inline
     case block
     case grid

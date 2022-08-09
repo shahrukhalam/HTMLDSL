@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum AutoDimension: CustomStringConvertible {
+public enum AutoDimension: CustomStringConvertible {
     case percentage(Int)
     case pixel(Int)
     case auto
 
-    var description: String {
+    public var description: String {
         switch self {
         case .percentage(let value):
             return "\(value)%"
@@ -24,12 +24,12 @@ enum AutoDimension: CustomStringConvertible {
     }
 }
 
-enum InheritDimension: CustomStringConvertible {
+public enum InheritDimension: CustomStringConvertible {
     case percentage(Int)
     case pixel(Int)
     case inherit
 
-    var description: String {
+    public var description: String {
         switch self {
         case .percentage(let value):
             return "\(value)%"
@@ -41,13 +41,13 @@ enum InheritDimension: CustomStringConvertible {
     }
 }
 
-enum AutoInheritDimension: CustomStringConvertible {
+public enum AutoInheritDimension: CustomStringConvertible {
     case percentage(Int)
     case pixel(Int)
     case auto
     case inherit
 
-    var description: String {
+    public var description: String {
         switch self {
         case .percentage(let value):
             return "\(value)%"
@@ -61,14 +61,14 @@ enum AutoInheritDimension: CustomStringConvertible {
     }
 }
 
-enum AutoInheritInitialDimension: CustomStringConvertible {
+public enum AutoInheritInitialDimension: CustomStringConvertible {
     case percentage(Int)
     case pixel(Int)
     case auto
     case inherit
     case initial
 
-    var description: String {
+    public var description: String {
         switch self {
         case .percentage(let value):
             return "\(value)%"
@@ -84,7 +84,7 @@ enum AutoInheritInitialDimension: CustomStringConvertible {
     }
 }
 
-enum BoxSizing: String {
+public enum BoxSizing: String {
     case contentBox = "content-box"
     case borderBox = "border-box"
     case initial

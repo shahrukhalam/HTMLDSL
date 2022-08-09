@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum TextAlignment: String {
+public enum TextAlignment: String {
     case left
     case right
     case center

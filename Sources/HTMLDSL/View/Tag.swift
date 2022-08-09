@@ -7,12 +7,13 @@
 
 import Foundation
 
-enum Tag: CustomStringConvertible {
+public enum Tag: CustomStringConvertible {
     case enclosing(EnclosingTag)
     case selfClosing(SelfClosingTag)
     case empty
+    case all
 
-    var description: String {
+    public var description: String {
         switch self {
         case .enclosing(let tag):
             return tag.description
@@ -20,11 +21,13 @@ enum Tag: CustomStringConvertible {
             return tag.rawValue
         case .empty:
             return ""
+        case .all:
+            return "*"
         }
     }
 }
 
-enum EnclosingTag: CustomStringConvertible {
+public enum EnclosingTag: CustomStringConvertible {
     case html
     case head
     case body
@@ -40,7 +43,7 @@ enum EnclosingTag: CustomStringConvertible {
     case div
     case iframe
 
-    var description: String {
+    public var description: String {
         switch self {
         case .html:
             return "html"
@@ -66,7 +69,7 @@ enum EnclosingTag: CustomStringConvertible {
     }
 }
 
-enum SelfClosingTag: String {
+public enum SelfClosingTag: String {
     case document = "!DOCTYPE html"
 
     // Head Content Tags

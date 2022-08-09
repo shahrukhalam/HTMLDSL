@@ -8,7 +8,7 @@
 import Foundation
 
 // https://www.w3schools.com/css/css_positioning.asp
-enum Position: String {
+public enum Position: String {
     case `static`
     case absolute
     case fixed
@@ -18,20 +18,20 @@ enum Position: String {
     case inherit
 }
 
-enum BackgroundPosition: String {
+public enum BackgroundPosition: String {
     case center
     case initial
     case inherit
 }
 
-enum BackgroundRepeat: String {
+public enum BackgroundRepeat: String {
     case `repeat`
     case noRepeat = "no-repeat"
     case initial
     case inherit
 }
 
-enum BackgroundSize: CustomStringConvertible {
+public enum BackgroundSize: CustomStringConvertible {
     case auto
     case pixel(x: Int, y: Int)
     case percentage(x: Int, y: Int)
@@ -40,7 +40,7 @@ enum BackgroundSize: CustomStringConvertible {
     case initial
     case inherit
 
-    var description: String {
+    public var description: String {
         switch self {
         case .auto:
             return "auto"
@@ -60,10 +60,10 @@ enum BackgroundSize: CustomStringConvertible {
     }
 }
 
-enum Transform: CustomStringConvertible {
+public enum Transform: CustomStringConvertible {
     case translate(X: AutoDimension, Y: AutoDimension)
 
-    var description: String {
+    public var description: String {
         switch self {
         case let .translate(X, Y):
             return "translate(\(X.description), \(Y.description))"

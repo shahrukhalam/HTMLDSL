@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum Color: CustomStringConvertible {
+public enum Color: CustomStringConvertible {
     case html(HTMLColor)
     case rgba(red: Int, green: Int, blue: Int, alpha: Float)
     case hexWithHash(String)
 
-    var description: String {
+    public var description: String {
         switch self {
         case .html(let color):
             return color.rawValue
@@ -24,7 +24,7 @@ enum Color: CustomStringConvertible {
     }
 }
 
-extension Color {
+public extension Color {
     static var NavBarColor: Color {
         return .rgba(red: 240, green: 240, blue: 240, alpha: 0.8) // #F0F0F0
     }
@@ -39,7 +39,7 @@ extension Color {
 }
 
 // Color Names Supported by All Browsers: https://www.w3schools.com/colors/colors_names.asp
-enum HTMLColor: String {
+public enum HTMLColor: String {
     case AliceBlue
     case AntiqueWhite
     case Aqua

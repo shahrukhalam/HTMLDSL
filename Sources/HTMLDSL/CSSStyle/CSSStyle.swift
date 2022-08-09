@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol CSSStyle {
+public protocol CSSStyle {
     var key: CustomStringConvertible { get }
     var styles: [Style] { get }
     var element: String { get }
 }
 
-extension CSSStyle {
+public extension CSSStyle {
     var element: String {
         let allStyles = styles.map { $0.description }.joined(separator: "\n")
         let isEmptyStyle = styles.isEmpty || allStyles.isEmpty
@@ -216,7 +216,7 @@ extension CSSStyle {
                         with: .transform(transform))
     }
 
-    // Grid
+    // MARK: Grid
     func gridColumn(gap: Int) -> Self {
         return modified(body: self,
                         oldStyle: .gridColumnGap(0),
@@ -229,7 +229,7 @@ extension CSSStyle {
                         with: .gridTemplateColumns(templates))
     }
 
-    // Flex
+    // MARK: Flex
     func flexDirection(_ direction: StackViewDirection) -> Self {
         return modified(body: self,
                         oldStyle: .flexDirection(.horizontal),
@@ -247,17 +247,22 @@ extension CSSStyle {
                         oldStyle: .flexDistributeOnCrossAxis(.flexStart),
                         with: .flexDistributeOnCrossAxis(distribution))
     }
+    
+    // MARK: Pointer
+    func pointer(_ event: PointerEvent) -> Self {
+        modified(body: self, oldStyle: .pointer(.auto), with: .pointer(event))
+    }
 }
 
-struct TagStyle: CSSStyle {
-    var styles = [Style]()
-    let key: CustomStringConvertible
+public struct TagStyle: CSSStyle {
+    public var styles = [Style]()
+    public let key: CustomStringConvertible
 
-    init(for tag: Tag) {
+    public init(for tag: Tag) {
         self.key = tag.description
     }
 
-    init(cssTag: CSSTag) {
+    public init(cssTag: CSSTag) {
         self.key = cssTag.rawValue
     }
 
@@ -267,16 +272,16 @@ struct TagStyle: CSSStyle {
     }
 }
 
-struct ClassStyle: CSSStyle {
-    var styles = [Style]()
-    let key: CustomStringConvertible
+public struct ClassStyle: CSSStyle {
+    public var styles = [Style]()
+    public let key: CustomStringConvertible
 
-    init(forClass: CSSClass) {
+    public init(forClass: CSSClass) {
         let isEmptyKey = forClass.rawValue.isEmpty
         self.key = isEmptyKey ? "" : ".\(forClass.rawValue)"
     }
 
-    init(forClass: CSSClass, withTag: Tag) {
+    public init(forClass: CSSClass, withTag: Tag) {
         switch (forClass, withTag) {
         case (.empty, .empty):
             self.key = ""

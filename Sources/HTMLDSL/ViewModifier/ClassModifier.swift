@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum CSSTag: String {
+public enum CSSTag: String {
     case hoverLink = "a:hover"
 }
 
-enum CSSClass: String {
+public enum CSSClass: String {
     case empty = ""
 
     // Custom Classes for Index

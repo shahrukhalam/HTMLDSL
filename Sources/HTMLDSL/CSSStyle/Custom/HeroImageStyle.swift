@@ -131,17 +131,17 @@ struct GridSubHeadingStyle: CSSStyle {
     }
 }
 
-enum StackViewDirection: String {
+public enum StackViewDirection: String {
     case horizontal = "row"
     case vertical = "column"
 }
 
-enum StackViewAlignment: String {
+public enum StackViewAlignment: String {
     case stretch
     case center
 }
 
-enum StackViewDistribution: String {
+public enum StackViewDistribution: String {
     case flexStart = "flex-start"
     case center
 }

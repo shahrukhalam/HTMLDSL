@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum FontFamily {
+public enum FontFamily {
     case serif([Serif])
     case sansSerif([SansSerif])
     case monospace([Monospace])
 
-    var description: String {
+    public var description: String {
         switch self {
         case .serif(let fonts):
             return fonts.map { $0.rawValue }.joined(separator: ", ")
@@ -23,7 +23,7 @@ enum FontFamily {
         }
     }
 
-    enum Serif: String {
+    public enum Serif: String {
         case serif
         case Georgia
         case Palatino
@@ -33,7 +33,7 @@ enum FontFamily {
         case TimesNewRoman = "Times New Roman"
     }
 
-    enum SansSerif: String {
+    public enum SansSerif: String {
         case sansSerif = "sans-serif"
         case SFProDisplay = "SF Pro Display"
         case SFProIcons = "SF Pro Icons"
@@ -54,7 +54,7 @@ enum FontFamily {
         case Verdana
     }
 
-    enum Monospace: String {
+    public enum Monospace: String {
         case monospace
         case Courier
         case CourierNew = "Courier New"

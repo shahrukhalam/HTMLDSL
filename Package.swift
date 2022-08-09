@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "HTMLDSL",
-    platforms: [.macOS(.v11)],
+    platforms: [.macOS(.v12)],
     products: [
         .library(name: "HTMLDSL", targets: ["HTMLDSL"])
     ],

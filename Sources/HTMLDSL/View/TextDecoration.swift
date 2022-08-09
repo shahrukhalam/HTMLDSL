@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum TextDecoration: String {
+public enum TextDecoration: String {
     case none
     case underline
 }

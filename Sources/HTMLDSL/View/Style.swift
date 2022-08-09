@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Style: CustomStringConvertible, Equatable {
+public enum Style: CustomStringConvertible, Equatable {
     case backgroundColor(Color)
     case width(AutoDimension)
     case height(AutoDimension)
@@ -47,33 +47,36 @@ enum Style: CustomStringConvertible, Equatable {
 
     case zIndex(Int)
 
-    // Grid
+    // MARK: Grid
     case gridColumnGap(Int)
     case gridTemplateColumns([AutoDimension])
 
-    // Flex
+    // MARK: Flex
     case flexDirection(StackViewDirection)
     case flexAlignAlongAxis(StackViewAlignment)
     case flexDistributeOnCrossAxis(StackViewDistribution)
+    
+    // MARK: Pointer
+    case pointer(PointerEvent)
 
-    var description: String {
+    public var description: String {
         switch self {
         case .backgroundColor(let color):
-            return "background-color:\(color.description);"
+            return "background-color: \(color.description);"
         case .foregroundColor(let color):
-            return "color:\(color.description);"
+            return "color: \(color.description);"
         case .width(let dimension):
-            return "width:\(dimension.description);"
+            return "width: \(dimension.description);"
         case .height(let dimension):
-            return "height:\(dimension.description);"
+            return "height: \(dimension.description);"
         case .fontFamily(let fontFamily):
-            return "font-family:\(fontFamily.description);"
+            return "font-family: \(fontFamily.description);"
         case .fontSize(let fontSize):
-            return "font-size:\(fontSize.description);"
+            return "font-size: \(fontSize.description);"
         case .fontWeight(let fontWeight):
-            return "font-weight:\(fontWeight.description);"
+            return "font-weight: \(fontWeight.description);"
         case .textAlignment(let alignment):
-            return "text-align:\(alignment.rawValue);"
+            return "text-align: \(alignment.rawValue);"
         case let .margin(left, top, right, bottom):
             return "margin: \(top.description) \(right.description) \(bottom.description) \(left.description);"
         case let .padding(left, top, right, bottom):
@@ -117,10 +120,12 @@ enum Style: CustomStringConvertible, Equatable {
             return "justify-content: \(alignment.rawValue);"
         case .flexDistributeOnCrossAxis(let distribution):
             return "align-items: \(distribution.rawValue);"
+        case .pointer(let event):
+            return "pointer-events: \(event.rawValue);"
         }
     }
 
-    static func == (lhs: Style, rhs: Style) -> Bool {
+    public static func == (lhs: Style, rhs: Style) -> Bool {
         switch (lhs, rhs) {
         case (.backgroundColor, .backgroundColor):
             return true
@@ -175,6 +180,8 @@ enum Style: CustomStringConvertible, Equatable {
         case (.flexAlignAlongAxis, .flexAlignAlongAxis):
             return true
         case (.flexDistributeOnCrossAxis, .flexDistributeOnCrossAxis):
+            return true
+        case (.pointer, .pointer):
             return true
         default:
             return false

@@ -28,6 +28,8 @@ extension View {
             textElement = "<\(tag.description)\(bodyElement)\(finalAttribute)>"
         case .empty:
             textElement = "\(body.element)"
+        case .all:
+            fatalError("Not for Views")
         }
 
         let spaceCount: Int = indentation.rawValue

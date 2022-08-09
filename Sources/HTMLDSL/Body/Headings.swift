@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum HeadingTag: String {
+public enum HeadingTag: String {
     case h1
     case h2
     case h3
