@@ -76,7 +76,7 @@ class LinkTests: XCTestCase {
         let expectation =
         """
             <a href="https://www.google.com" target="_blank">
-                <img src="google.jpg" alt="Google" style="width:42px;height:42px;">
+                <img src="google.jpg" alt="Google" style="width: 42px;height: 42px;">
             </a>
         """
 

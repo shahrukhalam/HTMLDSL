@@ -51,7 +51,7 @@ class ModifiedContentTests: XCTestCase {
 
         let expectation =
         """
-            <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color:Red;">
+            <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color: Red;">
         """
 
         XCTAssertEqual(image.element, expectation)
@@ -64,12 +64,12 @@ class ModifiedContentTests: XCTestCase {
 
         let redExpectation =
         """
-            <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color:Red;">
+            <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color: Red;">
         """
 
         let greenExpectation =
         """
-            <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color:Green;">
+            <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color: Green;">
         """
 
         XCTAssertEqual(redImage.attributes, [.style([.backgroundColor(.html(.Red))])])
@@ -87,7 +87,7 @@ class ModifiedContentTests: XCTestCase {
 
         let expectation =
         """
-            <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color:Blue;">
+            <img src="Images/nora.jpg" alt="Nora Fatehi" style="background-color: Blue;">
         """
 
         XCTAssertEqual(image.element, expectation)
@@ -100,7 +100,7 @@ class ModifiedContentTests: XCTestCase {
 
         let expectation =
         """
-            <h1 style="background-color:Green;color:Blue;"> Nora Fatehi </h1>
+            <h1 style="background-color: Green;color: Blue;"> Nora Fatehi </h1>
         """
 
         XCTAssertEqual(headings.element, expectation)
@@ -113,7 +113,7 @@ class ModifiedContentTests: XCTestCase {
 
         let expectation =
         """
-            <p style="background-color:Green;color:Blue;">
+            <p style="background-color: Green;color: Blue;">
             Nora Fatehi
             </p>
         """
@@ -129,7 +129,7 @@ class ModifiedContentTests: XCTestCase {
 
         let expectation =
         """
-            <p style="background-color:Green;color:Blue;" id="Nora">
+            <p style="background-color: Green;color: Blue;" id="Nora">
             Nora Fatehi
             </p>
         """
@@ -145,7 +145,7 @@ class ModifiedContentTests: XCTestCase {
 
         let expectation =
         """
-            <p style="background-color:Green;color:Blue;" class="flex-container">
+            <p style="background-color: Green;color: Blue;" class="flex-container">
             Nora Fatehi
             </p>
         """
@@ -162,7 +162,7 @@ class ModifiedContentTests: XCTestCase {
 
         let expectation =
         """
-            <p style="background-color:Green;color:Blue;" id="Nora" class="flex-container">
+            <p style="background-color: Green;color: Blue;" id="Nora" class="flex-container">
             Nora Fatehi
             </p>
         """

@@ -78,7 +78,7 @@ class CSSStyleTests: XCTestCase {
         <head>
             <style>
             body {
-            background-color:Yellow;
+            background-color: Yellow;
             }
             </style>
         </head>
@@ -102,10 +102,10 @@ class CSSStyleTests: XCTestCase {
         <head>
             <style>
             body {
-            background-color:Yellow;
+            background-color: Yellow;
             }
             h1 {
-            background-color:Red;
+            background-color: Red;
             }
             </style>
         </head>
@@ -129,10 +129,10 @@ class CSSStyleTests: XCTestCase {
         <head>
             <style>
             body {
-            background-color:Yellow;
+            background-color: Yellow;
             }
             .flex-container {
-            background-color:Red;
+            background-color: Red;
             }
             </style>
         </head>
@@ -155,7 +155,7 @@ class CSSStyleTests: XCTestCase {
         <head>
             <style>
             body {
-            background-color:Yellow;
+            background-color: Yellow;
             margin: 15px 15px 15px 15px;
             }
             </style>
@@ -180,10 +180,10 @@ class CSSStyleTests: XCTestCase {
         <head>
             <style>
             .flex-container {
-            background-color:Yellow;
+            background-color: Yellow;
             margin: 15px 15px 15px 15px;
-            width:15px;
-            height:15px;
+            width: 15px;
+            height: 15px;
             }
             </style>
         </head>
@@ -203,8 +203,8 @@ class CSSStyleTests: XCTestCase {
         top: 0px;
         right: 0px;
         bottom: auto;
-        background-color:rgba(240, 240, 240, 0.8);
-        text-align:center;
+        background-color: rgba(240, 240, 240, 0.8);
+        text-align: center;
         -webkit-backdrop-filter: saturate(180%) blur(20px);
         backdrop-filter: saturate(180%) blur(20px);
         z-index: 1;
@@ -215,13 +215,13 @@ class CSSStyleTests: XCTestCase {
         text-decoration: none;
         }
         .activeLink {
-        color:Black;
+        color: Black;
         }
         .inactiveLink {
-        color:rgba(60, 60, 60, 1.0);
+        color: rgba(60, 60, 60, 1.0);
         }
         a:hover {
-        color:Black;
+        color: Black;
         }
         """
 
@@ -234,8 +234,8 @@ class CSSStyleTests: XCTestCase {
         let expectation =
             """
         .heroImage {
-        background-color:rgba(250, 250, 250, 1.0);
-        height:745px;
+        background-color: rgba(250, 250, 250, 1.0);
+        height: 745px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -252,7 +252,7 @@ class CSSStyleTests: XCTestCase {
         let expectation =
             """
         .centeredText {
-        text-align:center;
+        text-align: center;
         position: absolute;
         left: 50%;
         top: 50px;
@@ -271,9 +271,9 @@ class CSSStyleTests: XCTestCase {
         let expectation =
             """
         .heroHeading {
-        font-size:44px;
-        font-weight:600;
-        color:White;
+        font-size: 44px;
+        font-weight: 600;
+        color: White;
         }
         """
 
@@ -286,9 +286,9 @@ class CSSStyleTests: XCTestCase {
         let expectation =
             """
         .heroSubHeading {
-        font-size:40px;
-        font-weight:400;
-        color:White;
+        font-size: 40px;
+        font-weight: 400;
+        color: White;
         }
         """
 
@@ -305,7 +305,7 @@ class CSSStyleTests: XCTestCase {
         display: grid;
         grid-template-columns: auto auto;
         grid-column-gap: 12px;
-        background-color:rgba(250, 250, 250, 1.0);
+        background-color: rgba(250, 250, 250, 1.0);
         }
         """
 
@@ -318,8 +318,8 @@ class CSSStyleTests: XCTestCase {
         let expectation =
             """
         .gridImage {
-        background-color:rgba(250, 250, 250, 1.0);
-        height:720px;
+        background-color: rgba(250, 250, 250, 1.0);
+        height: 720px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -336,9 +336,9 @@ class CSSStyleTests: XCTestCase {
         let expectation =
             """
         .gridSubHeading {
-        font-size:19px;
-        font-weight:400;
-        color:White;
+        font-size: 19px;
+        font-weight: 400;
+        color: White;
         }
         """
 

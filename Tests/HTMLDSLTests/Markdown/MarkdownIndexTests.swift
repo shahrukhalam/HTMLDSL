@@ -61,7 +61,7 @@ class MarkdownIndexTests: XCTestCase {
             <style>
             body {
             margin: 0px 0px 0px 0px;
-            font-family:SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
+            font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
             }
             </style>
         </head>
