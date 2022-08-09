@@ -24,10 +24,8 @@ public struct Markdown: HTMLBodyContentView {
 }
 
 private extension Markdown {
-    static func html(from markdown: String, options: Int32 = 0) -> String {
-        guard let cString = cmark_markdown_to_html(markdown,
-                                                   markdown.utf8.count,
-                                                   CMARK_OPT_SMART | options) else {
+    static func html(from markdown: String) -> String {
+        guard let cString = cmark_markdown_to_html(markdown, markdown.utf8.count, CMARK_OPT_UNSAFE) else {
             return markdown
         }
 

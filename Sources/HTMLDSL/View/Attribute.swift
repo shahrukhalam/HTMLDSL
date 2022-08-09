@@ -18,6 +18,9 @@ public enum Attribute: CustomStringConvertible, Equatable {
     // Link
     case href(String)
     case target(Target)
+    
+    // Script
+    case source(String)
 
     public var description: String {
         switch self {
@@ -33,6 +36,8 @@ public enum Attribute: CustomStringConvertible, Equatable {
             return "href=\"\(url)\""
         case .target(let target):
             return "target=\"\(target.rawValue)\""
+        case .source(let url):
+            return "src=\"\(url)\""
         }
     }
 
@@ -47,6 +52,8 @@ public enum Attribute: CustomStringConvertible, Equatable {
         case (.href, .href):
             return true
         case (.target, .target):
+            return true
+        case (.source, .source):
             return true
         default:
             return false

@@ -39,6 +39,7 @@ public enum EnclosingTag: CustomStringConvertible {
     case link
     case div
     case iframe
+    case script
 
     public var description: String {
         switch self {
@@ -62,6 +63,8 @@ public enum EnclosingTag: CustomStringConvertible {
             return "div"
         case .iframe:
             return "iframe"
+        case .script:
+            return "script"
         }
     }
 }
