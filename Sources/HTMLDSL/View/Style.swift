@@ -36,7 +36,7 @@ public enum Style: CustomStringConvertible, Equatable {
     case fontWeight(FontWeight)
     case textAlignment(TextAlignment)
     case textDecoration(TextDecoration)
-    case lineHeight(Int)
+    case lineHeight(AutoDimension)
 
     case filter(saturationInPercentage: Int, blurInPixel: Int)
 
@@ -127,8 +127,8 @@ public enum Style: CustomStringConvertible, Equatable {
             return "align-items: \(distribution.rawValue);"
         case .pointer(let event):
             return "pointer-events: \(event.rawValue);"
-        case .lineHeight(let heightInPixel):
-            return "line-height: \(heightInPixel)px;"
+        case .lineHeight(let dimension):
+            return "line-height: \(dimension.description);"
         case .borderWidth(let dimension):
             return "border-width: \(dimension.description);"
         }

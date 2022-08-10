@@ -14,7 +14,7 @@ class MarkdownIndexTests: XCTestCase {
         """
         # HTMLDSL
 
-        ## What's a DSL:
+        ## What is a DSL:
         It stands for Domain Specific Language.
 
         Purpose: DSL solves a particular problem for everyone even for the ones with very little knowledge on a particular domain.
@@ -76,7 +76,7 @@ class MarkdownIndexTests: XCTestCase {
             </div>
             <div>
                 <h1>HTMLDSL</h1>
-                <h2>What’s a DSL:</h2>
+                <h2>What is a DSL:</h2>
                 <p>It stands for Domain Specific Language.</p>
                 <p>Purpose: DSL solves a particular problem for everyone even for the ones with very little knowledge on a particular domain.</p>
                 <p>If you are an Apple Developer, then you would probably know about <code>Podfile</code> which is a DSL written in Ruby.</p>

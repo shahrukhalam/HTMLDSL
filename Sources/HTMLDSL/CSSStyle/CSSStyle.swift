@@ -154,8 +154,8 @@ public extension CSSStyle {
         modified(body: self, oldStyle: .textAlignment(.left), with: .textAlignment(alignment))
     }
     
-    func lineHeight(_ height: Int) -> Self {
-        modified(body: self, oldStyle: .lineHeight(0), with: .lineHeight(height))
+    func lineHeight(_ dimension: AutoDimension) -> Self {
+        modified(body: self, oldStyle: .lineHeight(.auto), with: .lineHeight(dimension))
     }
 
     func filter(saturationInPercentage: Int,
