@@ -13,7 +13,7 @@ public enum Attribute: CustomStringConvertible, Equatable {
     case id(HTMLID)
 
     case style([Style])
-    case `class`(CSSClass)
+    case `class`([CSSClass])
 
     // Link
     case href(String)
@@ -29,9 +29,10 @@ public enum Attribute: CustomStringConvertible, Equatable {
         case .style(let styles):
             let finalStyle = styles.map { $0.description }.joined()
             return "style=\"\(finalStyle)\""
-        case .class(let cssClass):
-            if case .empty = cssClass { return "" }
-            return "class=\"\(cssClass.rawValue)\""
+        case .class(let cssClasses):
+            let classes = cssClasses.map { $0.rawValue }.joined(separator: " ")
+            if classes.isEmpty { return "" }
+            return "class=\"\(classes)\""
         case .href(let url):
             return "href=\"\(url)\""
         case .target(let target):

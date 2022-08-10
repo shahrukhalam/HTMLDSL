@@ -35,23 +35,40 @@ public enum CSSClass: String {
     case flexibleContainerHorizontal
     case flexibleContainerVertical
     
-    // MARK: Markdown
+    // MARK: Article
     case article
-    
-    // MARK: Markdown
     case markdown
+    
+    // MARK: New Index
+    case sectionHeader
+    
+    // MARK: Common
+    case primaryLargeTitle
+    case secondaryLargeTitle
+    case tertiaryLargeTitle
+    case primaryTitle
+    case secondaryTitle
+    case primarySubTitle
+    case secondarySubTitle
+    case centerText
+    case centerDivX
+    case centerDivY
 }
 
 public struct ClassModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
     public typealias Body = ContentView
 
-    private let cssClass: CSSClass
-
+    private let cssClasses: [CSSClass]
+    
     public init(cssClass: CSSClass) {
-        self.cssClass = cssClass
+        self.cssClasses = [cssClass]
+    }
+
+    public init(cssClasses: [CSSClass]) {
+        self.cssClasses = cssClasses
     }
 
     public func body(content: Content) -> Body {
-        return update(content: content, for: .class(.empty), with: .class(cssClass))
+        return update(content: content, for: .class([.empty]), with: .class(cssClasses))
     }
 }

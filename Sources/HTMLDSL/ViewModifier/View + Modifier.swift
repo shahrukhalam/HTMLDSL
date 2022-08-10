@@ -13,8 +13,13 @@ public extension HTMLContentView {
         return ModifiedContent(content: self, modifier: modifier)
     }
 
+    func identifyBy(cssClasses: [CSSClass]) -> ModifiedContent<Self, ClassModifier<Self>> {
+        let modifier = ClassModifier<Self>(cssClasses: cssClasses)
+        return ModifiedContent(content: self, modifier: modifier)
+    }
+    
     func identifyBy(cssClass: CSSClass) -> ModifiedContent<Self, ClassModifier<Self>> {
-        let modifier = ClassModifier<Self>(cssClass: cssClass)
+        let modifier = ClassModifier<Self>(cssClasses: [cssClass])
         return ModifiedContent(content: self, modifier: modifier)
     }
 
@@ -43,6 +48,14 @@ public extension HTMLContentView {
                                             bottom: bottom)
         return ModifiedContent(content: self, modifier: modifier)
     }
+    
+    func margin(uniform dimension: AutoInheritDimension) -> ModifiedContent<Self, MarginModifier<Self>> {
+        let modifier = MarginModifier<Self>(left: dimension,
+                                            top: dimension,
+                                            right: dimension,
+                                            bottom: dimension)
+        return ModifiedContent(content: self, modifier: modifier)
+    }
 
     func padding(left: InheritDimension = .pixel(0),
                  top: InheritDimension = .pixel(0),
@@ -52,6 +65,14 @@ public extension HTMLContentView {
                                              top: top,
                                              right: right,
                                              bottom: bottom)
+        return ModifiedContent(content: self, modifier: modifier)
+    }
+    
+    func padding(uniform dimension: InheritDimension) -> ModifiedContent<Self, PaddingModifier<Self>> {
+        let modifier = PaddingModifier<Self>(left: dimension,
+                                             top: dimension,
+                                             right: dimension,
+                                             bottom: dimension)
         return ModifiedContent(content: self, modifier: modifier)
     }
 
