@@ -25,7 +25,7 @@ public struct CSSLink: HTMLHeadContentView {
 
 public extension CSSLink {
     enum DeviceType: String {
-        case small = "screen and (max-width: 600px)"
+        case small = "screen and (max-width: 500px)"
         case wide = "screen and (min-width: 600px)"
     }
     
