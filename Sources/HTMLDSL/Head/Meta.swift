@@ -15,8 +15,8 @@ public struct Meta: HTMLHeadContentView {
 
     private let attributes: [MetaAttributes]
 
-    public init(_ attributes: [MetaAttributes]) {
-        self.attributes = attributes
+    public init(_ attributes: MetaAttributes) {
+        self.attributes = [attributes]
     }
 
     public var element: String {
