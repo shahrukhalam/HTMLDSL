@@ -22,3 +22,15 @@ public struct CSSLink: HTMLHeadContentView {
         self.body = "rel=\"stylesheet\" href=\"\(path)\""
     }
 }
+
+public extension CSSLink {
+    enum DeviceType: String {
+        case small = "screen and (max-width: 600px)"
+        case wide = "screen and (min-width: 600px)"
+    }
+    
+    init(path: String, type: DeviceType) {
+        self.path = path
+        self.body = "rel=\"stylesheet\" media=\"\(type.rawValue)\" href=\"\(path)\""
+    }
+}
