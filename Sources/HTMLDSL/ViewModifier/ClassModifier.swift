@@ -8,7 +8,7 @@
 import Foundation
 
 public enum CSSTag: String {
-    case hoverLink = "a:hover"
+    case hover = "hover"
 }
 
 public enum CSSClass: String {
@@ -41,6 +41,8 @@ public enum CSSClass: String {
     
     // MARK: New Index
     case sectionHeader
+    case sectionHeaderHero
+    case link
     
     // MARK: Common
     case primaryLargeTitle

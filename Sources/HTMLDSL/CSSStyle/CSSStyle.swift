@@ -266,8 +266,8 @@ public struct TagStyle: CSSStyle {
         self.key = tag.description
     }
 
-    public init(cssTag: CSSTag) {
-        self.key = cssTag.rawValue
+    public init(for tag: Tag, with cssTag: CSSTag) {
+        self.key = tag.description + ":" + cssTag.rawValue
     }
 
     fileprivate init(for key: CustomStringConvertible, with style: [Style]) {
@@ -292,6 +292,14 @@ public struct ClassStyle: CSSStyle {
         default:
             self.key = ".\(forClass.rawValue) \(withTag.description)"
         }
+    }
+    
+    public init(forClass: CSSClass, withCSSTag: CSSTag) {
+        self.key = ".\(forClass.rawValue):\(withCSSTag.rawValue)"
+    }
+    
+    public init(_ class: CSSClass, cssTag: CSSTag, tag: Tag) {
+        self.key = ".\(`class`.rawValue):\(cssTag.rawValue)" + " " + tag.description
     }
 
     fileprivate init(for key: CustomStringConvertible, with style: [Style]) {

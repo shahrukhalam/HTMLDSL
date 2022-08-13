@@ -33,7 +33,7 @@ struct PageNavStyle: CSSStyle {
         let inactiveLinkStyle = ClassStyle(forClass: .inactiveLink)
             .foregroundColor(Color.InactiveBlack)
         
-        let hoverLinkStyle = TagStyle(cssTag: .hoverLink)
+        let hoverLinkStyle = TagStyle(for: .selfClosing(.link), with: .hover)
             .foregroundColor(.html(.Black))
         
         let classStyles = [navStyle, linkStyle, activeLinkStyle, inactiveLinkStyle]
