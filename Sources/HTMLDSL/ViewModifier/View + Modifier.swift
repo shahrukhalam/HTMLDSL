@@ -93,4 +93,9 @@ public extension HTMLContentView {
         let modifier = BorderModifier<Self>(dimension: dimension)
         return ModifiedContent(content: self, modifier: modifier)
     }
+    
+    func cornerRadius(_ dimension: AutoDimension) -> ModifiedContent<Self, CornerModifier<Self>> {
+        let modifier = CornerModifier<Self>(dimension: dimension)
+        return ModifiedContent(content: self, modifier: modifier)
+    }
 }

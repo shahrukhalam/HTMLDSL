@@ -63,6 +63,7 @@ public enum Style: CustomStringConvertible, Equatable {
     
     // MARK: Border
     case borderWidth(AutoDimension)
+    case cornerRadius(AutoDimension)
 
     public var description: String {
         switch self {
@@ -131,6 +132,8 @@ public enum Style: CustomStringConvertible, Equatable {
             return "line-height: \(dimension.description);"
         case .borderWidth(let dimension):
             return "border-width: \(dimension.description);"
+        case .cornerRadius(let dimension):
+            return "border-radius: \(dimension.description);"
         }
     }
 
@@ -195,6 +198,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.lineHeight, .lineHeight):
             return true
         case (.borderWidth, .borderWidth):
+            return true
+        case (.cornerRadius, .cornerRadius):
             return true
         default:
             return false
