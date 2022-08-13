@@ -27,6 +27,7 @@ public enum CSSClass: String {
 
     // MARK: Grid
     case gridContainer
+    case gridItem
     case gridImage
     case gridSubHeading
 

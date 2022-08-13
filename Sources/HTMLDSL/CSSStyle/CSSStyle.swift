@@ -232,6 +232,12 @@ public extension CSSStyle {
                         oldStyle: .gridTemplateColumns([]),
                         with: .gridTemplateColumns(templates))
     }
+    
+    func gridRow(gap: Int) -> Self {
+        return modified(body: self,
+                        oldStyle: .gridRowGap(0),
+                        with: .gridRowGap(gap))
+    }
 
     // MARK: Flex
     func flexDirection(_ direction: StackViewDirection) -> Self {

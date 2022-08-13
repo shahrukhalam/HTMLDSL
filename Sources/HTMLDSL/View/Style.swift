@@ -51,6 +51,7 @@ public enum Style: CustomStringConvertible, Equatable {
 
     // MARK: Grid
     case gridColumnGap(Int)
+    case gridRowGap(Int)
     case gridTemplateColumns([AutoDimension])
 
     // MARK: Flex
@@ -117,6 +118,8 @@ public enum Style: CustomStringConvertible, Equatable {
             return "transform: \(transform.description);"
         case .gridColumnGap(let gap):
             return "grid-column-gap: \(gap)px;"
+        case .gridRowGap(let gap):
+            return "grid-row-gap: \(gap)px;"
         case .gridTemplateColumns(let columnDimensions):
             let templateColumns = columnDimensions.map { $0.description }.joined(separator: " ")
             return "grid-template-columns: \(templateColumns);"
@@ -185,6 +188,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.transform, .transform):
             return true
         case (.gridColumnGap, .gridColumnGap):
+            return true
+        case (.gridRowGap, .gridRowGap):
             return true
         case (.gridTemplateColumns, .gridTemplateColumns):
             return true
