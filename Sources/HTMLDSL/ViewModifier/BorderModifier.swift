@@ -22,13 +22,31 @@ public struct BorderModifier<ContentView>: ViewModifier where ContentView: HTMLC
 public struct CornerModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
     public typealias Body = ContentView
     
-    private let dimension: AutoDimension
+    private let dimensions: [AutoDimension]
     
     init(dimension: AutoDimension) {
-        self.dimension = dimension
+        self.dimensions = [dimension]
+    }
+    
+    init(dimensions: [AutoDimension]) {
+        self.dimensions = dimensions
     }
     
     public func body(content: Content) -> Body {
-        return update(content: content, for: .cornerRadius(.auto), with: .cornerRadius(dimension))
+        return update(content: content, for: .cornerRadius([.auto]), with: .cornerRadius(dimensions))
+    }
+}
+
+public struct DisplayModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
+    public typealias Body = ContentView
+    
+    private let display: Display
+    
+    init(display: Display) {
+        self.display = display
+    }
+    
+    public func body(content: Content) -> Body {
+        return update(content: content, for: .display(.none), with: .display(display))
     }
 }

@@ -58,6 +58,7 @@ public enum CSSClass: String {
     case primarySubTitle
     case secondarySubTitle
     case tertiarySubTitle
+    case primarySmallSubTitle
     case centerText
     case centerDivX
     case centerDivY

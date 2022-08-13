@@ -16,4 +16,8 @@ public struct Div<Content>: HTMLBodyContentView where Content: HTMLBodyContentVi
     public init(@ViewBuilder content: () -> Content) {
         self.body = content()
     }
+    
+    public init(_ content: Content) {
+        self.body = content
+    }
 }
