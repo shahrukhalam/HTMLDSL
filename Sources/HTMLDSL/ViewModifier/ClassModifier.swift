@@ -42,6 +42,7 @@ public enum CSSClass: String {
     
     // MARK: New Index
     case sectionHeader
+    case sectionHeaderContent
     case sectionHeaderHero
     case link
     
