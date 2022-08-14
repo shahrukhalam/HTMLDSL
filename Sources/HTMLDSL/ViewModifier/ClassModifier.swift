@@ -63,6 +63,8 @@ public enum CSSClass: String {
     case centerText
     case centerDivX
     case centerDivY
+    case desktopHidden
+    case mobileHidden
 }
 
 public struct ClassModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
