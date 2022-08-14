@@ -47,23 +47,19 @@ public enum CSSClass: String {
     case link
     
     // MARK: Common
-    case primaryLargeTitle
-    case secondaryLargeTitle
-    case tertiaryLargeTitle
-    case primaryTitle
-    case secondaryTitle
-    case tertiaryTitle
-    case primarySmallTitle
-    case secondarySmallTitle
-    case tertiarySmallTitle
-    case primaryLargeSubTitle
-    case primarySubTitle
-    case secondarySubTitle
-    case tertiarySubTitle
-    case primarySmallSubTitle
+    case largeTitle
+    case title1
+    case title2
+    case title3
+    case headline
+    case body
+    case callout
+    case subheadline
+    
     case centerText
     case centerDivX
     case centerDivY
+    
     case desktopHidden
     case mobileHidden
 }
