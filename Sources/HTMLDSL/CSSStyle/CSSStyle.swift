@@ -262,6 +262,19 @@ public extension CSSStyle {
     func pointer(_ event: PointerEvent) -> Self {
         modified(body: self, oldStyle: .pointer(.auto), with: .pointer(event))
     }
+    
+    // MARK: Border
+    func border(width: AutoDimension) -> Self {
+        modified(body: self, oldStyle: .borderWidth(.auto), with: .borderWidth(width))
+    }
+    
+    func border(color: Color) -> Self {
+        modified(body: self, oldStyle: .borderColor(.html(.Black)), with: .borderColor(color))
+    }
+    
+    func borderLeft() -> Self {
+        modified(body: self, oldStyle: .borderLeft, with: .borderLeft)
+    }
 }
 
 public struct TagStyle: CSSStyle {

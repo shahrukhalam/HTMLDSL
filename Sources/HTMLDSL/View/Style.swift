@@ -64,6 +64,8 @@ public enum Style: CustomStringConvertible, Equatable {
     
     // MARK: Border
     case borderWidth(AutoDimension)
+    case borderColor(Color)
+    case borderLeft
     case cornerRadius([AutoDimension])
 
     public var description: String {
@@ -135,6 +137,10 @@ public enum Style: CustomStringConvertible, Equatable {
             return "line-height: \(dimension.description);"
         case .borderWidth(let dimension):
             return "border-width: \(dimension.description);"
+        case .borderColor(let color):
+            return "border-color: \(color.description);"
+        case .borderLeft:
+            return "border-left-style: solid;"
         case .cornerRadius(let dimensions):
             let description = dimensions.map { $0.description }.joined(separator: " ")
             return "border-radius: \(description);"
@@ -205,7 +211,11 @@ public enum Style: CustomStringConvertible, Equatable {
             return true
         case (.borderWidth, .borderWidth):
             return true
+        case (.borderColor, .borderColor):
+            return true
         case (.cornerRadius, .cornerRadius):
+            return true
+        case (.borderLeft, .borderLeft):
             return true
         default:
             return false
