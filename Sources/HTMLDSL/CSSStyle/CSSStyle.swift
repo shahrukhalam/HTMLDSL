@@ -320,6 +320,10 @@ public struct ClassStyle: CSSStyle {
     public init(_ class: CSSClass, cssTag: CSSTag, tag: Tag) {
         self.key = ".\(`class`.rawValue):\(cssTag.rawValue)" + " " + tag.description
     }
+    
+    public init(_ class: CSSClass, tag: Tag, cssTag: CSSTag) {
+        self.key = "." + `class`.rawValue + " " + tag.description + ":" + cssTag.rawValue
+    }
 
     fileprivate init(for key: CustomStringConvertible, with style: [Style]) {
         self.key = key
