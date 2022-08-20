@@ -34,3 +34,10 @@ public extension CSSLink {
         self.body = "rel=\"stylesheet\" media=\"\(type.rawValue)\" href=\"\(path)\""
     }
 }
+
+public extension CSSLink {
+    init(favicon path: String) {
+        self.path = path
+        self.body = "rel=\"icon\" type=\"image/png\" href=\"\(path)\""
+    }
+}
