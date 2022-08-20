@@ -48,6 +48,9 @@ public enum Style: CustomStringConvertible, Equatable {
     case backgroundSize(BackgroundSize)
 
     case zIndex(Int)
+    
+    // MARK: List
+    case listImage(String)
 
     // MARK: Grid
     case gridColumnGap(Int)
@@ -144,6 +147,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case .cornerRadius(let dimensions):
             let description = dimensions.map { $0.description }.joined(separator: " ")
             return "border-radius: \(description);"
+        case .listImage(let url):
+            return "list-style-image: url(\"\(url)\");"
         }
     }
 
@@ -216,6 +221,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.cornerRadius, .cornerRadius):
             return true
         case (.borderLeft, .borderLeft):
+            return true
+        case (.listImage, .listImage):
             return true
         default:
             return false

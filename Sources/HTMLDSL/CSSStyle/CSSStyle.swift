@@ -219,6 +219,11 @@ public extension CSSStyle {
                         oldStyle: .transform(.translate(X: .pixel(0), Y: .pixel(0))),
                         with: .transform(transform))
     }
+    
+    // MARK: List
+    func listImage(url: String) -> Self {
+        return modified(body: self, oldStyle: .listImage(""), with: .listImage(url))
+    }
 
     // MARK: Grid
     func gridColumn(gap: Int) -> Self {
