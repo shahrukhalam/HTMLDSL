@@ -36,6 +36,7 @@ public extension Meta {
     enum MetaAttributes: CustomStringConvertible {
         case characterSet(CharacterSet)
         case name(Name, content: String)
+        case property(Property, content: String)
         case viewport(width: Width, scale: Scale)
 
         public var description: String {
@@ -44,6 +45,8 @@ public extension Meta {
                 return "charset=\"\(characterSet.rawValue)\""
             case .name(let name, let content):
                 return "name=\"\(name.rawValue)\" content=\"\(content)\""
+            case .property(let proprty, let content):
+                return "proprty=\"\(proprty.rawValue)\" content=\"\(content)\""
             case .viewport(let width, let scale):
                 return "name=\"viewport\" content=\"width=\(width.rawValue), initial-scale=\(scale.rawValue)\""
             }
@@ -58,6 +61,14 @@ public extension Meta {
         case keywords
         case description
         case author
+        case twitter = "twitter:card"
+    }
+    
+    enum Property: String {
+        case title = "og:title"
+        case description = "og:description"
+        case image = "og:image"
+        case url = "og:url"
     }
 
     enum Width: String {
