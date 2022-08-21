@@ -61,6 +61,8 @@ public enum CSSClass: String {
     case centerText
     case centerDivX
     case centerDivY
+    case imageFullWidth
+    case imageHalfWidth
     
     case desktopHidden
     case mobileHidden
