@@ -39,6 +39,8 @@ public enum CSSClass: String {
     // MARK: Article
     case article
     case markdown
+    case intro
+    case imageCredits
     
     // MARK: New Index
     case sectionHeader

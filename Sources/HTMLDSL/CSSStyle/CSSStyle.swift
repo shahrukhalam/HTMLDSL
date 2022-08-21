@@ -318,6 +318,10 @@ public struct ClassStyle: CSSStyle {
         }
     }
     
+    public init(forClass: CSSClass, withClass: CSSClass) {
+        self.key = ".\(forClass.rawValue) .\(withClass.rawValue)"
+    }
+    
     public init(forClass: CSSClass, withCSSTag: CSSTag) {
         self.key = ".\(forClass.rawValue):\(withCSSTag.rawValue)"
     }
