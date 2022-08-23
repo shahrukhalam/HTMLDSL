@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct TargetModifier<ContentView>: ViewModifier where ContentView: HTMLBodyLinkContentView {
-    typealias Body = ContentView
+public struct TargetModifier<ContentView>: ViewModifier where ContentView: HTMLBodyLinkContentView {
+    public typealias Body = ContentView
 
     private let target: Target
 
@@ -16,7 +16,7 @@ struct TargetModifier<ContentView>: ViewModifier where ContentView: HTMLBodyLink
         self.target = target
     }
 
-    func body(content: Content) -> Body {
+    public func body(content: Content) -> Body {
         return update(content: content, for: .target(.sameWindowOrTab), with: .target(target))
     }
 }

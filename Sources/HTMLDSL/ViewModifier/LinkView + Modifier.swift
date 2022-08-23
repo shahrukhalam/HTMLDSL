@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension HTMLBodyLinkContentView {
+public extension HTMLBodyLinkContentView {
     func target(_ target: Target) -> ModifiedContent<Self, TargetModifier<Self>> {
         let modifier = TargetModifier<Self>(target: target)
         return ModifiedContent(content: self, modifier: modifier)
