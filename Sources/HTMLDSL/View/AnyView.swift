@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AnyView: HTMLHeadContentView, HTMLBodyContentView {
+public struct AnyView: HTMLHeadContentView, HTMLBodyContentView, HTMLBodyImageContentView {
     public typealias Body = Never
     public let tag = Tag.empty
 

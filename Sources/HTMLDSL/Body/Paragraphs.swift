@@ -7,14 +7,13 @@
 
 import Foundation
 
-struct Paragraphs: HTMLBodyTextContentView {
-    var body: String
-    let tag = Tag.enclosing(.paragraph)
-    var attributes = [Attribute]()
+public struct Paragraphs: HTMLBodyTextContentView, HTMLBodyImageContentView {
+    public var body: String
+    public let tag = Tag.enclosing(.paragraph)
+    public var attributes = [Attribute]()
 
-    let text: String
-
-    init(_ text: String) {
+    public let text: String
+    public init(_ text: String) {
         self.text = text
         self.body = text
     }

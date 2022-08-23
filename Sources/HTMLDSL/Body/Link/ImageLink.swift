@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct ImageLink<Content>: HTMLBodyLinkContentView where Content: HTMLBodyImageContentView {
-    var body: Content
-    let tag = Tag.enclosing(.link)
-    var attributes = [Attribute]()
+public struct ImageLink<Content>: HTMLBodyLinkContentView where Content: HTMLBodyImageContentView {
+    public var body: Content
+    public let tag = Tag.enclosing(.link)
+    public var attributes = [Attribute]()
 
-    let url: String
+    public let url: String
 
-    init(url: String, @LinkViewBuilder content: () -> Content) {
+    public init(url: String, @LinkViewBuilder content: () -> Content) {
         self.body = content()
 
         self.url = url

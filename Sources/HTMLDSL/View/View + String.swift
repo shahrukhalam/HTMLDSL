@@ -10,3 +10,7 @@ extension String: View {
     public var tag: Tag { fatalError("It's a last element of the hierarchy: Doesn't have a real Tag") }
     public var element: String { self }
 }
+
+public extension String {
+    static var lineBreak = "<br>"
+}
