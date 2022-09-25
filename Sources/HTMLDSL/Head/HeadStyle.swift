@@ -59,14 +59,14 @@ struct StyleBuilder {
     }
 }
 
-struct HeadStyle: HTMLHeadContentView {
-    let body: String
+public struct HeadStyle: HTMLHeadContentView {
+    public let body: String
 
-    let tag = Tag.enclosing(.style)
+    public let tag = Tag.enclosing(.style)
 
-    var attributes: [Attribute] = []
+    public var attributes: [Attribute] = []
 
-    init(@StyleBuilder content: () -> String) {
+    public init(@StyleBuilder content: () -> String) {
         let allStyles = content()
         self.body = allStyles
     }
