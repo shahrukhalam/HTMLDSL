@@ -28,8 +28,8 @@ class MarkdownIndexTests: XCTestCase {
             HTML {
                 Head {
                     Title("Wonder Woman")
-                    Meta([.characterSet(.utf8),
-                          .name(.author, content: "Shahrukh Alam")])
+                    Meta(.characterSet(.utf8))
+                    Meta(.name(.author, content: "Shahrukh Alam"))
                     CSSLink(path: "CSS/Common/nav.css")
                     HeadStyle {
                         IndexBodyStyle()
@@ -56,7 +56,8 @@ class MarkdownIndexTests: XCTestCase {
         <html>
         <head>
             <title> Wonder Woman </title>
-            <meta charset="UTF-8" name="author" content="Shahrukh Alam">
+            <meta charset="UTF-8">
+            <meta name="author" content="Shahrukh Alam">
             <link rel="stylesheet" href="CSS/Common/nav.css">
             <style>
             body {

@@ -220,7 +220,7 @@ class CSSStyleTests: XCTestCase {
         .inactiveLink {
         color: rgba(60, 60, 60, 1.0);
         }
-        a:hover {
+        link:hover {
         color: Black;
         }
         """

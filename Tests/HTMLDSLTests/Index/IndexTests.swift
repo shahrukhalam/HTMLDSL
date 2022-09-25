@@ -14,8 +14,8 @@ class IndexTests: XCTestCase {
             HTML {
                 Head {
                     Title("Wonder Woman")
-                    Meta([.characterSet(.utf8),
-                          .name(.author, content: "Shahrukh Alam")])
+                    Meta(.characterSet(.utf8))
+                    Meta(.name(.author, content: "Shahrukh Alam"))
                     CSSLink(path: "CSS/Common/nav.css")
                     CSSLink(path: "CSS/Index/hero.css")
                     CSSLink(path: "CSS/Index/grid.css")
@@ -53,7 +53,8 @@ class IndexTests: XCTestCase {
         <html>
         <head>
             <title> Wonder Woman </title>
-            <meta charset="UTF-8" name="author" content="Shahrukh Alam">
+            <meta charset="UTF-8">
+            <meta name="author" content="Shahrukh Alam">
             <link rel="stylesheet" href="CSS/Common/nav.css">
             <link rel="stylesheet" href="CSS/Index/hero.css">
             <link rel="stylesheet" href="CSS/Index/grid.css">

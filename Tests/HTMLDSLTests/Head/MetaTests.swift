@@ -9,40 +9,11 @@ import XCTest
 @testable import HTMLDSL
 
 class MetaTests: XCTestCase {
-    func testEmptyMeta() {
-        let document = Document {
-            HTML {
-                Head {
-                    Meta([])
-                }
-
-                Body {
-                    Headings("My Heading")
-                }
-            }
-        }
-
-        let expectation =
-        """
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <meta>
-        </head>
-        <body>
-            <h1> My Heading </h1>
-        </body>
-        </html>
-        """
-
-        XCTAssertEqual(document.element, expectation)
-    }
-
     func testMetaWithCharacterSet() {
         let document = Document {
             HTML {
                 Head {
-                    Meta([.characterSet(.utf8)])
+                    Meta(.characterSet(.utf8))
                 }
 
                 Body {
@@ -71,7 +42,7 @@ class MetaTests: XCTestCase {
         let document = Document {
             HTML {
                 Head {
-                    Meta([.name(.author, content: "John Doe")])
+                    Meta(.name(.author, content: "John Doe"))
                 }
 
                 Body {
@@ -100,7 +71,7 @@ class MetaTests: XCTestCase {
         let document = Document {
             HTML {
                 Head {
-                    Meta([.viewport(width: .deviceWidth, scale: .full)])
+                    Meta(.viewport(width: .deviceWidth, scale: .full))
                 }
 
                 Body {
@@ -129,9 +100,9 @@ class MetaTests: XCTestCase {
         let document = Document {
             HTML {
                 Head {
-                    Meta([.characterSet(.utf8),
-                          .name(.author, content: "John Doe"),
-                          .viewport(width: .deviceWidth, scale: .full)])
+                    Meta(.characterSet(.utf8))
+                    Meta(.name(.author, content: "John Doe"))
+                    Meta(.viewport(width: .deviceWidth, scale: .full))
                 }
 
                 Body {
@@ -145,7 +116,9 @@ class MetaTests: XCTestCase {
         <!DOCTYPE html>
         <html>
         <head>
-            <meta charset="UTF-8" name="author" content="John Doe" name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta charset="UTF-8">
+            <meta name="author" content="John Doe">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
         <body>
             <h1> My Heading </h1>
