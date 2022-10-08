@@ -12,5 +12,6 @@ extension String: View {
 }
 
 public extension String {
-    static var lineBreak = "<br>"
+    static let lineBreak: Self = "<br>"
+    static let empty: Self = ""
 }
