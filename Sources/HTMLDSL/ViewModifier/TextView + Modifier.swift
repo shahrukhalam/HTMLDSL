@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension HTMLBodyTextContentView {
+public extension HTMLBodyTextContentView {
     func foregroundColor(_ color: Color) -> ModifiedContent<Self, ForegroundColorModifier<Self>> {
         let modifier = ForegroundColorModifier<Self>(color: color)
         return ModifiedContent(content: self, modifier: modifier)

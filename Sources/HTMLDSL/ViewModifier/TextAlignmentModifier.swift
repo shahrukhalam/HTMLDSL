@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct TextAlignmentModifier<ContentView>: ViewModifier where ContentView: HTMLBodyTextContentView {
-    typealias Body = ContentView
+public struct TextAlignmentModifier<ContentView>: ViewModifier where ContentView: HTMLBodyTextContentView {
+    public typealias Body = ContentView
 
     private let alignment: TextAlignment
 
@@ -16,7 +16,7 @@ struct TextAlignmentModifier<ContentView>: ViewModifier where ContentView: HTMLB
         self.alignment = alignment
     }
 
-    func body(content: Content) -> Body {
+    public func body(content: Content) -> Body {
         return update(content: content, for: .textAlignment(.center), with: .textAlignment(alignment))
     }
 }

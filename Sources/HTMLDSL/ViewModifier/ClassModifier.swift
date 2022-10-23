@@ -59,8 +59,9 @@ public enum CSSClass: String {
     case subheadline
     
     case centerText
-    case centerDivX
-    case centerDivY
+    case centerDivContainerX
+    case centerDivContainerY
+    case centerDivContainer
     case imageFullWidth
     case imageHalfWidth
     

@@ -37,6 +37,10 @@ public extension HTMLContentView {
         let modifier = SizeModifier<Self>(width: width, height: height)
         return ModifiedContent(content: self, modifier: modifier)
     }
+    
+    func sizeFull() -> ModifiedContent<Self, SizeModifier<Self>> {
+        size(width: .percentage(100), height: .percentage(100))
+    }
 
     func margin(left: AutoInheritDimension = .pixel(0),
                 top: AutoInheritDimension = .pixel(0),
@@ -86,6 +90,16 @@ public extension HTMLContentView {
                                               top: top,
                                               right: right,
                                               bottom: bottom)
+        return ModifiedContent(content: self, modifier: modifier)
+    }
+    
+    func position(_ position: Position,
+                  uniform: AutoInheritInitialDimension = .auto) -> ModifiedContent<Self, PositionModifier<Self>> {
+        let modifier = PositionModifier<Self>(position: position,
+                                              left: uniform,
+                                              top: uniform,
+                                              right: uniform,
+                                              bottom: uniform)
         return ModifiedContent(content: self, modifier: modifier)
     }
     

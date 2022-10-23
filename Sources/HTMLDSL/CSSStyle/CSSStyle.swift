@@ -58,6 +58,10 @@ public extension CSSStyle {
 
         return body
     }
+    
+    func sizeFull() -> Self {
+        size(width: .percentage(100), height: .percentage(100))
+    }
 
     func margin(left: AutoInheritDimension = .pixel(0),
                 top: AutoInheritDimension = .pixel(0),
@@ -251,12 +255,14 @@ public extension CSSStyle {
                         with: .flexDirection(direction))
     }
 
+    /// Along the Axis
     func flexAlign(_ alignment: StackViewAlignment) -> Self {
         return modified(body: self,
                         oldStyle: .flexAlignAlongAxis(.stretch),
                         with: .flexAlignAlongAxis(alignment))
     }
 
+    /// Perpendicular the Axis
     func flexDistribute(_ distribution: StackViewDistribution) -> Self {
         return modified(body: self,
                         oldStyle: .flexDistributeOnCrossAxis(.flexStart),
@@ -288,6 +294,10 @@ public struct TagStyle: CSSStyle {
 
     public init(for tag: Tag) {
         self.key = tag.description
+    }
+    
+    public init(for tags: [Tag]) {
+        self.key = tags.map { $0.description }.joined(separator: ", ")
     }
 
     public init(for tag: Tag, with cssTag: CSSTag) {

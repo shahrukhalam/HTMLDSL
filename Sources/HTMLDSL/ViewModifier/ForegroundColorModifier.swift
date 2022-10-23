@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct ForegroundColorModifier<ContentView>: ViewModifier where ContentView: HTMLBodyTextContentView {
-    typealias Body = ContentView
+public struct ForegroundColorModifier<ContentView>: ViewModifier where ContentView: HTMLBodyTextContentView {
+    public typealias Body = ContentView
 
     private let color: Color
 
@@ -16,7 +16,7 @@ struct ForegroundColorModifier<ContentView>: ViewModifier where ContentView: HTM
         self.color = color
     }
 
-    func body(content: Content) -> Body {
+    public func body(content: Content) -> Body {
         return update(content: content, for: .foregroundColor(.html(.Black)), with: .foregroundColor(color))
     }
 }

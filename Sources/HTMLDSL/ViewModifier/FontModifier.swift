@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct FontModifier<ContentView>: ViewModifier where ContentView: HTMLBodyTextContentView {
-    typealias Body = ContentView
+public struct FontModifier<ContentView>: ViewModifier where ContentView: HTMLBodyTextContentView {
+    public typealias Body = ContentView
 
     private let size: FontSize?
     private let font: FontFamily?
@@ -18,7 +18,7 @@ struct FontModifier<ContentView>: ViewModifier where ContentView: HTMLBodyTextCo
         self.font = font
     }
 
-    func body(content: Content) -> Body {
+    public func body(content: Content) -> Body {
         switch (size, font) {
         case (.none, .none):
             return content
@@ -34,8 +34,8 @@ struct FontModifier<ContentView>: ViewModifier where ContentView: HTMLBodyTextCo
     }
 }
 
-struct FontWeightModifier<ContentView>: ViewModifier where ContentView: HTMLBodyTextContentView {
-    typealias Body = ContentView
+public struct FontWeightModifier<ContentView>: ViewModifier where ContentView: HTMLBodyTextContentView {
+    public typealias Body = ContentView
 
     private let weight: FontWeight
 
@@ -43,7 +43,7 @@ struct FontWeightModifier<ContentView>: ViewModifier where ContentView: HTMLBody
         self.weight = weight
     }
 
-    func body(content: Content) -> Body {
+    public func body(content: Content) -> Body {
         return update(content: content, for: .fontWeight(.normal), with: .fontWeight(weight))
     }
 }
