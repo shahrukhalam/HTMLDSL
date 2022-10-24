@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Ccmark
+import cmark
 
 public struct Markdown: HTMLBodyContentView {
     public var body: String

@@ -8,16 +8,16 @@ let package = Package(
     products: [
         .library(name: "HTMLDSL", targets: ["HTMLDSL"])
     ],
+    dependencies: [
+        .package(url: "https://github.com/brokenhandsio/cmark-gfm.git", from: "2.0.0")
+    ],
     targets: [
-        .systemLibrary(
-            name: "Ccmark",
-            pkgConfig: "libcmark",
-            providers: [
-                .apt(["cmark"]),
-                .brew(["cmark"]),
+        .target(
+            name: "HTMLDSL",
+            dependencies: [
+                .product(name: "cmark", package: "cmark-gfm")
             ]
         ),
-        .target(name: "HTMLDSL", dependencies: ["Ccmark"]),
         .testTarget(name: "HTMLDSLTests", dependencies: ["HTMLDSL"])
     ]
 )
