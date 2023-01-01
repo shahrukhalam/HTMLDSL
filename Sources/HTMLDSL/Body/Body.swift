@@ -10,7 +10,6 @@ import Foundation
 public struct Body<Content>: HTMLBodyView where Content: HTMLBodyContentView {
     public var body: Content
 
-    public let indentation: Indentation = .none
     public let tag = Tag.enclosing(.body)
     public var attributes = [Attribute]()
 

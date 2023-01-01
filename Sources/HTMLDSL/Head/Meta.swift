@@ -20,15 +20,12 @@ public struct Meta: HTMLHeadContentView {
     }
 
     public var element: String {
-        let spaceCount: Int = indentation.rawValue
-        let spaces = Array(repeating: " ", count: spaceCount).joined(separator: "")
-
         guard !attributes.isEmpty else {
-            return spaces + "<\(tag.description)>"
+            return "<\(tag.description)>"
         }
 
         let finalAttributes = attributes.map { $0.description }.joined(separator: " ")
-        return spaces + "<\(tag.description) \(finalAttributes)>"
+        return "<\(tag.description) \(finalAttributes)>"
     }
 }
 

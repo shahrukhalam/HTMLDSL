@@ -14,19 +14,14 @@ public struct Markdown: HTMLBodyContentView {
     public var attributes = [Attribute]()
     
     public init(_ markdown: String) {
-        let spaceCount: Int = Indentation.tab.rawValue
-        let spaces = Array(repeating: " ", count: spaceCount).joined(separator: "")
-        self.body = Self.html(from: markdown)
-            .split(separator: "\n")
-            .map { spaces + $0 }
-            .joined(separator: "\n")
+        self.body = markdown.html
     }
 }
 
-private extension Markdown {
-    static func html(from markdown: String) -> String {
-        guard let cString = cmark_markdown_to_html(markdown, markdown.utf8.count, CMARK_OPT_UNSAFE) else {
-            return markdown
+private extension String {
+    var html: Self {
+        guard let cString = cmark_markdown_to_html(self, utf8.count, CMARK_OPT_UNSAFE) else {
+            return self
         }
 
         defer { free(cString) }

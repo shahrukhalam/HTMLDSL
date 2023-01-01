@@ -21,8 +21,6 @@ public struct Title: HTMLHeadTextContentView {
 
 public extension HTMLHeadTextContentView {
     var element: String {
-        let spaceCount: Int = indentation.rawValue
-        let indentation = Array(repeating: " ", count: spaceCount).joined(separator: "")
-        return indentation + "<\(tag.description)> \(text) </\(tag.description)>"
+        return "<\(tag.description)> \(text) </\(tag.description)>"
     }
 }

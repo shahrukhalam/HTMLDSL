@@ -13,7 +13,7 @@ extension View {
         let isEmptyAttribute = attributes.isEmpty || allAttributes.isEmpty
         let finalAttribute = isEmptyAttribute ? "" : " " + allAttributes
 
-        let textElement: String
+        let element: String
         switch tag {
         case .enclosing:
             let isEmptyNewLine = newLine == .none
@@ -21,22 +21,15 @@ extension View {
 
             let lineSpace = newLine.rawValue
 
-            textElement = "<\(tag.description)\(finalAttribute)>\(bodyElement)\(lineSpace)</\(tag.description)>"
+            element = "<\(tag.description)\(finalAttribute)>\(bodyElement)\(lineSpace)</\(tag.description)>"
         case .selfClosing:
             let isEmptyNewLine = newLine == .none
             let bodyElementSameLine = body.element.isEmpty ? "" : " " + body.element
             let bodyElement: String = isEmptyNewLine ? bodyElementSameLine : (newLine.rawValue + body.element)
-            textElement = "<\(tag.description)\(bodyElement)\(finalAttribute)>"
+            element = "<\(tag.description)\(bodyElement)\(finalAttribute)>"
         case .empty:
-            textElement = "\(body.element)"
+            element = "\(body.element)"
         }
-
-        let spaceCount: Int = indentation.rawValue
-        let spaces = Array(repeating: " ", count: spaceCount).joined(separator: "")
-        let element = textElement
-            .split(separator: "\n")
-            .map { spaces + $0 }
-            .joined(separator: "\n")
 
         return element
     }
