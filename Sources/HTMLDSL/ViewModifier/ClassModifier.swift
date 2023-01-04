@@ -11,62 +11,37 @@ public enum CSSTag: String {
     case hover = "hover"
 }
 
-public enum CSSClass: String {
-    case empty = ""
+public struct CSSClass: ExpressibleByStringLiteral, Equatable {
+    let rawValue: String
 
-    // MARK: Custom Classes for Index
-    case indexNav
-    case activeLink
-    case inactiveLink
+    public init(stringLiteral value: String) {
+        self.rawValue = value
+    }
 
-    case centeredText
+    static let empty: Self = ""
 
-    case heroImage
-    case heroHeading
-    case heroSubHeading
+    // MARK: Custom Classes for Demo Index Page
+    static let indexNav: Self = #function
+    static let activeLink: Self = #function
+    static let inactiveLink: Self = #function
 
-    // MARK: Grid
-    case gridContainer
-    case gridItem
-    case gridImage
-    case gridSubHeading
+    static let centeredText: Self = #function
 
-    // MARK: Flex
-    case flexibleContainer = "flex-container"
-    case flexibleContainerHorizontal
-    case flexibleContainerVertical
-    
-    // MARK: Article
-    case article
-    case markdown
-    case intro
-    case imageCredits
-    
-    // MARK: New Index
-    case sectionHeader
-    case sectionHeaderContent
-    case sectionHeaderHero
-    case link
-    
-    // MARK: Common
-    case largeTitle
-    case title1
-    case title2
-    case title3
-    case headline
-    case body
-    case callout
-    case subheadline
-    
-    case centerText
-    case centerDivContainerX
-    case centerDivContainerY
-    case centerDivContainer
-    case imageFullWidth
-    case imageHalfWidth
-    
-    case desktopHidden
-    case mobileHidden
+    // Hero
+    static let heroImage: Self = #function
+    static let heroHeading: Self = #function
+    static let heroSubHeading: Self = #function
+
+    // Grid
+    static let gridContainer: Self = #function
+    static let gridItem: Self = #function
+    static let gridImage: Self = #function
+    static let gridSubHeading: Self = #function
+
+    // Flex
+    static let flexibleContainer: Self = "flex-container"
+    static let flexibleContainerHorizontal: Self = #function
+    static let flexibleContainerVertical: Self = #function
 }
 
 public struct ClassModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
