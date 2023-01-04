@@ -30,7 +30,7 @@ public enum Attribute: CustomStringConvertible, Equatable {
             let finalStyle = styles.map { $0.description }.joined()
             return "style=\"\(finalStyle)\""
         case .class(let cssClasses):
-            let classes = cssClasses.map { $0.rawValue }.joined(separator: " ")
+            let classes = cssClasses.map { $0.value }.joined(separator: " ")
             if classes.isEmpty { return "" }
             return "class=\"\(classes)\""
         case .href(let url):

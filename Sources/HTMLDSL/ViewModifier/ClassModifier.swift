@@ -12,36 +12,36 @@ public enum CSSTag: String {
 }
 
 public struct CSSClass: ExpressibleByStringLiteral, Equatable {
-    let rawValue: String
+    let value: String
 
     public init(stringLiteral value: String) {
-        self.rawValue = value
+        self.value = value
     }
 
-    static let empty: Self = ""
+    static var empty: Self { "" }
 
     // MARK: Custom Classes for Demo Index Page
-    static let indexNav: Self = #function
-    static let activeLink: Self = #function
-    static let inactiveLink: Self = #function
+    static var indexNav: Self { #function }
+    static var activeLink: Self { #function }
+    static var inactiveLink: Self { #function }
 
-    static let centeredText: Self = #function
+    static var centeredText: Self { #function }
 
     // Hero
-    static let heroImage: Self = #function
-    static let heroHeading: Self = #function
-    static let heroSubHeading: Self = #function
+    static var heroImage: Self { #function }
+    static var heroHeading: Self { #function }
+    static var heroSubHeading: Self { #function }
 
     // Grid
-    static let gridContainer: Self = #function
-    static let gridItem: Self = #function
-    static let gridImage: Self = #function
-    static let gridSubHeading: Self = #function
+    static var gridContainer: Self { #function }
+    static var gridItem: Self { #function }
+    static var gridImage: Self { #function }
+    static var gridSubHeading: Self { #function }
 
     // Flex
-    static let flexibleContainer: Self = "flex-container"
-    static let flexibleContainerHorizontal: Self = #function
-    static let flexibleContainerVertical: Self = #function
+    static var flexibleContainer: Self { "flex-container" }
+    static var flexibleContainerHorizontal: Self { #function }
+    static var flexibleContainerVertical: Self { #function }
 }
 
 public struct ClassModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {

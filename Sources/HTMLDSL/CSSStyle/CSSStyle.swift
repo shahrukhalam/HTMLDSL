@@ -315,8 +315,8 @@ public struct ClassStyle: CSSStyle {
     public let key: CustomStringConvertible
 
     public init(forClass: CSSClass) {
-        let isEmptyKey = forClass.rawValue.isEmpty
-        self.key = isEmptyKey ? "" : ".\(forClass.rawValue)"
+        let isEmptyKey = forClass.value.isEmpty
+        self.key = isEmptyKey ? "" : ".\(forClass.value)"
     }
 
     public init(forClass: CSSClass, withTag: Tag) {
@@ -324,24 +324,24 @@ public struct ClassStyle: CSSStyle {
         case (.empty, .empty):
             self.key = ""
         default:
-            self.key = ".\(forClass.rawValue) \(withTag.description)"
+            self.key = ".\(forClass.value) \(withTag.description)"
         }
     }
     
     public init(forClass: CSSClass, withClass: CSSClass) {
-        self.key = ".\(forClass.rawValue) .\(withClass.rawValue)"
+        self.key = ".\(forClass.value) .\(withClass.value)"
     }
     
     public init(forClass: CSSClass, withCSSTag: CSSTag) {
-        self.key = ".\(forClass.rawValue):\(withCSSTag.rawValue)"
+        self.key = ".\(forClass.value):\(withCSSTag.rawValue)"
     }
     
     public init(_ class: CSSClass, cssTag: CSSTag, tag: Tag) {
-        self.key = ".\(`class`.rawValue):\(cssTag.rawValue)" + " " + tag.description
+        self.key = ".\(`class`.value):\(cssTag.rawValue)" + " " + tag.description
     }
     
     public init(_ class: CSSClass, tag: Tag, cssTag: CSSTag) {
-        self.key = "." + `class`.rawValue + " " + tag.description + ":" + cssTag.rawValue
+        self.key = "." + `class`.value + " " + tag.description + ":" + cssTag.rawValue
     }
 
     fileprivate init(for key: CustomStringConvertible, with style: [Style]) {
