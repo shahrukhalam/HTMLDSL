@@ -275,16 +275,8 @@ public extension CSSStyle {
     }
     
     // MARK: Border
-    func border(width: AutoDimension) -> Self {
-        modified(body: self, oldStyle: .borderWidth(.auto), with: .borderWidth(width))
-    }
-    
-    func border(color: Color) -> Self {
-        modified(body: self, oldStyle: .borderColor(.html(.Black)), with: .borderColor(color))
-    }
-    
-    func borderLeft() -> Self {
-        modified(body: self, oldStyle: .borderLeft, with: .borderLeft)
+    func border(sides: [Side] = Side.allCases, width: AutoDimension = .pixel(1), color: Color = .html(.Black)) -> Self {
+        modified(body: self, oldStyle: .border(sides: [], width: .auto, color: .html(.Black)), with: .border(sides: sides, width: width, color: color))
     }
 }
 

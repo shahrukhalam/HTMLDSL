@@ -66,9 +66,7 @@ public enum Style: CustomStringConvertible, Equatable {
     case pointer(PointerEvent)
     
     // MARK: Border
-    case borderWidth(AutoDimension)
-    case borderColor(Color)
-    case borderLeft
+    case border(sides: [Side], width: AutoDimension, color: Color)
     case cornerRadius([AutoDimension])
 
     public var description: String {
@@ -138,12 +136,15 @@ public enum Style: CustomStringConvertible, Equatable {
             return "pointer-events: \(event.rawValue);"
         case .lineHeight(let dimension):
             return "line-height: \(dimension.description);"
-        case .borderWidth(let dimension):
-            return "border-width: \(dimension.description);"
-        case .borderColor(let color):
-            return "border-color: \(color.description);"
-        case .borderLeft:
-            return "border-left-style: solid;"
+        case let .border(sides, width, color):
+            let description = sides
+                .map { side in
+                    let sideBorder = "border-" + side.rawValue + ":"
+                    let attributes = [sideBorder, width.description, "solid", color.description]
+                    return attributes.joined(separator: " ") + ";"
+                }
+                .joined()
+            return description
         case .cornerRadius(let dimensions):
             let description = dimensions.map { $0.description }.joined(separator: " ")
             return "border-radius: \(description);"
@@ -214,13 +215,9 @@ public enum Style: CustomStringConvertible, Equatable {
             return true
         case (.lineHeight, .lineHeight):
             return true
-        case (.borderWidth, .borderWidth):
-            return true
-        case (.borderColor, .borderColor):
+        case (.border, .border):
             return true
         case (.cornerRadius, .cornerRadius):
-            return true
-        case (.borderLeft, .borderLeft):
             return true
         case (.listImage, .listImage):
             return true

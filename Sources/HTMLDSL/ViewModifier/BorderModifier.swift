@@ -8,14 +8,18 @@
 public struct BorderModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
     public typealias Body = ContentView
     
-    private let dimension: AutoDimension
+    private let sides: [Side]
+    private let width: AutoDimension
+    private let color: Color
     
-    public init(dimension: AutoDimension) {
-        self.dimension = dimension
+    public init(sides: [Side], width: AutoDimension, color: Color) {
+        self.sides = sides
+        self.width = width
+        self.color = color
     }
     
     public func body(content: Content) -> Body {
-        return update(content: content, for: .borderWidth(.auto), with: .borderWidth(dimension))
+        return update(content: content, for: .border(sides: [], width: .auto, color: .html(.Black)), with: .border(sides: sides, width: width, color: color))
     }
 }
 
