@@ -41,6 +41,8 @@ public enum EnclosingTag: CustomStringConvertible {
     case iframe
     case script
     case blockquote
+    case unorderedList
+    case orderedList
     case list
 
     public var description: String {
@@ -69,6 +71,10 @@ public enum EnclosingTag: CustomStringConvertible {
             return "script"
         case .blockquote:
             return "blockquote"
+        case .unorderedList:
+            return "ul"
+        case .orderedList:
+            return "ol"
         case .list:
             return "li"
         }
