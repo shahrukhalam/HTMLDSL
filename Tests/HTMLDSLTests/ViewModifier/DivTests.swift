@@ -11,7 +11,7 @@ import XCTest
 class DivTests: XCTestCase {
     func testDivWithHeading() {
         let div = Div {
-            Headings("Nora Fatehi")
+            Headings("Nora Fatehi", type: .h1)
         }
 
         let expectation =

@@ -10,7 +10,7 @@ import XCTest
 
 class FontModifierTests: XCTestCase {
     func testHeadingWithBackgroundColorForegroundColorAndNoFont() {
-        let headings = Headings("Nora Fatehi")
+        let headings = Headings("Nora Fatehi", type: .h1)
             .backgroundColor(.html(.Green))
             .foregroundColor(.html(.Blue))
             .font()
@@ -24,7 +24,7 @@ class FontModifierTests: XCTestCase {
     }
 
     func testHeadingWithFontSizeNoFamily() {
-        let headings = Headings("Nora Fatehi")
+        let headings = Headings("Nora Fatehi", type: .h1)
             .font(size: .percentage(100))
 
         let expectation =
@@ -36,7 +36,7 @@ class FontModifierTests: XCTestCase {
     }
 
     func testHeadingWithFontFamilyNoSize() {
-        let headings = Headings("Nora Fatehi")
+        let headings = Headings("Nora Fatehi", type: .h1)
             .font(family: .serif([.TimesNewRoman, .Times, .serif]))
 
         let expectation =
@@ -48,7 +48,7 @@ class FontModifierTests: XCTestCase {
     }
 
     func testHeadingWithFontSizeAndFamily() {
-        let headings = Headings("Nora Fatehi")
+        let headings = Headings("Nora Fatehi", type: .h1)
             .font(size: .percentage(100), family: .serif([.TimesNewRoman, .Times, .serif]))
 
         let expectation =
@@ -60,7 +60,7 @@ class FontModifierTests: XCTestCase {
     }
 
     func testHeadingWithFontSize_Family_AndAlignment() {
-        let headings = Headings("Nora Fatehi")
+        let headings = Headings("Nora Fatehi", type: .h1)
             .font(size: .percentage(100), family: .serif([.TimesNewRoman, .Times, .serif]))
             .align(.justify)
 

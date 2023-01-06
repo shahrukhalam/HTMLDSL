@@ -10,7 +10,7 @@ import XCTest
 
 class PaddingModifierTests: XCTestCase {
     func testHeadingWithUniformPadding() {
-        let headings = Headings("Nora Fatehi")
+        let headings = Headings("Nora Fatehi", type: .h1)
             .padding(left: .pixel(10), top: .pixel(10), right: .pixel(10), bottom: .pixel(10))
 
         let expectation =
@@ -22,7 +22,7 @@ class PaddingModifierTests: XCTestCase {
     }
 
     func testHeadingWithUniformMarginAndPadding() {
-        let headings = Headings("Nora Fatehi")
+        let headings = Headings("Nora Fatehi", type: .h1)
             .margin(left: .pixel(10), top: .pixel(10), right: .pixel(10), bottom: .pixel(10))
             .padding(left: .pixel(10), top: .pixel(10), right: .pixel(10), bottom: .pixel(10))
 

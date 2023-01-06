@@ -17,7 +17,7 @@ class DocumentTests: XCTestCase {
                 }
 
                 Body {
-                    Headings("My Heading")
+                    Headings("My Heading", type: .h1)
                 }
             }
         }
@@ -47,9 +47,9 @@ class DocumentTests: XCTestCase {
 
                 Body {
                     Div {
-                        Headings("My Heading1")
+                        Headings("My Heading1", type: .h1)
                         Div {
-                            Headings("My Heading2")
+                            Headings("My Heading2", type: .h1)
                         }
                     }
                 }

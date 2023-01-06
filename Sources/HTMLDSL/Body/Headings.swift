@@ -26,7 +26,7 @@ public struct Headings: HTMLBodyTextContentView {
 
     public let text: String
 
-    public init(_ text: String, type: HeadingTag = .h1) {
+    public init(_ text: String, type: HeadingTag) {
         self.text = text
 
         self.tag = Tag.enclosing(.headings(type))

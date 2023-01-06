@@ -26,10 +26,10 @@ struct Hero: HTMLBodyContentView {
     var body: some HTMLBodyContentView {
         Div {
             Div {
-                Headings(detail.title)
+                Headings(detail.title, type: .h1)
                     .identifyBy(cssClass: .heroHeading)
 
-                Headings(detail.subtitle)
+                Headings(detail.subtitle, type: .h2)
                     .identifyBy(cssClass: .heroSubHeading)
             }
             .identifyBy(cssClass: .centeredText)

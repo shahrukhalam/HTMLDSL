@@ -21,9 +21,9 @@ struct Grid: HTMLBodyContentView {
         let gridViews = details.map { detail -> AnyView in
             let gridView = Div {
                 Div {
-                    Headings(detail.title)
+                    Headings(detail.title, type: .h2)
                         .identifyBy(cssClass: .heroHeading)
-                    Headings(detail.subtitle)
+                    Headings(detail.subtitle, type: .h3)
                         .identifyBy(cssClass: .gridSubHeading)
                 }
                 .identifyBy(cssClass: .centeredText)

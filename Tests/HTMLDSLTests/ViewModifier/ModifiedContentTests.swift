@@ -10,7 +10,7 @@ import XCTest
 
 class ModifiedContentTests: XCTestCase {
     func testHeadingWithID() {
-        let headings = Headings("Nora Fatehi")
+        let headings = Headings("Nora Fatehi", type: .h1)
             .identifyBy(id: "Nora")
 
         let expectation =
@@ -22,7 +22,7 @@ class ModifiedContentTests: XCTestCase {
     }
 
     func testHeadingWithEmptyClass() {
-        let headings = Headings("Nora Fatehi")
+        let headings = Headings("Nora Fatehi", type: .h1)
             .identifyBy(cssClass: .empty)
 
         let expectation =
@@ -34,7 +34,7 @@ class ModifiedContentTests: XCTestCase {
     }
 
     func testHeadingWithClass() {
-        let headings = Headings("Nora Fatehi")
+        let headings = Headings("Nora Fatehi", type: .h1)
             .identifyBy(cssClass: .flexibleContainer)
 
         let expectation =
@@ -94,7 +94,7 @@ class ModifiedContentTests: XCTestCase {
     }
 
     func testHeadingWithBackgroundColorAndForegroundColor() {
-        let headings = Headings("Nora Fatehi")
+        let headings = Headings("Nora Fatehi", type: .h1)
             .backgroundColor(.html(.Green))
             .foregroundColor(.html(.Blue))
 

@@ -17,7 +17,7 @@ class ImageTests: XCTestCase {
                 }
 
                 Body {
-                    Headings("Nora Fatehi")
+                    Headings("Nora Fatehi", type: .h1)
                     Image("Images/nora.jpg", alternateText: "Nora Fatehi")
                 }
             }

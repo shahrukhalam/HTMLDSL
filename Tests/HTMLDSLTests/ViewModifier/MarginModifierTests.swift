@@ -10,7 +10,7 @@ import XCTest
 
 class MarginModifierTests: XCTestCase {
     func testHeadingWithUniformMargin() {
-        let headings = Headings("Nora Fatehi")
+        let headings = Headings("Nora Fatehi", type: .h1)
             .margin(left: .pixel(10), top: .pixel(10), right: .pixel(10), bottom: .pixel(10))
 
         let expectation =

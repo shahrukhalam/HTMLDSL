@@ -17,7 +17,7 @@ class MetaTests: XCTestCase {
                 }
 
                 Body {
-                    Headings("My Heading")
+                    Headings("My Heading", type: .h1)
                 }
             }
         }
@@ -46,7 +46,7 @@ class MetaTests: XCTestCase {
                 }
 
                 Body {
-                    Headings("My Heading")
+                    Headings("My Heading", type: .h1)
                 }
             }
         }
@@ -75,7 +75,7 @@ class MetaTests: XCTestCase {
                 }
 
                 Body {
-                    Headings("My Heading")
+                    Headings("My Heading", type: .h1)
                 }
             }
         }
@@ -106,7 +106,7 @@ class MetaTests: XCTestCase {
                 }
 
                 Body {
-                    Headings("My Heading")
+                    Headings("My Heading", type: .h1)
                 }
             }
         }
