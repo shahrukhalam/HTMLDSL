@@ -40,4 +40,9 @@ public extension CSSLink {
         self.path = path
         self.body = "rel=\"icon\" type=\"image/png\" href=\"\(path)\""
     }
+    
+    init(appleTouchIcon path: String) {
+        self.path = path
+        self.body = "rel=\"apple-touch-icon\" href=\"\(path)\""
+    }
 }
