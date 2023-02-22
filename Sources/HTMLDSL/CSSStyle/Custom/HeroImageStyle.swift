@@ -83,11 +83,11 @@ struct GridContainerStyle: CSSStyle {
     var element: String
 
     init(backgroundColor: Color = Color.TableBackgroundColor,
-         numberOfColumnsWithWidth: [AutoDimension] = [.auto, .auto]) {
+         numberOfColumns: Int = 2) {
         let gridContainerStyle = ClassStyle(forClass: .gridContainer)
             .padding(uniform: .pixel(12))
             .display(.grid)
-            .gridNumberOfColumnsWithWidth(numberOfColumnsWithWidth)
+            .gridNumberOfColumns(numberOfColumns)
             .gridColumn(gap: 12)
             .backgroundColor(backgroundColor)
 

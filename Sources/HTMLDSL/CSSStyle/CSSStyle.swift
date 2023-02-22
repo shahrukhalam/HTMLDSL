@@ -260,10 +260,11 @@ public extension CSSStyle {
                         with: .gridColumnGap(gap))
     }
 
-    func gridNumberOfColumnsWithWidth(_ templates: [AutoDimension]) -> Self {
+    /// Equal Width Problem: https://css-tricks.com/equal-width-columns-in-css-grid-are-kinda-weird/
+    func gridNumberOfColumns(_ columns: Int) -> Self {
         return modified(body: self,
-                        oldStyle: .gridTemplateColumns([]),
-                        with: .gridTemplateColumns(templates))
+                        oldStyle: .gridTemplateColumns(0),
+                        with: .gridTemplateColumns(columns))
     }
     
     func gridRow(gap: Int) -> Self {

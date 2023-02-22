@@ -55,7 +55,7 @@ public enum Style: CustomStringConvertible, Equatable {
     // MARK: Grid
     case gridColumnGap(Int)
     case gridRowGap(Int)
-    case gridTemplateColumns([AutoDimension])
+    case gridTemplateColumns(Int)
 
     // MARK: Flex
     case flexDirection(StackViewDirection)
@@ -123,9 +123,8 @@ public enum Style: CustomStringConvertible, Equatable {
             return "grid-column-gap: \(gap)px;"
         case .gridRowGap(let gap):
             return "grid-row-gap: \(gap)px;"
-        case .gridTemplateColumns(let columnDimensions):
-            let templateColumns = columnDimensions.map { $0.description }.joined(separator: " ")
-            return "grid-template-columns: \(templateColumns);"
+        case .gridTemplateColumns(let columns):
+            return "grid-template-columns: repeat(\(columns), minmax(0, 1fr));"
         case .flexDirection(let direction):
             return "flex-direction: \(direction.rawValue);"
         case .flexAlignAlongAxis(let alignment):
