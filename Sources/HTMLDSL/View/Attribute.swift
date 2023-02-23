@@ -8,8 +8,9 @@
 import Foundation
 
 public enum Attribute: CustomStringConvertible, Equatable {
-    public typealias HTMLID = String
+    case language(String)
 
+    public typealias HTMLID = String
     case id(HTMLID)
 
     case style([Style])
@@ -18,12 +19,15 @@ public enum Attribute: CustomStringConvertible, Equatable {
     // Link
     case href(String)
     case target(Target)
+    case accessibility(String)
     
     // Script
     case source(String)
 
     public var description: String {
         switch self {
+        case .language(let language):
+            return "lang=\"\(language)\""
         case .id(let id):
             return "id=\"\(id)\""
         case .style(let styles):
@@ -37,6 +41,8 @@ public enum Attribute: CustomStringConvertible, Equatable {
             return "href=\"\(url)\""
         case .target(let target):
             return "target=\"\(target.rawValue)\""
+        case .accessibility(let text):
+            return "aria-label=\"\(text)\""
         case .source(let url):
             return "src=\"\(url)\""
         }
@@ -44,6 +50,8 @@ public enum Attribute: CustomStringConvertible, Equatable {
 
     public static func == (lhs: Attribute, rhs: Attribute) -> Bool {
         switch (lhs, rhs) {
+        case (.language, .language):
+            return true
         case (.id, .id):
             return true
         case (.style, .style):
@@ -53,6 +61,8 @@ public enum Attribute: CustomStringConvertible, Equatable {
         case (.href, .href):
             return true
         case (.target, .target):
+            return true
+        case (.accessibility, .accessibility):
             return true
         case (.source, .source):
             return true

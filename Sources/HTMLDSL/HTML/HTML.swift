@@ -11,7 +11,7 @@ public struct HTML<Content>: HTMLView where Content: HTMLContentView {
     public var body: Content
 
     public let tag = Tag.enclosing(.html)
-    public var attributes = [Attribute]()
+    public var attributes: [Attribute] = [.language("en")]
 
     public init(@HTMLViewBuilder content: () -> Content) {
         self.body = content()

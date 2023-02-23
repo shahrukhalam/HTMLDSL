@@ -20,3 +20,17 @@ public struct TargetModifier<ContentView>: ViewModifier where ContentView: HTMLB
         return update(content: content, for: .target(.sameWindowOrTab), with: .target(target))
     }
 }
+
+public struct AccessibilityModifier<ContentView>: ViewModifier where ContentView: HTMLBodyLinkContentView {
+    public typealias Body = ContentView
+
+    private let text: String
+
+    init(text: String) {
+        self.text = text
+    }
+
+    public func body(content: Content) -> Body {
+        return update(content: content, for: .accessibility(""), with: .accessibility(text))
+    }
+}

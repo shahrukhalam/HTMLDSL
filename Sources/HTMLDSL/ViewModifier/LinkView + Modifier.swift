@@ -12,4 +12,9 @@ public extension HTMLBodyLinkContentView {
         let modifier = TargetModifier<Self>(target: target)
         return ModifiedContent(content: self, modifier: modifier)
     }
+
+    func accessibility(_ text: String) -> ModifiedContent<Self, AccessibilityModifier<Self>> {
+        let modifier = AccessibilityModifier<Self>(text: text)
+        return ModifiedContent(content: self, modifier: modifier)
+    }
 }
