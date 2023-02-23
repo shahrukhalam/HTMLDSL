@@ -12,6 +12,7 @@ public enum Style: CustomStringConvertible, Equatable {
 
     case width(AutoDimension)
     case height(AutoDimension)
+    case aspectRatio(Int, Int)
 
     case margin(left: AutoInheritDimension,
                 top: AutoInheritDimension,
@@ -79,6 +80,8 @@ public enum Style: CustomStringConvertible, Equatable {
             return "width: \(dimension.description);"
         case .height(let dimension):
             return "height: \(dimension.description);"
+        case let .aspectRatio(width, height):
+            return "aspect-ratio: \(width)/\(height);"
         case .fontFamily(let fontFamily):
             return "font-family: \(fontFamily.description);"
         case .fontSize(let fontSize):
@@ -161,6 +164,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.width, .width):
             return true
         case (.height, .height):
+            return true
+        case (.aspectRatio, .aspectRatio):
             return true
         case (.fontFamily, .fontFamily):
             return true

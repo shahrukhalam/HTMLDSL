@@ -42,6 +42,11 @@ public extension HTMLContentView {
         size(width: .percentage(100), height: .percentage(100))
     }
 
+    func aspectRatio(width: Int, height: Int) -> ModifiedContent<Self, AspectRatioModifier<Self>> {
+        let modifier = AspectRatioModifier<Self>(width: width, height: height)
+        return ModifiedContent(content: self, modifier: modifier)
+    }
+
     func margin(left: AutoInheritDimension = .pixel(0),
                 top: AutoInheritDimension = .pixel(0),
                 right: AutoInheritDimension = .pixel(0),
