@@ -46,3 +46,11 @@ public extension CSSLink {
         self.body = "rel=\"apple-touch-icon\" href=\"\(path)\""
     }
 }
+
+public extension CSSLink {
+    init(preloadImage path: String) {
+        self.path = path
+        let imageExtension = path.components(separatedBy: ".").last ?? "png"
+        self.body = "rel=\"preload\" href=\"\(path)\" as=\"image\" type=\"image/\(imageExtension)\""
+    }
+}
