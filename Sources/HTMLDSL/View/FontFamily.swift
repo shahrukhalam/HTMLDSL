@@ -52,6 +52,7 @@ public enum FontFamily {
         case Geneva
         case TrebuchetMS = "Trebuchet MS"
         case Verdana
+        case Poppins
     }
 
     public enum Monospace: String {
