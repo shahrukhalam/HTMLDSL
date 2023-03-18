@@ -9,7 +9,7 @@ import Foundation
 
 public enum Color: CustomStringConvertible {
     case html(HTMLColor)
-    case rgba(red: Int, green: Int, blue: Int, alpha: Float)
+    case rgba(red: Float, green: Float, blue: Float, alpha: Float)
     case hexWithHash(String)
 
     public var description: String {
