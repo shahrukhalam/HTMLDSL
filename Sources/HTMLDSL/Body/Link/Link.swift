@@ -7,12 +7,12 @@
 
 import Foundation
 
-public struct Link: HTMLBodyLinkContentView {
+public struct Link: HTMLBodyLinkContentView, HTMLBodyTextContentView {
     public var body: String
     public let tag = Tag.enclosing(.link)
     public var attributes = [Attribute]()
 
-    private let text: String
+    public let text: String
     public let url: String
 
     public init(text: String, url: String) {
