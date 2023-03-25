@@ -259,7 +259,13 @@ public extension CSSStyle {
                         oldStyle: .gridColumnGap(0),
                         with: .gridColumnGap(gap))
     }
-
+    
+    func gridRow(gap: Int) -> Self {
+        return modified(body: self,
+                        oldStyle: .gridRowGap(0),
+                        with: .gridRowGap(gap))
+    }
+    
     /// Equal Width Problem: https://css-tricks.com/equal-width-columns-in-css-grid-are-kinda-weird/
     func gridNumberOfColumns(_ columns: Int) -> Self {
         return modified(body: self,
@@ -267,10 +273,17 @@ public extension CSSStyle {
                         with: .gridTemplateColumns(columns))
     }
     
-    func gridRow(gap: Int) -> Self {
+    /// Grid Column Location & Size by Line
+    /// By Line is really important (see `Grid Lines` section of https://www.w3schools.com/css/css_grid.asp)
+    ///
+    /// For a 2 column template:
+    /// - Equal size as template: 1 / 2
+    /// - Double size as template: 1 / 3
+    ///
+    func gridColumn(location: Int, size: Int) -> Self {
         return modified(body: self,
-                        oldStyle: .gridRowGap(0),
-                        with: .gridRowGap(gap))
+                        oldStyle: .gridColumn(start: 0, end: 0),
+                        with: .gridColumn(start: location, end: size))
     }
 
     // MARK: Flex
