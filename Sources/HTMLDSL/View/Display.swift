@@ -7,7 +7,8 @@
 
 import Foundation
 
-// https://www.w3schools.com/cssref/pr_class_display.asp
+/// CSS display Property: https://www.w3schools.com/cssref/pr_class_display.asp
+/// CSS Default Values Reference: https://www.w3schools.com/cssref/css_default_values.php
 public enum Display: String {
     case inline
     case block
