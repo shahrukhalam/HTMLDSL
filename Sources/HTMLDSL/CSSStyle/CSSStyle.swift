@@ -344,11 +344,13 @@ public struct ClassStyle: CSSStyle {
     public var styles = [Style]()
     public let key: CustomStringConvertible
 
+    /// every element with a class named `some-class`
     public init(forClass: CSSClass) {
         let isEmptyKey = forClass.value.isEmpty
         self.key = isEmptyKey ? "" : ".\(forClass.value)"
     }
 
+    /// every child element with a tag named `some-tag` of a parent element with class named `some-class`
     public init(forClass: CSSClass, withTag: Tag) {
         switch (forClass, withTag) {
         case (.empty, .empty):
@@ -358,18 +360,29 @@ public struct ClassStyle: CSSStyle {
         }
     }
     
+    /// every child element with a tag named `some-child-tag`
+    /// of a parent element with tag named `some-tag`
+    /// of a parent element with class named `some-class`
+    public init(parent1: CSSClass, parent12: Tag, child: Tag) {
+        self.key = "." + parent1.value + " " + parent12.description + " " + child.description
+    }
+    
+    /// every child element with a class named `some-child-class` of a parent element with class named `some-class`
     public init(forClass: CSSClass, withClass: CSSClass) {
         self.key = ".\(forClass.value) .\(withClass.value)"
     }
     
+    /// on `hover` of an element with class `some-class`
     public init(forClass: CSSClass, withCSSTag: CSSTag) {
         self.key = ".\(forClass.value):\(withCSSTag.rawValue)"
     }
     
+    /// every child `link` on `hover` of a parent class named `some-class`
     public init(_ class: CSSClass, cssTag: CSSTag, tag: Tag) {
         self.key = ".\(`class`.value):\(cssTag.rawValue)" + " " + tag.description
     }
     
+    /// on `hover` of every `link` contained in a class named `some-class`
     public init(_ class: CSSClass, tag: Tag, cssTag: CSSTag) {
         self.key = "." + `class`.value + " " + tag.description + ":" + cssTag.rawValue
     }
