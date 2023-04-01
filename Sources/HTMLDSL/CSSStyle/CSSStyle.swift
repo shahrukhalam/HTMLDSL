@@ -316,6 +316,10 @@ public extension CSSStyle {
     func border(sides: [Side] = Side.allCases, width: AutoDimension = .pixel(1), color: Color = .html(.Black)) -> Self {
         modified(body: self, oldStyle: .border(sides: [], width: .auto, color: .html(.Black)), with: .border(sides: sides, width: width, color: color))
     }
+    
+    func cornerRadius(uniform: AutoDimension) -> Self {
+        modified(body: self, oldStyle: .cornerRadius([.auto, .auto, .auto, .auto]), with: .cornerRadius([uniform, uniform, uniform, uniform]))
+    }
 }
 
 public struct TagStyle: CSSStyle {
