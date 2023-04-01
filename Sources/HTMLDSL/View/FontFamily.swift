@@ -8,12 +8,15 @@
 import Foundation
 
 public enum FontFamily {
+    case apple([Apple])
     case serif([Serif])
     case sansSerif([SansSerif])
     case monospace([Monospace])
 
     public var description: String {
         switch self {
+        case .apple(let fonts):
+            return fonts.map { $0.rawValue }.joined(separator: ", ")
         case .serif(let fonts):
             return fonts.map { $0.rawValue }.joined(separator: ", ")
         case .sansSerif(let fonts):
@@ -21,6 +24,13 @@ public enum FontFamily {
         case .monospace(let fonts):
             return fonts.map { $0.rawValue }.joined(separator: ", ")
         }
+    }
+    
+    public enum Apple: String {
+        case SFPro = "system-ui"
+        case SFProRounded = "ui-rounded"
+        case NewYork = "ui-serif"
+        case SFMono = "ui-monospace"
     }
 
     public enum Serif: String {
