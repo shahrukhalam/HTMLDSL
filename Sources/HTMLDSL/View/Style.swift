@@ -13,6 +13,7 @@ public enum Style: CustomStringConvertible, Equatable {
     case width(AutoDimension)
     case height(AutoDimension)
     case aspectRatio(Int, Int)
+    case contentMode(HTMLDSL.ContentMode)
 
     case margin(left: AutoInheritDimension,
                 top: AutoInheritDimension,
@@ -81,6 +82,8 @@ public enum Style: CustomStringConvertible, Equatable {
             return "width: \(dimension.description);"
         case .height(let dimension):
             return "height: \(dimension.description);"
+        case .contentMode(let contentMode):
+            return "object-fit: \(contentMode.rawValue);"
         case let .aspectRatio(width, height):
             return "aspect-ratio: \(width)/\(height);"
         case .fontFamily(let fontFamily):

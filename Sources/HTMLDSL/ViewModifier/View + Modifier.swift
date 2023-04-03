@@ -47,6 +47,11 @@ public extension HTMLContentView {
         return ModifiedContent(content: self, modifier: modifier)
     }
 
+    func contentMode(_ contentMode: ContentMode) -> ModifiedContent<Self, ContentModeModifier<Self>> {
+        let modifier = ContentModeModifier<Self>(contentMode: contentMode)
+        return ModifiedContent(content: self, modifier: modifier)
+    }
+
     func margin(left: AutoInheritDimension = .pixel(0),
                 top: AutoInheritDimension = .pixel(0),
                 right: AutoInheritDimension = .pixel(0),

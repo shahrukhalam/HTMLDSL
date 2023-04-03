@@ -49,3 +49,17 @@ public struct AspectRatioModifier<ContentView>: ViewModifier where ContentView: 
         return update(content: content, for: .aspectRatio(1, 1), with: .aspectRatio(width, height))
     }
 }
+
+public struct ContentModeModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
+    public typealias Body = ContentView
+
+    private let contentMode: ContentMode
+
+    public init(contentMode: ContentMode) {
+        self.contentMode = contentMode
+    }
+
+    public func body(content: Content) -> Body {
+        return update(content: content, for: .contentMode(.none), with: .contentMode(contentMode))
+    }
+}
