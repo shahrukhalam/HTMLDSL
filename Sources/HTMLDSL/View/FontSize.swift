@@ -10,7 +10,8 @@ import Foundation
 public enum FontSize: CustomStringConvertible {
     case percentage(Int)
     case pixel(Int)
-    case relativeToDefaultFontSize(Float)
+    case relativeToRootFontSize(Float)
+    case relativeToParentFontSize(Float)
     case relativeToViewportWidth(Int)
 
     public var description: String {
@@ -19,7 +20,9 @@ public enum FontSize: CustomStringConvertible {
             return "\(value)%"
         case .pixel(let value):
             return "\(value)px"
-        case .relativeToDefaultFontSize(let value):
+        case .relativeToRootFontSize(let value):
+            return "\(value)rem"
+        case .relativeToParentFontSize(let value):
             return "\(value)em"
         case .relativeToViewportWidth(let value):
             return "\(value)vw"

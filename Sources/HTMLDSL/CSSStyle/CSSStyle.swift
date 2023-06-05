@@ -354,6 +354,12 @@ public struct ClassStyle: CSSStyle {
         self.key = isEmptyKey ? "" : ".\(forClass.value)"
     }
 
+    /// every element within a class named `some-class`
+    public init(elementsInClass: CSSClass) {
+        let isEmptyKey = elementsInClass.value.isEmpty
+        self.key = isEmptyKey ? "" : ".\(elementsInClass.value) *"
+    }
+
     /// every child element with a tag named `some-tag` of a parent element with class named `some-class`
     public init(forClass: CSSClass, withTag: Tag) {
         switch (forClass, withTag) {

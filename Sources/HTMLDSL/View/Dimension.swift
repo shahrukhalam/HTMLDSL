@@ -11,6 +11,7 @@ public enum AutoDimension: CustomStringConvertible {
     case percentage(Int)
     case pixel(Int)
     case auto
+    case number(Float)
 
     public var description: String {
         switch self {
@@ -20,6 +21,8 @@ public enum AutoDimension: CustomStringConvertible {
             return "\(value)px"
         case .auto:
             return "auto"
+        case .number(let value):
+            return "\(value)"
         }
     }
 }
@@ -41,11 +44,26 @@ public enum InheritDimension: CustomStringConvertible {
     }
 }
 
+public enum Length: CustomStringConvertible {
+    case relativeToRoot(Float)
+    case relativeToParent(Float)
+
+    public var description: String {
+        switch self {
+        case .relativeToRoot(let value):
+            return "\(value)rem"
+        case .relativeToParent(let value):
+            return "\(value)em"
+        }
+    }
+}
+
 public enum AutoInheritDimension: CustomStringConvertible {
     case percentage(Int)
     case pixel(Int)
     case auto
     case inherit
+    case length(Length)
 
     public var description: String {
         switch self {
@@ -57,6 +75,8 @@ public enum AutoInheritDimension: CustomStringConvertible {
             return "auto"
         case .inherit:
             return "inherit"
+        case .length(let value):
+            return value.description
         }
     }
 }
