@@ -307,13 +307,19 @@ public extension CSSStyle {
                         with: .flexDistributeOnCrossAxis(distribution))
     }
     
+    func flexWrap() -> Self {
+        return modified(body: self,
+                        oldStyle: .flexWrap,
+                        with: .flexWrap)
+    }
+    
     // MARK: Pointer
     func pointer(_ event: PointerEvent) -> Self {
         modified(body: self, oldStyle: .pointer(.auto), with: .pointer(event))
     }
     
     // MARK: Border
-    func border(sides: [Side] = Side.allCases, width: AutoDimension = .pixel(1), color: Color = .html(.Black)) -> Self {
+    func border(sides: [Side] = Side.allCases, width: AutoDimension = .pixel(2), color: Color = .html(.Black)) -> Self {
         modified(body: self, oldStyle: .border(sides: [], width: .auto, color: .html(.Black)), with: .border(sides: sides, width: width, color: color))
     }
     

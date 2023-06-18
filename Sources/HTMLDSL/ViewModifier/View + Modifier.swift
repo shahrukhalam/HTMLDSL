@@ -70,6 +70,10 @@ public extension HTMLContentView {
                                             bottom: dimension)
         return ModifiedContent(content: self, modifier: modifier)
     }
+    
+    func centerX() -> ModifiedContent<Self, MarginModifier<Self>> {
+        margin(left: .auto, right: .auto)
+    }
 
     func padding(left: InheritDimension = .pixel(0),
                  top: InheritDimension = .pixel(0),

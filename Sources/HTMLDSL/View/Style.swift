@@ -64,6 +64,7 @@ public enum Style: CustomStringConvertible, Equatable {
     case flexDirection(StackViewDirection)
     case flexAlignAlongAxis(StackViewAlignment)
     case flexDistributeOnCrossAxis(StackViewDistribution)
+    case flexWrap
     
     // MARK: Pointer
     case pointer(PointerEvent)
@@ -140,6 +141,8 @@ public enum Style: CustomStringConvertible, Equatable {
             return "justify-content: \(alignment.rawValue);"
         case .flexDistributeOnCrossAxis(let distribution):
             return "align-items: \(distribution.rawValue);"
+        case .flexWrap:
+            return "flex-wrap: wrap;"
         case .pointer(let event):
             return "pointer-events: \(event.rawValue);"
         case .lineHeight(let dimension):
@@ -222,6 +225,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.flexAlignAlongAxis, .flexAlignAlongAxis):
             return true
         case (.flexDistributeOnCrossAxis, .flexDistributeOnCrossAxis):
+            return true
+        case (.flexWrap, .flexWrap):
             return true
         case (.pointer, .pointer):
             return true
