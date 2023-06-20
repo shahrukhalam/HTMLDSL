@@ -19,10 +19,10 @@ public enum Style: CustomStringConvertible, Equatable {
                 top: AutoInheritDimension,
                 right: AutoInheritDimension,
                 bottom: AutoInheritDimension)
-    case padding(left: InheritDimension,
-                 top: InheritDimension,
-                 right: InheritDimension,
-                 bottom: InheritDimension)
+    case padding(left: AutoInheritDimension,
+                 top: AutoInheritDimension,
+                 right: AutoInheritDimension,
+                 bottom: AutoInheritDimension)
     case boxSizing(BoxSizing)
 
     case position(Position)

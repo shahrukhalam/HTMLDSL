@@ -10,15 +10,15 @@ import Foundation
 public struct PaddingModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
     public typealias Body = ContentView
 
-    private let left: InheritDimension
-    private let top: InheritDimension
-    private let right: InheritDimension
-    private let bottom: InheritDimension
+    private let left: AutoInheritDimension
+    private let top: AutoInheritDimension
+    private let right: AutoInheritDimension
+    private let bottom: AutoInheritDimension
 
-    public init(left: InheritDimension,
-         top: InheritDimension,
-         right: InheritDimension,
-         bottom: InheritDimension) {
+    public init(left: AutoInheritDimension,
+                top: AutoInheritDimension,
+                right: AutoInheritDimension,
+                bottom: AutoInheritDimension) {
         self.left = left
         self.top = top
         self.right = right

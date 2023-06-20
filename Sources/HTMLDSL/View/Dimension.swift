@@ -31,6 +31,7 @@ public enum InheritDimension: CustomStringConvertible {
     case percentage(Int)
     case pixel(Int)
     case inherit
+    case number(Float)
 
     public var description: String {
         switch self {
@@ -40,6 +41,8 @@ public enum InheritDimension: CustomStringConvertible {
             return "\(value)px"
         case .inherit:
             return "inherit"
+        case .number(let value):
+            return "\(value)"
         }
     }
 }

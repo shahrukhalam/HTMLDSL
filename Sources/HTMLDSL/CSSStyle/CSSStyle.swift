@@ -114,10 +114,10 @@ public extension CSSStyle {
                                bottom: .auto))
     }
 
-    func padding(left: InheritDimension = .pixel(0),
-                 top: InheritDimension = .pixel(0),
-                 right: InheritDimension = .pixel(0),
-                 bottom: InheritDimension = .pixel(0)) -> Self {
+    func padding(left: AutoInheritDimension = .pixel(0),
+                 top: AutoInheritDimension = .pixel(0),
+                 right: AutoInheritDimension = .pixel(0),
+                 bottom: AutoInheritDimension = .pixel(0)) -> Self {
         modified(body: self,
                  oldStyle: .padding(left: .pixel(0),
                                     top: .pixel(0),
@@ -129,7 +129,7 @@ public extension CSSStyle {
                                 bottom: bottom))
     }
 
-    func padding(uniform: InheritDimension) -> Self {
+    func padding(uniform: AutoInheritDimension) -> Self {
         modified(body: self,
                  oldStyle: .padding(left: .pixel(0),
                                     top: .pixel(0),

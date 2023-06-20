@@ -75,10 +75,10 @@ public extension HTMLContentView {
         margin(left: .auto, right: .auto)
     }
 
-    func padding(left: InheritDimension = .pixel(0),
-                 top: InheritDimension = .pixel(0),
-                 right: InheritDimension = .pixel(0),
-                 bottom: InheritDimension = .pixel(0)) -> ModifiedContent<Self, PaddingModifier<Self>> {
+    func padding(left: AutoInheritDimension = .pixel(0),
+                 top: AutoInheritDimension = .pixel(0),
+                 right: AutoInheritDimension = .pixel(0),
+                 bottom: AutoInheritDimension = .pixel(0)) -> ModifiedContent<Self, PaddingModifier<Self>> {
         let modifier = PaddingModifier<Self>(left: left,
                                              top: top,
                                              right: right,
@@ -86,7 +86,7 @@ public extension HTMLContentView {
         return ModifiedContent(content: self, modifier: modifier)
     }
     
-    func padding(uniform dimension: InheritDimension) -> ModifiedContent<Self, PaddingModifier<Self>> {
+    func padding(uniform dimension: AutoInheritDimension) -> ModifiedContent<Self, PaddingModifier<Self>> {
         let modifier = PaddingModifier<Self>(left: dimension,
                                              top: dimension,
                                              right: dimension,
