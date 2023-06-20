@@ -72,6 +72,9 @@ public enum Style: CustomStringConvertible, Equatable {
     // MARK: Border
     case border(sides: [Side], width: AutoDimension, color: Color)
     case cornerRadius([AutoDimension])
+    
+    // MARK: Lines
+    case noOfLines(Int)
 
     public var description: String {
         switch self {
@@ -159,6 +162,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case .cornerRadius(let dimensions):
             let description = dimensions.map { $0.description }.joined(separator: " ")
             return "border-radius: \(description);"
+        case .noOfLines(let lines):
+            return "overflow: hidden; text-overflow: ellipsis; display: -webkit-box;-webkit-line-clamp: \(lines); line-clamp: 2; -webkit-box-orient: vertical;"
         case .listImage(let url):
             return "list-style-image: url(\"\(url)\");"
         }
@@ -235,6 +240,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.border, .border):
             return true
         case (.cornerRadius, .cornerRadius):
+            return true
+        case (.noOfLines, .noOfLines):
             return true
         case (.listImage, .listImage):
             return true

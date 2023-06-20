@@ -326,6 +326,11 @@ public extension CSSStyle {
     func cornerRadius(uniform: AutoDimension) -> Self {
         modified(body: self, oldStyle: .cornerRadius([.auto, .auto, .auto, .auto]), with: .cornerRadius([uniform, uniform, uniform, uniform]))
     }
+    
+    // MARK: Limit no of lines
+    func noOfLines(_ lines: Int) -> Self {
+        modified(body: self, oldStyle: .noOfLines(0), with: .noOfLines(lines))
+    }
 }
 
 public struct TagStyle: CSSStyle {
