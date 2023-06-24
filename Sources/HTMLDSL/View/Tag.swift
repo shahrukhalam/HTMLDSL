@@ -45,6 +45,7 @@ public enum EnclosingTag: CustomStringConvertible {
     case orderedList
     case list
     case pre
+    case code
 
     public var description: String {
         switch self {
@@ -80,6 +81,8 @@ public enum EnclosingTag: CustomStringConvertible {
             return "li"
         case .pre:
             return "pre"
+        case .code:
+            return "code"
         }
     }
 }
