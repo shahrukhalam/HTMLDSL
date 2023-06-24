@@ -30,6 +30,7 @@ public enum FontFamily {
         case SFPro = "system-ui"
         case SFProRounded = "ui-rounded"
         case NewYork = "ui-serif"
+        case notion = "ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\""
         case SFMono = "ui-monospace"
     }
 
