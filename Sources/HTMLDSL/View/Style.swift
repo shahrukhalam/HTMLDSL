@@ -26,10 +26,10 @@ public enum Style: CustomStringConvertible, Equatable {
     case boxSizing(BoxSizing)
 
     case position(Position)
-    case constraint(left: AutoInheritInitialDimension,
-                    top: AutoInheritInitialDimension,
-                    right: AutoInheritInitialDimension,
-                    bottom: AutoInheritInitialDimension)
+    case constraint(left: AutoInheritDimension,
+                    top: AutoInheritDimension,
+                    right: AutoInheritDimension,
+                    bottom: AutoInheritDimension)
     case transform(Transform)
 
     case foregroundColor(Color)

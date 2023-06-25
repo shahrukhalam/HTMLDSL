@@ -12,16 +12,16 @@ public struct PositionModifier<ContentView>: ViewModifier where ContentView: HTM
 
     private let position: Position
 
-    private let left: AutoInheritInitialDimension
-    private let top: AutoInheritInitialDimension
-    private let right: AutoInheritInitialDimension
-    private let bottom: AutoInheritInitialDimension
+    private let left: AutoInheritDimension
+    private let top: AutoInheritDimension
+    private let right: AutoInheritDimension
+    private let bottom: AutoInheritDimension
 
     public init(position: Position,
-         left: AutoInheritInitialDimension,
-         top: AutoInheritInitialDimension,
-         right: AutoInheritInitialDimension,
-         bottom: AutoInheritInitialDimension) {
+         left: AutoInheritDimension,
+         top: AutoInheritDimension,
+         right: AutoInheritDimension,
+         bottom: AutoInheritDimension) {
         self.position = position
         self.left = left
         self.top = top

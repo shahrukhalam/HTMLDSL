@@ -147,10 +147,10 @@ public extension CSSStyle {
                         with: .position(position))
     }
 
-    func constraint(left: AutoInheritInitialDimension = .auto,
-                    top: AutoInheritInitialDimension = .auto,
-                    right: AutoInheritInitialDimension = .auto,
-                    bottom: AutoInheritInitialDimension = .auto) -> Self {
+    func constraint(left: AutoInheritDimension = .auto,
+                    top: AutoInheritDimension = .auto,
+                    right: AutoInheritDimension = .auto,
+                    bottom: AutoInheritDimension = .auto) -> Self {
         return modified(body: self,
                         oldStyle: .constraint(left: .auto,
                                               top: .auto,

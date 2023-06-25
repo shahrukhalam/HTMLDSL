@@ -95,10 +95,10 @@ public extension HTMLContentView {
     }
 
     func position(_ position: Position,
-                  left: AutoInheritInitialDimension = .auto,
-                  top: AutoInheritInitialDimension = .auto,
-                  right: AutoInheritInitialDimension = .auto,
-                  bottom: AutoInheritInitialDimension = .auto) -> ModifiedContent<Self, PositionModifier<Self>> {
+                  left: AutoInheritDimension = .auto,
+                  top: AutoInheritDimension = .auto,
+                  right: AutoInheritDimension = .auto,
+                  bottom: AutoInheritDimension = .auto) -> ModifiedContent<Self, PositionModifier<Self>> {
         let modifier = PositionModifier<Self>(position: position,
                                               left: left,
                                               top: top,
@@ -108,7 +108,7 @@ public extension HTMLContentView {
     }
     
     func position(_ position: Position,
-                  uniform: AutoInheritInitialDimension = .auto) -> ModifiedContent<Self, PositionModifier<Self>> {
+                  uniform: AutoInheritDimension = .auto) -> ModifiedContent<Self, PositionModifier<Self>> {
         let modifier = PositionModifier<Self>(position: position,
                                               left: uniform,
                                               top: uniform,
