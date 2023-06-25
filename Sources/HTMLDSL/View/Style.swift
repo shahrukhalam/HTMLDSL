@@ -56,6 +56,7 @@ public enum Style: CustomStringConvertible, Equatable {
 
     // MARK: Grid
     case gridColumnGap(Int)
+    case gridColumnGapDimension(AutoInheritDimension)
     case gridRowGap(Int)
     case gridTemplateColumns(Int)
     case gridColumn(start: Int, end: Int)
@@ -132,6 +133,8 @@ public enum Style: CustomStringConvertible, Equatable {
             return "transform: \(transform.description);"
         case .gridColumnGap(let gap):
             return "grid-column-gap: \(gap)px;"
+        case .gridColumnGapDimension(let dimension):
+            return "grid-column-gap: \(dimension.description);"
         case .gridRowGap(let gap):
             return "grid-row-gap: \(gap)px;"
         case .gridTemplateColumns(let columns):
@@ -163,7 +166,7 @@ public enum Style: CustomStringConvertible, Equatable {
             let description = dimensions.map { $0.description }.joined(separator: " ")
             return "border-radius: \(description);"
         case .noOfLines(let lines):
-            return "overflow: hidden; text-overflow: ellipsis; display: -webkit-box;-webkit-line-clamp: \(lines); line-clamp: 2; -webkit-box-orient: vertical;"
+            return "overflow: hidden; text-overflow: ellipsis; display: -webkit-box;-webkit-line-clamp: \(lines); line-clamp: \(lines); -webkit-box-orient: vertical;"
         case .listImage(let url):
             return "list-style-image: url(\"\(url)\");"
         }
@@ -218,6 +221,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.transform, .transform):
             return true
         case (.gridColumnGap, .gridColumnGap):
+            return true
+        case (.gridColumnGapDimension, .gridColumnGapDimension):
             return true
         case (.gridRowGap, .gridRowGap):
             return true

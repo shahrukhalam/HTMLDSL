@@ -260,6 +260,12 @@ public extension CSSStyle {
                         with: .gridColumnGap(gap))
     }
     
+    func gridColumn(dimension: AutoInheritDimension) -> Self {
+        return modified(body: self,
+                        oldStyle: .gridColumnGapDimension(.pixel(0)),
+                        with: .gridColumnGapDimension(dimension))
+    }
+    
     func gridRow(gap: Int) -> Self {
         return modified(body: self,
                         oldStyle: .gridRowGap(0),
