@@ -12,6 +12,7 @@ public enum Style: CustomStringConvertible, Equatable {
 
     case width(AutoDimension)
     case height(AutoDimension)
+    case maxWidth(AutoDimension)
     case aspectRatio(Int, Int)
     case contentMode(HTMLDSL.ContentMode)
 
@@ -85,6 +86,8 @@ public enum Style: CustomStringConvertible, Equatable {
             return "color: \(color.description);"
         case .width(let dimension):
             return "width: \(dimension.description);"
+        case .maxWidth(let dimension):
+            return "max-width: \(dimension.description);"
         case .height(let dimension):
             return "height: \(dimension.description);"
         case .contentMode(let contentMode):
@@ -179,6 +182,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.foregroundColor, .foregroundColor):
             return true
         case (.width, .width):
+            return true
+        case (.maxWidth, .maxWidth):
             return true
         case (.height, .height):
             return true

@@ -45,7 +45,7 @@ public extension CSSStyle {
         modified(body: self, oldStyle: .backgroundColor(.html(.Black)), with: .backgroundColor(color))
     }
 
-    func size(width: AutoDimension? = nil, height: AutoDimension? = nil) -> Self {
+    func size(width: AutoDimension? = nil, height: AutoDimension? = nil, maxWidth: AutoDimension? = nil) -> Self {
         var body = self
 
         if let width = width {
@@ -54,6 +54,10 @@ public extension CSSStyle {
 
         if let height = height {
             body = modified(body: body, oldStyle: .height(.auto), with: .height(height))
+        }
+
+        if let maxWidth = maxWidth {
+            body = modified(body: body, oldStyle: .maxWidth(.auto), with: .maxWidth(maxWidth))
         }
 
         return body
@@ -260,10 +264,10 @@ public extension CSSStyle {
                         with: .gridColumnGap(gap))
     }
     
-    func gridColumn(dimension: AutoInheritDimension) -> Self {
+    func gridColumn(gap: AutoInheritDimension) -> Self {
         return modified(body: self,
                         oldStyle: .gridColumnGapDimension(.pixel(0)),
-                        with: .gridColumnGapDimension(dimension))
+                        with: .gridColumnGapDimension(gap))
     }
     
     func gridRow(gap: Int) -> Self {
