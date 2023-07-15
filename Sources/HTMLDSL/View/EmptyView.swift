@@ -11,4 +11,5 @@ import Foundation
 struct EmptyView: HTMLContentView {
     typealias Body = Never
     let tag = Tag.empty
+    let element: String = ""
 }
