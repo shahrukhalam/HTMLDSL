@@ -62,7 +62,7 @@ public enum Length: CustomStringConvertible {
 }
 
 public enum AutoInheritDimension: CustomStringConvertible {
-    case percentage(Int)
+    case percentage(Float)
     case pixel(Int)
     case auto
     case inherit
