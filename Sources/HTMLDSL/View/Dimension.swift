@@ -9,7 +9,7 @@ import Foundation
 
 public enum AutoDimension: CustomStringConvertible {
     case percentage(Int)
-    case pixel(Int)
+    case pixel(Float)
     case auto
     case number(Float)
 

@@ -117,7 +117,7 @@ public extension HTMLContentView {
         return ModifiedContent(content: self, modifier: modifier)
     }
     
-    func border(sides: [Side] = Side.allCases, width: AutoDimension = .pixel(2), color: Color = .html(.Black)) -> ModifiedContent<Self, BorderModifier<Self>> {
+    func border(sides: [Side] = Side.allCases, width: AutoDimension = .pixel(1), color: Color = .html(.Black)) -> ModifiedContent<Self, BorderModifier<Self>> {
         let modifier = BorderModifier<Self>(sides: sides, width: width, color: color)
         return ModifiedContent(content: self, modifier: modifier)
     }

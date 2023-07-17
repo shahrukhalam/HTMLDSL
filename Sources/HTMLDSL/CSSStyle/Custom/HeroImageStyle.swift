@@ -17,7 +17,7 @@ struct HeroImageStyle: CSSStyle {
          backgroundColor: Color = Color.TableBackgroundColor) {
         let heroImageStyle = ClassStyle(forClass: .heroImage)
             .backgroundColor(backgroundColor)
-            .size(height: .pixel(heightInPixel))
+            .size(height: .pixel(Float(heightInPixel)))
             .backgroundPosition(.center)
             .backgroundRepeat(.noRepeat)
             .backgroundSize(.cover)
@@ -105,7 +105,7 @@ struct GridImageStyle: CSSStyle {
          backgroundColor: Color = Color.TableBackgroundColor) {
         let heroImageStyle = ClassStyle(forClass: .gridImage)
             .backgroundColor(backgroundColor)
-            .size(height: .pixel(heightInPixel))
+            .size(height: .pixel(Float(heightInPixel)))
             .backgroundPosition(.center)
             .backgroundRepeat(.noRepeat)
             .backgroundSize(.cover)
