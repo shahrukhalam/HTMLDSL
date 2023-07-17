@@ -13,7 +13,10 @@ public enum Display: String {
     case inline
     case block
     case grid
+    
     case flex
+    case inlineFlex = "inline-flex"
+
     case inlineBlock = "inline-block"
     case none
     case initial
