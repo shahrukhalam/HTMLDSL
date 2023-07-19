@@ -67,6 +67,7 @@ public enum Style: CustomStringConvertible, Equatable {
     case flexAlignAlongAxis(StackViewAlignment)
     case flexDistributeOnCrossAxis(StackViewDistribution)
     case flexWrap
+    case flexGap(AutoInheritDimension)
     
     // MARK: Pointer
     case pointer(PointerEvent)
@@ -152,6 +153,8 @@ public enum Style: CustomStringConvertible, Equatable {
             return "align-items: \(distribution.rawValue);"
         case .flexWrap:
             return "flex-wrap: wrap;"
+        case .flexGap(let gap):
+            return "gap: \(gap.description);"
         case .pointer(let event):
             return "pointer-events: \(event.rawValue);"
         case .lineHeight(let dimension):
@@ -242,6 +245,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.flexDistributeOnCrossAxis, .flexDistributeOnCrossAxis):
             return true
         case (.flexWrap, .flexWrap):
+            return true
+        case (.flexGap, .flexGap):
             return true
         case (.pointer, .pointer):
             return true
