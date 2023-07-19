@@ -22,6 +22,10 @@ public struct ViewBuilder {
         guard let content = content else { return AnyView(EmptyView()) }
         return AnyView(content)
     }
+    
+    public static func buildArray<Content>(_ contents: [Content]) -> AnyView where Content: HTMLBodyContentView {
+        return AnyView(contents)
+    }
 
     public static func buildBlock<C0, C1>(_ c0: C0, _ c1: C1) -> AnyView where C0 : HTMLContentView, C1 : HTMLContentView {
         let views = [AnyView(c0), AnyView(c1)]
