@@ -23,6 +23,14 @@ public struct ViewBuilder {
         return AnyView(content)
     }
     
+    public static func buildEither<Content>(first content: Content) -> AnyView where Content: HTMLBodyContentView {
+        return AnyView(content)
+    }
+    
+    public static func buildEither<Content>(second content: Content) -> AnyView where Content: HTMLBodyContentView {
+        return AnyView(content)
+    }
+    
     public static func buildArray<Content>(_ contents: [Content]) -> AnyView where Content: HTMLBodyContentView {
         return AnyView(contents)
     }

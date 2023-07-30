@@ -329,6 +329,18 @@ public extension CSSStyle {
                         with: .flexGap(gap))
     }
     
+    func flex(rowGap: AutoInheritDimension) -> Self {
+        return modified(body: self,
+                        oldStyle: .flexRowGap(.auto),
+                        with: .flexRowGap(rowGap))
+    }
+    
+    func flex(columnGap: AutoInheritDimension) -> Self {
+        return modified(body: self,
+                        oldStyle: .flexColumnGap(.auto),
+                        with: .flexColumnGap(columnGap))
+    }
+    
     // MARK: Pointer
     func pointer(_ event: PointerEvent) -> Self {
         modified(body: self, oldStyle: .pointer(.auto), with: .pointer(event))
