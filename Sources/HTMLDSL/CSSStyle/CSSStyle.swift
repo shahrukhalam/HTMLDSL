@@ -359,6 +359,11 @@ public extension CSSStyle {
     func noOfLines(_ lines: Int) -> Self {
         modified(body: self, oldStyle: .noOfLines(0), with: .noOfLines(lines))
     }
+    
+    // MARK: Scroll
+    func scrollVertically() -> Self {
+        modified(body: self, oldStyle: .scrollVertically, with: .scrollVertically)
+    }
 }
 
 public struct TagStyle: CSSStyle {

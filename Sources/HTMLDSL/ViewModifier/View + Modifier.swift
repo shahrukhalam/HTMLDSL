@@ -7,6 +7,18 @@
 
 import Foundation
 
+public extension HTMLView {
+    func backgroundImage(
+        path: String,
+        position: BackgroundPosition = .inherit,
+        size: BackgroundSize = .inherit,
+        repeating: BackgroundRepeat = .inherit
+    ) -> ModifiedContent<Self, BackgroundImageModifier<Self>> {
+        let modifier = BackgroundImageModifier<Self>(path: path, position: position, size: size, repeating: repeating)
+        return ModifiedContent(content: self, modifier: modifier)
+    }
+}
+
 public extension HTMLContentView {
     func identifyBy(id: String) -> ModifiedContent<Self, IDModifier<Self>> {
         let modifier = IDModifier<Self>(id: id)
@@ -25,11 +37,6 @@ public extension HTMLContentView {
 
     func backgroundColor(_ color: Color) -> ModifiedContent<Self, BackgroundColorModifier<Self>> {
         let modifier = BackgroundColorModifier<Self>(color: color)
-        return ModifiedContent(content: self, modifier: modifier)
-    }
-
-    func backgroundImage(path: String) -> ModifiedContent<Self, BackgroundImageModifier<Self>> {
-        let modifier = BackgroundImageModifier<Self>(path: path)
         return ModifiedContent(content: self, modifier: modifier)
     }
 

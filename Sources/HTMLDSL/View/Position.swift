@@ -35,6 +35,7 @@ public enum BackgroundSize: CustomStringConvertible {
     case auto
     case pixel(x: Int, y: Int)
     case percentage(x: Int, y: Int)
+    case percentages(Int)
     case cover
     case contain
     case initial
@@ -48,6 +49,8 @@ public enum BackgroundSize: CustomStringConvertible {
             return "\(x)px \(y)px"
         case let .percentage(x, y):
             return "\(x)% \(y)%"
+        case .percentages(let value):
+            return "\(value)%"
         case .cover:
             return "cover"
         case .contain:

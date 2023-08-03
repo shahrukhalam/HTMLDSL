@@ -80,6 +80,9 @@ public enum Style: CustomStringConvertible, Equatable {
     
     // MARK: Lines
     case noOfLines(Int)
+    
+    // MARK: Scroll
+    case scrollVertically
 
     public var description: String {
         switch self {
@@ -181,6 +184,8 @@ public enum Style: CustomStringConvertible, Equatable {
             return "overflow: hidden; text-overflow: ellipsis; display: -webkit-box;-webkit-line-clamp: \(lines); line-clamp: \(lines); -webkit-box-orient: vertical;"
         case .listImage(let url):
             return "list-style-image: url(\"\(url)\");"
+        case .scrollVertically:
+            return "overflow-y: scroll;"
         }
     }
 
@@ -269,6 +274,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.noOfLines, .noOfLines):
             return true
         case (.listImage, .listImage):
+            return true
+        case (.scrollVertically, .scrollVertically):
             return true
         default:
             return false
