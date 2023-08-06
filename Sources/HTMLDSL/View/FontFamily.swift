@@ -42,6 +42,7 @@ public enum FontFamily {
         case BookAntiqua = "Book Antiqua"
         case Times
         case TimesNewRoman = "Times New Roman"
+        case AmericanTypewriter = "American Typewriter"
     }
 
     public enum SansSerif: String {
