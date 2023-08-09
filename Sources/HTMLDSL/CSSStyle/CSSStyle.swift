@@ -13,6 +13,16 @@ public protocol CSSStyle {
     var element: String { get }
 }
 
+public struct CSSVariable<T> {
+    public init(name: String, value: (dark: T, light: T)) {
+        self.name = name
+        self.value = value
+    }
+    
+    let name: String
+    let value: (dark: T, light: T)
+}
+
 public extension CSSStyle {
     var element: String {
         let allStyles = styles.map { $0.description }.joined(separator: "\n")
@@ -43,6 +53,27 @@ public extension CSSStyle {
 
     func backgroundColor(_ color: Color) -> Self {
         modified(body: self, oldStyle: .backgroundColor(.html(.Black)), with: .backgroundColor(color))
+    }
+    
+    func variable(color: CSSVariable<Color>, scheme: ColorScheme) -> Self {
+        modified(
+            body: self,
+            oldStyle: .variable(
+                .init(name: "", value: (dark: .html(.Black), light: .html(.White))),
+                .light
+            ),
+            with: .variable(color, scheme)
+        )
+    }
+    
+    func backgroundColor(variable: CSSVariable<Color>) -> Self {
+        modified(
+            body: self,
+            oldStyle: .backgroundVariable(
+                .init(name: "", value: (dark: .html(.Black), light: .html(.White)))
+            ),
+            with: .backgroundVariable(variable)
+        )
     }
 
     func size(width: AutoDimension? = nil, height: AutoDimension? = nil, maxWidth: AutoDimension? = nil) -> Self {
@@ -168,6 +199,16 @@ public extension CSSStyle {
 
     func foregroundColor(_ color: Color) -> Self {
         modified(body: self, oldStyle: .foregroundColor(.html(.Black)), with: .foregroundColor(color))
+    }
+    
+    func foregroundColor(variable: CSSVariable<Color>) -> Self {
+        modified(
+            body: self,
+            oldStyle: .foregroundVariable(
+                .init(name: "", value: (dark: .html(.White), light: .html(.Black)))
+            ),
+            with: .foregroundVariable(variable)
+        )
     }
 
     func font(family: FontFamily) -> Self {

@@ -7,8 +7,16 @@
 
 import Foundation
 
+public enum ColorScheme: String {
+    case light
+    case dark
+}
+
 public enum Style: CustomStringConvertible, Equatable {
+    case variable(CSSVariable<Color>, ColorScheme)
+    
     case backgroundColor(Color)
+    case backgroundVariable(CSSVariable<Color>)
 
     case width(AutoDimension)
     case height(AutoDimension)
@@ -34,6 +42,7 @@ public enum Style: CustomStringConvertible, Equatable {
     case transform(Transform)
 
     case foregroundColor(Color)
+    case foregroundVariable(CSSVariable<Color>)
     case fontFamily(FontFamily)
     case fontSize(FontSize)
     case fontWeight(FontWeight)
@@ -86,10 +95,16 @@ public enum Style: CustomStringConvertible, Equatable {
 
     public var description: String {
         switch self {
+        case .variable(let variable, let scheme):
+            return "--\(variable.name): \(scheme == .light ? variable.value.light : variable.value.dark);"
         case .backgroundColor(let color):
             return "background-color: \(color.description);"
+        case .backgroundVariable(let variable):
+            return "background-color: var(--\(variable.name));"
         case .foregroundColor(let color):
             return "color: \(color.description);"
+        case .foregroundVariable(let variable):
+            return "color: var(--\(variable.name));"
         case .width(let dimension):
             return "width: \(dimension.description);"
         case .maxWidth(let dimension):
@@ -191,9 +206,15 @@ public enum Style: CustomStringConvertible, Equatable {
 
     public static func == (lhs: Style, rhs: Style) -> Bool {
         switch (lhs, rhs) {
+        case (.variable(let lhsVariable, let lhsScheme), .variable(let rhsVariable, let rhsScheme)):
+            return lhsVariable.name == rhsVariable.name && lhsScheme == rhsScheme
         case (.backgroundColor, .backgroundColor):
             return true
+        case (.backgroundVariable, .backgroundVariable):
+            return true
         case (.foregroundColor, .foregroundColor):
+            return true
+        case (.foregroundVariable, .foregroundVariable):
             return true
         case (.width, .width):
             return true
