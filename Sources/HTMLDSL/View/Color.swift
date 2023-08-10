@@ -11,6 +11,7 @@ public enum Color: CustomStringConvertible {
     case html(HTMLColor)
     case rgba(red: Float, green: Float, blue: Float, alpha: Float)
     case hexWithHash(String)
+    case transparent
 
     public var description: String {
         switch self {
@@ -20,6 +21,8 @@ public enum Color: CustomStringConvertible {
             return "rgba(\(red), \(green), \(blue), \(alpha))"
         case .hexWithHash(let value):
             return value
+        case .transparent:
+            return "transparent"
         }
     }
 }
