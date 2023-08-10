@@ -66,7 +66,7 @@ public extension CSSStyle {
         )
     }
     
-    func backgroundColor(variable: CSSVariable<Color>) -> Self {
+    func backgroundVariable(_ variable: CSSVariable<Color>) -> Self {
         modified(
             body: self,
             oldStyle: .backgroundVariable(
