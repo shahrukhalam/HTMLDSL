@@ -129,12 +129,12 @@ public extension HTMLContentView {
         return ModifiedContent(content: self, modifier: modifier)
     }
     
-    func cornerRadius(_ dimension: AutoDimension) -> ModifiedContent<Self, CornerModifier<Self>> {
+    func cornerRadius(_ dimension: AutoInheritDimension) -> ModifiedContent<Self, CornerModifier<Self>> {
         let modifier = CornerModifier<Self>(dimension: dimension)
         return ModifiedContent(content: self, modifier: modifier)
     }
     
-    func cornerRadius(_ dimensions: [AutoDimension]) -> ModifiedContent<Self, CornerModifier<Self>> {
+    func cornerRadius(_ dimensions: [AutoInheritDimension]) -> ModifiedContent<Self, CornerModifier<Self>> {
         let modifier = CornerModifier<Self>(dimensions: dimensions)
         return ModifiedContent(content: self, modifier: modifier)
     }

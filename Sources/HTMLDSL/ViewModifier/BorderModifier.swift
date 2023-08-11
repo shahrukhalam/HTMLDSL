@@ -26,13 +26,13 @@ public struct BorderModifier<ContentView>: ViewModifier where ContentView: HTMLC
 public struct CornerModifier<ContentView>: ViewModifier where ContentView: HTMLContentView {
     public typealias Body = ContentView
     
-    private let dimensions: [AutoDimension]
+    private let dimensions: [AutoInheritDimension]
     
-    init(dimension: AutoDimension) {
+    init(dimension: AutoInheritDimension) {
         self.dimensions = [dimension]
     }
     
-    init(dimensions: [AutoDimension]) {
+    init(dimensions: [AutoInheritDimension]) {
         self.dimensions = dimensions
     }
     

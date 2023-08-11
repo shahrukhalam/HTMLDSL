@@ -85,7 +85,7 @@ public enum Style: CustomStringConvertible, Equatable {
     
     // MARK: Border
     case border(sides: [Side], width: AutoDimension, color: Color)
-    case cornerRadius([AutoDimension])
+    case cornerRadius([AutoInheritDimension])
     
     // MARK: Lines
     case noOfLines(Int)
