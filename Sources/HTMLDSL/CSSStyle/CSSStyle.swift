@@ -19,7 +19,7 @@ public struct CSSVariable<T> {
         self.value = value
     }
     
-    let name: String
+    public let name: String
     let value: (dark: T, light: T)
 }
 
@@ -201,7 +201,7 @@ public extension CSSStyle {
         modified(body: self, oldStyle: .foregroundColor(.html(.Black)), with: .foregroundColor(color))
     }
     
-    func foregroundColor(variable: CSSVariable<Color>) -> Self {
+    func foregroundVariable(_ variable: CSSVariable<Color>) -> Self {
         modified(
             body: self,
             oldStyle: .foregroundVariable(
