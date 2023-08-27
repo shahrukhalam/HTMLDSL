@@ -35,7 +35,7 @@ public extension Meta {
         case name(Name, content: String)
         case property(Property, content: String)
         case twitter(Twitter, content: String)
-        case viewport(width: Width, scale: Scale)
+        case viewport(width: Width, scale: Scale, maxScale: Scale? = nil, isUserInteractionDisabled: Bool = false)
 
         public var description: String {
             switch self {
@@ -47,8 +47,16 @@ public extension Meta {
                 return "property=\"\(proprty.rawValue)\" content=\"\(content)\""
             case .twitter(let name, let content):
                 return "name=\"\(name.rawValue)\" content=\"\(content)\""
-            case .viewport(let width, let scale):
-                return "name=\"viewport\" content=\"width=\(width.rawValue), initial-scale=\(scale.rawValue)\""
+            case let .viewport(width, scale, maxScale, isUserInteractionDisabled):
+                var content = "width=\(width.rawValue), initial-scale=\(scale.rawValue)"
+                if let maxScale = maxScale {
+                    content += ", maximum-scale=\(scale.rawValue)"
+                }
+                if isUserInteractionDisabled {
+                    content += ", user-scalable=no"
+                }
+                
+                return "name=\"viewport\" content=\"\(content)\""
             }
         }
     }
