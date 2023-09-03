@@ -46,6 +46,8 @@ public extension CSSStyle {
             return ClassStyle(for: key, with: newStyles) as! Self
         case is PageStyle:
             return PageStyle(style: newStyles) as! Self
+        case is AnyStyle:
+            preconditionFailure("AnyStyle doesn't support modification")
         default:
             preconditionFailure("No other Style is supported yet")
         }
@@ -497,4 +499,28 @@ public struct PageStyle: CSSStyle {
     fileprivate init(style: [Style]) {
         self.styles = style
     }
+}
+
+public struct AnyStyle: CSSStyle {
+    public let styles: [Style] = []
+    public let key: CustomStringConvertible = String.empty
+    public let element: String
+
+    public init(content: CSSStyle) {
+        self.element = content.element
+    }
+    
+    public init(contents: [CSSStyle]) {
+        self.element = contents
+            .map { $0.element }
+            .joined(separator: "\n")
+    }
+}
+
+public struct EmptyStyle: CSSStyle {
+    public let styles: [Style] = []
+    public let key: CustomStringConvertible = String.empty
+    public let element: String = ""
+    
+    public init() {  }
 }

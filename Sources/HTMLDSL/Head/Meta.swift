@@ -50,7 +50,7 @@ public extension Meta {
             case let .viewport(width, scale, maxScale, isUserInteractionDisabled):
                 var content = "width=\(width.rawValue), initial-scale=\(scale.rawValue)"
                 if let maxScale = maxScale {
-                    content += ", maximum-scale=\(scale.rawValue)"
+                    content += ", maximum-scale=\(maxScale.rawValue)"
                 }
                 if isUserInteractionDisabled {
                     content += ", user-scalable=no"
