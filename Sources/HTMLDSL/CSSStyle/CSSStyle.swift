@@ -394,6 +394,10 @@ public extension CSSStyle {
         modified(body: self, oldStyle: .border(sides: [], width: .auto, color: .html(.Black)), with: .border(sides: sides, width: width, color: color))
     }
     
+    func borderCollapse() -> Self {
+        modified(body: self, oldStyle: .borderCollapse, with: .borderCollapse)
+    }
+    
     func cornerRadius(uniform: AutoInheritDimension) -> Self {
         modified(body: self, oldStyle: .cornerRadius([.auto, .auto, .auto, .auto]), with: .cornerRadius([uniform, uniform, uniform, uniform]))
     }
@@ -482,6 +486,10 @@ public struct ClassStyle: CSSStyle {
     /// on `hover` of every `link` contained in a class named `some-class`
     public init(_ class: CSSClass, tag: Tag, cssTag: CSSTag) {
         self.key = "." + `class`.value + " " + tag.description + ":" + cssTag.rawValue
+    }
+    
+    public init(tags: [Tag]) {
+        self.key = tags.map { $0.description }.joined(separator: ", ")
     }
 
     fileprivate init(for key: CustomStringConvertible, with style: [Style]) {

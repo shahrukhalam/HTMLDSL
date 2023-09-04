@@ -85,6 +85,7 @@ public enum Style: CustomStringConvertible, Equatable {
     
     // MARK: Border
     case border(sides: [Side], width: AutoDimension, color: Color)
+    case borderCollapse
     case cornerRadius([AutoInheritDimension])
     
     // MARK: Lines
@@ -192,6 +193,8 @@ public enum Style: CustomStringConvertible, Equatable {
                 }
                 .joined()
             return description
+        case .borderCollapse:
+            return "border-collapse: collapse;"
         case .cornerRadius(let dimensions):
             let description = dimensions.map { $0.description }.joined(separator: " ")
             return "border-radius: \(description);"
@@ -289,6 +292,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.lineHeight, .lineHeight):
             return true
         case (.border, .border):
+            return true
+        case (.borderCollapse, .borderCollapse):
             return true
         case (.cornerRadius, .cornerRadius):
             return true
