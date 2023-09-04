@@ -22,6 +22,42 @@ class MarkdownTests: XCTestCase {
         XCTAssertEqual(markdown.element, expectation)
     }
     
+    func testMarkdownTable() {
+        let markdown = Markdown("""
+        | Syntax      | Description |
+        | ----------- | ----------- |
+        | Header      | Title       |
+        | Paragraph   | Text        |
+        """)
+        
+        let expectation =
+        """
+        <div>
+        <table>
+        <thead>
+        <tr>
+        <th>Syntax</th>
+        <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Header</td>
+        <td>Title</td>
+        </tr>
+        <tr>
+        <td>Paragraph</td>
+        <td>Text</td>
+        </tr>
+        </tbody>
+        </table>
+        
+        </div>
+        """
+        
+        XCTAssertEqual(markdown.element, expectation)
+    }
+    
     func testMarkdownDiv() {
         let markdownDiv = Div {
             Link(text: "Home", url: "index.html")
