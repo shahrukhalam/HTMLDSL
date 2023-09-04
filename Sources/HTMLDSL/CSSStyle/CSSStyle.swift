@@ -468,6 +468,13 @@ public struct ClassStyle: CSSStyle {
         self.key = "." + parent1.value + " " + parent12.description + " " + child.description
     }
     
+    /// every child element with a tag named `some-child-tag`
+    /// of a parent element with tag not named `some-tag`
+    /// of a parent element with class named `some-class`
+    public init(parent1: CSSClass, notParent12: Tag, child: Tag) {
+        self.key = "." + parent1.value + " " + ":not(\(notParent12.description))" + " " + child.description
+    }
+    
     /// every child element with a class named `some-child-class` of a parent element with class named `some-class`
     public init(forClass: CSSClass, withClass: CSSClass) {
         self.key = ".\(forClass.value) .\(withClass.value)"
