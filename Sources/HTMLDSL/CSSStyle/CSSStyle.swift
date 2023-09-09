@@ -126,29 +126,29 @@ public extension CSSStyle {
                                right: uniform,
                                bottom: uniform))
     }
-
-    func centerX(top: AutoInheritDimension = .pixel(0), bottom: AutoInheritDimension = .pixel(0)) -> Self {
-        modified(body: self,
-                 oldStyle: .margin(left: .pixel(0),
-                                   top: .pixel(0),
-                                   right: .pixel(0),
-                                   bottom: .pixel(0)),
-                 with: .margin(left: .auto,
-                               top: top,
-                               right: .auto,
-                               bottom: bottom))
+    
+    /// apply to parent (not to the child)
+    func center() -> Self {
+        self
+            .display(.flex)
+            .flexDistribute(.center)
+            .flexAlign(.center)
     }
 
-    func centerY(left: AutoInheritDimension = .pixel(0), right: AutoInheritDimension = .pixel(0)) -> Self {
-        modified(body: self,
-                 oldStyle: .margin(left: .pixel(0),
-                                   top: .pixel(0),
-                                   right: .pixel(0),
-                                   bottom: .pixel(0)),
-                 with: .margin(left: left,
-                               top: .auto,
-                               right: right,
-                               bottom: .auto))
+    /// apply to parent (not to the child)
+    func centerX() -> Self {
+        self
+            .display(.flex)
+            .flexAlign(.center)
+    }
+
+    /// apply to parent (not to the child)
+    func centerY() -> Self {
+        self
+            .display(.flex)
+            .flexDirection(.vertical)
+            .flexAlign(.center)
+            .flexDistribute(.flexStart)
     }
 
     func padding(left: AutoInheritDimension = .pixel(0),
