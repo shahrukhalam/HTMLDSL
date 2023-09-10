@@ -36,17 +36,22 @@ public extension Meta {
         case property(Property, content: String)
         case twitter(Twitter, content: String)
         case viewport(width: Width, scale: Scale, maxScale: Scale? = nil, isUserInteractionDisabled: Bool = false)
+        case noindex
 
         public var description: String {
             switch self {
             case .characterSet(let characterSet):
                 return "charset=\"\(characterSet.rawValue)\""
+                
             case .name(let name, let content):
                 return "name=\"\(name.rawValue)\" content=\"\(content)\""
+                
             case .property(let proprty, let content):
                 return "property=\"\(proprty.rawValue)\" content=\"\(content)\""
+                
             case .twitter(let name, let content):
                 return "name=\"\(name.rawValue)\" content=\"\(content)\""
+                
             case let .viewport(width, scale, maxScale, isUserInteractionDisabled):
                 var content = "width=\(width.rawValue), initial-scale=\(scale.rawValue)"
                 if let maxScale = maxScale {
@@ -57,6 +62,9 @@ public extension Meta {
                 }
                 
                 return "name=\"viewport\" content=\"\(content)\""
+                
+            case .noindex:
+                return "name=\"robots\" content=\"noindex\""
             }
         }
     }
