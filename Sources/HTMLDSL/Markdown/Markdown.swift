@@ -20,7 +20,7 @@ public struct Markdown: HTMLBodyContentView {
 
 private extension String {
     var html: Self {
-        guard let cString = cmark_gfm_markdown_to_html(self, utf8.count, CMARK_OPT_SMART | CMARK_OPT_UNSAFE) else {
+        guard let cString = cmark_markdown_to_html(self, utf8.count, CMARK_OPT_UNSAFE) else {
             return self
         }
 
