@@ -388,6 +388,16 @@ public extension CSSStyle {
                         with: .flexColumnGap(columnGap))
     }
     
+    /// Sets the value how stack view will resist to compression or expansion, default value is 0
+    /// `flex = 1` means can compression or expansion
+    func flex(value: Int) -> Self {
+        return modified(
+            body: self,
+            oldStyle: .flexValue(0),
+            with: .flexValue(value)
+        )
+    }
+    
     // MARK: Pointer
     func pointer(_ event: PointerEvent) -> Self {
         modified(body: self, oldStyle: .pointer(.auto), with: .pointer(event))

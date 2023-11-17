@@ -80,6 +80,7 @@ public enum Style: CustomStringConvertible, Equatable {
     case flexGap(AutoInheritDimension)
     case flexRowGap(AutoInheritDimension)
     case flexColumnGap(AutoInheritDimension)
+    case flexValue(Int)
     
     // MARK: Pointer
     case pointer(PointerEvent)
@@ -183,6 +184,8 @@ public enum Style: CustomStringConvertible, Equatable {
             return "row-gap: \(gap.description);"
         case .flexColumnGap(let gap):
             return "column-gap: \(gap.description);"
+        case .flexValue(let value):
+            return "flex: \(value);"
         case .pointer(let event):
             return "pointer-events: \(event.rawValue);"
         case .lineHeight(let dimension):
@@ -291,6 +294,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.flexRowGap, .flexRowGap):
             return true
         case (.flexColumnGap, .flexColumnGap):
+            return true
+        case (.flexValue, .flexValue):
             return true
         case (.pointer, .pointer):
             return true
