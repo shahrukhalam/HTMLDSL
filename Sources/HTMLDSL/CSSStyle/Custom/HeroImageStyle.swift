@@ -136,13 +136,22 @@ public enum StackViewDirection: String {
     case vertical = "column"
 }
 
-public enum StackViewAlignment: String {
-    case stretch
+public enum StackViewDistribution: String {
+    case fill = "stretch"
     case center
+    /// Distribute items evenly
+    /// Start, in-between, and end gaps have equal sizes
+    case spaceEvenly = "space-evenly"
+    /// Distribute items evenly
+    /// The first item is flush with the start, the last is flush with the end
+    case spaceBetween = "space-between"
+    /// Distribute items evenly
+    /// Start and end gaps are half the size of the space between each item
+    case spaceAround = "space-around"
 }
 
-public enum StackViewDistribution: String {
-    case flexStart = "flex-start"
+public enum StackViewAlignment: String {
+    case leading = "flex-start"
     case center
 }
 
@@ -153,8 +162,8 @@ struct StackViewStyle: CSSStyle {
     var element: String
 
     init(direction: StackViewDirection = .horizontal,
-         alignment: StackViewAlignment = .stretch,
-         distribution: StackViewDistribution = .flexStart) {
+         distribution: StackViewDistribution = .fill,
+         alignment: StackViewAlignment = .leading) {
         let stackViewStyle: ClassStyle
 
         switch direction {

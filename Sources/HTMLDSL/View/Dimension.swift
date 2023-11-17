@@ -12,6 +12,7 @@ public enum AutoDimension: CustomStringConvertible {
     case pixel(Float)
     case auto
     case number(Float)
+    case fullViewPortHeight
 
     public var description: String {
         switch self {
@@ -23,6 +24,8 @@ public enum AutoDimension: CustomStringConvertible {
             return "auto"
         case .number(let value):
             return "\(value)"
+        case .fullViewPortHeight:
+            return "100vh"
         }
     }
 }

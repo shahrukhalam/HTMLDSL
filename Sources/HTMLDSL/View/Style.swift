@@ -20,6 +20,7 @@ public enum Style: CustomStringConvertible, Equatable {
 
     case width(AutoDimension)
     case height(AutoDimension)
+    case minHeight(AutoDimension)
     case maxWidth(AutoDimension)
     case aspectRatio(Int, Int)
     case contentMode(HTMLDSL.ContentMode)
@@ -73,8 +74,8 @@ public enum Style: CustomStringConvertible, Equatable {
 
     // MARK: Flex
     case flexDirection(StackViewDirection)
-    case flexAlignAlongAxis(StackViewAlignment)
-    case flexDistributeOnCrossAxis(StackViewDistribution)
+    case flexAlignOnCrossAxis(StackViewAlignment)
+    case flexDistributeAlongAxis(StackViewDistribution)
     case flexWrap
     case flexGap(AutoInheritDimension)
     case flexRowGap(AutoInheritDimension)
@@ -108,10 +109,12 @@ public enum Style: CustomStringConvertible, Equatable {
             return "color: var(--\(variable.name));"
         case .width(let dimension):
             return "width: \(dimension.description);"
-        case .maxWidth(let dimension):
-            return "max-width: \(dimension.description);"
         case .height(let dimension):
             return "height: \(dimension.description);"
+        case .minHeight(let dimension):
+            return "min-height: \(dimension.description);"
+        case .maxWidth(let dimension):
+            return "max-width: \(dimension.description);"
         case .contentMode(let contentMode):
             return "object-fit: \(contentMode.rawValue);"
         case let .aspectRatio(width, height):
@@ -168,10 +171,10 @@ public enum Style: CustomStringConvertible, Equatable {
             return "grid-column: \(start) / \(end);"
         case .flexDirection(let direction):
             return "flex-direction: \(direction.rawValue);"
-        case .flexAlignAlongAxis(let alignment):
-            return "justify-content: \(alignment.rawValue);"
-        case .flexDistributeOnCrossAxis(let distribution):
-            return "align-items: \(distribution.rawValue);"
+        case .flexAlignOnCrossAxis(let alignment):
+            return "align-items: \(alignment.rawValue);"
+        case .flexDistributeAlongAxis(let distribution):
+            return "justify-content: \(distribution.rawValue);"
         case .flexWrap:
             return "flex-wrap: wrap;"
         case .flexGap(let gap):
@@ -220,6 +223,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.foregroundVariable, .foregroundVariable):
             return true
         case (.width, .width):
+            return true
+        case (.minHeight, .minHeight):
             return true
         case (.maxWidth, .maxWidth):
             return true
@@ -275,9 +280,9 @@ public enum Style: CustomStringConvertible, Equatable {
             return true
         case (.flexDirection, .flexDirection):
             return true
-        case (.flexAlignAlongAxis, .flexAlignAlongAxis):
+        case (.flexAlignOnCrossAxis, .flexAlignOnCrossAxis):
             return true
-        case (.flexDistributeOnCrossAxis, .flexDistributeOnCrossAxis):
+        case (.flexDistributeAlongAxis, .flexDistributeAlongAxis):
             return true
         case (.flexWrap, .flexWrap):
             return true

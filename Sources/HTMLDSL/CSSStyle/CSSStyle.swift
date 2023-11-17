@@ -78,7 +78,7 @@ public extension CSSStyle {
         )
     }
 
-    func size(width: AutoDimension? = nil, height: AutoDimension? = nil, maxWidth: AutoDimension? = nil) -> Self {
+    func size(width: AutoDimension? = nil, height: AutoDimension? = nil, minHeight: AutoDimension? = nil, maxWidth: AutoDimension? = nil) -> Self {
         var body = self
 
         if let width = width {
@@ -87,6 +87,10 @@ public extension CSSStyle {
 
         if let height = height {
             body = modified(body: body, oldStyle: .height(.auto), with: .height(height))
+        }
+        
+        if let minHeight = minHeight {
+            body = modified(body: body, oldStyle: .minHeight(.auto), with: .minHeight(minHeight))
         }
 
         if let maxWidth = maxWidth {
@@ -147,8 +151,8 @@ public extension CSSStyle {
         self
             .display(.flex)
             .flexDirection(.vertical)
-            .flexAlign(.center)
-            .flexDistribute(.flexStart)
+            .flexAlign(.leading)
+            .flexDistribute(.center)
     }
 
     func padding(left: AutoInheritDimension = .pixel(0),
@@ -346,18 +350,18 @@ public extension CSSStyle {
                         with: .flexDirection(direction))
     }
 
-    /// Along the Axis
+    /// Perpendicular to the Axis
     func flexAlign(_ alignment: StackViewAlignment) -> Self {
         return modified(body: self,
-                        oldStyle: .flexAlignAlongAxis(.stretch),
-                        with: .flexAlignAlongAxis(alignment))
+                        oldStyle: .flexAlignOnCrossAxis(.leading),
+                        with: .flexAlignOnCrossAxis(alignment))
     }
 
-    /// Perpendicular the Axis
+    /// Along the Axis
     func flexDistribute(_ distribution: StackViewDistribution) -> Self {
         return modified(body: self,
-                        oldStyle: .flexDistributeOnCrossAxis(.flexStart),
-                        with: .flexDistributeOnCrossAxis(distribution))
+                        oldStyle: .flexDistributeAlongAxis(.center),
+                        with: .flexDistributeAlongAxis(distribution))
     }
     
     func flexWrap() -> Self {
