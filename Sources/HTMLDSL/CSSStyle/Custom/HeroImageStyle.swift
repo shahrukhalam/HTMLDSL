@@ -37,7 +37,7 @@ struct CenteredTextStyle: CSSStyle {
         let centeredTextStyle = ClassStyle(forClass: .centeredText)
             .align(.center)
             .position(.absolute)
-            .constraint(left: .percentage(50), top: .pixel(topInPixel))
+            .constraint(left: .percentage(50), top: .pixel(Float(topInPixel)))
             .transform(.translate(X: .percentage(-50), Y: .percentage(0)))
 
         self.element = centeredTextStyle.element
