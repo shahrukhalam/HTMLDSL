@@ -1,12 +1,11 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 5.9
 
 import PackageDescription
 
 let package = Package(
     name: "HTMLDSL",
     platforms: [
-        .iOS(.v15),
-        .macOS(.v12)
+        .macOS(.v13)
     ],
     products: [
         .library(name: "HTMLDSL", targets: ["HTMLDSL"])

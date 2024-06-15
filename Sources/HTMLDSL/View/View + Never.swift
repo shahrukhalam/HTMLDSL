@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Never: View {
+extension Never: HTMLBodyContentView {
     public typealias Body = Never
     public var tag: Tag { fatalError("It's a Never: Doesn't have a real Tag") }
 }

@@ -16,12 +16,13 @@ extension String {
         case highlight = "mark"
         case small = "small"
         case delete = "del"
+        case underline = "u"
         case insert = "ins"
         case `subscript` = "sub"
         case superscript = "sup"
     }
 
-    var bold: Self {
+    public var bold: Self {
         "<\(Tag.bold.rawValue)>\(self)</\(Tag.bold.rawValue)>"
     }
 
@@ -29,7 +30,7 @@ extension String {
         "<\(Tag.markImportant.rawValue)>\(self)</\(Tag.markImportant.rawValue)>"
     }
 
-    var italic: Self {
+    public var italic: Self {
         "<\(Tag.italic.rawValue)>\(self)</\(Tag.italic.rawValue)>"
     }
 
@@ -45,8 +46,12 @@ extension String {
         "<\(Tag.small.rawValue)>\(self)</\(Tag.small.rawValue)>"
     }
 
-    var delete: Self {
+    public var delete: Self {
         "<\(Tag.delete.rawValue)>\(self)</\(Tag.delete.rawValue)>"
+    }
+
+    public var underline: Self {
+        "<\(Tag.underline.rawValue)>\(self)</\(Tag.underline.rawValue)>"
     }
 
     var insert: Self {
