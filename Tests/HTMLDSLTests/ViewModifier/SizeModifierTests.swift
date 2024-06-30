@@ -15,7 +15,7 @@ class SizeModifierTests: XCTestCase {
 
         let expectation =
         """
-            <img src="Images/nora.jpg" alt="Nora Fatehi">
+        <img src="Images/nora.jpg" alt="Nora Fatehi">
         """
 
         XCTAssertEqual(image.element, expectation)
@@ -27,7 +27,7 @@ class SizeModifierTests: XCTestCase {
 
         let expectation =
         """
-            <img src="Images/nora.jpg" alt="Nora Fatehi" style="width: 100%;">
+        <img src="Images/nora.jpg" alt="Nora Fatehi" style="width: 100%;">
         """
 
         XCTAssertEqual(image.element, expectation)
@@ -39,7 +39,7 @@ class SizeModifierTests: XCTestCase {
 
         let expectation =
         """
-            <img src="Images/nora.jpg" alt="Nora Fatehi" style="height: 100%;">
+        <img src="Images/nora.jpg" alt="Nora Fatehi" style="height: 100%;">
         """
 
         XCTAssertEqual(image.element, expectation)
@@ -51,7 +51,7 @@ class SizeModifierTests: XCTestCase {
 
         let expectation =
         """
-            <img src="Images/nora.jpg" alt="Nora Fatehi" style="width: 100px;height: auto;">
+        <img src="Images/nora.jpg" alt="Nora Fatehi" style="width: 100.0px;height: auto;">
         """
 
         XCTAssertEqual(image.element, expectation)

@@ -19,8 +19,9 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-            <style>
-            </style>
+        <style>
+
+        </style>
         </head>
         """
 
@@ -37,8 +38,9 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-            <style>
-            </style>
+        <style>
+
+        </style>
         </head>
         """
 
@@ -55,10 +57,11 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-            <style>
-            body {
-            }
-            </style>
+        <style>
+        body {
+
+        }
+        </style>
         </head>
         """
 
@@ -76,11 +79,11 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-            <style>
-            body {
-            background-color: Yellow;
-            }
-            </style>
+        <style>
+        body {
+        background-color: Yellow;
+        }
+        </style>
         </head>
         """
 
@@ -100,14 +103,14 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-            <style>
-            body {
-            background-color: Yellow;
-            }
-            h1 {
-            background-color: Red;
-            }
-            </style>
+        <style>
+        body {
+        background-color: Yellow;
+        }
+        h1 {
+        background-color: Red;
+        }
+        </style>
         </head>
         """
 
@@ -127,14 +130,14 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-            <style>
-            body {
-            background-color: Yellow;
-            }
-            .flex-container {
-            background-color: Red;
-            }
-            </style>
+        <style>
+        body {
+        background-color: Yellow;
+        }
+        .flex-container {
+        background-color: Red;
+        }
+        </style>
         </head>
         """
 
@@ -153,12 +156,12 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-            <style>
-            body {
-            background-color: Yellow;
-            margin: 15px 15px 15px 15px;
-            }
-            </style>
+        <style>
+        body {
+        background-color: Yellow;
+        margin: 15.0px 15.0px 15.0px 15.0px;
+        }
+        </style>
         </head>
         """
 
@@ -178,14 +181,14 @@ class CSSStyleTests: XCTestCase {
         let expectation =
         """
         <head>
-            <style>
-            .flex-container {
-            background-color: Yellow;
-            margin: 15px 15px 15px 15px;
-            width: 15px;
-            height: 15px;
-            }
-            </style>
+        <style>
+        .flex-container {
+        background-color: Yellow;
+        margin: 15.0px 15.0px 15.0px 15.0px;
+        width: 15.0px;
+        height: 15.0px;
+        }
+        </style>
         </head>
         """
 
@@ -199,18 +202,18 @@ class CSSStyleTests: XCTestCase {
             """
         .indexNav {
         position: fixed;
-        left: 0px;
-        top: 0px;
-        right: 0px;
+        left: 0.0px;
+        top: 0.0px;
+        right: 0.0px;
         bottom: auto;
-        background-color: rgba(240, 240, 240, 0.8);
+        background-color: rgba(240.0, 240.0, 240.0, 0.8);
         text-align: center;
         -webkit-backdrop-filter: saturate(180%) blur(20px);
         backdrop-filter: saturate(180%) blur(20px);
         z-index: 1;
         }
         .indexNav a {
-        padding: 16px 16px 16px 16px;
+        padding: 16.0px 16.0px 16.0px 16.0px;
         display: inline-block;
         text-decoration: none;
         }
@@ -218,7 +221,7 @@ class CSSStyleTests: XCTestCase {
         color: Black;
         }
         .inactiveLink {
-        color: rgba(60, 60, 60, 1.0);
+        color: rgba(60.0, 60.0, 60.0, 1.0);
         }
         link:hover {
         color: Black;
@@ -234,8 +237,8 @@ class CSSStyleTests: XCTestCase {
         let expectation =
             """
         .heroImage {
-        background-color: rgba(250, 250, 250, 1.0);
-        height: 745px;
+        background-color: rgba(250.0, 250.0, 250.0, 1.0);
+        height: 745.0px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -254,8 +257,8 @@ class CSSStyleTests: XCTestCase {
         .centeredText {
         text-align: center;
         position: absolute;
-        left: 50%;
-        top: 50px;
+        left: 50.0%;
+        top: 50.0px;
         right: auto;
         bottom: auto;
         transform: translate(-50%, 0%);
@@ -301,11 +304,11 @@ class CSSStyleTests: XCTestCase {
         let expectation =
             """
         .gridContainer {
-        padding: 12px 12px 12px 12px;
+        padding: 12.0px 12.0px 12.0px 12.0px;
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-column-gap: 12px;
-        background-color: rgba(250, 250, 250, 1.0);
+        background-color: rgba(250.0, 250.0, 250.0, 1.0);
         }
         """
 
@@ -318,8 +321,8 @@ class CSSStyleTests: XCTestCase {
         let expectation =
             """
         .gridImage {
-        background-color: rgba(250, 250, 250, 1.0);
-        height: 720px;
+        background-color: rgba(250.0, 250.0, 250.0, 1.0);
+        height: 720.0px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

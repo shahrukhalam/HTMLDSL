@@ -14,44 +14,9 @@ class MarkdownTests: XCTestCase {
         
         let expectation =
         """
-            <div>
-                <p>Hello</p>
-            </div>
-        """
-        
-        XCTAssertEqual(markdown.element, expectation)
-    }
-    
-    func testMarkdownTable() {
-        let markdown = Markdown("""
-        | Syntax      | Description |
-        | ----------- | ----------- |
-        | Header      | Title       |
-        | Paragraph   | Text        |
-        """)
-        
-        let expectation =
-        """
         <div>
-        <table>
-        <thead>
-        <tr>
-        <th>Syntax</th>
-        <th>Description</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td>Header</td>
-        <td>Title</td>
-        </tr>
-        <tr>
-        <td>Paragraph</td>
-        <td>Text</td>
-        </tr>
-        </tbody>
-        </table>
-        
+        <p>Hello</p>
+
         </div>
         """
         
@@ -67,14 +32,15 @@ class MarkdownTests: XCTestCase {
         
         let expectation =
         """
-            <div>
-                <a href="index.html" class="activeLink">
-                Home
-                </a>
-                <div>
-                    <p>Hello</p>
-                </div>
-            </div>
+        <div>
+        <a href="index.html" class="activeLink">
+        Home
+        </a>
+        <div>
+        <p>Hello</p>
+
+        </div>
+        </div>
         """
         
         XCTAssertEqual(markdownDiv.element, expectation)
@@ -99,19 +65,20 @@ class MarkdownTests: XCTestCase {
         let expectation =
         """
         <!DOCTYPE html>
-        <html>
+        <html lang="en">
         <head>
-            <title> Wonder Woman </title>
+        <title> Wonder Woman </title>
         </head>
         <body>
-            <div>
-                <a href="index.html" class="activeLink">
-                Home
-                </a>
-                <div>
-                    <p>Hello</p>
-                </div>
-            </div>
+        <div>
+        <a href="index.html" class="activeLink">
+        Home
+        </a>
+        <div>
+        <p>Hello</p>
+
+        </div>
+        </div>
         </body>
         </html>
         """

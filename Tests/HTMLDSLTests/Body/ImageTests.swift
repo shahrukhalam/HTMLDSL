@@ -26,13 +26,13 @@ class ImageTests: XCTestCase {
         let expectation =
         """
         <!DOCTYPE html>
-        <html>
+        <html lang="en">
         <head>
-            <title> My Website </title>
+        <title> My Website </title>
         </head>
         <body>
-            <h1> Nora Fatehi </h1>
-            <img src="Images/nora.jpg" alt="Nora Fatehi">
+        <h1> Nora Fatehi </h1>
+        <img src="Images/nora.jpg" alt="Nora Fatehi">
         </body>
         </html>
         """

@@ -15,7 +15,7 @@ class MarginModifierTests: XCTestCase {
 
         let expectation =
         """
-            <h1 style="margin: 10px 10px 10px 10px;"> Nora Fatehi </h1>
+        <h1 style="margin: 10.0px 10.0px 10.0px 10.0px;"> Nora Fatehi </h1>
         """
 
         XCTAssertEqual(headings.element, expectation)

@@ -25,14 +25,14 @@ class ParagraphTests: XCTestCase {
         let expectation =
         """
         <!DOCTYPE html>
-        <html>
+        <html lang="en">
         <head>
-            <title> My Website </title>
+        <title> My Website </title>
         </head>
         <body>
-            <p>
-            Nora Fatehi
-            </p>
+        <p>
+        Nora Fatehi
+        </p>
         </body>
         </html>
         """

@@ -53,36 +53,37 @@ class MarkdownIndexTests: XCTestCase {
         let expectation =
             """
         <!DOCTYPE html>
-        <html>
+        <html lang="en">
         <head>
-            <title> Wonder Woman </title>
-            <meta charset="UTF-8">
-            <meta name="author" content="Shahrukh Alam">
-            <link rel="stylesheet" href="CSS/Common/nav.css">
-            <style>
-            body {
-            margin: 0px 0px 0px 0px;
-            font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
-            }
-            </style>
+        <title> Wonder Woman </title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Shahrukh Alam">
+        <link rel="stylesheet" href="CSS/Common/nav.css">
+        <style>
+        body {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
+        }
+        </style>
         </head>
         <body>
-            <div class="indexNav">
-                <a href="index.html" class="activeLink">
-                Home
-                </a>
-                <a href="about.html" class="inactiveLink">
-                About
-                </a>
-            </div>
-            <div>
-                <h1>HTMLDSL</h1>
-                <h2>What is a DSL:</h2>
-                <p>It stands for Domain Specific Language.</p>
-                <p>Purpose: DSL solves a particular problem for everyone even for the ones with very little knowledge on a particular domain.</p>
-                <p>If you are an Apple Developer, then you would probably know about <code>Podfile</code> which is a DSL written in Ruby.</p>
-                <p>Here we are trying to build one for HTML in Pure Swift which we all love.</p>
-            </div>
+        <div class="indexNav">
+        <a href="index.html" class="activeLink">
+        Home
+        </a>
+        <a href="about.html" class="inactiveLink">
+        About
+        </a>
+        </div>
+        <div>
+        <h1>HTMLDSL</h1>
+        <h2>What is a DSL:</h2>
+        <p>It stands for Domain Specific Language.</p>
+        <p>Purpose: DSL solves a particular problem for everyone even for the ones with very little knowledge on a particular domain.</p>
+        <p>If you are an Apple Developer, then you would probably know about <code>Podfile</code> which is a DSL written in Ruby.</p>
+        <p>Here we are trying to build one for HTML in Pure Swift which we all love.</p>
+
+        </div>
         </body>
         </html>
         """

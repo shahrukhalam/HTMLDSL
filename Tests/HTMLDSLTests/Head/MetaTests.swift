@@ -25,12 +25,12 @@ class MetaTests: XCTestCase {
         let expectation =
         """
         <!DOCTYPE html>
-        <html>
+        <html lang="en">
         <head>
-            <meta charset="UTF-8">
+        <meta charset="UTF-8">
         </head>
         <body>
-            <h1> My Heading </h1>
+        <h1> My Heading </h1>
         </body>
         </html>
         """
@@ -54,12 +54,12 @@ class MetaTests: XCTestCase {
         let expectation =
         """
         <!DOCTYPE html>
-        <html>
+        <html lang="en">
         <head>
-            <meta name="author" content="John Doe">
+        <meta name="author" content="John Doe">
         </head>
         <body>
-            <h1> My Heading </h1>
+        <h1> My Heading </h1>
         </body>
         </html>
         """
@@ -83,12 +83,12 @@ class MetaTests: XCTestCase {
         let expectation =
         """
         <!DOCTYPE html>
-        <html>
+        <html lang="en">
         <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
         <body>
-            <h1> My Heading </h1>
+        <h1> My Heading </h1>
         </body>
         </html>
         """
@@ -114,14 +114,14 @@ class MetaTests: XCTestCase {
         let expectation =
         """
         <!DOCTYPE html>
-        <html>
+        <html lang="en">
         <head>
-            <meta charset="UTF-8">
-            <meta name="author" content="John Doe">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
         <body>
-            <h1> My Heading </h1>
+        <h1> My Heading </h1>
         </body>
         </html>
         """

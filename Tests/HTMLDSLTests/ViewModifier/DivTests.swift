@@ -16,9 +16,9 @@ class DivTests: XCTestCase {
 
         let expectation =
         """
-            <div>
-                <h1> Nora Fatehi </h1>
-            </div>
+        <div>
+        <h1> Nora Fatehi </h1>
+        </div>
         """
 
         XCTAssertEqual(div.element, expectation)
