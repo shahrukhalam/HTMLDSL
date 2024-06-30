@@ -16,3 +16,8 @@ public protocol View {
     var attributes: [Attribute] { get set }
     var element: String { get }
 }
+
+public extension View {
+    var newLine: NewLine { .one }
+    var tag: Tag { .empty }
+}
