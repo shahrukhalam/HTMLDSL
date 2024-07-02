@@ -32,5 +32,6 @@ extension View {
         }
 
         return element
+            .trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }

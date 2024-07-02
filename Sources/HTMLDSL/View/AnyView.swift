@@ -15,9 +15,13 @@ public struct AnyView: HTMLHeadContentView, HTMLBodyContentView, HTMLBodyImageCo
 
     public init<Content>(_ content: Content) where Content: HTMLContentView {
         self.element = content.element
+            .trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
     public init<Content>(_ content: [Content]) where Content: HTMLContentView {
-        self.element = content.map { $0.element }.joined(separator: "\n")
+        self.element = content
+            .map { $0.element }
+            .joined(separator: "\n")
+            .trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
