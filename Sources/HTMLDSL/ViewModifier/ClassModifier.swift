@@ -11,7 +11,7 @@ public enum CSSTag: String {
     case hover = "hover"
 }
 
-public struct CSSClass: ExpressibleByStringLiteral, Equatable {
+public struct CSSClass: ExpressibleByStringInterpolation, Equatable {
     let value: String
 
     public init(stringLiteral value: String) {
