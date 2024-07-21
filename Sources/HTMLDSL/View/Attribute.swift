@@ -24,6 +24,9 @@ public enum Attribute: CustomStringConvertible, Equatable {
     // Script
     case source(String)
 
+    // Custom
+    case custom(key: String, value: String)
+
     public var description: String {
         switch self {
         case .language(let language):
@@ -45,6 +48,8 @@ public enum Attribute: CustomStringConvertible, Equatable {
             return "aria-label=\"\(text)\""
         case .source(let url):
             return "src=\"\(url)\""
+        case let .custom(key, value):
+            return "\(key)=\"\(value)\""
         }
     }
 
@@ -66,6 +71,8 @@ public enum Attribute: CustomStringConvertible, Equatable {
             return true
         case (.source, .source):
             return true
+        case (.custom(let keyLHS, _), .custom(let keyRHS, _)):
+            return keyLHS == keyRHS
         default:
             return false
         }
