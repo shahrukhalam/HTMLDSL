@@ -1,4 +1,4 @@
-public struct EmbeddedVideo: HTMLBodyContentView {
+public struct Embed: HTMLBodyContentView {
     public let body: String = .empty
     public let tag = Tag.enclosing(.iframe)
     public var attributes = [Attribute]()
