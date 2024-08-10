@@ -34,13 +34,13 @@ public enum EnclosingTag: CustomStringConvertible {
     case style
 
     // Body Content Tags
+    case blockquote
     case headings(HeadingTag)
     case paragraph
     case link
     case div
     case iframe
     case script
-    case blockquote
     case unorderedList
     case orderedList
     case list
