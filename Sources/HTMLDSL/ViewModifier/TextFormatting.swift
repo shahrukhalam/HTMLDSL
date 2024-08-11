@@ -12,6 +12,7 @@ extension String {
         case bold = "b"
         case markImportant = "strong"
         case italic = "i"
+        case code
         case emphasize = "em"
         case highlight = "mark"
         case small = "small"
@@ -32,6 +33,10 @@ extension String {
 
     public var italic: Self {
         "<\(Tag.italic.rawValue)>\(self)</\(Tag.italic.rawValue)>"
+    }
+
+    public var code: Self {
+        "<\(Tag.code.rawValue)>\(self)</\(Tag.code.rawValue)>"
     }
 
     var emphasize: Self {
