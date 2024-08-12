@@ -34,8 +34,10 @@ public protocol HTMLBodyTextContentView: HTMLBodyContentView {
     var text: String { get }
 }
 /// Images in `Body`
+/// eg: Image
 public protocol HTMLBodyImageContentView: HTMLBodyContentView {  }
 /// Links in `Body`
+/// eg: Link
 public protocol HTMLBodyLinkContentView: HTMLBodyContentView {
     var url: String { get }
 }
