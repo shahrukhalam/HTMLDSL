@@ -43,7 +43,7 @@ public enum EnclosingTag: CustomStringConvertible {
     case script
     case unorderedList
     case orderedList
-    case list
+    case listItem
     case pre
     case code
     case video
@@ -82,7 +82,7 @@ public enum EnclosingTag: CustomStringConvertible {
             return "ul"
         case .orderedList:
             return "ol"
-        case .list:
+        case .listItem:
             return "li"
         case .pre:
             return "pre"

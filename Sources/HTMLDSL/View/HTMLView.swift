@@ -41,3 +41,9 @@ public protocol HTMLBodyImageContentView: HTMLBodyContentView {  }
 public protocol HTMLBodyLinkContentView: HTMLBodyContentView {
     var url: String { get }
 }
+/// List in `Body`
+/// eg: OrderedList, UnorderedList
+public protocol HTMLBodyListView: HTMLBodyContentView {  }
+/// Item of List in `Body`
+/// eg: ListItem
+public protocol HTMLBodyListItemView: HTMLBodyContentView {  }

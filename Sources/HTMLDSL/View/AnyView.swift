@@ -25,3 +25,5 @@ public struct AnyView: HTMLHeadContentView, HTMLBodyContentView, HTMLBodyImageCo
             .trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
+
+extension AnyView: HTMLBodyListItemView {  }
