@@ -4,6 +4,11 @@ public struct Embed: HTMLBodyContentView {
     public var attributes = [Attribute]()
 
     public init(_ source: String) {
-        self.attributes += [.source(source), .custom(key: "frameborder", value: "0")]
+        self.attributes += [
+            .source(source),
+            .key("allow", value: "autoplay; fullscreen; encrypted-media; picture-in-picture"),
+            .value("allowfullscreen"),
+            .key("frameborder", value: "0")
+        ]
     }
 }
