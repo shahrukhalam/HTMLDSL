@@ -17,7 +17,7 @@ class DivTests: XCTestCase {
         let expectation =
         """
         <div>
-        <h1> Nora Fatehi </h1>
+        <h1>Nora Fatehi</h1>
         </div>
         """
 

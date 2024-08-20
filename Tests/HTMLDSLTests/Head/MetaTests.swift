@@ -30,7 +30,7 @@ class MetaTests: XCTestCase {
         <meta charset="UTF-8">
         </head>
         <body>
-        <h1> My Heading </h1>
+        <h1>My Heading</h1>
         </body>
         </html>
         """
@@ -59,7 +59,7 @@ class MetaTests: XCTestCase {
         <meta name="author" content="John Doe">
         </head>
         <body>
-        <h1> My Heading </h1>
+        <h1>My Heading</h1>
         </body>
         </html>
         """
@@ -88,7 +88,7 @@ class MetaTests: XCTestCase {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
         <body>
-        <h1> My Heading </h1>
+        <h1>My Heading</h1>
         </body>
         </html>
         """
@@ -121,7 +121,7 @@ class MetaTests: XCTestCase {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
         <body>
-        <h1> My Heading </h1>
+        <h1>My Heading</h1>
         </body>
         </html>
         """

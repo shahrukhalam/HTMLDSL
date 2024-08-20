@@ -15,7 +15,7 @@ class ModifiedContentTests: XCTestCase {
 
         let expectation =
         """
-        <h1 id="Nora"> Nora Fatehi </h1>
+        <h1 id="Nora">Nora Fatehi</h1>
         """
 
         XCTAssertEqual(headings.element, expectation)
@@ -27,7 +27,7 @@ class ModifiedContentTests: XCTestCase {
 
         let expectation =
         """
-        <h1> Nora Fatehi </h1>
+        <h1>Nora Fatehi</h1>
         """
 
         XCTAssertEqual(headings.element, expectation)
@@ -39,7 +39,7 @@ class ModifiedContentTests: XCTestCase {
 
         let expectation =
         """
-        <h1 class="flex-container"> Nora Fatehi </h1>
+        <h1 class="flex-container">Nora Fatehi</h1>
         """
 
         XCTAssertEqual(headings.element, expectation)
@@ -100,7 +100,7 @@ class ModifiedContentTests: XCTestCase {
 
         let expectation =
         """
-        <h1 style="background-color: Green;color: Blue;"> Nora Fatehi </h1>
+        <h1 style="background-color: Green;color: Blue;">Nora Fatehi</h1>
         """
 
         XCTAssertEqual(headings.element, expectation)
@@ -113,9 +113,7 @@ class ModifiedContentTests: XCTestCase {
 
         let expectation =
         """
-        <p style="background-color: Green;color: Blue;">
-        Nora Fatehi
-        </p>
+        <p style="background-color: Green;color: Blue;">Nora Fatehi</p>
         """
 
         XCTAssertEqual(headings.element, expectation)
@@ -129,9 +127,7 @@ class ModifiedContentTests: XCTestCase {
 
         let expectation =
         """
-        <p style="background-color: Green;color: Blue;" id="Nora">
-        Nora Fatehi
-        </p>
+        <p style="background-color: Green;color: Blue;" id="Nora">Nora Fatehi</p>
         """
 
         XCTAssertEqual(headings.element, expectation)
@@ -145,9 +141,7 @@ class ModifiedContentTests: XCTestCase {
 
         let expectation =
         """
-        <p style="background-color: Green;color: Blue;" class="flex-container">
-        Nora Fatehi
-        </p>
+        <p style="background-color: Green;color: Blue;" class="flex-container">Nora Fatehi</p>
         """
 
         XCTAssertEqual(headings.element, expectation)
@@ -162,9 +156,7 @@ class ModifiedContentTests: XCTestCase {
 
         let expectation =
         """
-        <p style="background-color: Green;color: Blue;" id="Nora" class="flex-container">
-        Nora Fatehi
-        </p>
+        <p style="background-color: Green;color: Blue;" id="Nora" class="flex-container">Nora Fatehi</p>
         """
 
         XCTAssertEqual(headings.element, expectation)

@@ -61,6 +61,7 @@ public struct StyleBuilder {
 public struct HeadStyle: HTMLHeadContentView {
     public let body: String
 
+    public let newLine: NewLine = .one
     public let tag = Tag.enclosing(.style)
 
     public var attributes: [Attribute] = []

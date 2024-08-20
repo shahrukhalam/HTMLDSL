@@ -10,6 +10,7 @@ import Foundation
 public struct Document<Content>: View where Content: HTMLView {
     public var body: Content
 
+    public let newLine: NewLine = .one
     public let tag = Tag.selfClosing(.document)
     public var attributes = [Attribute]()
 

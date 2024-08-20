@@ -20,6 +20,6 @@ public struct Title: HTMLHeadTextContentView {
 
 public extension HTMLHeadTextContentView {
     var element: String {
-        return "<\(tag.description)> \(text) </\(tag.description)>"
+        return "<\(tag.description)>\(text)</\(tag.description)>"
     }
 }

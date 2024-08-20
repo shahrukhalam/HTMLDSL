@@ -22,11 +22,11 @@ class ListTests: XCTestCase {
         <!DOCTYPE html>
         <html lang="en">
         <head>
-        <title> My Website </title>
+        <title>My Website</title>
         </head>
         <body>
         <ul>
-        <li> First Item </li>
+        <li>First Item</li>
         </ul>
         </body>
         </html>
@@ -56,12 +56,12 @@ class ListTests: XCTestCase {
         <!DOCTYPE html>
         <html lang="en">
         <head>
-        <title> My Website </title>
+        <title>My Website</title>
         </head>
         <body>
         <ul>
-        <li> First Item </li>
-        <li> Second Item </li>
+        <li>First Item</li>
+        <li>Second Item</li>
         </ul>
         </body>
         </html>
@@ -92,12 +92,12 @@ class ListTests: XCTestCase {
         <!DOCTYPE html>
         <html lang="en">
         <head>
-        <title> My Website </title>
+        <title>My Website</title>
         </head>
         <body>
         <ul>
-        <li> First Item </li>
-        <li> Second Item </li>
+        <li>First Item</li>
+        <li>Second Item</li>
         </ul>
         </body>
         </html>
@@ -126,11 +126,11 @@ class ListTests: XCTestCase {
         <!DOCTYPE html>
         <html lang="en">
         <head>
-        <title> My Website </title>
+        <title>My Website</title>
         </head>
         <body>
         <ol>
-        <li> First Item </li>
+        <li>First Item</li>
         </ol>
         </body>
         </html>
@@ -160,12 +160,12 @@ class ListTests: XCTestCase {
         <!DOCTYPE html>
         <html lang="en">
         <head>
-        <title> My Website </title>
+        <title>My Website</title>
         </head>
         <body>
         <ol>
-        <li> First Item </li>
-        <li> Second Item </li>
+        <li>First Item</li>
+        <li>Second Item</li>
         </ol>
         </body>
         </html>
@@ -196,12 +196,12 @@ class ListTests: XCTestCase {
         <!DOCTYPE html>
         <html lang="en">
         <head>
-        <title> My Website </title>
+        <title>My Website</title>
         </head>
         <body>
         <ol>
-        <li> First Item </li>
-        <li> Second Item </li>
+        <li>First Item</li>
+        <li>Second Item</li>
         </ol>
         </body>
         </html>

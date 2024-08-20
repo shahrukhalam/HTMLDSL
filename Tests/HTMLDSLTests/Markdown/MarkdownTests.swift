@@ -16,7 +16,6 @@ class MarkdownTests: XCTestCase {
         """
         <div>
         <p>Hello</p>
-
         </div>
         """
         
@@ -33,12 +32,9 @@ class MarkdownTests: XCTestCase {
         let expectation =
         """
         <div>
-        <a href="index.html" class="activeLink">
-        Home
-        </a>
+        <a href="index.html" class="activeLink">Home</a>
         <div>
         <p>Hello</p>
-
         </div>
         </div>
         """
@@ -67,16 +63,13 @@ class MarkdownTests: XCTestCase {
         <!DOCTYPE html>
         <html lang="en">
         <head>
-        <title> Wonder Woman </title>
+        <title>Wonder Woman</title>
         </head>
         <body>
         <div>
-        <a href="index.html" class="activeLink">
-        Home
-        </a>
+        <a href="index.html" class="activeLink">Home</a>
         <div>
         <p>Hello</p>
-
         </div>
         </div>
         </body>

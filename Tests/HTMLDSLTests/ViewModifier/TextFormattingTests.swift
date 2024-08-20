@@ -14,9 +14,7 @@ class TextFormattingTests: XCTestCase {
 
         let expectation =
         """
-        <p>
-        <b>Nora Fatehi</b>
-        </p>
+        <p><b>Nora Fatehi</b></p>
         """
 
         XCTAssertEqual(paragraphs.element, expectation)
@@ -27,9 +25,7 @@ class TextFormattingTests: XCTestCase {
 
         let expectation =
         """
-        <p>
-        Nora <i>Fatehi</i>
-        </p>
+        <p>Nora <i>Fatehi</i></p>
         """
 
         XCTAssertEqual(paragraphs.element, expectation)

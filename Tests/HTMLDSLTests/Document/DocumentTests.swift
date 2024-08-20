@@ -27,10 +27,10 @@ class DocumentTests: XCTestCase {
         <!DOCTYPE html>
         <html lang="en">
         <head>
-        <title> My Website </title>
+        <title>My Website</title>
         </head>
         <body>
-        <h1> My Heading </h1>
+        <h1>My Heading</h1>
         </body>
         </html>
         """
@@ -61,13 +61,13 @@ class DocumentTests: XCTestCase {
         <!DOCTYPE html>
         <html lang="en">
         <head>
-        <title> My Website </title>
+        <title>My Website</title>
         </head>
         <body>
         <div>
-        <h1> My Heading1 </h1>
+        <h1>My Heading1</h1>
         <div>
-        <h1> My Heading2 </h1>
+        <h1>My Heading2</h1>
         </div>
         </div>
         </body>

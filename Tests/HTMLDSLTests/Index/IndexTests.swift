@@ -52,7 +52,7 @@ class IndexTests: XCTestCase {
         <!DOCTYPE html>
         <html lang="en">
         <head>
-        <title> Wonder Woman </title>
+        <title>Wonder Woman</title>
         <meta charset="UTF-8">
         <meta name="author" content="Shahrukh Alam">
         <link rel="stylesheet" href="CSS/Common/nav.css">
@@ -67,30 +67,26 @@ class IndexTests: XCTestCase {
         </head>
         <body>
         <div class="indexNav">
-        <a href="index.html" class="activeLink">
-        Home
-        </a>
-        <a href="about.html" class="inactiveLink">
-        About
-        </a>
+        <a href="index.html" class="activeLink">Home</a>
+        <a href="about.html" class="inactiveLink">About</a>
         </div>
         <div class="heroImage" style="background-image: url(Images/wonder1.jpg);background-position: inherit;background-size: inherit;background-repeat: inherit;">
         <div class="centeredText">
-        <h1 class="heroHeading"> Gal Galot </h1>
-        <h2 class="heroSubHeading"> Diana Prince or Wonder Woman </h2>
+        <h1 class="heroHeading">Gal Galot</h1>
+        <h2 class="heroSubHeading">Diana Prince or Wonder Woman</h2>
         </div>
         </div>
         <div class="gridContainer">
         <div class="gridImage" style="background-image: url(Images/wonder2.jpg);background-position: inherit;background-size: inherit;background-repeat: inherit;">
         <div class="centeredText">
-        <h2 class="heroHeading"> Wonder Woman </h2>
-        <h3 class="gridSubHeading"> Amazons, Themyscira & Ares </h3>
+        <h2 class="heroHeading">Wonder Woman</h2>
+        <h3 class="gridSubHeading">Amazons, Themyscira & Ares</h3>
         </div>
         </div>
         <div class="gridImage" style="background-image: url(Images/wonder3.jpeg);background-position: inherit;background-size: inherit;background-repeat: inherit;">
         <div class="centeredText">
-        <h2 class="heroHeading"> Wonder Woman 1984 </h2>
-        <h3 class="gridSubHeading"> I wish to be You </h3>
+        <h2 class="heroHeading">Wonder Woman 1984</h2>
+        <h3 class="gridSubHeading">I wish to be You</h3>
         </div>
         </div>
         </div>

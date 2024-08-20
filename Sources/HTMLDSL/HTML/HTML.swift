@@ -10,6 +10,7 @@ import Foundation
 public struct HTML<Content>: HTMLView where Content: HTMLContentView {
     public var body: Content
 
+    public let newLine: NewLine = .one
     public let tag = Tag.enclosing(.html)
     public var attributes: [Attribute] = [.language("en")]
 

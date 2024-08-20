@@ -10,6 +10,7 @@ import Foundation
 public struct Div<Content>: HTMLBodyContentView where Content: HTMLBodyContentView {
     public var body: Content
 
+    public let newLine: NewLine = .one
     public let tag = Tag.enclosing(.div)
     public var attributes = [Attribute]()
 

@@ -10,6 +10,7 @@ import Foundation
 public struct Head<Content>: HTMLHeadView where Content: HTMLHeadContentView {
     public var body: Content
 
+    public let newLine: NewLine = .one
     public let tag = Tag.enclosing(.head)
     public var attributes = [Attribute]()
 

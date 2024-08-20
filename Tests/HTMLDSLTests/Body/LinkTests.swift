@@ -14,9 +14,7 @@ class LinkTests: XCTestCase {
 
         let expectation =
         """
-        <a href="https://www.google.com">
-        Google
-        </a>
+        <a href="https://www.google.com">Google</a>
         """
 
         XCTAssertEqual(link.element, expectation)
@@ -27,9 +25,7 @@ class LinkTests: XCTestCase {
 
         let expectation =
         """
-        <a href="https://www.google.com" target="_blank">
-        Google
-        </a>
+        <a href="https://www.google.com" target="_blank">Google</a>
         """
 
         XCTAssertEqual(link.element, expectation)
@@ -42,9 +38,7 @@ class LinkTests: XCTestCase {
 
         let expectation =
         """
-        <a href="https://www.google.com">
-        <img src="google.jpg" alt="Google">
-        </a>
+        <a href="https://www.google.com"><img src="google.jpg" alt="Google"></a>
         """
 
         XCTAssertEqual(link.element, expectation)
@@ -58,9 +52,7 @@ class LinkTests: XCTestCase {
 
         let expectation =
         """
-        <a href="https://www.google.com" target="_blank">
-        <img src="google.jpg" alt="Google">
-        </a>
+        <a href="https://www.google.com" target="_blank"><img src="google.jpg" alt="Google"></a>
         """
 
         XCTAssertEqual(link.element, expectation)
@@ -75,9 +67,7 @@ class LinkTests: XCTestCase {
 
         let expectation =
         """
-        <a href="https://www.google.com" target="_blank">
-        <img src="google.jpg" alt="Google" style="width: 42.0px;height: 42.0px;">
-        </a>
+        <a href="https://www.google.com" target="_blank"><img src="google.jpg" alt="Google" style="width: 42.0px;height: 42.0px;"></a>
         """
 
         XCTAssertEqual(link.element, expectation)

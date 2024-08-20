@@ -3,6 +3,7 @@ struct List<Content>: HTMLBodyListView where Content: HTMLBodyListItemView {
 
     let body: Content
 
+    public let newLine: NewLine = .one
     var tag: Tag {
         switch type {
         case .ordered:

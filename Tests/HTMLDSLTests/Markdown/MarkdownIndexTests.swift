@@ -55,7 +55,7 @@ class MarkdownIndexTests: XCTestCase {
         <!DOCTYPE html>
         <html lang="en">
         <head>
-        <title> Wonder Woman </title>
+        <title>Wonder Woman</title>
         <meta charset="UTF-8">
         <meta name="author" content="Shahrukh Alam">
         <link rel="stylesheet" href="CSS/Common/nav.css">
@@ -68,12 +68,8 @@ class MarkdownIndexTests: XCTestCase {
         </head>
         <body>
         <div class="indexNav">
-        <a href="index.html" class="activeLink">
-        Home
-        </a>
-        <a href="about.html" class="inactiveLink">
-        About
-        </a>
+        <a href="index.html" class="activeLink">Home</a>
+        <a href="about.html" class="inactiveLink">About</a>
         </div>
         <div>
         <h1>HTMLDSL</h1>
@@ -82,7 +78,6 @@ class MarkdownIndexTests: XCTestCase {
         <p>Purpose: DSL solves a particular problem for everyone even for the ones with very little knowledge on a particular domain.</p>
         <p>If you are an Apple Developer, then you would probably know about <code>Podfile</code> which is a DSL written in Ruby.</p>
         <p>Here we are trying to build one for HTML in Pure Swift which we all love.</p>
-
         </div>
         </body>
         </html>

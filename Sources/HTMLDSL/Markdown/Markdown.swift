@@ -10,6 +10,7 @@ import cmark
 
 public struct Markdown: HTMLBodyContentView {
     public var body: String
+    public let newLine: NewLine = .one
     public let tag: Tag = .enclosing(.div)
     public var attributes = [Attribute]()
     
