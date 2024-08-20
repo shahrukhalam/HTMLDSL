@@ -15,7 +15,6 @@ import Foundation
 ///
 public struct Image: HTMLBodyImageContentView {
     public var body: String
-    public let newLine: NewLine = .none
     public let tag = Tag.selfClosing(.image)
     public var attributes = [Attribute]()
 

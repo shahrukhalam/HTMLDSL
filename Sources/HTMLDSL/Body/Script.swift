@@ -9,7 +9,6 @@ import Foundation
 
 public struct Script: HTMLBodyContentView {
     public var body: String = ""
-    public let newLine: NewLine = .none
     public let tag = Tag.enclosing(.script)
     public var attributes = [Attribute]()
 

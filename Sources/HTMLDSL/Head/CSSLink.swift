@@ -10,7 +10,6 @@ import Foundation
 public struct CSSLink: HTMLHeadContentView {
     public let body: String
 
-    public let newLine: NewLine = .none
     public let tag = Tag.selfClosing(.link)
 
     public var attributes: [Attribute] = []

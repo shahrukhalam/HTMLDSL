@@ -8,8 +8,6 @@
 public struct Divider: HTMLBodyContentView {
     public var body: String
 
-    public let newLine: NewLine = .none
-
     public let tag: Tag = .selfClosing(.hr)
     public var attributes = [Attribute]()
 

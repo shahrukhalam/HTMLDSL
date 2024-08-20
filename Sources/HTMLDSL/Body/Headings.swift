@@ -19,8 +19,6 @@ public enum HeadingTag: String {
 public struct Headings: HTMLBodyTextContentView {
     public var body: String
 
-    public let newLine: NewLine = .none
-
     public let tag: Tag
     public var attributes = [Attribute]()
 

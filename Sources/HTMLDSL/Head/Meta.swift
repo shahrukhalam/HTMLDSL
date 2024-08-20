@@ -10,7 +10,6 @@ import Foundation
 public struct Meta: HTMLHeadContentView {
     public typealias Body = Never
 
-    public let newLine: NewLine = .none
     public let tag = Tag.selfClosing(.meta)
 
     private let attributes: [MetaAttributes]

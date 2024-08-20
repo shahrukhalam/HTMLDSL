@@ -18,6 +18,6 @@ public protocol View {
 }
 
 public extension View {
-    var newLine: NewLine { .one }
+    var newLine: NewLine { .none }
     var tag: Tag { .empty }
 }

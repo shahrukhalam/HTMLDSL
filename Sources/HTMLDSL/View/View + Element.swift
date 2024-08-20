@@ -17,7 +17,7 @@ extension View {
         switch tag {
         case .enclosing:
             let isEmptyNewLine = newLine == .none
-            let bodyElement: String = isEmptyNewLine ? (" " + body.element + " ") : (newLine.rawValue + body.element)
+            let bodyElement: String = isEmptyNewLine ? body.element : (newLine.rawValue + body.element)
 
             let lineSpace = newLine.rawValue
 
