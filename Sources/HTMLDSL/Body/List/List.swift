@@ -1,10 +1,10 @@
-struct List<Content>: HTMLBodyListView where Content: HTMLBodyListItemView {
-    let type: Types
+public struct List<Content>: HTMLBodyListView where Content: HTMLBodyListItemView {
+    private let type: Types
 
-    let body: Content
-
+    public let body: Content
     public let newLine: NewLine = .one
-    var tag: Tag {
+    
+    public var tag: Tag {
         switch type {
         case .ordered:
             return .enclosing(.orderedList)
@@ -13,14 +13,14 @@ struct List<Content>: HTMLBodyListView where Content: HTMLBodyListItemView {
         }
     }
 
-    var attributes = [Attribute]()
+    public var attributes = [Attribute]()
 
-    init(type: Types, @ViewBuilder content: () -> Content) {
+    public init(type: Types, @ViewBuilder content: () -> Content) {
         self.type = type
         self.body = content()
     }
 
-    enum Types {
+    public enum Types {
         case ordered
         case unordered
     }

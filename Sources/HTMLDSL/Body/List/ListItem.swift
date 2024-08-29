@@ -1,10 +1,10 @@
-struct ListItem: HTMLBodyListItemView {
-    let tag: Tag = .enclosing(.listItem)
-    let body: String
+public struct ListItem: HTMLBodyListItemView {
+    public let tag: Tag = .enclosing(.listItem)
+    public let body: String
 
-    var attributes = [Attribute]()
+    public var attributes = [Attribute]()
 
-    init(_ text: String) {
+    public init(_ text: String) {
         self.body = text
     }
 }
