@@ -1,4 +1,4 @@
-public struct Listt<Content>: HTMLBodyListView where Content: HTMLBodyListItemView {
+public struct List<Content>: HTMLBodyListView where Content: HTMLBodyListItemView {
     private let type: Types
 
     public let body: Content
