@@ -22,6 +22,7 @@ public enum Style: CustomStringConvertible, Equatable {
     case height(AutoDimension)
     case minHeight(AutoDimension)
     case maxWidth(AutoDimension)
+    case maxHeight(AutoDimension)
     case aspectRatio(Int, Int)
     case contentMode(HTMLDSL.ContentMode)
 
@@ -116,6 +117,8 @@ public enum Style: CustomStringConvertible, Equatable {
             return "min-height: \(dimension.description);"
         case .maxWidth(let dimension):
             return "max-width: \(dimension.description);"
+        case .maxHeight(let dimension):
+            return "max-height: \(dimension.description);"
         case .contentMode(let contentMode):
             return "object-fit: \(contentMode.rawValue);"
         case let .aspectRatio(width, height):
@@ -230,6 +233,8 @@ public enum Style: CustomStringConvertible, Equatable {
         case (.minHeight, .minHeight):
             return true
         case (.maxWidth, .maxWidth):
+            return true
+        case (.maxHeight, .maxHeight):
             return true
         case (.height, .height):
             return true

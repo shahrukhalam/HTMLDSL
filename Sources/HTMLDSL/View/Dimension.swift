@@ -13,6 +13,9 @@ public enum AutoDimension: CustomStringConvertible {
     case auto
     case number(Float)
     case fullViewPortHeight
+    case fullViewPortWidth
+    case percentageViewPortHeight(Int)
+    case percentageViewPortWidth(Int)
 
     public var description: String {
         switch self {
@@ -26,6 +29,12 @@ public enum AutoDimension: CustomStringConvertible {
             return "\(value)"
         case .fullViewPortHeight:
             return "100vh"
+        case .fullViewPortWidth:
+            return "100vw"
+        case .percentageViewPortHeight(let value):
+            return "\(value)vh"
+        case .percentageViewPortWidth(let value):
+            return "\(value)vw"
         }
     }
 }

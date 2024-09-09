@@ -78,7 +78,7 @@ public extension CSSStyle {
         )
     }
 
-    func size(width: AutoDimension? = nil, height: AutoDimension? = nil, minHeight: AutoDimension? = nil, maxWidth: AutoDimension? = nil) -> Self {
+    func size(width: AutoDimension? = nil, height: AutoDimension? = nil, minHeight: AutoDimension? = nil, maxWidth: AutoDimension? = nil, maxHeight: AutoDimension? = nil) -> Self {
         var body = self
 
         if let width = width {
@@ -95,6 +95,10 @@ public extension CSSStyle {
 
         if let maxWidth = maxWidth {
             body = modified(body: body, oldStyle: .maxWidth(.auto), with: .maxWidth(maxWidth))
+        }
+
+        if let maxHeight = maxHeight {
+            body = modified(body: body, oldStyle: .maxHeight(.auto), with: .maxHeight(maxHeight))
         }
 
         return body
