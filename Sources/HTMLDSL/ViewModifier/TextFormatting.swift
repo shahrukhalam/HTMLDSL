@@ -35,8 +35,8 @@ extension String {
         "<\(Tag.italic.rawValue)>\(self)</\(Tag.italic.rawValue)>"
     }
 
-    public var code: Self {
-        "<\(Tag.code.rawValue)>\(self)</\(Tag.code.rawValue)>"
+    public func code(cssClass: CSSClass) -> Self {
+        "<\(Tag.code.rawValue) class=\"\(cssClass.value)\">\(self)</\(Tag.code.rawValue)>"
     }
 
     var emphasize: Self {
