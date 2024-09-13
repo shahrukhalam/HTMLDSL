@@ -8,8 +8,10 @@
 import Foundation
 
 /// EmptyView: Acts as a Dummy View for Compiler, shouldn't be used
-struct EmptyView: HTMLContentView {
-    typealias Body = Never
-    let tag = Tag.empty
-    let element: String = ""
+public struct EmptyView: HTMLContentView {
+    public typealias Body = Never
+    public let tag = Tag.empty
+    public let element: String = ""
+
+    public init() {  }
 }
