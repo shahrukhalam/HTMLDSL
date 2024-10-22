@@ -9,6 +9,7 @@ import Foundation
 
 public enum CSSTag: String {
     case hover = "hover"
+    case first_child = "first-child"
 }
 
 public struct CSSClass: ExpressibleByStringInterpolation, Equatable {
