@@ -32,6 +32,8 @@ public enum FontSize: CustomStringConvertible {
 
 public enum FontWeight: CustomStringConvertible {
     case normal
+    case medium
+    case semiBold
     case bold
     case bolder
     case lighter
@@ -43,6 +45,10 @@ public enum FontWeight: CustomStringConvertible {
         switch self {
         case .normal:
             return "normal"
+        case .medium:
+            return "500"
+        case .semiBold:
+            return "600"
         case .bold:
             return "bold"
         case .bolder:

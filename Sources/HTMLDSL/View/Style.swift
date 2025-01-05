@@ -69,7 +69,7 @@ public enum Style: CustomStringConvertible, Equatable {
     // MARK: Grid
     case gridColumnGap(Int)
     case gridColumnGapDimension(AutoInheritDimension)
-    case gridRowGap(Int)
+    case gridRowGap(AutoInheritDimension)
     case gridTemplateColumns(Int)
     case gridColumn(start: Int, end: Int)
 
@@ -168,7 +168,7 @@ public enum Style: CustomStringConvertible, Equatable {
         case .gridColumnGapDimension(let dimension):
             return "grid-column-gap: \(dimension.description);"
         case .gridRowGap(let gap):
-            return "grid-row-gap: \(gap)px;"
+            return "grid-row-gap: \(gap.description);"
         case .gridTemplateColumns(let columns):
             return "grid-template-columns: repeat(\(columns), minmax(0, 1fr));"
         case let .gridColumn(start, end):

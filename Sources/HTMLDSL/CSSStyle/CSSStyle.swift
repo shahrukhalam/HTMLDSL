@@ -329,9 +329,9 @@ public extension CSSStyle {
                         with: .gridColumnGapDimension(gap))
     }
     
-    func gridRow(gap: Int) -> Self {
+    func gridRow(gap: AutoInheritDimension) -> Self {
         return modified(body: self,
-                        oldStyle: .gridRowGap(0),
+                        oldStyle: .gridRowGap(.pixel(0)),
                         with: .gridRowGap(gap))
     }
     
