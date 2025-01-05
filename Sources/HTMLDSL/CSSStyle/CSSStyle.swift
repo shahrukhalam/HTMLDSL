@@ -108,6 +108,14 @@ public extension CSSStyle {
         size(width: .percentage(100), height: .percentage(100))
     }
 
+    func aspectRatio(width: Int, height: Int) -> Self {
+        modified(body: self, oldStyle: .aspectRatio(1, 2), with: .aspectRatio(width, height))
+    }
+
+    func contentMode(_ contentMode: ContentMode) -> Self {
+        modified(body: self, oldStyle: .contentMode(.none), with: .contentMode(contentMode))
+    }
+
     func margin(left: AutoInheritDimension = .pixel(0),
                 top: AutoInheritDimension = .pixel(0),
                 right: AutoInheritDimension = .pixel(0),
@@ -497,7 +505,11 @@ public struct ClassStyle: CSSStyle {
     public init(forClass: CSSClass, withClass: CSSClass) {
         self.key = ".\(forClass.value) .\(withClass.value)"
     }
-    
+
+    public init(forClass: CSSClass, withClass: CSSClass, tag: CSSTag) {
+        self.key = ".\(forClass.value) .\(withClass.value):\(tag.rawValue)"
+    }
+
     /// on `hover` of an element with class `some-class`
     public init(forClass: CSSClass, withCSSTag: CSSTag) {
         self.key = ".\(forClass.value):\(withCSSTag.rawValue)"
