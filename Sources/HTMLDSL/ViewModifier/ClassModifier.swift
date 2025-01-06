@@ -1,10 +1,3 @@
-//
-//  ClassModifier.swift
-//  HTMLDSL
-//
-//  Created by Shahrukh Alam on 23/12/20.
-//
-
 import Foundation
 
 public enum CSSTag: String {
