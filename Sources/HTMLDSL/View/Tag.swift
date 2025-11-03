@@ -49,6 +49,7 @@ public enum EnclosingTag: CustomStringConvertible {
     case video
     case hr
     case table
+    case tableRow
     case tableHeader
     case tableData
 
@@ -94,6 +95,8 @@ public enum EnclosingTag: CustomStringConvertible {
             return "hr"
         case .table:
             return "table"
+        case .tableRow:
+            return "tr"
         case .tableHeader:
             return "th"
         case .tableData:
